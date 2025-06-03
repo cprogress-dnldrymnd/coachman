@@ -324,6 +324,7 @@ Block::make(__('Caravan/Motohomes Models'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Caravan/Motohomes Models</div>"),
         Field::make('checkbox', 'is_swiper', __('Is Swiper')),
+        Field::make('checkbox', 'display_model_layouts', __('Display Model Layouts')),
         Field::make('complex', 'posts')
             ->add_fields('caravan', array(
                 Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_classes('hidden'),
@@ -397,59 +398,60 @@ Block::make(__('Caravan/Motohomes Models'))
             </div>
         </div>
     </div>
-
-    <?php foreach ($fields['posts'] as $key => $post) { ?>
-        <?php foreach ($post['model'] as $key => $model) { ?>
-            <?php
-                $args = array(
-                    'post_type' => $post['_type'],
-                    'numberposts' => -1,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => $post['taxonomy'],
-                            'field' => 'term_id',
-                            'terms' => $model,
+    <?php if ($fields['display_model_layouts']) { ?>
+        <?php foreach ($fields['posts'] as $key => $post) { ?>
+            <?php foreach ($post['model'] as $key => $model) { ?>
+                <?php
+                    $args = array(
+                        'post_type' => $post['_type'],
+                        'numberposts' => -1,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => $post['taxonomy'],
+                                'field' => 'term_id',
+                                'terms' => $model,
+                            ),
                         ),
-                    ),
-                );
-                $posts_listings = get_posts($args);
-            ?>
-            <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
-                <div class="container  py-5">
-                    <div class="row g-3">
-                        <?php foreach ($posts_listings as $posts_listing) { ?>
-                            <?php
-                            $berths = get__post_meta_by_id($posts_listing->ID, 'berths');
-                            $length = get__post_meta_by_id($posts_listing->ID, 'length');
-                            ?>
-                            <div class="col-lg-3">
-                                <div class="listings--posts--grid bg-white p-4">
-                                    <h3 class="fs-24"><?= __listing_title($posts_listing->post_title, $model) ?></h3>
-                                    <div class="image-box image-style" style="--fit: contain">
-                                        <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
-                                    </div>
-                                    <div class="listing--features">
-                                        <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
-                                            <?php if ($berths) { ?>
-                                                <li class="d-flex align-items-center justify-content-between py-2">
-                                                    <span>Berths</span>
-                                                    <span><?= $berths ?></span>
-                                                </li>
-                                            <?php } ?>
-                                            <?php if ($length) { ?>
-                                                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
-                                                    <span>Length</span>
-                                                    <span><?= $length ?></span>
-                                                </li>
-                                            <?php } ?>
-                                        </ul>
+                    );
+                    $posts_listings = get_posts($args);
+                ?>
+                <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                    <div class="container  py-5">
+                        <div class="row g-3">
+                            <?php foreach ($posts_listings as $posts_listing) { ?>
+                                <?php
+                                $berths = get__post_meta_by_id($posts_listing->ID, 'berths');
+                                $length = get__post_meta_by_id($posts_listing->ID, 'length');
+                                ?>
+                                <div class="col-lg-3">
+                                    <div class="listings--posts--grid bg-white p-4">
+                                        <h3 class="fs-24"><?= __listing_title($posts_listing->post_title, $model) ?></h3>
+                                        <div class="image-box image-style" style="--fit: contain">
+                                            <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
+                                        </div>
+                                        <div class="listing--features">
+                                            <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
+                                                <?php if ($berths) { ?>
+                                                    <li class="d-flex align-items-center justify-content-between py-2">
+                                                        <span>Berths</span>
+                                                        <span><?= $berths ?></span>
+                                                    </li>
+                                                <?php } ?>
+                                                <?php if ($length) { ?>
+                                                    <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                                                        <span>Length</span>
+                                                        <span><?= $length ?></span>
+                                                    </li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
         <?php } ?>
     <?php } ?>
 
