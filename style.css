@@ -11502,7 +11502,7 @@ img {
     border-right: none;
     border-bottom-color: var(--bs-black); }
     .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:hover, .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:active, .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:focus {
-      border-bottom-color: 1px solid; }
+      border-bottom-color: var(--bs-white); }
 
 .wp-block-button__link.wp-block-button__link {
   font-size: inherit;
