@@ -12132,7 +12132,12 @@ h5, .h5 {
   right: 0;
   z-index: 2;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms; }
   .listings--posts.active {
     height: var(--height); }
 
