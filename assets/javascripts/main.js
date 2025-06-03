@@ -33,9 +33,8 @@ function listings() {
         jQuery(this).toggleClass('active');
 
         var $target = jQuery(this).attr('listing-target');
-        setTimeout(function () {
-            jQuery($target).toggleClass('active');
-        }, 500);
+        jQuery($target).toggleClass('active');
+
         e.preventDefault();
 
     });

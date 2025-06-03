@@ -50,7 +50,6 @@
     z-index: 2;
     height: 0;
     overflow: hidden;
-    @include transition(500ms);
     &.active {
         height: var(--height);
     }
