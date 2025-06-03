@@ -352,7 +352,7 @@ Block::make(__('Caravan/Motohomes Models'))
             </div>
         </div>
     </div>
-    <div class="listings--posts">
+    <div class="listings--posts bg-lightgray-2 ">
         <?php foreach ($fields['posts'] as $key => $post) { ?>
             <?php foreach ($post['model'] as $model) { ?>
                 <?php
@@ -370,12 +370,19 @@ Block::make(__('Caravan/Motohomes Models'))
                 $posts = get_posts($args);
 
                 ?>
-                <div class="listings--posts--inner" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
-                    <?php
-                    foreach ($posts as $post) {
-                        echo $post->post_title;
-                    }
-                    ?>
+                <div class="listings--posts--holder" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                    <div class="row g-4">
+                        <?php foreach ($posts as $post) { ?>
+                            <div class="col-lg-3">
+                                <div class="listings--posts--grid bg-white p-4">
+                                    <h3 class="fs-24"><?= $post->post_title ?></h3>
+                                    <div class="image-box image-style">
+                                        <?= get_the_post_thumbnail($post->ID, 'medium') ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
                 </div>
             <?php } ?>
         <?php } ?>
