@@ -201,10 +201,10 @@ $Caravans->has_archive = false;
 
 
 
-$Manufacturer = new newTaxonomy();
-$Manufacturer->taxonomy = 'caravan_model';
-$Manufacturer->post_type = 'caravan';
-$Manufacturer->args = array(
+$Caravan_Model = new newTaxonomy();
+$Caravan_Model->taxonomy = 'caravan_model';
+$Caravan_Model->post_type = 'caravan';
+$Caravan_Model->args = array(
     'label'        => 'Caravan Model',
     'labels' => array(
         'name'                       => _x('Caravan Model', 'Taxonomy General Name', 'text_domain'),
@@ -233,5 +233,53 @@ $Manufacturer->args = array(
     'show_in_rest' => true,
     'rewrite'      => array(
         'slug'         => 'caravan-model',
+    )
+);
+$Motorhomes = new newPostType();
+$Motorhomes->key = 'Motorhome';
+$Motorhomes->name = 'Motorhomes';
+$Motorhomes->singular_name = 'Motorhomes';
+$Motorhomes->icon = 'dashicons-video-alt3';
+$Motorhomes->show_in_rest = true;
+$Motorhomes->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Motorhomes->exclude_from_search = true;
+$Motorhomes->publicly_queryable = true;
+$Motorhomes->show_in_admin_bar = false;
+$Motorhomes->has_archive = false;
+
+
+
+$Motorhome_Model = new newTaxonomy();
+$Motorhome_Model->taxonomy = 'motorhome_model';
+$Motorhome_Model->post_type = 'motorhome';
+$Motorhome_Model->args = array(
+    'label'        => 'Motorhome Model',
+    'labels' => array(
+        'name'                       => _x('Motorhome Model', 'Taxonomy General Name', 'text_domain'),
+        'singular_name'              => _x('Motorhome Model', 'Taxonomy Singular Name', 'text_domain'),
+        'menu_name'                  => __('Motorhome Model', 'text_domain'),
+        'all_items'                  => __('All Motorhome Model', 'text_domain'),
+        'parent_item'                => __('Parent Motorhome Model', 'text_domain'),
+        'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+        'new_item_name'              => __('New Item Name', 'text_domain'),
+        'add_new_item'               => __('Add New Item', 'text_domain'),
+        'edit_item'                  => __('Edit Item', 'text_domain'),
+        'update_item'                => __('Update Item', 'text_domain'),
+        'view_item'                  => __('View Item', 'text_domain'),
+        'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+        'add_or_remove_items'        => __('Add or remove Motorhome Model', 'text_domain'),
+        'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+        'popular_items'              => __('Popular Motorhome Model', 'text_domain'),
+        'search_items'               => __('Search Motorhome Model', 'text_domain'),
+        'not_found'                  => __('Not Found', 'text_domain'),
+        'no_terms'                   => __('No Motorhome Model', 'text_domain'),
+        'items_list'                 => __('Items list', 'text_domain'),
+        'items_list_navigation'      => __('Items list navigation', 'text_domain'),
+    ),
+    'hierarchical' => true,
+    'query_var'    => true,
+    'show_in_rest' => true,
+    'rewrite'      => array(
+        'slug'         => 'motorhome-model',
     )
 );
