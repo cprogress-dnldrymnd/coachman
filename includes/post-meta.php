@@ -243,9 +243,7 @@ Block::make(__('Swiper Pagination'))
 
 Block::make(__('Swiper Slide'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swiper Slide</div>")->set_width(50),
-        Field::make('text', 'tab_item_id', __(''))->set_width(50)->set_classes('crb-field-style-1')
-            ->set_attribute('placeholder', 'Tab Item ID')
+        Field::make('html', 'html_1')->set_html("<div $style>Swiper Slide</div>"),
     ))
     ->set_parent('carbon-fields/swiper-wrapper')
     ->set_inner_blocks(true)
