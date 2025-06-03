@@ -28,9 +28,11 @@ function listings() {
     });
 
     jQuery('.listings--inner--js').click(function (e) {
-        jQuery(this).addClass('active');
+        jQuery('.listings--inner--js').removeClass('active');
+        jQuery('.listings--posts').removeClass('active');
+        jQuery(this).toggle('active');
         $target = jQuery(this).attr('listing-target');
-        jQuery($target).addClass('active');
+        jQuery($target).toggle('active');
         e.preventDefault();
 
     });
