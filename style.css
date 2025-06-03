@@ -11815,6 +11815,16 @@ h5, .h5 {
       width: 25px;
       height: 20px; } }
 
+#offCanvasMenu .listings--inner {
+  padding: 0 !important; }
+  #offCanvasMenu .listings--inner .model-num {
+    display: inline-block !important;
+    background-color: var(--bs-white);
+    padding: 5px;
+    font-size: 13px; }
+    #offCanvasMenu .listings--inner .model-num svg {
+      display: none; }
+
 .bottom-footer .container > div {
   border-top: 1px solid #D3D3D3;
   padding-top: 30px;
