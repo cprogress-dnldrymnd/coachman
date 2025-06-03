@@ -196,14 +196,9 @@ img {
 }
 
 .offcanvas.offcanvas {
-    max-width: 860px;
+    max-width: 1000px;
     width: 100%;
     z-index: 99999;
-
-    .offcanvas-body {
-        background-color: var(--lightgray-color-4);
-        padding: 50px 20px;
-    }
 
     .btn-close.btn-close {
         position: absolute;
