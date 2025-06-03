@@ -189,7 +189,7 @@ Block::make(__('Tabs Content Item'))
 
 Block::make(__('Swiper'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>")->set_width(50),
+        Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>"),
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
