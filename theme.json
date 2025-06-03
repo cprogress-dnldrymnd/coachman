@@ -171,6 +171,16 @@
 					"color": "#9C1B2A",
 					"name": "Maroon",
 					"slug": "maroon"
+				},
+				{
+					"color": "#f2f2f2",
+					"name": "Light gray",
+					"slug": "lightgray"
+				},
+				{
+					"color": "#EEEFF2",
+					"name": "Light gray 2",
+					"slug": "lightgray-2"
 				}
 			]
 		},
