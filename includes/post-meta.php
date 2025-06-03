@@ -310,12 +310,12 @@ Block::make(__('Caravan/Motohomes Models'))
         Field::make('html', 'html_1')->set_html("<div $style>Caravan/Motohomes Models</div>"),
         Field::make('complex', 'posts')
             ->add_fields('caravan', array(
-                Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_attribute('readonly', 'readonly'),
+                Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_attribute('style', 'display: none;'),
                 Field::make('multiselect', 'model', __('Caravan Model'))
                     ->add_options(get_taxonomy_terms_wpdb('caravan_model'))
             ))
             ->add_fields('motorhome', array(
-                Field::make('hidden', 'taxonomy', __('Motorhome Model'))->set_default_value('motorhome_model')->set_attribute('readonly', 'readonly'),
+                Field::make('text', 'taxonomy', __('Motorhome Model'))->set_default_value('motorhome_model')->set_attribute('style', 'display: none;'),
                 Field::make('multiselect', 'model', __('Motorhome Model'))
                     ->add_options(get_taxonomy_terms_wpdb('motorhome_model'))
             ))
