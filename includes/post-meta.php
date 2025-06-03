@@ -189,7 +189,7 @@ Block::make(__('Tabs Content Item'))
 
 Block::make(__('Swiper'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swiper Slider</div>")->set_width(50),
+        Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>")->set_width(50),
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
@@ -229,7 +229,7 @@ Block::make(__('Swiper Wrapper'))
     });
 Block::make(__('Swiper Pagination'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swipper Wrapper</div>")->set_width(50),
+        Field::make('html', 'html_1')->set_html("<div $style>Swipper Pagination</div>")->set_width(50),
         Field::make('text', 'tab_item_id', __(''))->set_width(50)->set_classes('crb-field-style-1')
             ->set_attribute('placeholder', 'Tab Item ID')
     ))
@@ -243,7 +243,7 @@ Block::make(__('Swiper Pagination'))
 
 Block::make(__('Swiper Slide'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Tab Navigation Item</div>")->set_width(50),
+        Field::make('html', 'html_1')->set_html("<div $style>Swiper Slide</div>")->set_width(50),
         Field::make('text', 'tab_item_id', __(''))->set_width(50)->set_classes('crb-field-style-1')
             ->set_attribute('placeholder', 'Tab Item ID')
     ))
