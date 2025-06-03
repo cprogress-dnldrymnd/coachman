@@ -116,7 +116,6 @@ img {
 
 .form-holder {
     font-size: 20px;
-
     .row {
         --bs-gutter-x: 8px;
         --bs-gutter-y: 8px;
@@ -127,54 +126,6 @@ img {
     }
 }
 
-.seach-stock-holder {
-    label {
-        color: var(--bs-white);
-    }
-    .tab-nav-holder {
-        .container {
-            @include responsive(xs-sm) {
-                max-width: 100%;
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-    }
-    .tab-cotnent-holder {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-
-    .nav-tabs {
-        .nav-item {
-            .nav-link {
-                @include responsive(xs-sm) {
-                    width: 100%;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-            }
-            @include responsive(xs-sm) {
-                flex: 1 0 0%;
-            }
-        }
-        @include responsive(xs-sm) {
-            flex-wrap: nowrap !important;
-        }
-    }
-    .search-stock-mobile {
-        @include responsive(xs-sm) {
-            &:not(.filter--active) {
-                & + .tab-nav-holder {
-                    display: none;
-                    & + .tab-cotnent-holder {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
 
 .image-style {
     position: relative;

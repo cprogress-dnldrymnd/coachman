@@ -11168,33 +11168,6 @@ img {
         --bs-gutter-x: 12px;
         --bs-gutter-y: 12px; } }
 
-.seach-stock-holder label {
-  color: var(--bs-white); }
-@media screen and (max-width: 991px) {
-  .seach-stock-holder .tab-nav-holder .container {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0; } }
-.seach-stock-holder .tab-cotnent-holder {
-  padding-top: 32px;
-  padding-bottom: 32px; }
-@media screen and (max-width: 991px) {
-  .seach-stock-holder .nav-tabs .nav-item .nav-link {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px; } }
-@media screen and (max-width: 991px) {
-  .seach-stock-holder .nav-tabs .nav-item {
-    flex: 1 0 0%; } }
-@media screen and (max-width: 991px) {
-  .seach-stock-holder .nav-tabs {
-    flex-wrap: nowrap !important; } }
-@media screen and (max-width: 991px) {
-  .seach-stock-holder .search-stock-mobile:not(.filter--active) + .tab-nav-holder {
-    display: none; }
-    .seach-stock-holder .search-stock-mobile:not(.filter--active) + .tab-nav-holder + .tab-cotnent-holder {
-      display: none; } }
-
 .image-style {
   position: relative;
   padding: var(--padding, 30%); }
