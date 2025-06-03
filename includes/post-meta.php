@@ -336,7 +336,16 @@ Block::make(__('Caravan/Motohomes Models'))
                     ?>
                     <div class="col-lg-4">
                         <div class="listings--inner">
-                            
+                            <?php if ($logo) { ?>
+                                <div class="logo-box">
+                                    <?= wp_get_attachment_image($logo, 'medium') ?>
+                                </div>
+                            <?php } ?>
+                            <?php if ($image) { ?>
+                                <div class="image-box image-style">
+                                    <?= wp_get_attachment_image($image, 'medium') ?>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                 <?php } ?>
