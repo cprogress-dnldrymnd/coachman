@@ -12200,8 +12200,8 @@ h5, .h5 {
     .swiper-slider-holder .swiper-pagination-holder .swiper-pagination .swiper-pagination-bullet {
       flex: 1 0 0%; }
 
-.listings-style-1 {
-  max-width: 1100px; }
+.listings-style-1 .swiper-listings-taxonomy .swiper-slide {
+  width: 230px; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins

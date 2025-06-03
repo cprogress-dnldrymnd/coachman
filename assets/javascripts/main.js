@@ -68,6 +68,8 @@ function swiper_sliders() {
     });
     var swiper = new Swiper(".swiper-listings-taxonomy", {
         slidesPerView: 'auto',
+        spaceBetween: 40,
+
     });
 
 
