@@ -1,5 +1,5 @@
 :root :where(.editor-styles-wrapper.editor-styles-wrapper) {
-  --wp--preset--font-size--large: 20px !important; }
+  --wp--preset--font-size--large: 16px !important; }
 
 body a {
   color: #000; }
@@ -52,7 +52,7 @@ strong {
 
 .crb-field-style-1.crb-field-style-1 .cf-field__body input {
   background-color: var(--maroon);
-  font-family: "Pennypacker";
+  font-family: "pennypacker-semiwide";
   color: var(--wp--preset--color--white);
   border-radius: 5px;
   padding: 15px;

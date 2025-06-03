@@ -12225,6 +12225,10 @@ h5, .h5 {
 
 #offCanvasMenu .listings--inner {
   padding: 0 !important; }
+  #offCanvasMenu .listings--inner .logo-box img {
+    height: 18px;
+    width: auto;
+    object-fit: contain; }
   #offCanvasMenu .listings--inner .model-num {
     display: inline-block !important;
     background-color: var(--bs-white);

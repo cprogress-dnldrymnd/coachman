@@ -46,6 +46,13 @@
 #offCanvasMenu {
     .listings--inner {
         padding: 0 !important;
+        .logo-box {
+            img {
+                height: 18px;
+                width: auto;
+                object-fit: contain;
+            }
+        }
         .model-num {
             display: inline-block !important;
             background-color: var(--bs-white);
