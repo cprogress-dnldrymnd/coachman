@@ -310,7 +310,7 @@ Block::make(__('Caravan/Motohomes Models'))
         Field::make('html', 'html_1')->set_html("<div $style>Caravan/Motohomes Models</div>"),
         Field::make('complex', 'posts')
             ->add_fields('caravan', array(
-                Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_attribute('hidden'),
+                Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_classes('hidden'),
                 Field::make('multiselect', 'model', __('Caravan Model'))
                     ->add_options(get_taxonomy_terms_wpdb('caravan_model'))
             ))
