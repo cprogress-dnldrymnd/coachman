@@ -271,4 +271,5 @@ Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
     ->add_fields(array(
         Field::make('image', 'logo', __('Logo')),
+        Field::make('image', 'image', __('Image')),
     ));
