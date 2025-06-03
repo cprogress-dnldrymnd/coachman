@@ -1,8 +1,8 @@
 jQuery(document).ready(function () {
     swiper_sliders();
-    fancybox();
-    mega_menu();
-    search_stock();
+    //fancybox();
+    // mega_menu();
+    // search_stock();
     listings();
     read_more();
 });
@@ -66,5 +66,10 @@ function swiper_sliders() {
             el: ".swiper-pagination",
         },
     });
+    var swiper = new Swiper(".swiper-listings-taxonomy", {
+        slidesPerView: 'auto',
+    });
+
+
 
 }
