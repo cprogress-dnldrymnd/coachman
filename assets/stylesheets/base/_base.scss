@@ -49,6 +49,9 @@ img {
     &.style-2 {
         .nav-link {
             border: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
             @include after {
                 content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg>');
             }
@@ -61,7 +64,6 @@ img {
 img {
     max-width: 100%;
 }
-
 
 .form-holder {
     font-size: 20px;
@@ -175,7 +177,6 @@ img {
     top: 0;
 }
 
-
 .swiper-button.swiper-button {
     --swiper-navigation-size: 20px;
     width: 56px;
@@ -195,8 +196,6 @@ img {
         display: none !important;
     }
 }
-
-
 
 .offcanvas.offcanvas {
     max-width: 860px;
