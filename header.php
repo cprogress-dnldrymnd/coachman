@@ -25,7 +25,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header id="masthead" class="site-header" role="banner">
+    <?php
+    $header_style = get__post_meta('header_style');
+    ?>
+    <header id="masthead" class="site-header <?= $header_style ?>" role="banner">
         <?php
         echo do_shortcode('[template template_id=98]');
         ?>

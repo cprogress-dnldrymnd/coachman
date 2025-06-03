@@ -1,7 +1,9 @@
 #masthead {
-    position: sticky;
-    top: var(--admin-bar-height);
     z-index: 9999;
+    &.header-transparent {
+        position: sticky;
+        top: var(--admin-bar-height);
+    }
 }
 .menu-burger {
     --burger-width: 40px;
