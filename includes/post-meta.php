@@ -412,7 +412,7 @@ Block::make(__('Caravan/Motohomes Models'))
 
 Block::make(__('Listing Feature'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>--Swiper Slide</div>"),
+        Field::make('html', 'html_1')->set_html("<div $style>Listing Feature</div>"),
     ))
     ->set_parent('core/post-template')
     ->set_inner_blocks(true)
@@ -422,7 +422,7 @@ Block::make(__('Listing Feature'))
     <?= __listing_features(get_the_ID()) ?>
 <?php
     });
-    
+
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
     ->or_where('term_taxonomy', '=', 'motorhome_model')
