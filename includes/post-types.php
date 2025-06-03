@@ -136,6 +136,7 @@ class newTaxonomy
         return $columns;
     }
 }
+/*
 $Templates = new newPostType();
 $Templates->key = 'template';
 $Templates->name = 'Templates';
@@ -186,7 +187,7 @@ $Testimonials->exclude_from_search = true;
 $Testimonials->publicly_queryable = true;
 $Testimonials->show_in_admin_bar = false;
 $Testimonials->has_archive = false;
-
+*/
 $Caravans = new newPostType();
 $Caravans->key = 'caravan';
 $Caravans->name = 'Caravans';
