@@ -27,8 +27,9 @@
 <body <?php body_class(); ?>>
     <?php
     $header_style = get__post_meta('header_style');
+    $header_style_val =  $header_style ? $header_style : 'header-default';
     ?>
-    <header id="masthead" class="site-header <?= $header_style ?>" role="banner">
+    <header id="masthead" class="site-header <?= $header_style_val ?>" role="banner">
         <?php
         echo do_shortcode('[template template_id=98]');
         ?>

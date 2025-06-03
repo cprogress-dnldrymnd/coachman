@@ -11,7 +11,7 @@ Container::make('post_meta', __('Page Settings'))
     ->add_fields(array(
         Field::make('select', 'header_style', __('Header Style'))
             ->set_options(array(
-                '' => 'Default',
+                'header-default' => 'Default',
                 'header-transparent' => 'Transparent',
             )),
     ));

@@ -11808,6 +11808,8 @@ h5, .h5 {
   #masthead.header-transparent {
     position: sticky;
     top: var(--admin-bar-height); }
+  #masthead.header-default .menu-burger .bar {
+    background-color: var(--bs-black); }
 
 .menu-burger {
   --burger-width: 40px;
