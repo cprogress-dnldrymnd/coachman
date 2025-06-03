@@ -11045,6 +11045,7 @@ button.swiper-pagination-bullet {
 :root {
   --dark: #1c272e;
   --maroon: #841d26;
+  --lightgray: #f2f2f2;
   --bs-border-radius: 5px;
   --bs-border-color: #cdcdcd; }
 
@@ -11093,7 +11094,8 @@ img {
 .nav-tabs {
   --bs-nav-link-font-size: inherit;
   --bs-nav-link-color: var(--bs-black);
-  --bs-nav-tabs-link-active-color: var(--bs-white); }
+  --bs-nav-tabs-link-active-color: var(--bs-white);
+  border: none; }
   .nav-tabs .nav-link {
     font-weight: 600;
     padding: 25px 45px;
@@ -11102,8 +11104,8 @@ img {
     position: relative;
     z-index: 1; }
     .nav-tabs .nav-link.active {
-      background-color: var(--green-color);
-      border-color: var(--green-color); }
+      background-color: var(--lightgray);
+      border-color: var(--lightgray); }
     @media screen and (max-width: 767px) {
       .nav-tabs .nav-link {
         padding: 18px 25px; } }
