@@ -157,7 +157,22 @@
 .md-margin-bottom {
     margin-bottom: var(--md-spacing);
 }
+.md-margin-top {
+    margin-top: var(--md-spacing);
+}
 
+.lg-margin-top {
+    margin-top: var(--lg-spacing);
+}
+.lg-margin-bottom {
+    margin-bottom: var(--lg-spacing);
+}
+.xl-margin-top {
+    margin-top: var(--xl-spacing);
+}
+.xl-margin-bottom {
+    margin-bottom: var(--xl-spacing);
+}
 .md-padding-mobile {
     @include responsive(xs) {
         padding: var(--md-spacing);
