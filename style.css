@@ -11340,7 +11340,7 @@ img {
   .image-style.image-style-2 {
     background-color: var(--lightgray); }
     .image-style.image-style-2 img {
-      width: 85%;
+      width: 75%;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);

@@ -94,8 +94,9 @@ img {
     }
     &.image-style-2 {
         background-color: var(--lightgray);
+        padding: 25%;
         img {
-            width: 85%;
+            width: 75%;
             top: 50%;
             left: 50%;
             @include transform(translate(-50%, -50%));
