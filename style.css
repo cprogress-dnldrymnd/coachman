@@ -11858,7 +11858,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-weight: bold;
+  font-weight: 400;
   line-height: 1.2;
   color: var(--black-color); }
 
