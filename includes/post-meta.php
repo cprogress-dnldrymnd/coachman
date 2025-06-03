@@ -267,6 +267,69 @@ Block::make(__('Swiper Slide'))
 <?php
     });
 
+
+function get_taxonomy_terms_wpdb($taxonomy)
+{
+    global $wpdb; // Access the global WordPress database object.
+
+    $terms_array = array(); // Initialize an empty array to store the results.
+
+    // Prepare the SQL query to fetch term_id and name.
+    // We join wp_terms with wp_term_taxonomy to filter by the specified taxonomy.
+    // wp_terms stores the term details (id, name, slug).
+    // wp_term_taxonomy links terms to taxonomies and stores count, description, parent.
+    // Using $wpdb->prepare for security to prevent SQL injection.
+    $query = $wpdb->prepare(
+        "SELECT t.term_id, t.name
+         FROM {$wpdb->terms} AS t
+         INNER JOIN {$wpdb->term_taxonomy} AS tt
+         ON t.term_id = tt.term_id
+         WHERE tt.taxonomy = %s
+         ORDER BY t.name ASC", // Order by term name for better readability.
+        $taxonomy
+    );
+
+    // Execute the query and get results as an array of objects.
+    // Each object will have properties 'term_id' and 'name'.
+    $results = $wpdb->get_results($query);
+
+    // Check if any results were returned.
+    if (! empty($results)) {
+        // Loop through the results and populate the terms_array.
+        foreach ($results as $term) {
+            // Assign the term name as the value and term_id as the key.
+            $terms_array[$term->term_id] = $term->name;
+        }
+    }
+
+    return $terms_array; // Return the formatted array of terms.
+}
+
+Block::make(__('Caravan/Motohomes Models'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Caravan/Motohomes Models</div>"),
+        Field::make('complex', 'posts')
+            ->add_fields('caravan', array(
+                Field::make('multiselect', 'caravan_model', __('Caravan Model'))
+                    ->add_options(get_taxonomy_terms_wpdb('caravan_model'))
+            ))
+            ->add_fields('motorhome', array(
+                Field::make('multiselect', 'motorhome_model', __('Motorhome Model'))
+                    ->add_options(get_taxonomy_terms_wpdb('motorhome_model'))
+            ))
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+
+    <div class="listings">
+        <div class="row g-4">
+
+        </div>
+    </div>
+
+<?php
+    });
+
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
     ->add_fields(array(
