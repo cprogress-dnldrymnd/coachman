@@ -27,6 +27,10 @@
     .swiper-listings-taxonomy {
         .swiper-slide {
             width: 230px;
+            .image-box {
+                object-fit: contain;
+                padding: 50% 0;
+            }
         }
     }
 }

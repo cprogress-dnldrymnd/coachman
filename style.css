@@ -12202,6 +12202,8 @@ h5, .h5 {
 
 .listings-style-1 .swiper-listings-taxonomy .swiper-slide {
   width: 230px; }
+  .listings-style-1 .swiper-listings-taxonomy .swiper-slide .image-box {
+    object-fit: contain; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
