@@ -101,9 +101,17 @@ Block::make(__('Tabs Navigation'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Tabs Navigation</div>")->set_width(50),
         Field::make('text', 'tab_id', '')->set_width(50)->set_classes('crb-field-style-1')
-            ->set_attribute('placeholder', 'Tab ID')
-
-
+            ->set_attribute('placeholder', 'Tab ID'),
+        Field::make('checkbox', 'is_swiper', __('Is Swiper')),
+        Field::make('select', 'direction', __('Direction'))
+            ->set_options(array(
+                '' => 'Default',
+                'horizontal' => 'Horizontal',
+                'vertical' => 'Vertical',
+                '4' => '4',
+                '5' => '5',
+                '6' => '6',
+            )),
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
@@ -113,8 +121,17 @@ Block::make(__('Tabs Navigation'))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
     <div class="container">
-        <div class="swiper swiper-nav-tabs-swiper nav-tabs-swiper nav-tabs-swiper-js overflow-visible sm-margin-bottom">
-            <ul class="swiper-wrapper nav nav-tabs" id="<?= $fields['tab_id'] ?>" role="tablist">
+        <?php
+        if ($fields['is_swiper']) {
+            $class1 = 'swiper swiper-nav-tabs-swiper nav-tabs-swiper nav-tabs-swiper-js ';
+            $class2 = 'swiper-wrapper nav nav-tabs';
+        } else {
+            $class1 = 'nav-tabs-holder';
+            $class2 = 'nav nav-tabs';
+        }
+        ?>
+        <div class="<?= $class1 ?> overflow-visible sm-margin-bottom">
+            <ul class="<?= $class12 ?> swiper-wrapper nav nav-tabs" id="<?= $fields['tab_id'] ?>" role="tablist">
                 <?= $inner_blocks ?>
             </ul>
         </div>
