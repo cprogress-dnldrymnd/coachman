@@ -11388,7 +11388,7 @@ span.icons {
     left: auto; }
     @media screen and (max-width: 991px) {
       .offcanvas.offcanvas.offcanvas-start .btn-close.btn-close {
-        transform: translateX(-120%); } }
+        transform: translateX(120%); } }
   @media screen and (min-width: 992px) {
     .offcanvas.offcanvas.offcanvas-visible-desktop {
       max-width: 100%;

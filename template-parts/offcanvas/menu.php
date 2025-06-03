@@ -5,11 +5,12 @@
         <div class="offcanvas-body--inner background-white rounded overflow-hidden">
             <div class="container">
                 <div class="row g-0">
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
 
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-5 bg-lightgray">
 
+                    
                     </div>
                 </div>
             </div>
