@@ -1,8 +1,9 @@
 body {
     --admin-bar-height: 0px;
+    --header-height: 107.45px;
 }
 #main {
-    margin-top: var(--header-height, 107.45px);
+    margin-top: calc(var(--header-height) - var(--header-height) - var(--header-height));
 }
 img {
     height: auto;
