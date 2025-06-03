@@ -407,7 +407,7 @@ Block::make(__('Caravan/Motohomes Models'))
         <?php } ?>
     <?php } ?>
 
-    <?php
+<?php
     });
 
 Block::make(__('Listing Feature'))
@@ -415,7 +415,7 @@ Block::make(__('Listing Feature'))
         Field::make('html', 'html_1')->set_html("<div $style>Listing Feature</div>"),
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-    ?><?= get_the_title() ?>
+?>
     <?= __listing_features(get_the_ID()) ?>
 <?php
     });
