@@ -11499,7 +11499,8 @@ img {
     padding: 0;
     border-top: none;
     border-left: none;
-    border-right: none; }
+    border-right: none;
+    border-bottom: none; }
 
 .wp-block-button__link.wp-block-button__link {
   font-size: inherit;

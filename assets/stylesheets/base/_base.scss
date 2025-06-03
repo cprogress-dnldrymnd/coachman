@@ -298,6 +298,10 @@ img {
             border-top: none;
             border-left: none;
             border-right: none;
+            border-bottom: none;
+            @include on-event {
+                border-bottom: 1px solid;
+            }
         }
     }
 }
