@@ -11336,7 +11336,7 @@ img {
     height: 100%;
     object-fit: var(--fit, cover); }
   .image-style.image-style-contain img {
-    object-fit: var(--fit, contain); }
+    object-fit: var(--fit, contain) !important; }
 
 .site-content > .wp-block-group {
   overflow: hidden; }
