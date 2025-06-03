@@ -11259,7 +11259,8 @@ img {
     height: 37px;
     transform: translateX(-180%);
     background-size: 25px;
-    background-image: none; }
+    background-image: none;
+    color: var(--bs-white); }
     @media screen and (max-width: 991px) {
       .offcanvas.offcanvas .btn-close.btn-close {
         width: 30px;
