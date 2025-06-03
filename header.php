@@ -31,11 +31,7 @@
     ?>
     <header id="masthead" class="site-header <?= $header_style_val ?>" role="banner">
         <?php
-        echo do_shortcode('[template template_id=98]');
+        echo do_shortcode('[template template_id=395]');
         ?>
     </header>
     <main id="main" class="main-content" role="main">
-
-        <?php
-        echo do_shortcode('[template template_id=395]');
-        ?>
