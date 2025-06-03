@@ -1,8 +1,8 @@
+
 #masthead {
-    position: absolute;
-    left: 0;
+    position: sticky;
     top: var(--admin-bar-height);
-    right: 0;
+    z-index: 9999;
 }
 .wp-block-site-logo {
     img {
@@ -178,17 +178,7 @@
         visibility: visible;
     }
 }
-#masthead {
-    position: sticky;
-    top: 0;
-    background-color: var(--bs-white);
-    z-index: 9999;
-}
-.admin-bar {
-    #masthead {
-        top: 32px;
-    }
-}
+
 
 .custom-submenu.custom-submenu.custom-submenu.custom-submenu {
     --top: calc(var(--header-height, 102px) + var(--admin-bar-height, 0));
