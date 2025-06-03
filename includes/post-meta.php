@@ -377,9 +377,7 @@ Block::make(__('Caravan/Motohomes Models'))
                                 <div class="col-lg-3">
                                     <div class="listings--posts--grid bg-white p-4">
                                         <h3 class="fs-24"><?= $post->post_title ?></h3>
-                                        <div class="image-box image-style">
-                                            <?= get_the_post_thumbnail($post->ID, 'medium') ?>
-                                        </div>
+                                     
                                     </div>
                                 </div>
                             <?php } ?>
