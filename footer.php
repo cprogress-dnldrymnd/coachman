@@ -29,6 +29,7 @@
 <?php
 get_template_part('template-parts/offcanvas/finance-calculator');
 get_template_part('template-parts/offcanvas/reserve-form');
+get_template_part('template-parts/offcanvas/menu');
 ?>
 
 <script>
