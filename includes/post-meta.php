@@ -198,7 +198,6 @@ Block::make(__('Swiper'))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
-    <?= var_dump($attributes) ?>
     <div class="swiper-slider-holder" <?= $attributes['className'] ?>>
         <div class="swiper swiper-slider-block">
             <?= $inner_blocks ?>
