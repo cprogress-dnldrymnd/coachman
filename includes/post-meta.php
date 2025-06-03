@@ -282,7 +282,90 @@ Block::make(__('Swiper Slide'))
 <?php
     });
 
+Block::make(__('Swiper Gallery'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>"),
+        Field::make('complex', 'swiper_options')
+            ->add_fields('autoplay', array(
+                Field::make('text', 'delay', __('delay'))->set_attribute('type', 'number'),
+                Field::make('checkbox', 'disableoninteraction', __('disableOnInteraction')),
+            ))
+            ->add_fields('spacebetween', array(
+                Field::make('text', 'spacebetween', __('spaceBetween'))->set_attribute('type', 'number'),
+            ))
+    ))
+    ->set_inner_blocks(true)
+    ->set_inner_blocks_position('below')
+    ->set_allowed_inner_blocks(array(
+        'carbon-fields/swiper-wrapper',
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <div class="swiper-slider-holder" <?= $attributes['className'] ?>>
+        <div class="swiper swiper-slider-block">
+            <?= $inner_blocks ?>
+        </div>
+    </div>
+<?php
+    });
 
+
+Block::make(__('Swiper Gallery Wrapper'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>-Swipper Wrapper</div>"),
+    ))
+    ->set_parent('carbon-fields/swiper-gallery')
+    ->set_inner_blocks(true)
+    ->set_inner_blocks_position('below')
+    ->set_allowed_inner_blocks(array(
+        'carbon-fields/swiper-slide',
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <div class="swiper-wrapper">
+        <?= $inner_blocks ?>
+    </div>
+
+<?php
+    });
+Block::make(__('Swiper Gallery Pagination & Navigation'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>-Swipper Pagination</div>"),
+    ))
+    ->set_parent('carbon-fields/swiper-gallery')
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <div class="swiper-pagination-holder">
+        <div class="container">
+            <div class="swiper-pagination"> </div>
+        </div>
+    </div>
+<?php
+    });
+
+
+Block::make(__('Swiper Gallery Slide'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>--Swiper Slide</div>"),
+    ))
+    ->set_parent('carbon-fields/swiper-gallery-wrapper')
+    ->set_inner_blocks(true)
+    ->set_allowed_inner_blocks(array(
+        'core/paragraph',
+        'core/heading',
+        'core/image',
+    ))
+    ->set_inner_blocks_position('below')
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <div class="swiper-slide">
+        <div class="swiper-slide--inner">
+            <?= $inner_blocks ?>
+        </div>
+    </div>
+
+<?php
+    });
 
 Block::make(__('Caravan/Motohomes Models'))
     ->add_fields(array(
