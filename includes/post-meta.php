@@ -412,7 +412,7 @@ Block::make(__('Caravan/Motohomes Models'))
 
 Block::make(__('Listing Feature'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Listing Feature</div>".get_the_title()),
+        Field::make('html', 'html_1')->set_html("<div $style>Listing Feature</div>"),
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
