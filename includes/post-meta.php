@@ -18,32 +18,15 @@ Container::make('post_meta', __('Page Settings'))
 Container::make('post_meta', __('Caravan Properties'))
     ->where('post_type', '=', 'caravan')
     ->add_fields(array(
-        Field::make('media_gallery', 'gallery', __('Gallery')),
-        Field::make('image', 'floor_plan', __('Floor Plan')),
-        Field::make('text', 'listing_url', __('Listing URL'))->set_attribute('type', 'url'),
-        Field::make('text', 'rrp', __('RRP (£)'))->set_attribute('type', 'number')->set_attribute('step', '1')->set_width(33),
-        Field::make('text', 'our_price', __('Our Price (£)'))->set_attribute('type', 'number')->set_attribute('step', '1')->set_width(33),
-        Field::make('text', 'savings', __('Savings (£)'))->set_attribute('type', 'number')->set_attribute('step', '1')->set_width(33),
-
         Field::make('select', 'berths', __('Berths'))
             ->set_options(array(
-                'all' => 'All',
                 '2' => '2',
                 '3' => '3',
                 '4' => '4',
                 '5' => '5',
                 '6' => '6',
             )),
-        Field::make('select', 'axle', __('Axle'))
-            ->set_options(array(
-                'Single Axle' => 'Single Axle',
-                'Twin Axle' => 'Twin Axle',
-            )),
-        Field::make('text', 'year', __('Year')),
-        Field::make('text', 'warranty', __('Warranty')),
-        Field::make('text', 'weight', __('Weight')),
-        Field::make('text', 'awning_size', __('Awning Size')),
-        Field::make('checkbox', 'now_on_display', __('Now On Display')),
+        Field::make('text', 'length', __('Length'))
     ));
 
 $style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Pennypacker; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
