@@ -414,7 +414,6 @@ Block::make(__('Listing Feature'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Listing Feature</div>"),
     ))
-    ->set_parent('core/post-template')
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
     <?= __listing_features(get_the_ID()) ?>
