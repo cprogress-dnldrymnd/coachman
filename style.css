@@ -11806,7 +11806,9 @@ h5, .h5 {
 #masthead {
   z-index: 9999; }
   #masthead.header-transparent {
-    position: sticky;
+    position: absolute;
+    left: 0;
+    right: 0;
     top: var(--admin-bar-height); }
   #masthead.header-default .menu-burger .bar {
     background-color: var(--bs-black); }
