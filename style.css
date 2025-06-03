@@ -12236,6 +12236,10 @@ h5, .h5 {
     font-size: 13px; }
     #offCanvasMenu .listings--inner .model-num svg {
       display: none; }
+#offCanvasMenu .listings-taxonomy-holder {
+  max-width: 230px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .bottom-footer .container > div {
   border-top: 1px solid #D3D3D3;
