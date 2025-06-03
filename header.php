@@ -37,5 +37,5 @@
     <main id="main" class="main-content" role="main">
 
         <?php
-        echo do_shortcode('[template template_id=1735]');
+        echo do_shortcode('[template template_id=395]');
         ?>
