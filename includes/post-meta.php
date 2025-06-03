@@ -36,7 +36,7 @@ Container::make('post_meta', __('Caravan Properties'))
         Field::make('checkbox', 'now_on_display', __('Now On Display')),
     ));
 
-$style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Proxima Nova; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
+$style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Pennypacker; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
 
 Block::make(__('Icon'))
     ->add_fields(array(
