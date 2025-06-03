@@ -12287,6 +12287,17 @@ h5, .h5 {
     .swiper-slider-holder .swiper-pagination-holder .swiper-pagination .swiper-pagination-bullet {
       flex: 1 0 0%; }
 
+.listings--inner {
+  cursor: pointer;
+  position: relative; }
+  .listings--inner .listing--model-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; }
+
 .listings-style-1 .swiper-listings-taxonomy .swiper-slide {
   width: 280px; }
   .listings-style-1 .swiper-listings-taxonomy .swiper-slide .logo-box img {
@@ -12294,15 +12305,7 @@ h5, .h5 {
     object-fit: contain;
     width: auto; }
   .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner {
-    cursor: pointer;
-    position: relative; }
-    .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner .listing--model-link {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1; }
+    cursor: pointer; }
     .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner.active {
       background-color: var(--lightgray-2); }
     @media screen and (min-width: 992px) {
