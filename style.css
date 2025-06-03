@@ -12132,10 +12132,8 @@ h5, .h5 {
 
 .listings--posts {
   display: none;
-  height: 0;
   overflow: hidden; }
   .listings--posts.active {
-    height: var(--height);
     display: block; }
 
 /*-----------------------------------------------------------------------------------*/

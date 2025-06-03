@@ -21,11 +21,12 @@ function listings() {
         jQuery('.nav-tabs-swiper-js .nav-item:first-child .nav-link').click();
     }
 
+    /*
     jQuery('.listings--posts > div').each(function (index, element) {
         $height = jQuery(this).outerHeight();
         jQuery(this).parent().css('--height', $height + 'px');
 
-    });
+    });*/
 
     jQuery('.listings--inner--js').click(function (e) {
         jQuery('.listings--inner--js').removeClass('active');
