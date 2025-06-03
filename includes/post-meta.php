@@ -418,11 +418,31 @@ Block::make(__('Caravan/Motohomes Models'))
                 <div class="container  py-5">
                     <div class="row g-3">
                         <?php foreach ($posts_listings as $posts_listing) { ?>
+                            <?php
+                            $berths = get__post_meta_by_id($posts_listing->ID, 'berths');
+                            $length = get__post_meta_by_id($posts_listing->ID, 'berths');
+                            ?>
                             <div class="col-lg-3">
                                 <div class="listings--posts--grid bg-white p-4">
                                     <h3 class="fs-24"><?= __listing_title($posts_listing->post_title, $model) ?></h3>
                                     <div class="image-box image-style" style="--fit: contain">
                                         <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
+                                    </div>
+                                    <div class="listing--features">
+                                        <ul class="d-flex flex-column gap-3 m-0">
+                                            <?php if ($berths) { ?>
+                                                <li class="d-flex gap-3 align-items-center">
+                                                    <span>Berths</span>
+                                                    <span><?= $berths ?></span>
+                                                </li>
+                                            <?php } ?>
+                                            <?php if ($length) { ?>
+                                                <li class="d-flex gap-3 align-items-center">
+                                                    <span>Berths</span>
+                                                    <span><?= $length ?></span>
+                                                </li>
+                                            <?php } ?>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
