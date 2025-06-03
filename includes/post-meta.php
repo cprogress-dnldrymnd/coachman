@@ -321,19 +321,19 @@ Block::make(__('Caravan/Motohomes Models'))
             ))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-        $taxonomy_terms = [];
-        foreach ($fields['posts'] as $post) {
-            $taxonomy_terms[] = $post[]
-        }
 ?>
 
     <div class="listings">
         <div class="row g-4">
-
+            <?php foreach ($fields['posts'] as $post) { ?>
+                <div class="col-lg-4">
+                    <div class="listings--inner">
+                        
+                    </div>
+                </div>
+            <?php } ?>
         </div>
-    </div>
-
-<?php
+    <?php
     });
 
 Container::make('term_meta', __('Model Properties'))
