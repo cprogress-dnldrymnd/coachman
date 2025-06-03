@@ -30,7 +30,7 @@ function listings() {
     jQuery('.listings--inner--js').click(function (e) {
         jQuery(this).addClass('active');
         $target = jQuery(this).attr('listing-target');
-        jQuery($target).addClass
+        jQuery($target).addClass('active');
         e.preventDefault();
 
     });
