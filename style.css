@@ -11494,6 +11494,12 @@ img {
   .wp-block-button.wp-block-button.is-style-outline .wp-block-button__link {
     border-width: 1px;
     padding: 16px 25px; }
+  .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link {
+    border-radius: 0px;
+    padding: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none; }
 
 .wp-block-button__link.wp-block-button__link {
   font-size: inherit;
