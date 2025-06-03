@@ -431,13 +431,13 @@ Block::make(__('Caravan/Motohomes Models'))
                                     <div class="listing--features">
                                         <ul class="d-flex flex-column gap-3 m-0 fs-14">
                                             <?php if ($berths) { ?>
-                                                <li class="d-flex gap-3 align-items-center justify-content-between">
+                                                <li class="d-flex align-items-center justify-content-between py-2">
                                                     <span>Berths</span>
                                                     <span><?= $berths ?></span>
                                                 </li>
                                             <?php } ?>
                                             <?php if ($length) { ?>
-                                                <li class="d-flex gap-3 align-items-center justify-content-between">
+                                                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
                                                     <span>Berths</span>
                                                     <span><?= $length ?></span>
                                                 </li>
