@@ -335,6 +335,18 @@ Block::make(__('Caravan/Motohomes Models'))
                             <?php
                             $logo = get__term_meta($model, 'logo', true);
                             $image = get__term_meta($model, 'image', true);
+                            $args = array(
+                                'post_type' => $post['_type'],
+                                'numberposts' => -1,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => $post['taxonomy'],
+                                        'field' => 'term_id',
+                                        'terms' => $model,
+                                    ),
+                                ),
+                            );
+                            $posts_listings = get_posts($args);
                             ?>
                             <div class="swiper-slide">
                                 <div class="listings--inner listings--inner--js" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
@@ -348,6 +360,9 @@ Block::make(__('Caravan/Motohomes Models'))
                                             <?= wp_get_attachment_image($image, 'medium') ?>
                                         </div>
                                     <?php } ?>
+                                    <div class="model-num">
+                                        <?= count($posts_listings) ?> Models
+                                    </div>
                                 </div>
                             </div>
                         <?php } ?>
@@ -372,7 +387,6 @@ Block::make(__('Caravan/Motohomes Models'))
                     ),
                 );
                 $posts_listings = get_posts($args);
-
             ?>
             <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                 <div class="container  py-5">
