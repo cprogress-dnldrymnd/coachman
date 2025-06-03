@@ -210,7 +210,7 @@ Block::make(__('Swiper'))
 
 Block::make(__('Swiper Wrapper'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swipper Wrapper</div>"),
+        Field::make('html', 'html_1')->set_html("<div $style>-Swipper Wrapper</div>"),
     ))
     ->set_parent('carbon-fields/swiper')
     ->set_inner_blocks(true)
@@ -229,7 +229,7 @@ Block::make(__('Swiper Wrapper'))
     });
 Block::make(__('Swiper Pagination'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swipper Pagination</div>")->set_width(50),
+        Field::make('html', 'html_1')->set_html("<div $style>-Swipper Pagination</div>")->set_width(50),
         Field::make('text', 'tab_item_id', __(''))->set_width(50)->set_classes('crb-field-style-1')
             ->set_attribute('placeholder', 'Tab Item ID')
     ))
@@ -243,7 +243,7 @@ Block::make(__('Swiper Pagination'))
 
 Block::make(__('Swiper Slide'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swiper Slide</div>"),
+        Field::make('html', 'html_1')->set_html("<div $style>--Swiper Slide</div>"),
     ))
     ->set_parent('carbon-fields/swiper-wrapper')
     ->set_inner_blocks(true)
