@@ -240,7 +240,11 @@ Block::make(__('Swiper Pagination'))
     ->set_parent('carbon-fields/swiper')
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
-    <div class="swiper-pagination"> </div>
+    <div class="swiper-pagination-holder">
+        <div class="container">
+            <div class="swiper-pagination"> </div>
+        </div>
+    </div>
 <?php
     });
 

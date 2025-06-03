@@ -12496,20 +12496,17 @@ h5, .h5 {
 .delear-details .logo-box img {
   max-width: 140px; }
 
-.swiper-slider-holder .swiper-pagination {
+.swiper-slider-holder .swiper-pagination-holder .swiper-pagination {
   display: flex;
   gap: 40px;
   align-items: center;
-  --swiper-pagination-bottom: 50px;
+  position: static;
   --swiper-pagination-bullet-height: 4px;
   --swiper-pagination-bullet-border-radius: 0;
   --swiper-pagination-bullet-inactive-color: var(--bs-white);
   --swiper-pagination-bullet-inactive-opacity: 0.25;
   --swiper-pagination-bullet-opacity: 1;
-  --swiper-pagination-color: var(--maroon)
-  .swiper-pagination-bullet {
-      flex: 1 0 0%;
-  } ; }
+  --swiper-pagination-color: var(--maroon) .swiper-pagination-bullet {flex: 1 0 0%;}; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
