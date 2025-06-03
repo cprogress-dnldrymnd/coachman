@@ -17,8 +17,8 @@ function read_more() {
 }
 
 function listings() {
-    if (jQuery('.nav-tabs-swiper-style-1').length > 0) {
-        jQuery('.nav-tabs-swiper-style-1 .nav-item:first-child .nav-link').click();
+    if (jQuery('.nav-tabs-swiper-js').length > 0) {
+        jQuery('.nav-tabs-swiper-js .nav-item:first-child .nav-link').click();
     }
 }
 function search_stock() {

@@ -112,7 +112,7 @@ Block::make(__('Tabs Navigation'))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
-    <div class="swiper swiper-nav-tabs-swiper nav-tabs-swiper  overflow-visible sm-margin-bottom">
+    <div class="swiper swiper-nav-tabs-swiper nav-tabs-swiper nav-tabs-swiper-js overflow-visible sm-margin-bottom">
         <ul class="swiper-wrapper nav nav-tabs" id="<?= $fields['tab_id'] ?>" role="tablist">
             <?= $inner_blocks ?>
         </ul>
