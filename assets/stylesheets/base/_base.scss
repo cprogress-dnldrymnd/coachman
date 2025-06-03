@@ -87,6 +87,11 @@ img {
         height: 100%;
         object-fit: var(--fit, cover);
     }
+    &.image-style-contain {
+        img {
+            object-fit: var(--fit, contain);
+        }
+    }
 }
 
 .site-content {

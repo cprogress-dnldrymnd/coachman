@@ -11335,6 +11335,10 @@ img {
     width: 100%;
     height: 100%;
     object-fit: var(--fit, cover); }
+  .image-style.image-style-contain {
+    padding: 0; }
+    .image-style.image-style-contain img {
+      object-fit: contain; }
 
 .site-content > .wp-block-group {
   overflow: hidden; }
