@@ -352,40 +352,42 @@ Block::make(__('Caravan/Motohomes Models'))
             </div>
         </div>
     </div>
-    <div class="listings--posts bg-lightgray-2 ">
-        <?php foreach ($fields['posts'] as $key => $post) { ?>
-            <?php foreach ($post['model'] as $model) { ?>
-                <?php
-                $args = array(
-                    'post_type' => $post['_type'],
-                    'numberposts' => -1,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => $post['taxonomy'],
-                            'field' => 'term_id',
-                            'terms' => $model,
+    <div class="listings--posts bg-lightgray-2">
+        <div class="container">
+            <?php foreach ($fields['posts'] as $key => $post) { ?>
+                <?php foreach ($post['model'] as $model) { ?>
+                    <?php
+                    $args = array(
+                        'post_type' => $post['_type'],
+                        'numberposts' => -1,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => $post['taxonomy'],
+                                'field' => 'term_id',
+                                'terms' => $model,
+                            ),
                         ),
-                    ),
-                );
-                $posts = get_posts($args);
+                    );
+                    $posts = get_posts($args);
 
-                ?>
-                <div class="listings--posts--holder" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
-                    <div class="row g-4">
-                        <?php foreach ($posts as $post) { ?>
-                            <div class="col-lg-3">
-                                <div class="listings--posts--grid bg-white p-4">
-                                    <h3 class="fs-24"><?= $post->post_title ?></h3>
-                                    <div class="image-box image-style">
-                                        <?= get_the_post_thumbnail($post->ID, 'medium') ?>
+                    ?>
+                    <div class="listings--posts--holder" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                        <div class="row g-4">
+                            <?php foreach ($posts as $post) { ?>
+                                <div class="col-lg-3">
+                                    <div class="listings--posts--grid bg-white p-4">
+                                        <h3 class="fs-24"><?= $post->post_title ?></h3>
+                                        <div class="image-box image-style">
+                                            <?= get_the_post_thumbnail($post->ID, 'medium') ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             <?php } ?>
-        <?php } ?>
+        </div>
     </div>
 <?php
     });
