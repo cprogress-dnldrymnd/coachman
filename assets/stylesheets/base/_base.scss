@@ -298,9 +298,9 @@ img {
             border-top: none;
             border-left: none;
             border-right: none;
-            border-bottom: none;
+            border-bottom-color: var(--bs-black);
             @include on-event {
-                border-bottom: 1px solid;
+                border-bottom-color: var(--bs-white);
             }
         }
     }
