@@ -208,9 +208,7 @@ Block::make(__('Swiper'))
 
 Block::make(__('Swiper Wrapper'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swipper Wrapper</div>")->set_width(50),
-        Field::make('text', 'tab_item_id', __(''))->set_width(50)->set_classes('crb-field-style-1')
-            ->set_attribute('placeholder', 'Tab Item ID')
+        Field::make('html', 'html_1')->set_html("<div $style>Swipper Wrapper</div>"),
     ))
     ->set_parent('carbon-fields/swiper')
     ->set_inner_blocks(true)
