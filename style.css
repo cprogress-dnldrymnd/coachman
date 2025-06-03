@@ -11408,7 +11408,7 @@ img {
 .sticky-element {
   position: sticky;
   position: -webkit-sticky;
-  top: 0; }
+  top: var(--admin-bar-height, 0px); }
 
 .swiper-button.swiper-button {
   --swiper-navigation-size: 20px;
@@ -11834,6 +11834,9 @@ img {
   background-size: cover;
   background-position: center;
   opacity: 1; }
+
+.overflow-unset {
+  overflow: unset !important; }
 
 body {
   font-family: "pennypacker-semiwide", sans-serif;
