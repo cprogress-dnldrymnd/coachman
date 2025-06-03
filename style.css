@@ -11330,7 +11330,8 @@ img {
   height: 100%; }
 
 .title-box img {
-  height: 18px; }
+  height: 18px;
+  width: auto; }
 
 @media (min-width: 1500px) {
   .container {
