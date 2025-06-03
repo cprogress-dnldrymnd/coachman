@@ -57,7 +57,12 @@ function fancybox() {
 }
 
 function swiper_sliders() {
-    var swiper = new Swiper(".swiper-slider-block", {
+    var swiper_on_mobile = new Swiper('.swiper-nav-tabs-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        freeMode: true,
+    });
+    var swiper_slider_block = new Swiper(".swiper-slider-block", {
         breakpoints: {
             slidesPerView: 1,
             spaceBetween: 40,
@@ -66,7 +71,7 @@ function swiper_sliders() {
             el: ".swiper-pagination",
         },
     });
-    var swiper = new Swiper(".swiper-listings-taxonomy", {
+    var swiper_listing_taxonomy = new Swiper(".swiper-listings-taxonomy", {
         slidesPerView: 'auto',
         spaceBetween: 40,
 
