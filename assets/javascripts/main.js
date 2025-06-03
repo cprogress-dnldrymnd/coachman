@@ -26,6 +26,14 @@ function listings() {
         jQuery(this).css('--height', $height + 'px');
 
     });
+
+    jQuery('.listings--inner--js').click(function (e) {
+        jQuery(this).addClass('active');
+        $target = jQuery(this).attr('listing-target');
+        jQuery($target).addClass
+        e.preventDefault();
+
+    });
 }
 function search_stock() {
     jQuery('.edit-stock-filter').click(function (e) {
