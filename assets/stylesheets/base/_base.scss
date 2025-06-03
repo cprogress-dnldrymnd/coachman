@@ -557,8 +557,14 @@ span.icons {
         }
     }
 }
-.wp-block-button {
+.wp-block-button.wp-block-button {
     font-size: 15px;
+    &.is-style-outline {
+        .wp-block-button__link {
+            border-width: 1px;
+            padding: 16px 25px;
+        }
+    }
 }
 .wp-block-button__link.wp-block-button__link {
     font-size: inherit;

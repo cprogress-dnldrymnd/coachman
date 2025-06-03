@@ -11469,8 +11469,10 @@ span.icons {
   .swiper-mobile-style .swiper-slide {
     width: 85% !important; } }
 
-.wp-block-button {
+.wp-block-button.wp-block-button {
   font-size: 15px; }
+  .wp-block-button.wp-block-button.is-style-outline .wp-block-button__link {
+    border-width: 1px; }
 
 .wp-block-button__link.wp-block-button__link {
   font-size: inherit;
