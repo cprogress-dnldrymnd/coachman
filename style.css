@@ -11097,6 +11097,7 @@ img {
   --bs-nav-tabs-link-active-color: var(--bs-white);
   border: none; }
   .nav-tabs .nav-link {
+    font-weight: 600;
     padding: 10px 23px;
     border: 1px solid var(--bs-black);
     background-color: var(--bs-white);
