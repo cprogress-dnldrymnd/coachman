@@ -369,7 +369,6 @@ Block::make(__('Caravan/Motohomes Models'))
                 );
                 $posts = get_posts($args);
 
-                var_dump($args);
                 ?>
                 <div class="listings--posts--inner" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                     <?php
