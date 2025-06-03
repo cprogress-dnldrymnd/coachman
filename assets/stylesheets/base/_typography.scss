@@ -17,6 +17,7 @@ body {
     color: var(--black-color);
 }
 p {
+    font-weight: 300;
     @include responsive(mobile) {
         line-height: 1.1;
     }
