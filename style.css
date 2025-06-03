@@ -11828,6 +11828,9 @@ span.icons {
   .wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important; } }
 
+.border-left-white {
+  border-left: 1px solid var(--bs-white); }
+
 body {
   font-family: "Pennypacker", sans-serif;
   color: var(--text-color);
@@ -11922,10 +11925,10 @@ h3, .h3,
       font-size: 25px; } }
 
 h4, .h4 {
-  font-size: 1.25rem; }
+  font-size: 25px; }
 
 h5, .h5 {
-  font-size: 1.15rem; }
+  font-size: 20px; }
 
 .font-sm {
   font-size: 1rem; }
