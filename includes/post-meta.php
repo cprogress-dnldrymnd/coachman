@@ -353,7 +353,8 @@ Block::make(__('Caravan/Motohomes Models'))
                 <?php } ?>
             </div>
         </div>
-    <?php
+    </div>
+<?php
     });
 
 Container::make('term_meta', __('Model Properties'))
