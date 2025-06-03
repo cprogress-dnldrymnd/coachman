@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
     swiper_sliders();
     //fancybox();
-    // mega_menu();
+    mega_menu();
     // search_stock();
     listings();
     read_more();
@@ -55,11 +55,6 @@ function mega_menu() {
         jQuery('body').css('--admin-bar-height', $admin_bar + 'px');
 
     }
-    jQuery('.has-custom-submenu').hover(function () {
-        jQuery('body').addClass('mega-menu-active');
-    }, function () {
-        jQuery('body').removeClass('mega-menu-active');
-    });
 }
 
 function fancybox() {
