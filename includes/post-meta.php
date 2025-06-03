@@ -462,7 +462,7 @@ Container::make('term_meta', __('Model Properties'))
     ->add_fields(array(
         Field::make('image', 'logo', __('Logo')),
         Field::make('image', 'image', __('Image')),
-        Field::make('association', 'Page', __('Page'))
+        Field::make('association', 'page', __('Page'))
             ->set_types(array(
                 array(
                     'type'      => 'post',
