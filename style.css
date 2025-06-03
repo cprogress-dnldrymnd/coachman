@@ -11642,6 +11642,13 @@ img {
 .h-100vh {
   height: 100vh; }
 
+.bg-overlay-1 .wp-block-cover__background {
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="922" viewBox="0 0 1920 922"><defs><radialGradient id="radial-gradient" cx="0.307" cy="0.14" r="0.702" gradientUnits="objectBoundingBox"><stop offset="0" stop-opacity="0"/><stop offset="1"/></radialGradient></defs><rect id="Acadia-location-006-1024x666" width="1920" height="922" opacity="0.15" fill="url(%23radial-gradient)" style="mix-blend-mode: overlay;isolation: isolate"/></svg>');
+  background-size: cover;
+  background-position: center;
+  opacity: 1; }
+
 body {
   font-family: "Pennypacker", sans-serif;
   color: var(--text-color);
