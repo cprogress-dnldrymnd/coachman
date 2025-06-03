@@ -224,7 +224,6 @@ Block::make(__('Swiper Wrapper'))
     </div>
 
 <?php
-
     });
 Block::make(__('Swiper Pagination'))
     ->add_fields(array(
