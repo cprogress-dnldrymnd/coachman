@@ -376,7 +376,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             $posts_listings = get_posts($args);
                             ?>
                             <div class="<?= $class3 ?> ">
-                                <div class="listings--inner h-100 p-4 listings--inner--js" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                                <div class="listings--inner h-100 p-4 listings--inner--js <?= $fields['display_model_layouts'] ? 'has-model-layout' : '' ?>" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                                     <?php if ($page) { ?>
                                         <a href="<?= get_the_permalink($page[0]['id']) ?>" class="listing--model-link"></a>
                                     <?php } ?>
