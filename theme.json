@@ -168,79 +168,9 @@
 					"slug": "white-theme"
 				},
 				{
-					"color": "#ff681e",
-					"name": "Orange 1",
-					"slug": "orange-color"
-				},
-				{
-					"color": "#FF980E",
-					"name": "Orange 2",
-					"slug": "orange-color-2"
-				},
-				{
-					"color": "#FF5251",
-					"name": "Orange 3",
-					"slug": "orange-color-3"
-				},
-				{
-					"color": "#45c324",
-					"name": "Green",
-					"slug": "green"
-				},
-				{
-					"color": "#FFC831",
-					"name": "Yellow",
-					"slug": "yellow"
-				},
-				{
-					"color": "#009BA5",
-					"name": "Teal",
-					"slug": "teal"
-				},
-				{
-					"color": "#00BCE2",
-					"name": "Blue",
-					"slug": "blue"
-				},
-				{
-					"color": "#505050",
-					"name": "Dark",
-					"slug": "dark"
-				},
-				{
-					"color": "#CCCCCC",
-					"name": "Gray",
-					"slug": "gray"
-				},
-				{
-					"color": "#f5f5f5",
-					"name": "Lightgray 1",
-					"slug": "lightgray-1"
-				},
-				{
-					"color": "#F2F2F2",
-					"name": "Lightgray 2",
-					"slug": "lightgray-2"
-				},
-				{
-					"color": "#f5f5f5",
-					"name": "Lightgray 3",
-					"slug": "lightgray-3"
-				},
-				{
-					"color": "#F6F6F6",
-					"name": "Lightgray 4",
-					"slug": "lightgray-4"
-				},
-				{
-					"color": "#CC0909",
-					"name": "Red",
-					"slug": "red"
-				},
-				{
-					"name": "Black",
-					"slug": "black",
-					"color": "#000000"
+					"color": "#9C1B2A",
+					"name": "Maroon",
+					"slug": "maroon"
 				}
 			]
 		},
