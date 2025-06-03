@@ -330,9 +330,13 @@ Block::make(__('Caravan/Motohomes Models'))
                 $models = $post['model'];
                 ?>
                 <?php foreach ($models as $model) { ?>
+                    <?php
+                    $logo = get__term_meta($model, 'logo', true);
+                    $logo = get__term_meta($model, 'image', true);
+                    ?>
                     <div class="col-lg-4">
                         <div class="listings--inner">
-
+                            
                         </div>
                     </div>
                 <?php } ?>
@@ -343,6 +347,7 @@ Block::make(__('Caravan/Motohomes Models'))
 
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
+    ->or_where('term_taxonomy', '=', 'motorhome_model')
     ->add_fields(array(
         Field::make('image', 'logo', __('Logo')),
         Field::make('image', 'image', __('Image')),
