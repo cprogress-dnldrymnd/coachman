@@ -12126,6 +12126,13 @@ h5, .h5 {
     .listings-style-1 .swiper-listings-taxonomy .swiper-slide .image-box img {
       object-fit: contain; }
 
+.listings--posts {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 0; }
+
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
 /*-----------------------------------------------------------------------------------*/
