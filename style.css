@@ -11076,6 +11076,9 @@ button.swiper-pagination-bullet {
 body {
   --admin-bar-height: 0px; }
 
+#main {
+  margin-top: var(--header-height, 107.45px); }
+
 img {
   height: auto; }
 
