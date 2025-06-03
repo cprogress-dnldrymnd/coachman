@@ -25,12 +25,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <header id="masthead" class="site-header" role="banner">
+        <?php
+        echo do_shortcode('[template template_id=98]');
+        ?>
+    </header>
     <main id="main" class="main-content" role="main">
-        <header id="masthead" class="site-header" role="banner">
-            <?php
-            echo do_shortcode('[template template_id=98]');
-            ?>
-        </header>
+
         <?php
         echo do_shortcode('[template template_id=1735]');
         ?>
