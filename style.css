@@ -11836,7 +11836,8 @@ img {
   opacity: 1; }
 
 .overflow-unset {
-  overflow: unset !important; }
+  overflow: unset !important;
+  z-index: 9999; }
 
 body {
   font-family: "pennypacker-semiwide", sans-serif;
