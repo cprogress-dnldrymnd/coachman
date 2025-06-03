@@ -106,11 +106,8 @@ Block::make(__('Tabs Navigation'))
         Field::make('select', 'direction', __('Direction'))
             ->set_options(array(
                 '' => 'Default',
-                'horizontal' => 'Horizontal',
-                'vertical' => 'Vertical',
-                '4' => '4',
-                '5' => '5',
-                '6' => '6',
+                'flex-row' => 'Horizontal',
+                'flex-column' => 'Vertical',
             )),
     ))
     ->set_inner_blocks(true)
@@ -127,10 +124,10 @@ Block::make(__('Tabs Navigation'))
             $class2 = 'swiper-wrapper nav nav-tabs';
         } else {
             $class1 = 'nav-tabs-holder';
-            $class2 = 'nav nav-tabs';
+            $class2 = 'nav nav-tabs gap-1';
         }
         ?>
-        <div class="<?= $class1 ?> overflow-visible sm-margin-bottom">
+        <div class="<?= $class1 ?> <?= $fields['direction'] ?> overflow-visible sm-margin-bottom">
             <ul class="<?= $class2 ?> swiper-wrapper nav nav-tabs" id="<?= $fields['tab_id'] ?>" role="tablist">
                 <?= $inner_blocks ?>
             </ul>
