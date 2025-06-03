@@ -11910,6 +11910,14 @@ h5, .h5 {
   .listings--posts.active {
     display: block; }
 
+.cover-style-1 .wp-block-cover__inner-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: var(--md-spacing);
+  padding-bottom: var(--md-spacing); }
+
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
 /*-----------------------------------------------------------------------------------*/
