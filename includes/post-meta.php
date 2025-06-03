@@ -333,7 +333,7 @@ Block::make(__('Caravan/Motohomes Models'))
                         $image = get__term_meta($model, 'image', true);
                         ?>
                         <div class="swiper-slide">
-                            <div class="listings--inner" listing-target="listings--posts-<?= $model ?>=  ?>">
+                            <div class="listings--inner" listing-target="listings--posts-<?= $model ?>">
                                 <?php if ($logo) { ?>
                                     <div class="logo-box">
                                         <?= wp_get_attachment_image($logo, 'medium') ?>
@@ -367,11 +367,11 @@ Block::make(__('Caravan/Motohomes Models'))
                     ),
                 ));
                 ?>
-                <div class="listings--posts--inner" id="listings--posts-<?= $model ?>=  ?>">
+                <div class="listings--posts--inner" id="listings--posts-<?= $model ?>">
                     <?php
-                        foreach($posts as $post) {
-                            echo $post->post_title;
-                        }
+                    foreach ($posts as $post) {
+                        echo $post->post_title;
+                    }
                     ?>
                 </div>
             <?php } ?>
