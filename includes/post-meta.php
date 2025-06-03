@@ -356,7 +356,7 @@ Block::make(__('Caravan/Motohomes Models'))
             </div>
         </div>
     </div>
-    <div class="listings--posts bg-lightgray-2">
+    <div class="listings--posts bg-lightgray-2 py-5">
         <div class="container">
             <?php foreach ($fields['posts'] as $key => $post) { ?>
                 <?php foreach ($post['model'] as $model) { ?>
