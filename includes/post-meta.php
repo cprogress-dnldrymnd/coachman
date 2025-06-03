@@ -330,8 +330,8 @@ Block::make(__('Caravan/Motohomes Models'))
             <div class="swiper swiper-listings-taxonomy">
                 <div class="swiper-wrapper">
 
-                    <?php foreach ($fields['posts'] as $key => $post) { ?>
-                        <?php foreach ($post['model'] as $model) { ?>
+                    <?php foreach ($fields['posts'] as $post) { ?>
+                        <?php foreach ($post['model'] as $key => $model) { ?>
                             <?php
                             $logo = get__term_meta($model, 'logo', true);
                             $image = get__term_meta($model, 'image', true);
@@ -376,7 +376,7 @@ Block::make(__('Caravan/Motohomes Models'))
     </div>
 
     <?php foreach ($fields['posts'] as $key => $post) { ?>
-        <?php foreach ($post['model'] as $model) { ?>
+        <?php foreach ($post['model'] as $key => $model) { ?>
             <?php
                 $args = array(
                     'post_type' => $post['_type'],
