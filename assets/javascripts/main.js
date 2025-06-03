@@ -32,7 +32,7 @@ function listings() {
         jQuery('.listings--posts').removeClass('active');
         jQuery(this).toggleClass('active');
         $target = jQuery(this).attr('listing-target');
-        jQuery($target).toggleClass('active');
+        jQuery($target).toggle('active');
         e.preventDefault();
 
     });
