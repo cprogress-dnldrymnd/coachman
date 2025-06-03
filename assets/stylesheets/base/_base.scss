@@ -410,6 +410,15 @@ span.icons {
             background-size: 15px;
         }
     }
+    &.offcanvas-start {
+        .btn-close.btn-close {
+            right: 0;
+            left: auto;
+            @include responsive(xs-sm) {
+                transform: translateX(120%);
+            }
+        }
+    }
     &.offcanvas-visible-desktop {
         @include responsive(md-lg) {
             max-width: 100%;

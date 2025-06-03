@@ -11383,6 +11383,12 @@ span.icons {
         padding: 10px;
         transform: translateX(-120%);
         background-size: 15px; } }
+  .offcanvas.offcanvas.offcanvas-start .btn-close.btn-close {
+    right: 0;
+    left: auto; }
+    @media screen and (max-width: 991px) {
+      .offcanvas.offcanvas.offcanvas-start .btn-close.btn-close {
+        transform: translateX(-120%); } }
   @media screen and (min-width: 992px) {
     .offcanvas.offcanvas.offcanvas-visible-desktop {
       max-width: 100%;
