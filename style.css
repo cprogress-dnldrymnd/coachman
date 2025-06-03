@@ -11682,11 +11682,11 @@ span.icons {
 .lg-margin-bottom {
   margin-bottom: var(--lg-spacing); }
 
-.lg-margin-top {
-  margin-top: var(--lg-spacing); }
+.xl-margin-top {
+  margin-top: var(--xl-spacing); }
 
-.lg-margin-bottom {
-  margin-bottom: var(--lg-spacing); }
+.xl-margin-bottom {
+  margin-bottom: var(--xl-spacing); }
 
 @media screen and (max-width: 767px) {
   .md-padding-mobile {
