@@ -4,7 +4,12 @@ body {
 img {
     height: auto;
 }
-
+.form-control {
+    border-radius: 0;
+    padding: 20px;
+    font-size: 15px;
+    border-color: var(--dark);
+}
 .nav-tabs {
     --bs-nav-link-font-size: inherit;
     --bs-nav-link-color: var(--bs-black);
@@ -559,30 +564,6 @@ span.icons {
     padding: 18px 25px;
 }
 
-.btn-with-icon {
-    display: inline-flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    svg {
-        height: 14px;
-        width: auto;
-    }
-}
-
-.svg-box {
-    svg {
-        width: var(--svg-width, 50px);
-        height: var(--svg-height, 50px);
-    }
-}
-
-.video-gallery-box {
-    iframe {
-        width: 100%;
-    }
-}
-
 .wp-block-embed__wrapper {
     position: relative;
     padding: 28.1% 0;
@@ -599,62 +580,5 @@ span.icons {
 .h-100 {
     .wp-block-embed__wrapper {
         height: 100%;
-    }
-}
-
-.checklist.checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        @include before {
-            content: "";
-            width: 16px;
-            height: 9px;
-            border-left: 2px solid var(--orange-color);
-            border-bottom: 2px solid var(--orange-color);
-            margin-top: -2px;
-            display: inline-block;
-            @include transform(rotate(-45deg));
-        }
-    }
-}
-
-.table-style-1.table-style-1 {
-    max-width: 1000px;
-    table {
-        th {
-            border-top: none !important;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            @include responsive(md-lg) {
-                font-size: 32px;
-            }
-        }
-        thead {
-            border-color: #dddddd;
-        }
-        th,
-        td {
-            border-left: none;
-            border-right: none;
-            border-color: #dddddd;
-            padding: 15px 10px;
-        }
-    }
-}
-
-.listing-grid-item__button {
-    .btn {
-        @include responsive(md-lg) {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
     }
 }

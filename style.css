@@ -11043,6 +11043,7 @@ button.swiper-pagination-bullet {
   to {
     transform: rotate(360deg); } }
 :root {
+  --dark: #1c272e;
   --maroon: #841d26;
   --bs-border-radius: 5px;
   --bs-border-color: #cdcdcd; }
@@ -11077,6 +11078,12 @@ body {
 
 img {
   height: auto; }
+
+.form-control {
+  border-radius: 0;
+  padding: 20px;
+  font-size: 15px;
+  border-color: #1C272E; }
 
 .nav-tabs {
   --bs-nav-link-font-size: inherit;
@@ -11468,22 +11475,6 @@ span.icons {
   font-size: inherit;
   padding: 18px 25px; }
 
-.btn-with-icon {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center; }
-  .btn-with-icon svg {
-    height: 14px;
-    width: auto; }
-
-.svg-box svg {
-  width: var(--svg-width, 50px);
-  height: var(--svg-height, 50px); }
-
-.video-gallery-box iframe {
-  width: 100%; }
-
 .wp-block-embed__wrapper {
   position: relative;
   padding: 28.1% 0; }
@@ -11498,54 +11489,6 @@ span.icons {
 
 .h-100 .wp-block-embed__wrapper {
   height: 100%; }
-
-.checklist.checklist {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-  .checklist.checklist li {
-    display: flex;
-    align-items: center;
-    gap: 10px; }
-    .checklist.checklist li:before {
-      content: "";
-      width: 16px;
-      height: 9px;
-      border-left: 2px solid var(--orange-color);
-      border-bottom: 2px solid var(--orange-color);
-      margin-top: -2px;
-      display: inline-block;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
-
-.table-style-1.table-style-1 {
-  max-width: 1000px; }
-  .table-style-1.table-style-1 table th {
-    border-top: none !important;
-    padding-top: 25px;
-    padding-bottom: 25px; }
-    @media screen and (min-width: 992px) {
-      .table-style-1.table-style-1 table th {
-        font-size: 32px; } }
-  .table-style-1.table-style-1 table thead {
-    border-color: #dddddd; }
-  .table-style-1.table-style-1 table th,
-  .table-style-1.table-style-1 table td {
-    border-left: none;
-    border-right: none;
-    border-color: #dddddd;
-    padding: 15px 10px; }
-
-@media screen and (min-width: 992px) {
-  .listing-grid-item__button .btn {
-    padding-left: 10px;
-    padding-right: 10px; } }
 
 @media (min-width: 1500px) {
   .container {
