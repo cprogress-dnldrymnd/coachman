@@ -1,0 +1,126 @@
+body {
+    font-family: "Pennypacker", sans-serif;
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.2;
+    @include responsive(xs-sm) {
+        font-size: 18px;
+    }
+    @include responsive(xs) {
+        font-size: 16px;
+    }
+}
+
+@include headings {
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--black-color);
+}
+p {
+    @include responsive(mobile) {
+        line-height: 1.1;
+    }
+}
+p:last-child {
+    margin-bottom: 0 !important;
+}
+a {
+    color: var(--orange-color);
+    @include on-event {
+        color: var(--accent-color);
+    }
+}
+
+h1 {
+    font-size: 4.25rem;
+    @include responsive(xs-sm) {
+        font-size: 3.5rem;
+    }
+    @include responsive(xs) {
+        font-size: 3rem;
+    }
+    @include responsive(mobile) {
+        font-size: 2.5rem;
+    }
+}
+h2,
+.h2 {
+    font-size: 59px;
+    @include responsive(xs-md) {
+        font-size: 50px;
+    }
+    @include responsive(xs-sm) {
+        font-size: 40px;
+    }
+    @include responsive(xs) {
+        font-size: 30px;
+    }
+    @include responsive(mobile) {
+        font-size: 24px;
+    }
+}
+h3,
+.h3 {
+    font-size: 37px;
+    @include responsive(xs-md) {
+        font-size: 32px;
+    }
+    @include responsive(xs-sm) {
+        font-size: 30px;
+    }
+    @include responsive(xs) {
+        font-size: 27px;
+    }
+    @include responsive(mobile) {
+        font-size: 25px;
+    }
+}
+h4 {
+    font-size: 1.25rem;
+}
+h5 {
+    font-size: 1.15rem;
+}
+
+.font-sm {
+    font-size: 1rem;
+}
+.fs-35 {
+    font-size: 35px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+.fs-25 {
+    font-size: 25;
+}
+.fs-24 {
+    font-size: 24px;
+}
+.fs-23 {
+    font-size: 23px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-14 {
+    font-size: 14px;
+}
+.fs-13 {
+    font-size: 13px;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.fs-7 {
+    font-size: 7px;
+}
+@include responsive(mobile) {
+    .fs-14-mobile {
+        font-size: 14px;
+    }
+}
