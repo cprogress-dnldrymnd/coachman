@@ -324,32 +324,34 @@ Block::make(__('Caravan/Motohomes Models'))
 ?>
 
     <div class="listings listings-style-1">
-        <div class="row g-4">
-            <?php foreach ($fields['posts'] as $post) { ?>
-                <?php
-                $models = $post['model'];
-                ?>
-                <?php foreach ($models as $model) { ?>
+        <div class="swiper swiper-listings-taxonomy">
+            <div class="swiper-wrapper">
+                <?php foreach ($fields['posts'] as $post) { ?>
                     <?php
-                    $logo = get__term_meta($model, 'logo', true);
-                    $image = get__term_meta($model, 'image', true);
+                    $models = $post['model'];
                     ?>
-                    <div class="col-lg-3">
-                        <div class="listings--inner">
-                            <?php if ($logo) { ?>
-                                <div class="logo-box">
-                                    <?= wp_get_attachment_image($logo, 'medium') ?>
-                                </div>
-                            <?php } ?>
-                            <?php if ($image) { ?>
-                                <div class="image-box image-style">
-                                    <?= wp_get_attachment_image($image, 'medium') ?>
-                                </div>
-                            <?php } ?>
+                    <?php foreach ($models as $model) { ?>
+                        <?php
+                        $logo = get__term_meta($model, 'logo', true);
+                        $image = get__term_meta($model, 'image', true);
+                        ?>
+                        <div class="swiper-slide">
+                            <div class="listings--inner">
+                                <?php if ($logo) { ?>
+                                    <div class="logo-box">
+                                        <?= wp_get_attachment_image($logo, 'medium') ?>
+                                    </div>
+                                <?php } ?>
+                                <?php if ($image) { ?>
+                                    <div class="image-box image-style">
+                                        <?= wp_get_attachment_image($image, 'medium') ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
+            </div>
         </div>
     <?php
     });
