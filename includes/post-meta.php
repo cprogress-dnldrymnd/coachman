@@ -251,11 +251,6 @@ Block::make(__('Swiper Wrapper'))
 Block::make(__('Swiper Pagination'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>-Swipper Pagination</div>"),
-        Field::make('select', 'header_style', __('Header Style'))
-            ->set_options(array(
-                'header-default' => 'Default',
-                'header-transparent' => 'Transparent',
-            )),
     ))
     ->set_parent('carbon-fields/swiper')
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
@@ -467,4 +462,12 @@ Container::make('term_meta', __('Model Properties'))
     ->add_fields(array(
         Field::make('image', 'logo', __('Logo')),
         Field::make('image', 'image', __('Image')),
+        Field::make('association', 'Page', __('Page'))
+            ->set_types(array(
+                array(
+                    'type'      => 'post',
+                    'post_type' => 'page',
+                )
+            ))
+            ->set_max(1)
     ));
