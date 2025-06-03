@@ -4,6 +4,7 @@
         bottom: 50px;
         left: 0;
         right: 0;
+        z-index: 1;
         .swiper-pagination {
             display: flex;
             gap: 40px;
@@ -14,7 +15,10 @@
             --swiper-pagination-bullet-inactive-color: var(--bs-white);
             --swiper-pagination-bullet-inactive-opacity: 0.25;
             --swiper-pagination-bullet-opacity: 1;
-            --swiper-pagination-color: var(--maroon) .swiper-pagination-bullet {flex: 1 0 0%;};
+            --swiper-pagination-color: var(--maroon);
+            .swiper-pagination-bullet {
+                flex: 1 0 0%;
+            }
         }
     }
 }
