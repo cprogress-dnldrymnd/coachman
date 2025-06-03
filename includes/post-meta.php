@@ -359,7 +359,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             <?php
                             $logo = get__term_meta($model, 'logo', true);
                             $image = get__term_meta($model, 'image', true);
-                            $page = carbon_get_post_meta($model, 'page');
+                            $page = carbon_get_term_meta($model, 'page');
 
 
                             $args = array(
