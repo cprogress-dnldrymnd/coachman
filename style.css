@@ -11043,21 +11043,7 @@ button.swiper-pagination-bullet {
   to {
     transform: rotate(360deg); } }
 :root {
-  --orange-color: #ff681e;
-  --orange-color-2: #ff980e;
-  --orange-color-3: #ff5251;
-  --green-color: #45c324;
-  --yellow-color: #ffc831;
-  --teal-color: #009ba5;
-  --blue-color: #00bce2;
-  --text-color: #202020;
-  --dark-color: #505050;
-  --gray-color: #cccccc;
-  --red-color: #cc0909;
-  --lightgray-color: #f5f5f5;
-  --lightgray-color-2: #f2f2f2;
-  --lightgray-color-3: #f9f9f9;
-  --lightgray-color-4: #f6f6f6;
+  --maroon: #841d26;
   --bs-border-radius: 5px;
   --bs-border-color: #cdcdcd; }
 
@@ -12509,6 +12495,21 @@ h5, .h5 {
 
 .delear-details .logo-box img {
   max-width: 140px; }
+
+.swiper-slider-holder .swiper-pagination {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  --swiper-pagination-bottom: 50px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-border-radius: 0;
+  --swiper-pagination-bullet-inactive-color: var(--bs-white);
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-color: var(--maroon)
+  .swiper-pagination-bullet {
+      flex: 1 0 0%;
+  } ; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins

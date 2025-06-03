@@ -1,12 +1,17 @@
 .swiper-slider-holder {
-    .swiper {
-        .swiper-wrapper {
-            .swiper-slide {
-              
-            }
-        }
-    }
     .swiper-pagination {
-      
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        --swiper-pagination-bottom: 50px;
+        --swiper-pagination-bullet-height: 4px;
+        --swiper-pagination-bullet-border-radius: 0;
+        --swiper-pagination-bullet-inactive-color: var(--bs-white);
+        --swiper-pagination-bullet-inactive-opacity: 0.25;
+        --swiper-pagination-bullet-opacity: 1;
+        --swiper-pagination-color: var(--maroon)
+        .swiper-pagination-bullet {
+            flex: 1 0 0%;
+        }
     }
 }
