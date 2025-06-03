@@ -427,7 +427,7 @@ Block::make(__('Caravan/Motohomes Models'))
                         <?php foreach ($posts_listings as $posts_listing) { ?>
                             <div class="col-lg-3">
                                 <div class="listings--posts--grid bg-white p-4">
-                                    <h3 class="fs-24"><?= $posts_listing->post_title ?></h3>
+                                    <h3 class="fs-24"><?= __listing_title($posts_listing->post_title, $model) ?></h3>
                                     <div class="image-box image-style" style="--fit: contain">
                                         <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                     </div>

@@ -335,3 +335,18 @@ function listing__key_information_v2()
 <?php
     return ob_get_clean();
 }
+
+
+//**/newww */
+function __listing_title($title, $term_id)
+{
+    ob_start();
+    $logo = get__term_meta($term_id, 'logo', true);
+?>
+    <div class="title-box d-flex gap-3 align-items-center">
+        <?= wp_get_attachment_image($logo, 'medium') ?>
+        <?= $title ?>
+    </div>
+<?php
+    return ob_get_clean();
+}
