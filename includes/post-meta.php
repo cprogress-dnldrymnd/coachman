@@ -190,6 +190,14 @@ Block::make(__('Tabs Content Item'))
 Block::make(__('Swiper'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>"),
+        Field::make('complex', 'swiper_options')
+            ->add_fields('autoplay', array(
+                Field::make('text', 'delay', __('delay'))->set_attribute('type', 'number'),
+                Field::make('checkbox', 'disableoninteraction', __('disableOnInteraction')),
+            ))
+            ->add_fields('spaceBetween', array(
+                Field::make('text', 'spacebetween', __('spaceBetween'))->set_attribute('type', 'number'),
+            ))
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
