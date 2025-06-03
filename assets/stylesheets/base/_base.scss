@@ -177,7 +177,7 @@ img {
 .sticky-element {
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: var(--admin-bar-height, 0px);
 }
 
 .swiper-button.swiper-button {
