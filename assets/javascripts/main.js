@@ -23,7 +23,7 @@ function listings() {
 
     jQuery('.listings--posts > div').each(function (index, element) {
         $height = jQuery(this).outerHeight();
-        jQuery(this).css('--height', $height + 'px');
+        jQuery(this).parent().css('--height', $height + 'px');
 
     });
 
