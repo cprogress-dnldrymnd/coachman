@@ -251,6 +251,11 @@ Block::make(__('Swiper Wrapper'))
 Block::make(__('Swiper Pagination'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>-Swipper Pagination</div>"),
+        Field::make('select', 'header_style', __('Header Style'))
+            ->set_options(array(
+                'header-default' => 'Default',
+                'header-transparent' => 'Transparent',
+            )),
     ))
     ->set_parent('carbon-fields/swiper')
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
