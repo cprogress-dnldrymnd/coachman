@@ -11914,9 +11914,9 @@ h5, .h5 {
   z-index: 9999; }
 
 .menu-burger {
-  --burger-width: 37px;
-  --burger-height: 28px;
-  --bar-height: 4px;
+  --burger-width: 40px;
+  --burger-height: 25px;
+  --bar-height: 3px;
   border: none;
   background-color: transparent;
   padding: 0;
