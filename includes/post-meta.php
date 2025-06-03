@@ -266,3 +266,9 @@ Block::make(__('Swiper Slide'))
 
 <?php
     });
+
+Container::make('term_meta', __('Model Properties'))
+    ->where('term_taxonomy', '=', 'caravan_model')
+    ->add_fields(array(
+        Field::make('image', 'logo', __('Logo')),
+    ));

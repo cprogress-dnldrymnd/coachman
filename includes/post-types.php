@@ -202,16 +202,16 @@ $Caravans->has_archive = false;
 
 
 $Manufacturer = new newTaxonomy();
-$Manufacturer->taxonomy = 'caravan_models';
+$Manufacturer->taxonomy = 'caravan_model';
 $Manufacturer->post_type = 'caravan';
 $Manufacturer->args = array(
-    'label'        => 'Caravan Models',
+    'label'        => 'Caravan Model',
     'labels' => array(
-        'name'                       => _x('Caravan Models', 'Taxonomy General Name', 'text_domain'),
-        'singular_name'              => _x('Caravan Models', 'Taxonomy Singular Name', 'text_domain'),
-        'menu_name'                  => __('Caravan Models', 'text_domain'),
-        'all_items'                  => __('All Caravan Models', 'text_domain'),
-        'parent_item'                => __('Parent Caravan Models', 'text_domain'),
+        'name'                       => _x('Caravan Model', 'Taxonomy General Name', 'text_domain'),
+        'singular_name'              => _x('Caravan Model', 'Taxonomy Singular Name', 'text_domain'),
+        'menu_name'                  => __('Caravan Model', 'text_domain'),
+        'all_items'                  => __('All Caravan Model', 'text_domain'),
+        'parent_item'                => __('Parent Caravan Model', 'text_domain'),
         'parent_item_colon'          => __('Parent Item:', 'text_domain'),
         'new_item_name'              => __('New Item Name', 'text_domain'),
         'add_new_item'               => __('Add New Item', 'text_domain'),
@@ -219,12 +219,12 @@ $Manufacturer->args = array(
         'update_item'                => __('Update Item', 'text_domain'),
         'view_item'                  => __('View Item', 'text_domain'),
         'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
-        'add_or_remove_items'        => __('Add or remove Caravan Models', 'text_domain'),
+        'add_or_remove_items'        => __('Add or remove Caravan Model', 'text_domain'),
         'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
-        'popular_items'              => __('Popular Caravan Models', 'text_domain'),
-        'search_items'               => __('Search Caravan Models', 'text_domain'),
+        'popular_items'              => __('Popular Caravan Model', 'text_domain'),
+        'search_items'               => __('Search Caravan Model', 'text_domain'),
         'not_found'                  => __('Not Found', 'text_domain'),
-        'no_terms'                   => __('No Caravan Models', 'text_domain'),
+        'no_terms'                   => __('No Caravan Model', 'text_domain'),
         'items_list'                 => __('Items list', 'text_domain'),
         'items_list_navigation'      => __('Items list navigation', 'text_domain'),
     ),
@@ -233,40 +233,5 @@ $Manufacturer->args = array(
     'show_in_rest' => true,
     'rewrite'      => array(
         'slug'         => 'caravan-model',
-    )
-);
-
-$Listing_Category = new newTaxonomy();
-$Listing_Category->taxonomy = 'listing_category';
-$Listing_Category->post_type = 'caravan';
-$Listing_Category->args = array(
-    'label'        => 'Listing Categories',
-    'labels' => array(
-        'name'                       => _x('Listing Categories', 'Taxonomy General Name', 'text_domain'),
-        'singular_name'              => _x('Listing Category', 'Taxonomy Singular Name', 'text_domain'),
-        'menu_name'                  => __('Listing Category', 'text_domain'),
-        'all_items'                  => __('All Listing Category', 'text_domain'),
-        'parent_item'                => __('Parent Listing Category', 'text_domain'),
-        'parent_item_colon'          => __('Parent Item:', 'text_domain'),
-        'new_item_name'              => __('New Item Name', 'text_domain'),
-        'add_new_item'               => __('Add New Item', 'text_domain'),
-        'edit_item'                  => __('Edit Item', 'text_domain'),
-        'update_item'                => __('Update Item', 'text_domain'),
-        'view_item'                  => __('View Item', 'text_domain'),
-        'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
-        'add_or_remove_items'        => __('Add or remove Listing Category', 'text_domain'),
-        'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
-        'popular_items'              => __('Popular Listing Category', 'text_domain'),
-        'search_items'               => __('Search Listing Category', 'text_domain'),
-        'not_found'                  => __('Not Found', 'text_domain'),
-        'no_terms'                   => __('No Listing Category', 'text_domain'),
-        'items_list'                 => __('Items list', 'text_domain'),
-        'items_list_navigation'      => __('Items list navigation', 'text_domain'),
-    ),
-    'hierarchical' => true,
-    'query_var'    => true,
-    'show_in_rest' => true,
-    'rewrite'      => array(
-        'slug'         => 'listing-category',
     )
 );
