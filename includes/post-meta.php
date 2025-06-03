@@ -334,7 +334,7 @@ Block::make(__('Caravan/Motohomes Models'))
                     $logo = get__term_meta($model, 'logo', true);
                     $image = get__term_meta($model, 'image', true);
                     ?>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="listings--inner">
                             <?php if ($logo) { ?>
                                 <div class="logo-box">
