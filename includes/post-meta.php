@@ -326,6 +326,9 @@ Block::make(__('Caravan/Motohomes Models'))
     <div class="listings listings-style-1">
         <div class="swiper swiper-listings-taxonomy">
             <div class="swiper-wrapper">
+                <pre>
+                    <?php var_dump($fields['posts'] ) ?>
+                </pre>
                 <?php foreach ($fields['posts'] as $post) { ?>
                     <?php foreach ($post['model'] as $model) { ?>
                         <?php
