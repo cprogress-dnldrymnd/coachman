@@ -11249,10 +11249,6 @@ img {
   .offcanvas.offcanvas .offcanvas-body {
     background-color: var(--lightgray-color-4);
     padding: 50px 20px; }
-    .offcanvas.offcanvas .offcanvas-body .offcanvas-body--inner {
-      max-width: 740px;
-      margin-left: auto;
-      margin-right: auto; }
   .offcanvas.offcanvas .btn-close.btn-close {
     position: absolute;
     left: 0;
@@ -11634,6 +11630,9 @@ img {
 .border-left-white {
   border-left: 1px solid var(--bs-white); }
 
+.h-100vh {
+  height: 100vh; }
+
 body {
   font-family: "Pennypacker", sans-serif;
   color: var(--text-color);
@@ -11868,10 +11867,6 @@ h5, .h5 {
 
 .listings-style-1 .swiper-listings-taxonomy .swiper-slide {
   width: 280px; }
-  .listings-style-1 .swiper-listings-taxonomy .swiper-slide .image-box {
-    padding: 50% 0; }
-    .listings-style-1 .swiper-listings-taxonomy .swiper-slide .image-box img {
-      object-fit: contain; }
   .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner {
     cursor: pointer; }
     .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner.active {
