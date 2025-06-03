@@ -352,7 +352,7 @@ Block::make(__('Caravan/Motohomes Models'))
         } else {
             $class1 = 'listings-taxonomy-holder';
             $class2 = 'listings-taxonomy-wrapper row';
-            $class3 = 'col-lg-3';
+            $class3 = 'col-lg-12';
         }
 ?>
 
