@@ -326,11 +326,16 @@ Block::make(__('Caravan/Motohomes Models'))
     <div class="listings">
         <div class="row g-4">
             <?php foreach ($fields['posts'] as $post) { ?>
-                <div class="col-lg-4">
-                    <div class="listings--inner">
+                <?php
+                $models = $post['model'];
+                ?>
+                <?php foreach ($models as $model) { ?>
+                    <div class="col-lg-4">
+                        <div class="listings--inner">
 
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             <?php } ?>
         </div>
     <?php
