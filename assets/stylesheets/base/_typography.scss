@@ -2,7 +2,7 @@ body {
     font-family: "pennypacker-semiwide", sans-serif;
     color: var(--text-color);
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
     @include responsive(xs-sm) {
         font-size: 18px;
     }
