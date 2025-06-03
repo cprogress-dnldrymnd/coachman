@@ -8,9 +8,9 @@
         .menu-burger .bar {
             background-color: var(--bs-black);
         }
-    }
-    & + #main {
-        margin-top: 0;
+        & + #main {
+            margin-top: 0;
+        }
     }
 }
 .menu-burger {
