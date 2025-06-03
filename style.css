@@ -12290,7 +12290,8 @@ h5, .h5 {
   width: 280px; }
   .listings-style-1 .swiper-listings-taxonomy .swiper-slide .logo-box img {
     height: 18px;
-    object-fit: contain; }
+    object-fit: contain;
+    width: auto; }
   .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner {
     cursor: pointer; }
     .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner.active {
