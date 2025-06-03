@@ -109,6 +109,12 @@ Block::make(__('Tabs Navigation'))
                 'flex-row' => 'Horizontal',
                 'flex-column' => 'Vertical',
             )),
+        Field::make('select', 'style', __('Style'))
+            ->set_options(array(
+                '' => 'Default',
+                'style-1' => 'Style 1',
+                'style-2' => 'Style 2',
+            )),
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
