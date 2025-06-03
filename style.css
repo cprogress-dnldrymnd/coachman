@@ -12297,6 +12297,9 @@ h5, .h5 {
     right: 0;
     bottom: 0;
     z-index: 1; }
+  @media screen and (min-width: 992px) {
+    .listings--inner.has-model-layout .listing--model-link {
+      display: none; } }
 
 .listings-style-1 .swiper-listings-taxonomy .swiper-slide {
   width: 280px; }
@@ -12308,9 +12311,6 @@ h5, .h5 {
     cursor: pointer; }
     .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner.active {
       background-color: var(--lightgray-2); }
-    @media screen and (min-width: 992px) {
-      .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner.has-model-layout .listing--model-link {
-        display: none; } }
 
 .listings--posts {
   display: none;
