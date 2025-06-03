@@ -429,7 +429,7 @@ Block::make(__('Caravan/Motohomes Models'))
                                         <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                     </div>
                                     <div class="listing--features">
-                                        <ul class="d-flex flex-column gap-3 m-0 fs-14">
+                                        <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
                                             <?php if ($berths) { ?>
                                                 <li class="d-flex align-items-center justify-content-between py-2">
                                                     <span>Berths</span>
