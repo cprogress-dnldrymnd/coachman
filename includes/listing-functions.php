@@ -394,8 +394,8 @@ function __listing_title($title, $term_id)
 function __listing_features($post_id)
 {
     ob_start();
-    $berths = get__post_meta_by_id($post_id->ID, 'berths');
-    $length = get__post_meta_by_id($post_id->ID, 'length');
+    $berths = get__post_meta_by_id($post_id, 'berths');
+    $length = get__post_meta_by_id($post_id, 'length');
 ?>
     <div class="listing--features">
         <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
