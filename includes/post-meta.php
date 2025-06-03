@@ -126,14 +126,14 @@ Block::make(__('Tabs Navigation'))
     <div class="container">
         <?php
         if ($fields['is_swiper']) {
-            $class1 = 'swiper swiper-nav-tabs-swiper nav-tabs-swiper nav-tabs-swiper-js ';
+            $class1 = 'swiper swiper-nav-tabs-swiper nav-tabs-swiper';
             $class2 = 'swiper-wrapper nav nav-tabs';
         } else {
             $class1 = 'nav-tabs-holder';
             $class2 = 'nav nav-tabs gap-1';
         }
         ?>
-        <div class="<?= $class1 ?> overflow-visible sm-margin-bottom">
+        <div class="<?= $class1 ?> overflow-visible sm-margin-bottom nav-tabs-swiper-js">
             <ul class="<?= $class2 ?>  <?= $fields['direction'] ?> <?= $fields['style'] ?>" id="<?= $fields['tab_id'] ?>" role="tablist">
                 <?= $inner_blocks ?>
             </ul>
