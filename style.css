@@ -11083,7 +11083,8 @@ img {
   border-radius: 0;
   padding: 20px;
   font-size: 15px;
-  border-color: #1C272E; }
+  border-color: var(--dark);
+  line-height: 1; }
 
 .nav-tabs {
   --bs-nav-link-font-size: inherit;

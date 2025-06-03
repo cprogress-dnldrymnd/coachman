@@ -9,6 +9,7 @@ img {
     padding: 20px;
     font-size: 15px;
     border-color: var(--dark);
+    line-height: 1;
 }
 .nav-tabs {
     --bs-nav-link-font-size: inherit;
@@ -562,6 +563,7 @@ span.icons {
 .wp-block-button__link.wp-block-button__link {
     font-size: inherit;
     padding: 18px 25px;
+    font-size: 15px;
 }
 
 .wp-block-embed__wrapper {
