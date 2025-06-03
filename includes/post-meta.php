@@ -330,6 +330,7 @@ function get_taxonomy_terms_wpdb($taxonomy)
 Block::make(__('Caravan/Motohomes Models'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Caravan/Motohomes Models</div>"),
+        Field::make('checkbox', 'is_swiper', __('Is Swiper')),
         Field::make('complex', 'posts')
             ->add_fields('caravan', array(
                 Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_classes('hidden'),
@@ -343,12 +344,22 @@ Block::make(__('Caravan/Motohomes Models'))
             ))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+
+        if ($fields['is_swiper']) {
+            $class1 = 'swiper swiper-listings-taxonomy';
+            $class2 = 'swiper-wrapper';
+            $class3 = 'swiper-slide h-auto';
+        } else {
+            $class1 = 'listings-taxonomy-holder';
+            $class2 = 'listings-taxonomy-wrapper row';
+            $class3 = 'col-lg-3';
+        }
 ?>
 
     <div class="listings listings-style-1">
         <div class="container">
-            <div class="swiper swiper-listings-taxonomy">
-                <div class="swiper-wrapper">
+            <div class="<?= $class1 ?>">
+                <div class="<?= $class2 ?>">
 
                     <?php foreach ($fields['posts'] as $post) { ?>
                         <?php foreach ($post['model'] as $key => $model) { ?>
@@ -368,7 +379,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             );
                             $posts_listings = get_posts($args);
                             ?>
-                            <div class="swiper-slide h-auto">
+                            <div class="<?= $class3 ?> ">
                                 <div class="listings--inner h-100 p-4 listings--inner--js" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                                     <?php if ($logo) { ?>
                                         <div class="logo-box">
