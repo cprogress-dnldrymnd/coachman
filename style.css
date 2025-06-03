@@ -11116,51 +11116,13 @@ img {
     flex-wrap: nowrap; }
     .nav-tabs.swiper-wrapper .swiper-slide {
       width: auto; }
+  .nav-tabs.style-2 .nav-link {
+    border: none; }
+    .nav-tabs.style-2 .nav-link.active {
+      background-color: var(--lightgray-2); }
 
 img {
   max-width: 100%; }
-
-.list-inline-icons li a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: var(--black-color);
-  line-height: 1; }
-  .list-inline-icons li a svg {
-    width: 20px;
-    flex: 0 0 20px;
-    height: 20px;
-    margin-right: 10px; }
-.list-inline-icons li:not(:last-child) {
-  margin-right: 1rem; }
-
-.breadcrumbs-holder {
-  border-bottom: 1px solid var(--blue-color);
-  padding-bottom: 10px; }
-  .breadcrumbs-holder ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 18px;
-    align-items: center; }
-    .breadcrumbs-holder ul li {
-      display: flex;
-      align-items: center; }
-      .breadcrumbs-holder ul li span {
-        font-weight: bold; }
-      .breadcrumbs-holder ul li a {
-        color: var(--black-color); }
-      .breadcrumbs-holder ul li:not(:last-child)::after {
-        content: "";
-        display: inline-block;
-        height: 8px;
-        width: 8px;
-        border-top: 1px solid;
-        border-left: 1px solid;
-        transform: rotate(135deg);
-        margin-left: 10px;
-        margin-right: 10px; }
 
 .form-holder {
   font-size: 20px; }
@@ -11254,61 +11216,6 @@ img {
   position: -webkit-sticky;
   top: 0; }
 
-.accordion-style-1 .accordion {
-  padding: 20px;
-  background-color: var(--bs-white);
-  --bs-accordion-active-bg: transparent; }
-  .accordion-style-1 .accordion .accordion-item {
-    border-left: none;
-    border-right: none;
-    --bs-accordion-border-color: #ececec; }
-    .accordion-style-1 .accordion .accordion-item:first-child {
-      border-top: none; }
-    .accordion-style-1 .accordion .accordion-item:last-child {
-      border-bottom: none; }
-    .accordion-style-1 .accordion .accordion-item .accordion-body {
-      --bs-accordion-body-padding-x: 0; }
-.accordion-style-1 .accordion-button {
-  --bs-accordion-inner-border-radius: 0;
-  --bs-accordion-inner-border-radius: 0;
-  --bs-accordion-btn-padding-x: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  font-weight: bold;
-  font-size: 19px; }
-  .accordion-style-1 .accordion-button .accordion-button-inner {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-grow: 1;
-    justify-content: space-between; }
-    .accordion-style-1 .accordion-button .accordion-button-inner .icon-text {
-      display: flex;
-      align-items: center;
-      gap: 20px; }
-      @media screen and (max-width: 575px) {
-        .accordion-style-1 .accordion-button .accordion-button-inner .icon-text {
-          gap: 10px;
-          font-size: 15px; } }
-  .accordion-style-1 .accordion-button:after {
-    flex: 0 0 auto;
-    margin-left: 0; }
-  .accordion-style-1 .accordion-button .icon {
-    flex: 0 0 32px; }
-    .accordion-style-1 .accordion-button .icon img,
-    .accordion-style-1 .accordion-button .icon svg {
-      width: 32px;
-      height: 32px;
-      object-fit: contain; }
-      @media screen and (max-width: 575px) {
-        .accordion-style-1 .accordion-button .icon img,
-        .accordion-style-1 .accordion-button .icon svg {
-          font-size: 20px; } }
-.accordion-style-1 .form-control-holder label {
-  display: none; }
-
 .swiper-button.swiper-button {
   --swiper-navigation-size: 20px;
   width: 56px;
@@ -11326,33 +11233,6 @@ img {
       height: 36px; } }
   .swiper-button.swiper-button.swiper-button-lock {
     display: none !important; }
-
-.icon-list {
-  gap: 28px; }
-  .icon-list a {
-    color: inherit; }
-  .icon-list li {
-    display: flex;
-    gap: 12px;
-    align-items: center; }
-  .icon-list.icon-list-v2 {
-    gap: 18px;
-    --width: calc(50% - 9px); }
-    .icon-list.icon-list-v2 > li {
-      flex: 0 0 var(--width);
-      width: var(--width); }
-  .icon-list.icon-list-v3 {
-    gap: 18px; }
-    .icon-list.icon-list-v3 li svg {
-      flex: 0 0 20px;
-      width: 20px; }
-
-span.icons {
-  display: flex;
-  gap: 5px; }
-
-.calculator-form form label {
-  font-weight: bold; }
 
 .offcanvas.offcanvas {
   max-width: 860px;
@@ -11413,24 +11293,6 @@ span.icons {
   display: none; }
 .wpcf7.wpcf7 .wpcf7-list-item.first, .wpcf7.wpcf7 .wpcf7-list-item:first-child {
   margin-left: 0 !important; }
-
-@media screen and (max-width: 991px) {
-  .swiper-on-mobile.swiper-on-mobile.swiper-on-mobile .swiper-wrapper {
-    display: flex;
-    gap: 0; } }
-
-.swiper-mobile-style .swiper {
-  overflow: visible; }
-.swiper-mobile-style .swiper-wrapper {
-  flex-wrap: nowrap; }
-@media screen and (max-width: 991px) {
-  .swiper-mobile-style .swiper-slide {
-    width: 50% !important;
-    height: auto !important;
-    flex-basis: unset; } }
-@media screen and (max-width: 575px) {
-  .swiper-mobile-style .swiper-slide {
-    width: 85% !important; } }
 
 .wp-block-button.wp-block-button {
   font-size: 15px; }

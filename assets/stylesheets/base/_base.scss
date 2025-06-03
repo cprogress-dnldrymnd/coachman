@@ -46,74 +46,22 @@ img {
             width: auto;
         }
     }
+    &.style-2 {
+        .nav-link {
+            border: none;
+            @include after {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg>');
+            }
+            &.active {
+                background-color: var(--lightgray-2);
+            }
+        }
+    }
 }
 img {
     max-width: 100%;
 }
 
-.list-inline-icons {
-    li {
-        a {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            color: var(--black-color);
-            line-height: 1;
-
-            svg {
-                width: 20px;
-                flex: 0 0 20px;
-                height: 20px;
-                margin-right: 10px;
-            }
-        }
-
-        @include not-last-child {
-            margin-right: 1rem;
-        }
-    }
-}
-
-.breadcrumbs-holder {
-    border-bottom: 1px solid var(--blue-color); //blue
-    padding-bottom: 10px;
-
-    ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 18px;
-        align-items: center;
-
-        li {
-            display: flex;
-            align-items: center;
-
-            span {
-                font-weight: bold;
-            }
-
-            a {
-                color: var(--black-color); //black
-            }
-
-            &:not(:last-child) {
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    height: 8px;
-                    width: 8px;
-                    border-top: 1px solid;
-                    border-left: 1px solid;
-                    transform: rotate(135deg);
-                    margin-left: 10px;
-                    margin-right: 10px;
-                }
-            }
-        }
-    }
-}
 
 .form-holder {
     font-size: 20px;
@@ -227,85 +175,6 @@ img {
     top: 0;
 }
 
-.accordion-style-1 {
-    .accordion {
-        padding: 20px;
-        background-color: var(--bs-white);
-        --bs-accordion-active-bg: transparent;
-        .accordion-item {
-            border-left: none;
-            border-right: none;
-            --bs-accordion-border-color: #ececec;
-
-            @include first-child {
-                border-top: none;
-            }
-
-            @include last-child {
-                border-bottom: none;
-            }
-
-            .accordion-body {
-                --bs-accordion-body-padding-x: 0;
-            }
-        }
-    }
-
-    .accordion-button {
-        --bs-accordion-inner-border-radius: 0;
-        --bs-accordion-inner-border-radius: 0;
-        --bs-accordion-btn-padding-x: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        font-weight: bold;
-        font-size: 19px;
-
-        .accordion-button-inner {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-grow: 1;
-            justify-content: space-between;
-
-            .icon-text {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                @include responsive(mobile) {
-                    gap: 10px;
-                    font-size: 15px;
-                }
-            }
-        }
-
-        @include after {
-            flex: 0 0 auto;
-            margin-left: 0;
-        }
-
-        .icon {
-            flex: 0 0 32px;
-
-            img,
-            svg {
-                width: 32px;
-                height: 32px;
-                object-fit: contain;
-                @include responsive(mobile) {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .form-control-holder {
-        label {
-            display: none;
-        }
-    }
-}
 
 .swiper-button.swiper-button {
     --swiper-navigation-size: 20px;
@@ -327,53 +196,7 @@ img {
     }
 }
 
-.icon-list {
-    gap: 28px;
 
-    a {
-        color: inherit;
-    }
-
-    li {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-    }
-
-    &.icon-list-v2 {
-        gap: 18px;
-        --width: calc(50% - 9px);
-
-        > li {
-            flex: 0 0 var(--width);
-            width: var(--width);
-        }
-    }
-
-    &.icon-list-v3 {
-        gap: 18px;
-
-        li {
-            svg {
-                flex: 0 0 20px;
-                width: 20px;
-            }
-        }
-    }
-}
-
-span.icons {
-    display: flex;
-    gap: 5px;
-}
-
-.calculator-form {
-    form {
-        label {
-            font-weight: bold;
-        }
-    }
-}
 
 .offcanvas.offcanvas {
     max-width: 860px;
@@ -457,34 +280,7 @@ span.icons {
         }
     }
 }
-.swiper-on-mobile.swiper-on-mobile.swiper-on-mobile {
-    .swiper-wrapper {
-        @include responsive(xs-sm) {
-            display: flex;
-            gap: 0;
-        }
-    }
-}
 
-.swiper-mobile-style {
-    .swiper {
-        overflow: visible;
-    }
-    .swiper-wrapper {
-        flex-wrap: nowrap;
-    }
-    .swiper-slide {
-        @include responsive(xs-sm) {
-            width: 50% !important;
-            height: auto !important;
-            flex-basis: unset;
-        }
-
-        @include responsive(mobile) {
-            width: 85% !important;
-        }
-    }
-}
 .wp-block-button.wp-block-button {
     font-size: 15px;
     &.is-style-outline {
