@@ -44,4 +44,7 @@
     z-index: 2;
     height: 0;
     overflow: hidden;
+    &.active {
+        height: var(--height);
+    }
 }
