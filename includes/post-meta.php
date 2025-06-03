@@ -327,16 +327,13 @@ Block::make(__('Caravan/Motohomes Models'))
         <div class="swiper swiper-listings-taxonomy">
             <div class="swiper-wrapper">
                 <?php foreach ($fields['posts'] as $post) { ?>
-                    <?php
-                    $models = $post['model'];
-                    ?>
-                    <?php foreach ($models as $model) { ?>
+                    <?php foreach ($post['model'] as $model) { ?>
                         <?php
                         $logo = get__term_meta($model, 'logo', true);
                         $image = get__term_meta($model, 'image', true);
                         ?>
                         <div class="swiper-slide">
-                            <div class="listings--inner">
+                            <div class="listings--inner" listing-target="listings--posts-<?= $model ?>=  ?>">
                                 <?php if ($logo) { ?>
                                     <div class="logo-box">
                                         <?= wp_get_attachment_image($logo, 'medium') ?>
@@ -353,6 +350,32 @@ Block::make(__('Caravan/Motohomes Models'))
                 <?php } ?>
             </div>
         </div>
+    </div>
+    <div class="listings--posts">
+        <?php foreach ($fields['posts'] as $key => $post) { ?>
+            <?php foreach ($post['model'] as $model) { ?>
+                <?php
+                $posts = get_posts(array(
+                    'post_type' => $key,
+                    'posts_per_page' => -1,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => $post['taxonomy'],
+                            'field' => 'term_id',
+                            'terms' => $model,
+                        ),
+                    ),
+                ));
+                ?>
+                <div class="listings--posts--inner" id="listings--posts-<?= $model ?>=  ?>">
+                    <?php
+                        foreach($posts as $post) {
+                            echo $post->post_title;
+                        }
+                    ?>
+                </div>
+            <?php } ?>
+        <?php } ?>
     </div>
 <?php
     });
