@@ -195,7 +195,7 @@ Block::make(__('Swiper'))
                 Field::make('text', 'delay', __('delay'))->set_attribute('type', 'number'),
                 Field::make('checkbox', 'disableoninteraction', __('disableOnInteraction')),
             ))
-            ->add_fields('spaceBetween', array(
+            ->add_fields('spacebetween', array(
                 Field::make('text', 'spacebetween', __('spaceBetween'))->set_attribute('type', 'number'),
             ))
     ))
