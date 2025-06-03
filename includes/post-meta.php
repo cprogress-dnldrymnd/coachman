@@ -5,6 +5,15 @@ use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
 use Carbon_Fields\Block;
 
+Container::make('post_meta', __('Page Settings'))
+    ->where('post_type', '=', 'caravan')
+    ->add_fields(array(
+        Field::make('select', 'header_style', __('Header Style'))
+            ->set_options(array(
+                '' => 'Default',
+                'header-transparent' => 'Transparent',
+            )),
+    ));
 Container::make('post_meta', __('Caravan Properties'))
     ->where('post_type', '=', 'caravan')
     ->add_fields(array(
