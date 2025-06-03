@@ -317,6 +317,7 @@ Block::make(__('Caravan/Motohomes Models'))
                 Field::make('multiselect', 'motorhome_model', __('Motorhome Model'))
                     ->add_options(get_taxonomy_terms_wpdb('motorhome_model'))
             ))
+            ->set_max(1)
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
