@@ -359,6 +359,8 @@ Block::make(__('Caravan/Motohomes Models'))
                             <?php
                             $logo = get__term_meta($model, 'logo', true);
                             $image = get__term_meta($model, 'image', true);
+                            $page = get__term_meta($model, 'page', true);
+
                             $args = array(
                                 'post_type' => $post['_type'],
                                 'numberposts' => -1,
@@ -374,6 +376,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             ?>
                             <div class="<?= $class3 ?> ">
                                 <div class="listings--inner h-100 p-4 listings--inner--js" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                                    <a href="<?= get_permalink($page[0]['id']) ?>" class="listing--model-link"></a>
                                     <?php if ($logo) { ?>
                                         <div class="logo-box">
                                             <?= wp_get_attachment_image($logo, 'medium') ?>
