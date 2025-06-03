@@ -338,18 +338,6 @@ function listing__key_information_v2()
 
 
 //**/newww */
-function __listing_title($title, $term_id)
-{
-    ob_start();
-    $logo = get__term_meta($term_id, 'logo', true);
-?>
-    <div class="title-box d-flex gap-3 align-items-center">
-        <?= wp_get_attachment_image($logo, 'medium') ?>
-        <?= $title ?>
-    </div>
-<?php
-    return ob_get_clean();
-}
 
 
 function get_taxonomy_terms_wpdb($taxonomy)
@@ -387,4 +375,44 @@ function get_taxonomy_terms_wpdb($taxonomy)
     }
 
     return $terms_array; // Return the formatted array of terms.
+}
+
+
+function __listing_title($title, $term_id)
+{
+    ob_start();
+    $logo = get__term_meta($term_id, 'logo', true);
+?>
+    <div class="title-box d-flex gap-3 align-items-center">
+        <?= wp_get_attachment_image($logo, 'medium') ?>
+        <?= $title ?>
+    </div>
+<?php
+    return ob_get_clean();
+}
+
+function __listing_features($post_id)
+{
+    ob_start();
+    $berths = get__post_meta_by_id($post_id->ID, 'berths');
+    $length = get__post_meta_by_id($post_id->ID, 'length');
+?>
+    <div class="listing--features">
+        <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
+            <?php if ($berths) { ?>
+                <li class="d-flex align-items-center justify-content-between py-2">
+                    <span>Berths</span>
+                    <span><?= $berths ?></span>
+                </li>
+            <?php } ?>
+            <?php if ($length) { ?>
+                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                    <span>Length</span>
+                    <span><?= $length ?></span>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+<?php
+    return ob_get_clean();
 }

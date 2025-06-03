@@ -282,23 +282,6 @@ Block::make(__('Swiper Slide'))
 <?php
     });
 
-Block::make(__('Listing Feature'))
-    ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>--Swiper Slide</div>"),
-    ))
-    ->set_parent('core/post-template')
-    ->set_inner_blocks(true)
-    ->set_inner_blocks_position('below')
-    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-?>
-    <div class="swiper-slide">
-        <div class="swiper-slide--inner">
-            <?= $inner_blocks ?>
-        </div>
-    </div>
-
-<?php
-    });
 
 
 Block::make(__('Caravan/Motohomes Models'))
@@ -406,32 +389,14 @@ Block::make(__('Caravan/Motohomes Models'))
                     <div class="container  py-5">
                         <div class="row g-3">
                             <?php foreach ($posts_listings as $posts_listing) { ?>
-                                <?php
-                                $berths = get__post_meta_by_id($posts_listing->ID, 'berths');
-                                $length = get__post_meta_by_id($posts_listing->ID, 'length');
-                                ?>
+
                                 <div class="col-lg-3">
                                     <div class="listings--posts--grid bg-white p-4">
                                         <h3 class="fs-24"><?= __listing_title($posts_listing->post_title, $model) ?></h3>
                                         <div class="image-box image-style" style="--fit: contain">
                                             <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                         </div>
-                                        <div class="listing--features">
-                                            <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
-                                                <?php if ($berths) { ?>
-                                                    <li class="d-flex align-items-center justify-content-between py-2">
-                                                        <span>Berths</span>
-                                                        <span><?= $berths ?></span>
-                                                    </li>
-                                                <?php } ?>
-                                                <?php if ($length) { ?>
-                                                    <li class="d-flex gap-3 align-items-center justify-content-between py-2">
-                                                        <span>Length</span>
-                                                        <span><?= $length ?></span>
-                                                    </li>
-                                                <?php } ?>
-                                            </ul>
-                                        </div>
+                                        <?= __listing_features($posts_listing->ID) ?>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -445,6 +410,19 @@ Block::make(__('Caravan/Motohomes Models'))
 <?php
     });
 
+Block::make(__('Listing Feature'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>--Swiper Slide</div>"),
+    ))
+    ->set_parent('core/post-template')
+    ->set_inner_blocks(true)
+    ->set_inner_blocks_position('below')
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <?= __listing_features(get_the_ID()) ?>
+<?php
+    });
+    
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
     ->or_where('term_taxonomy', '=', 'motorhome_model')
