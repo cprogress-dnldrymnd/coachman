@@ -11810,6 +11810,8 @@ h5, .h5 {
     top: var(--admin-bar-height); }
   #masthead.header-default .menu-burger .bar {
     background-color: var(--bs-black); }
+  #masthead + #main {
+    margin-top: 0; }
 
 .menu-burger {
   --burger-width: 40px;

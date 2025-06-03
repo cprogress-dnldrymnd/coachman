@@ -9,6 +9,9 @@
             background-color: var(--bs-black);
         }
     }
+    & + #main {
+        margin-top: 0;
+    }
 }
 .menu-burger {
     --burger-width: 40px;
