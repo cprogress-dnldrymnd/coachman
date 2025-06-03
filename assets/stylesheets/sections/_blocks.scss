@@ -1,12 +1,10 @@
 .swiper-slider-holder {
-    .swiper-slider-block {
-        .swiper {
-            min-height: 100vh;
-            .swiper-wrapper {
+    .swiper {
+        min-height: 100vh;
+        .swiper-wrapper {
+            height: 100%;
+            .swiper-slide {
                 height: 100%;
-                .swiper-slide {
-                    height: 100%;
-                }
             }
         }
     }
