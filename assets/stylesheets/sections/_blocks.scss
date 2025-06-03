@@ -27,6 +27,12 @@
     .swiper-listings-taxonomy {
         .swiper-slide {
             width: 280px;
+            .logo-box {
+                img {
+                    height: 18px;
+                    object-fit: contain;
+                }
+            }
             .listings--inner {
                 cursor: pointer;
                 &.active {
