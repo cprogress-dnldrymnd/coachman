@@ -12137,11 +12137,11 @@ h5, .h5 {
   z-index: 2;
   height: 0;
   overflow: hidden;
-  -webkit-transition: 400ms;
-  -moz-transition: 400ms;
-  -ms-transition: 400ms;
-  -o-transition: 400ms;
-  transition: 400ms; }
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
   .listings--posts.active {
     height: var(--height); }
 

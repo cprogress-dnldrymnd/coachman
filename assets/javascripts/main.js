@@ -31,8 +31,11 @@ function listings() {
         jQuery('.listings--inner--js').removeClass('active');
         jQuery('.listings--posts').removeClass('active');
         jQuery(this).toggleClass('active');
-        $target = jQuery(this).attr('listing-target');
-        jQuery($target).toggleClass('active');
+
+        var $target = jQuery(this).attr('listing-target');
+        setTimeout(function () {
+            jQuery($target).toggleClass('active');
+        }, 500);
         e.preventDefault();
 
     });
