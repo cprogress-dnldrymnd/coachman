@@ -92,6 +92,15 @@ img {
             object-fit: var(--fit, contain) !important;
         }
     }
+    &.image-style-2 {
+        background-color: var(--lightgray);
+        img {
+            width: 85%;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+        }
+    }
 }
 
 .site-content {

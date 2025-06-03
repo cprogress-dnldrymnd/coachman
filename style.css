@@ -11337,6 +11337,17 @@ img {
     object-fit: var(--fit, cover); }
   .image-style.image-style-contain img {
     object-fit: var(--fit, contain) !important; }
+  .image-style.image-style-2 {
+    background-color: var(--lightgray); }
+    .image-style.image-style-2 img {
+      width: 85%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
 
 .site-content > .wp-block-group {
   overflow: hidden; }
