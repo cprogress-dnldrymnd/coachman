@@ -323,7 +323,7 @@ Block::make(__('Caravan/Motohomes Models'))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
 
-    <div class="listings">
+    <div class="listings listings-style-1">
         <div class="row g-4">
             <?php foreach ($fields['posts'] as $post) { ?>
                 <?php
