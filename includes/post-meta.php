@@ -356,9 +356,9 @@ Block::make(__('Caravan/Motohomes Models'))
         <?php foreach ($fields['posts'] as $key => $post) { ?>
             <?php foreach ($post['model'] as $model) { ?>
                 <?php
-                $posts = get_posts(array(
+                $args = array(
                     'post_type' => $post['_type'],
-                    'posts_per_page' => -1,
+                    'numberposts' => -1,
                     'tax_query' => array(
                         array(
                             'taxonomy' => $post['taxonomy'],
@@ -366,7 +366,10 @@ Block::make(__('Caravan/Motohomes Models'))
                             'terms' => $model,
                         ),
                     ),
-                ));
+                );
+                $posts = get_posts($args);
+
+                var_dump($args);
                 ?>
                 <div class="listings--posts--inner" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                     <?php
