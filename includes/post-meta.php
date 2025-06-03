@@ -356,11 +356,10 @@ Block::make(__('Caravan/Motohomes Models'))
         }
 ?>
 
-    <div class="listings listings-style-1">
+    <div class="listings listings-style-1" style="--padding: 50% 0; --fit: contain;">
         <div class="container">
             <div class="<?= $class1 ?>">
                 <div class="<?= $class2 ?>">
-
                     <?php foreach ($fields['posts'] as $post) { ?>
                         <?php foreach ($post['model'] as $key => $model) { ?>
                             <?php
