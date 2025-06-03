@@ -34,6 +34,7 @@
                 }
             }
             .listings--inner {
+                cursor: pointer;
                 &.active {
                     background-color: var(--lightgray-2);
                 }
