@@ -255,7 +255,9 @@ Block::make(__('Swiper Slide'))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
     <div class="swiper-slide">
-        <?= $inner_blocks ?>
+        <div class="swiper-slide--inner">
+            <?= $inner_blocks ?>
+        </div>
     </div>
 
 <?php

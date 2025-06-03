@@ -12510,12 +12510,8 @@ h5, .h5 {
 .delear-details .logo-box img {
   max-width: 140px; }
 
-.swiper-slider-holder .swiper {
+.swiper-slider-holder .swiper .swiper-wrapper .swiper-slide {
   min-height: 100vh; }
-  .swiper-slider-holder .swiper .swiper-wrapper {
-    height: 100%; }
-    .swiper-slider-holder .swiper .swiper-wrapper .swiper-slide {
-      height: 100%; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
