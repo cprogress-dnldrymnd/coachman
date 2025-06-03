@@ -20,6 +20,12 @@ function listings() {
     if (jQuery('.nav-tabs-swiper-js').length > 0) {
         jQuery('.nav-tabs-swiper-js .nav-item:first-child .nav-link').click();
     }
+
+    jQuery('.listings--posts--holder--inner').each(function (index, element) {
+        $height = jQuery(this).outerHeight();
+        jQuery(this).parent().css('--height', $height + 'px');
+
+    });
 }
 function search_stock() {
     jQuery('.edit-stock-filter').click(function (e) {

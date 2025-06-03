@@ -376,17 +376,19 @@ Block::make(__('Caravan/Motohomes Models'))
 
                     ?>
                     <div class="listings--posts--holder" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
-                        <div class="row g-3">
-                            <?php foreach ($posts_listings as $posts_listing) { ?>
-                                <div class="col-lg-3">
-                                    <div class="listings--posts--grid bg-white p-4">
-                                        <h3 class="fs-24"><?= $posts_listing->post_title ?></h3>
-                                        <div class="image-box image-style" style="--fit: contain">
-                                            <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
+                        <div class="listings--posts--holder--inner">
+                            <div class="row g-3">
+                                <?php foreach ($posts_listings as $posts_listing) { ?>
+                                    <div class="col-lg-3">
+                                        <div class="listings--posts--grid bg-white p-4">
+                                            <h3 class="fs-24"><?= $posts_listing->post_title ?></h3>
+                                            <div class="image-box image-style" style="--fit: contain">
+                                                <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php } ?>
+                                <?php } ?>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
