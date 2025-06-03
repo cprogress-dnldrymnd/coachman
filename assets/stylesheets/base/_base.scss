@@ -33,6 +33,7 @@ img {
         &.active {
             background-color: var(--lightgray);
             border-color: var(--lightgray);
+            color: var(--bs-black);
         }
         @include responsive(xs) {
             padding: 18px 25px;

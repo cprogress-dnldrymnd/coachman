@@ -11105,7 +11105,8 @@ img {
     border-radius: 0; }
     .nav-tabs .nav-link.active {
       background-color: var(--lightgray);
-      border-color: var(--lightgray); }
+      border-color: var(--lightgray);
+      color: var(--bs-black); }
     @media screen and (max-width: 767px) {
       .nav-tabs .nav-link {
         padding: 18px 25px; } }
