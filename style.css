@@ -12125,6 +12125,8 @@ h5, .h5 {
     padding: 50% 0; }
     .listings-style-1 .swiper-listings-taxonomy .swiper-slide .image-box img {
       object-fit: contain; }
+  .listings-style-1 .swiper-listings-taxonomy .swiper-slide .listings--inner.active {
+    background-color: var(--lightgray-2); }
 
 .listings--posts {
   position: absolute;

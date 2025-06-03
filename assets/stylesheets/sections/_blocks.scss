@@ -33,6 +33,11 @@
                     object-fit: contain;
                 }
             }
+            .listings--inner {
+                &.active {
+                    background-color: var(--lightgray-2);
+                }
+            }
         }
     }
 }
