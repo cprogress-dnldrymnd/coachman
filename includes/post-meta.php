@@ -332,7 +332,7 @@ Block::make(__('Caravan/Motohomes Models'))
                 <?php foreach ($models as $model) { ?>
                     <?php
                     $logo = get__term_meta($model, 'logo', true);
-                    $logo = get__term_meta($model, 'image', true);
+                    $image = get__term_meta($model, 'image', true);
                     ?>
                     <div class="col-lg-4">
                         <div class="listings--inner">
