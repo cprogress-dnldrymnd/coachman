@@ -6,7 +6,8 @@ use Carbon_Fields\Field;
 use Carbon_Fields\Block;
 
 Container::make('post_meta', __('Page Settings'))
-    ->where('post_type', '=', 'caravan')
+    ->where('post_type', '=', 'page')
+    ->set_context('side')
     ->add_fields(array(
         Field::make('select', 'header_style', __('Header Style'))
             ->set_options(array(
