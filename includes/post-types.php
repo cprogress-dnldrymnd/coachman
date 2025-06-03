@@ -189,8 +189,8 @@ $Testimonials->has_archive = false;
 
 $Caravans = new newPostType();
 $Caravans->key = 'caravan';
-$Caravans->name = 'Caravans & Motorhomes';
-$Caravans->singular_name = 'Caravans & Motorhomes';
+$Caravans->name = 'Caravans';
+$Caravans->singular_name = 'Caravans';
 $Caravans->icon = 'dashicons-video-alt3';
 $Caravans->show_in_rest = true;
 $Caravans->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
@@ -202,16 +202,16 @@ $Caravans->has_archive = false;
 
 
 $Manufacturer = new newTaxonomy();
-$Manufacturer->taxonomy = 'manufacturer';
+$Manufacturer->taxonomy = 'caravan_models';
 $Manufacturer->post_type = 'caravan';
 $Manufacturer->args = array(
-    'label'        => 'Manufacturer',
+    'label'        => 'Caravan Models',
     'labels' => array(
-        'name'                       => _x('Manufacturer', 'Taxonomy General Name', 'text_domain'),
-        'singular_name'              => _x('Manufacturer', 'Taxonomy Singular Name', 'text_domain'),
-        'menu_name'                  => __('Manufacturer', 'text_domain'),
-        'all_items'                  => __('All Manufacturer', 'text_domain'),
-        'parent_item'                => __('Parent Manufacturer', 'text_domain'),
+        'name'                       => _x('Caravan Models', 'Taxonomy General Name', 'text_domain'),
+        'singular_name'              => _x('Caravan Models', 'Taxonomy Singular Name', 'text_domain'),
+        'menu_name'                  => __('Caravan Models', 'text_domain'),
+        'all_items'                  => __('All Caravan Models', 'text_domain'),
+        'parent_item'                => __('Parent Caravan Models', 'text_domain'),
         'parent_item_colon'          => __('Parent Item:', 'text_domain'),
         'new_item_name'              => __('New Item Name', 'text_domain'),
         'add_new_item'               => __('Add New Item', 'text_domain'),
@@ -219,12 +219,12 @@ $Manufacturer->args = array(
         'update_item'                => __('Update Item', 'text_domain'),
         'view_item'                  => __('View Item', 'text_domain'),
         'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
-        'add_or_remove_items'        => __('Add or remove Manufacturer', 'text_domain'),
+        'add_or_remove_items'        => __('Add or remove Caravan Models', 'text_domain'),
         'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
-        'popular_items'              => __('Popular Manufacturer', 'text_domain'),
-        'search_items'               => __('Search Manufacturer', 'text_domain'),
+        'popular_items'              => __('Popular Caravan Models', 'text_domain'),
+        'search_items'               => __('Search Caravan Models', 'text_domain'),
         'not_found'                  => __('Not Found', 'text_domain'),
-        'no_terms'                   => __('No Manufacturer', 'text_domain'),
+        'no_terms'                   => __('No Caravan Models', 'text_domain'),
         'items_list'                 => __('Items list', 'text_domain'),
         'items_list_navigation'      => __('Items list navigation', 'text_domain'),
     ),
@@ -232,7 +232,7 @@ $Manufacturer->args = array(
     'query_var'    => true,
     'show_in_rest' => true,
     'rewrite'      => array(
-        'slug'         => 'manufacturer',
+        'slug'         => 'caravan-model',
     )
 );
 
