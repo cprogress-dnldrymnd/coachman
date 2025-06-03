@@ -11385,7 +11385,8 @@ span.icons {
         background-size: 15px; } }
   .offcanvas.offcanvas.offcanvas-start .btn-close.btn-close {
     right: 0;
-    left: auto; }
+    left: auto;
+    transform: translateX(180%); }
     @media screen and (max-width: 991px) {
       .offcanvas.offcanvas.offcanvas-start .btn-close.btn-close {
         transform: translateX(120%); } }

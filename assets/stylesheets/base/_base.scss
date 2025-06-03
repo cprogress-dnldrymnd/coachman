@@ -414,6 +414,7 @@ span.icons {
         .btn-close.btn-close {
             right: 0;
             left: auto;
+            transform: translateX(180%);
             @include responsive(xs-sm) {
                 transform: translateX(120%);
             }
