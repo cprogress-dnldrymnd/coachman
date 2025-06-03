@@ -356,45 +356,43 @@ Block::make(__('Caravan/Motohomes Models'))
             </div>
         </div>
     </div>
-    <div class="listings--posts bg-lightgray-2 py-5">
-        <div class="container">
-            <?php foreach ($fields['posts'] as $key => $post) { ?>
-                <?php foreach ($post['model'] as $model) { ?>
-                    <?php
-                    $args = array(
-                        'post_type' => $post['_type'],
-                        'numberposts' => -1,
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => $post['taxonomy'],
-                                'field' => 'term_id',
-                                'terms' => $model,
-                            ),
-                        ),
-                    );
-                    $posts_listings = get_posts($args);
 
-                    ?>
-                    <div class="listings--posts--holder" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
-                        <div class="listings--posts--holder--inner">
-                            <div class="row g-3">
-                                <?php foreach ($posts_listings as $posts_listing) { ?>
-                                    <div class="col-lg-3">
-                                        <div class="listings--posts--grid bg-white p-4">
-                                            <h3 class="fs-24"><?= $posts_listing->post_title ?></h3>
-                                            <div class="image-box image-style" style="--fit: contain">
-                                                <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
-                                            </div>
-                                        </div>
+    <?php foreach ($fields['posts'] as $key => $post) { ?>
+        <?php foreach ($post['model'] as $model) { ?>
+            <?php
+                $args = array(
+                    'post_type' => $post['_type'],
+                    'numberposts' => -1,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => $post['taxonomy'],
+                            'field' => 'term_id',
+                            'terms' => $model,
+                        ),
+                    ),
+                );
+                $posts_listings = get_posts($args);
+
+            ?>
+            <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                <div class="container  py-5">
+                    <div class="row g-3">
+                        <?php foreach ($posts_listings as $posts_listing) { ?>
+                            <div class="col-lg-3">
+                                <div class="listings--posts--grid bg-white p-4">
+                                    <h3 class="fs-24"><?= $posts_listing->post_title ?></h3>
+                                    <div class="image-box image-style" style="--fit: contain">
+                                        <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                     </div>
-                                <?php } ?>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
-                <?php } ?>
-            <?php } ?>
-        </div>
-    </div>
+                </div>
+            </div>
+        <?php } ?>
+    <?php } ?>
+
 <?php
     });
 
