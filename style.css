@@ -11927,6 +11927,8 @@ h5, .h5 {
 
 .listing--features {
   border-top: 1px solid va(--dark); }
+  .listing--features li {
+    border-bottom: 1px solid var(--dark); }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
