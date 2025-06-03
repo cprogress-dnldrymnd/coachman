@@ -350,3 +350,41 @@ function __listing_title($title, $term_id)
 <?php
     return ob_get_clean();
 }
+
+
+function get_taxonomy_terms_wpdb($taxonomy)
+{
+    global $wpdb; // Access the global WordPress database object.
+
+    $terms_array = array(); // Initialize an empty array to store the results.
+
+    // Prepare the SQL query to fetch term_id and name.
+    // We join wp_terms with wp_term_taxonomy to filter by the specified taxonomy.
+    // wp_terms stores the term details (id, name, slug).
+    // wp_term_taxonomy links terms to taxonomies and stores count, description, parent.
+    // Using $wpdb->prepare for security to prevent SQL injection.
+    $query = $wpdb->prepare(
+        "SELECT t.term_id, t.name
+         FROM {$wpdb->terms} AS t
+         INNER JOIN {$wpdb->term_taxonomy} AS tt
+         ON t.term_id = tt.term_id
+         WHERE tt.taxonomy = %s
+         ORDER BY t.name ASC", // Order by term name for better readability.
+        $taxonomy
+    );
+
+    // Execute the query and get results as an array of objects.
+    // Each object will have properties 'term_id' and 'name'.
+    $results = $wpdb->get_results($query);
+
+    // Check if any results were returned.
+    if (! empty($results)) {
+        // Loop through the results and populate the terms_array.
+        foreach ($results as $term) {
+            // Assign the term name as the value and term_id as the key.
+            $terms_array[$term->term_id] = $term->name;
+        }
+    }
+
+    return $terms_array; // Return the formatted array of terms.
+}
