@@ -348,8 +348,8 @@ Block::make(__('Caravan/Motohomes Models'))
                             );
                             $posts_listings = get_posts($args);
                             ?>
-                            <div class="swiper-slide">
-                                <div class="listings--inner listings--inner--js" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                            <div class="swiper-slide h-auto">
+                                <div class="listings--inner h-100 p-4 listings--inner--js" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                                     <?php if ($logo) { ?>
                                         <div class="logo-box">
                                             <?= wp_get_attachment_image($logo, 'medium') ?>
