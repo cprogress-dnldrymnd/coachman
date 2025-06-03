@@ -11260,7 +11260,11 @@ img {
     transform: translateX(-180%);
     background-size: 25px;
     background-image: none;
-    color: var(--bs-white); }
+    color: var(--bs-white);
+    top: 40px; }
+    .offcanvas.offcanvas .btn-close.btn-close svg {
+      width: 40px;
+      height: 40px; }
     @media screen and (max-width: 991px) {
       .offcanvas.offcanvas .btn-close.btn-close {
         width: 30px;
