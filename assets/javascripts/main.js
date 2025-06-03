@@ -30,9 +30,9 @@ function listings() {
     jQuery('.listings--inner--js').click(function (e) {
         jQuery('.listings--inner--js').removeClass('active');
         jQuery('.listings--posts').removeClass('active');
-        jQuery(this).toggle('active');
+        jQuery(this).toggleClass('active');
         $target = jQuery(this).attr('listing-target');
-        jQuery($target).toggle('active');
+        jQuery($target).toggleClass('active');
         e.preventDefault();
 
     });
