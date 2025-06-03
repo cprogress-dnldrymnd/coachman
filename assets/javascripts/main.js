@@ -61,18 +61,8 @@ function fancybox() {
 function swiper_sliders() {
     var swiper = new Swiper(".swiper-slider-block", {
         breakpoints: {
-            0: {
-                slidesPerView: 'auto',
-                spaceBetween: 12,
-                freeMode: true,
-            },
-
-
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-
+            slidesPerView: 1,
+            spaceBetween: 40,
         },
 
         navigation: {
