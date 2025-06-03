@@ -11988,7 +11988,7 @@ h5, .h5 {
 #masthead {
   position: absolute;
   left: 0;
-  top: 0;
+  top: var(--admin-bar-height);
   right: 0; }
 
 @media screen and (min-width: 1200px) {
