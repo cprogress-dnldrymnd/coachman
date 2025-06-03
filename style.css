@@ -12131,14 +12131,12 @@ h5, .h5 {
       background-color: var(--lightgray-2); }
 
 .listings--posts {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  display: none;
   height: 0;
   overflow: hidden; }
   .listings--posts.active {
-    height: var(--height); }
+    height: var(--height);
+    display: block; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins

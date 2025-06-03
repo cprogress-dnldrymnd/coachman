@@ -44,13 +44,11 @@
 }
 
 .listings--posts {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    height: 0;
+    display: none;
+  //  height: 0;
     overflow: hidden;
     &.active {
-        height: var(--height);
+        //height: var(--height);
+        display: block;
     }
 }
