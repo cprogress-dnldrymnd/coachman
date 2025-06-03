@@ -372,7 +372,7 @@ Block::make(__('Caravan/Motohomes Models'))
 
                     ?>
                     <div class="listings--posts--holder" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
-                        <div class="row g-4">
+                        <div class="row g-3">
                             <?php foreach ($posts_listings as $posts_listing) { ?>
                                 <div class="col-lg-3">
                                     <div class="listings--posts--grid bg-white p-4">
