@@ -310,15 +310,21 @@ Block::make(__('Caravan/Motohomes Models'))
         Field::make('html', 'html_1')->set_html("<div $style>Caravan/Motohomes Models</div>"),
         Field::make('complex', 'posts')
             ->add_fields('caravan', array(
-                Field::make('multiselect', 'caravan_model', __('Caravan Model'))
+                Field::make('hidden', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model'),
+                Field::make('multiselect', 'model', __('Caravan Model'))
                     ->add_options(get_taxonomy_terms_wpdb('caravan_model'))
             ))
             ->add_fields('motorhome', array(
-                Field::make('multiselect', 'motorhome_model', __('Motorhome Model'))
+                Field::make('hidden', 'taxonomy', __('Motorhome Model'))->set_default_value('motorhome_model'),
+                Field::make('multiselect', 'model', __('Motorhome Model'))
                     ->add_options(get_taxonomy_terms_wpdb('motorhome_model'))
             ))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+        $taxonomy_terms = [];
+        foreach ($fields['posts'] as $post) {
+            $taxonomy_terms[] = $post[]
+        }
 ?>
 
     <div class="listings">
