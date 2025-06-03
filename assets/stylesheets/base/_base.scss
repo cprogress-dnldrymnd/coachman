@@ -209,17 +209,19 @@ img {
         background-color: var(--lightgray-color-4);
         padding: 50px 20px;
     }
+
     .btn-close.btn-close {
         position: absolute;
         left: 0;
-        background-color: #eeeff2;
-        border-radius: 5px;
+        border-radius: 0;
         opacity: 1;
-        padding: 10px 15px;
+        padding: 0;
         width: 43px;
         height: 37px;
         transform: translateX(-180%);
         background-size: 25px;
+        background-image: none;
+        color: var(--bs-white);
         @include responsive(xs-sm) {
             width: 30px;
             height: 30px;

@@ -11252,14 +11252,14 @@ img {
   .offcanvas.offcanvas .btn-close.btn-close {
     position: absolute;
     left: 0;
-    background-color: #eeeff2;
-    border-radius: 5px;
+    border-radius: 0;
     opacity: 1;
-    padding: 10px 15px;
+    padding: 0;
     width: 43px;
     height: 37px;
     transform: translateX(-180%);
-    background-size: 25px; }
+    background-size: 25px;
+    background-image: none; }
     @media screen and (max-width: 991px) {
       .offcanvas.offcanvas .btn-close.btn-close {
         width: 30px;
