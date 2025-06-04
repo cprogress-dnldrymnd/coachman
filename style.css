@@ -12205,7 +12205,7 @@ h5, .h5 {
     right: 0;
     top: var(--admin-bar-height); }
   #masthead.header-default .svg-logo {
-    color: var(--bs-black); }
+    color: var(--logo-color); }
   #masthead.header-default .menu-burger .bar {
     background-color: var(--bs-black); }
   #masthead.header-default + #main {
