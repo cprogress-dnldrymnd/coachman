@@ -12346,6 +12346,11 @@ h5, .h5 {
   .listing--features li {
     border-bottom: 1px solid var(--dark); }
 
+.listing--buttons button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid; }
+
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
 /*-----------------------------------------------------------------------------------*/

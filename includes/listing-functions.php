@@ -427,15 +427,15 @@ function __listing_buttons($post_id)
     <div class="listing--buttons">
         <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center">
             <?php if ($_360_walkthrough) { ?>
-                <li class="d-flex align-items-center justify-content-between py-2">
-                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
+                <li>
+                    <button class=" py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
                         360° Walkthrough
                     </button>
                 </li>
             <?php } ?>
             <?php if ($video) { ?>
-                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
-                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
+                <li>
+                    <button class="py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
                         Video Tour
                     </button>
                 </li>
