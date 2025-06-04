@@ -26,6 +26,7 @@ p:last-child {
     margin-bottom: 0 !important;
 }
 a {
+    color: var(--bs-black);
     @include on-event {
         color: var(--maroon);
     }
