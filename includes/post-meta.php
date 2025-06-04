@@ -17,6 +17,7 @@ Container::make('post_meta', __('Page Settings'))
     ));
 Container::make('post_meta', __('Caravan Properties'))
     ->where('post_type', '=', 'caravan')
+    ->or_where('post_type', '=', 'motorhome')
     ->add_fields(array(
         Field::make('select', 'berths', __('Berths'))
             ->set_options(array(
@@ -26,7 +27,11 @@ Container::make('post_meta', __('Caravan Properties'))
                 '5' => '5',
                 '6' => '6',
             )),
-        Field::make('text', 'length', __('Length'))
+        Field::make('text', 'length', __('Length')),
+        Field::make('oembed', '360_walkthrough', __('360° Walkthrough')),
+        Field::make('oembed', 'video', __('Video tour')),
+
+
     ));
 
 $style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Pennypacker; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
