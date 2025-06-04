@@ -7,6 +7,9 @@
         top: var(--admin-bar-height);
     }
     &.header-default {
+        .svg-logo {
+            color: var(--bs-black);
+        }
         .menu-burger .bar {
             background-color: var(--bs-black);
         }
