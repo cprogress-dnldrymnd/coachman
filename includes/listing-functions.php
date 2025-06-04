@@ -442,7 +442,7 @@ function __listing_buttons($post_id)
             <?php } ?>
         </ul>
     </div>
-    <div class="offcanvas offcanvas--layouts offcanvas-start" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
+    <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0 overflow-hidden">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
