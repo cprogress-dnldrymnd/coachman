@@ -392,6 +392,22 @@
         background-size: cover;
         background-position: center;
         opacity: 1;
+        @include before-after {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+        }
+        @include before {
+            top: 0;
+            height: 35%;
+            background: transparent linear-gradient(180deg, #000000 0%, #00000000 100%) 0% 0% no-repeat;
+        }
+        @include after {
+            bottom: 0;
+            background: transparent linear-gradient(0deg, #000000 0%, #00000000 100%) 0% 0% no-repeat;
+            height: 35%;
+        }
     }
 }
 
