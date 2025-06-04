@@ -450,7 +450,8 @@ function __listing_buttons($post_id)
                 </svg>
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden">
-                test
+                <p class="fs-22">360° Walkthrough</p>
+                <?= $_360_walkthrough ?>
             </div>
         </div>
     </div>
