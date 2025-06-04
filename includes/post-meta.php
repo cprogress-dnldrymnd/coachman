@@ -483,6 +483,15 @@ Block::make(__('Caravan/Motohomes Models'))
                                             <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                         </div>
                                         <?= __listing_features($posts_listing->ID) ?>
+                                        <div class="listing--buttons mt-2">
+                                            <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
+                                                <li>
+                                                    <a class="py-2 px-0" href="<?= get_term_link($model) ?>">
+                                                        Explore
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             <?php } ?>
