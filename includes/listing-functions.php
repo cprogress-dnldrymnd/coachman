@@ -435,7 +435,7 @@ function __listing_buttons($post_id)
             <?php } ?>
             <?php if ($video) { ?>
                 <li>
-                    <button class="py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
+                    <button class="py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasVideo-<?= $post_id ?>">
                         Video Tour
                     </button>
                 </li>
