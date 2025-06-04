@@ -11342,7 +11342,6 @@ img {
   .image-style.image-style-contain img {
     object-fit: var(--fit, contain) !important; }
   .image-style.image-style-2 {
-    background-color: var(--lightgray);
     --padding: 25%; }
     .image-style.image-style-2 img {
       width: 75%;
