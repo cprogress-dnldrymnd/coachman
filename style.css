@@ -11893,10 +11893,8 @@ p {
 p:last-child {
   margin-bottom: 0 !important; }
 
-a {
-  color: var(--orange-color); }
-  a:hover, a:active, a:focus {
-    color: var(--accent-color); }
+a:hover, a:active, a:focus {
+  color: var(--maroon); }
 
 h1, .h1 {
   font-size: 4.25rem; }
