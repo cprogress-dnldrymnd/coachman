@@ -11855,7 +11855,7 @@ img {
   background-position: center;
   opacity: 1; }
   .bg-overlay-1.bg-overlay-1.bg-overlay-1.bg-overlay-1 .wp-block-cover__background:before, .bg-overlay-1.bg-overlay-1.bg-overlay-1.bg-overlay-1 .wp-block-cover__background:after {
-    content: "";
+    content: "" !important;
     position: absolute;
     right: 0;
     left: 0; }

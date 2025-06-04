@@ -393,7 +393,8 @@
         background-position: center;
         opacity: 1;
         @include before-after {
-            content: "";
+            content: "" !important;
+            display: block !important;
             position: absolute;
             right: 0;
             left: 0;
