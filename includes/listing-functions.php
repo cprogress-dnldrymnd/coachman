@@ -383,9 +383,13 @@ function __listing_title($post_id)
     ob_start();
     $post_type = get_post_type($post_id);
     $title = get_the_title($post_id);
-    $model = get_the_terms($post_id, $post_type . '_model')[0];;
-    $logo = get__term_meta($model->term_id, 'logo', true);
-    $final_title = str_replace($model->name, ' ', $title);
+    $model = get_the_terms($post_id, $post_type . '_model')[0];
+    if ($model) {
+        $logo = get__term_meta($model->term_id, 'logo', true);
+        $final_title = str_replace($model->name, ' ', $title);
+    } else {
+        $final_title = $title;
+    }
 ?>
     <div class="title-box d-flex gap-3 align-items-center">
         <?= wp_get_attachment_image($logo, 'medium') ?>
