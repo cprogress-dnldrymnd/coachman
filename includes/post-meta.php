@@ -506,6 +506,16 @@ Block::make(__('Listing Feature'))
 <?php
     });
 
+Block::make(__('Listing Buttons'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Listing Buttons</div>"),
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <?= __listing_buttons(get_the_ID()) ?>
+<?php
+    });
+
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
     ->or_where('term_taxonomy', '=', 'motorhome_model')

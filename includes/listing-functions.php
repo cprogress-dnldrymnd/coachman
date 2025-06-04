@@ -416,3 +416,32 @@ function __listing_features($post_id)
 <?php
     return ob_get_clean();
 }
+
+
+function __listing_buttons($post_id)
+{
+    ob_start();
+    $_360_walkthrough = get__post_meta_by_id($post_id, '360_walkthrough');
+    $video = get__post_meta_by_id($post_id, 'video');
+?>
+    <div class="listing--features">
+        <ul class="d-flex flex-column gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center">
+            <?php if ($_360_walkthrough) { ?>
+                <li class="d-flex align-items-center justify-content-between py-2">
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
+                        360° Walkthrough
+                    </button>
+                </li>
+            <?php } ?>
+            <?php if ($video) { ?>
+                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
+                        Video Tour
+                    </button>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+<?php
+    return ob_get_clean();
+}
