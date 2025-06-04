@@ -428,7 +428,7 @@ function __listing_buttons($post_id)
         <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
             <?php if ($_360_walkthrough) { ?>
                 <li>
-                    <button class=" py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
+                    <button class=" py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvas360-<?= $post_id ?>">
                         360° Walkthrough
                     </button>
                 </li>
