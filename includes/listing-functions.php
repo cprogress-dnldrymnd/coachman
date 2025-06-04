@@ -378,10 +378,13 @@ function get_taxonomy_terms_wpdb($taxonomy)
 }
 
 
-function __listing_title($title, $term_id)
+function __listing_title($post_id)
 {
     ob_start();
-    $logo = get__term_meta($term_id, 'logo', true);
+    $post_type = get_post_type($post_id);
+    $title = get_the_title($post_id);
+    $model_id = get_the_terms($post_id, $post_type . '_model')[0]->term_id;
+    $logo = get__term_meta($model_id, 'logo', true);
 ?>
     <div class="title-box d-flex gap-3 align-items-center">
         <?= wp_get_attachment_image($logo, 'medium') ?>
