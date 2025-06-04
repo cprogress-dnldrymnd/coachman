@@ -464,7 +464,9 @@ function __listing_buttons($post_id)
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
                 <p class="fs-22">Video Tour</p>
-                <iframe src="<?= $video ?>" frameborder="0"></iframe>
+                <div class="embed-holder position-relative">
+                    <iframe src="<?= $video ?>" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
     </div>
