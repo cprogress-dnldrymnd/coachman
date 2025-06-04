@@ -30,8 +30,6 @@ Container::make('post_meta', __('Caravan Properties'))
         Field::make('text', 'length', __('Length')),
         Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
-
-
     ));
 
 $style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Pennypacker; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
