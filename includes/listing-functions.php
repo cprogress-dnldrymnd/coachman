@@ -424,7 +424,7 @@ function __listing_buttons($post_id)
     $_360_walkthrough = get__post_meta_by_id($post_id, '360_walkthrough');
     $video = get__post_meta_by_id($post_id, 'video');
 ?>
-    <div class="listing--features">
+    <div class="listing--buttons">
         <ul class="d-flex flex-column gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center">
             <?php if ($_360_walkthrough) { ?>
                 <li class="d-flex align-items-center justify-content-between py-2">
