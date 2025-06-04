@@ -11858,7 +11858,8 @@ img {
     content: "";
     position: absolute;
     right: 0;
-    left: 0; }
+    left: 0;
+    opacity: 0.9; }
   .bg-overlay-1.bg-overlay-1.bg-overlay-1.bg-overlay-1 .wp-block-cover__background:before {
     top: 0;
     height: 35%;
