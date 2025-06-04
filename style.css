@@ -11046,6 +11046,7 @@ button.swiper-pagination-bullet {
   to {
     transform: rotate(360deg); } }
 :root {
+  --logo-color: #282d32;
   --dark: #1c272e;
   --maroon: #841d26;
   --lightgray: #f2f2f2;
