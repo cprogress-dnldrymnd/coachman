@@ -451,7 +451,10 @@ function __listing_buttons($post_id)
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
                 <p class="fs-22">360° Walkthrough</p>
-                <iframe src="<?= $_360_walkthrough ?>" frameborder="0"></iframe>
+                <div class="embed-holder position-relative">
+                    <iframe src="<?= $_360_walkthrough ?>" frameborder="0"></iframe>
+                </div>
+                <?= do_shortcode('[template template_id=426]'); ?>
             </div>
         </div>
     </div>
@@ -467,6 +470,7 @@ function __listing_buttons($post_id)
                 <div class="embed-holder position-relative">
                     <iframe src="<?= $video ?>" frameborder="0"></iframe>
                 </div>
+                <?= do_shortcode('[template template_id=426]'); ?>
             </div>
         </div>
     </div>
