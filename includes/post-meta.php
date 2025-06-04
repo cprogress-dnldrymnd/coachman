@@ -28,8 +28,8 @@ Container::make('post_meta', __('Caravan Properties'))
                 '6' => '6',
             )),
         Field::make('text', 'length', __('Length')),
-        Field::make('oembed', '360_walkthrough', __('360° Walkthrough')),
-        Field::make('oembed', 'video', __('Video tour')),
+        Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
+        Field::make('oembed', 'video', __('Video tour'))->set_width(50),
 
 
     ));
