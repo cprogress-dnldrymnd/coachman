@@ -470,6 +470,8 @@ Block::make(__('Caravan/Motohomes Models'))
                         ),
                     );
                     $posts_listings = get_posts($args);
+                    $page = carbon_get_term_meta($model, 'page');
+
                 ?>
                 <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
                     <div class="container  py-5">
@@ -483,15 +485,18 @@ Block::make(__('Caravan/Motohomes Models'))
                                             <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                         </div>
                                         <?= __listing_features($posts_listing->ID) ?>
-                                        <div class="listing--buttons mt-2">
-                                            <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
-                                                <li>
-                                                    <a class="py-2 px-0" href="">
-                                                        Explore
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <?php if ($page) { ?>
+                                            <div class="listing--buttons mt-2">
+                                                <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
+                                                    <li>
+                                                        <a class="py-2 px-0" href="<?= get_the_permalink($page[0]['id']) ?>">
+                                                            Explore
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        <?php } ?>
+
                                     </div>
                                 </div>
                             <?php } ?>
