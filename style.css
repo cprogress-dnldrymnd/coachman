@@ -11895,8 +11895,10 @@ p {
 p:last-child {
   margin-bottom: 0 !important; }
 
-a:hover, a:active, a:focus {
-  color: var(--maroon); }
+a {
+  color: var(--bs-black); }
+  a:hover, a:active, a:focus {
+    color: var(--maroon); }
 
 h1, .h1 {
   font-size: 4.25rem; }
