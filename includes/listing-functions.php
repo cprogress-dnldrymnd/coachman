@@ -451,7 +451,7 @@ function __listing_buttons($post_id)
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden">
                 <p class="fs-22">360° Walkthrough</p>
-                <?= $_360_walkthrough ?>
+                <iframe src="<?= $_360_walkthrough ?>" frameborder="0"></iframe>
             </div>
         </div>
     </div>
