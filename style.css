@@ -11307,7 +11307,8 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    width: 100%; }
+    width: 100%;
+    text-decoration: none; }
     .nav-tabs.style-2 .nav-link:hover, .nav-tabs.style-2 .nav-link:active, .nav-tabs.style-2 .nav-link:focus {
       color: var(--maroon); }
     .nav-tabs.style-2 .nav-link:after {

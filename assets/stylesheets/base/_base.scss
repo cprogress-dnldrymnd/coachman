@@ -50,6 +50,7 @@ img {
             justify-content: space-between;
             padding: 20px;
             width: 100%;
+            text-decoration: none;
             @include on-event{
                 color: var(--maroon);
             }
