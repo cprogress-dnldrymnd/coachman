@@ -489,7 +489,7 @@ Block::make(__('Caravan/Motohomes Models'))
                                             <div class="listing--buttons mt-2">
                                                 <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
                                                     <li>
-                                                        <a class="py-2 px-0" href="<?= get_the_permalink($page[0]['id']) ?>">
+                                                        <a class="py-2 px-0 text-decoration-none" href="<?= get_the_permalink($page[0]['id']) ?>">
                                                             Explore
                                                         </a>
                                                     </li>
