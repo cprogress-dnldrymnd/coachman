@@ -425,7 +425,7 @@ function __listing_buttons($post_id)
     $video = get__post_meta_by_id($post_id, 'video');
 ?>
     <div class="listing--buttons">
-        <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center">
+        <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
             <?php if ($_360_walkthrough) { ?>
                 <li>
                     <button class=" py-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasLayout" aria-controls="offCanvasLayout-<?= $post_id ?>">
