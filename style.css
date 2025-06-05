@@ -12494,6 +12494,8 @@ h5, .h5 {
 
 .offcanvas--technical-details.offcanvas--technical-details {
   max-width: 900px; }
+  .offcanvas--technical-details.offcanvas--technical-details .wp-block-buttons > .wp-block-button {
+    flex: 1 0 0%; }
 
 /*-----------------------------------------------------------------------------------*/
 /* Plugins
