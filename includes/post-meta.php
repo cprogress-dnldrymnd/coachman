@@ -563,7 +563,7 @@ Block::make(__('Model Technical Details'))
             <?= $fields['button_text'] ?>
         </button>
     </div>
-    <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvasModelSpecs-<?= $model_id ?>" aria-labelledby="offCanvasModelSpecs-<?= $model_id ?>Label" aria-modal="true" role="dialog">
+    <div class="offcanvas offcanvas--technical-details offcanvas-end" tabindex="-1" id="offCanvasModelSpecs-<?= $model_id ?>" aria-labelledby="offCanvasModelSpecs-<?= $model_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0 overflow-hidden">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
