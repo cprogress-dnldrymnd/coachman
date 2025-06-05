@@ -11547,8 +11547,8 @@ img {
   right: 0;
   bottom: 0;
   width: 50%;
-  --swiper-navigation-color: var(--bs-white);
-  --swiper-pagination-color: var(--bs-white);
+  --swiper-navigation-color: currentColor;
+  --swiper-pagination-color: currentColor;
   --swiper-pagination-bullet-inactive-color: currentColor;
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-navigation-size: 10px;
