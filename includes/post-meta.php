@@ -219,6 +219,7 @@ Block::make(__('Swiper'))
             ->add_fields('slidesperview', array(
                 Field::make('text', 'slidesperview', __('slidesPerView')),
             ))
+            ->set_duplicate_groups_allowed(false)
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
