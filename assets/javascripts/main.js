@@ -81,8 +81,11 @@ function swiper_sliders() {
         $atts = jQuery(this).attr('swiper_atts');
         $atts = JSON.parse($atts);
         $id = '#' + jQuery(this).find('.swiper').attr('id');
-        console.log($id);
-        console.log($atts);
+        if (jQuery(this).hasClass('swiper-nav-style-2')) {
+            jQuery(this).find('.swiper-button-prev').appendTo(jQuery(this).find('.swiper-pagination-navigation-style-2'));
+            jQuery(this).find('.swiper-pagination').appendTo(jQuery(this).find('.swiper-pagination-navigation-style-2'));
+            jQuery(this).find('.swiper-button-next').appendTo(jQuery(this).find('.swiper-pagination-navigation-style-2'));
+        }
         var swiper_slider_block = new Swiper($id, $atts);
     });
 
