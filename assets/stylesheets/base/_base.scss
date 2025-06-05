@@ -51,7 +51,7 @@ img {
             padding: 20px;
             width: 100%;
             text-decoration: none;
-            @include on-event{
+            @include on-event {
                 color: var(--maroon);
             }
             @include after {
@@ -342,5 +342,16 @@ img {
     img {
         height: 18px;
         width: auto;
+    }
+}
+
+.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    > div {
+        position: static;
     }
 }
