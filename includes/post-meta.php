@@ -536,6 +536,7 @@ Block::make(__('Listing Buttons'))
 Block::make(__('Model Technical Details'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Listing Buttons</div>"),
+        Field::make('text', 'button_text', __('Button Text'))->set_default_value('View all technical details'),
         Field::make('complex', 'model')
             ->add_fields('caravan', array(
                 Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_classes('hidden'),
