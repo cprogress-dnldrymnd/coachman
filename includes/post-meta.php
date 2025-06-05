@@ -584,7 +584,7 @@ Block::make(__('Model Technical Details'))
                                 </button>
                             </h2>
                             <div id="collapse<?= $key ?>" class="accordion-collapse collapse <?= $key == 0 ? 'show' : '' ?>" data-bs-parent="#accordionTechnicalDetails">
-                                <div class="accordion-body checklists-holder bg-lightgray-2">
+                                <div class="accordion-body checklists-holder bg-lightgray-2 fs-14">
                                     <?= wpautop($technical_detail['description']) ?>
                                 </div>
                             </div>
