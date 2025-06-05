@@ -16,8 +16,6 @@
     <?php echo do_shortcode('[template template_id=396]'); ?>
 </footer>
 
-<div class="backdrop"></div>
-
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
