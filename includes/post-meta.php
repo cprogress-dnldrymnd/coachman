@@ -579,7 +579,7 @@ Block::make(__('Model Technical Details'))
                     <?php foreach ($technical_details as $key => $technical_detail) { ?>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button <?= $key == 0 ? '' : 'collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $key ?>" aria-expanded="<?= $key == 0 ? 'true' : 'false' ?>" aria-controls="collapse<?= $key ?>">
+                                <button class="accordion-button fs-17 fw-semibold <?= $key == 0 ? '' : 'collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $key ?>" aria-expanded="<?= $key == 0 ? 'true' : 'false' ?>" aria-controls="collapse<?= $key ?>">
                                     <?= $technical_detail['heading'] ?>
                                 </button>
                             </h2>

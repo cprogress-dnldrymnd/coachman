@@ -11615,7 +11615,8 @@ img {
 
 .accordion.accordion {
   --bs-accordion-border-width: 0;
-  --bs-accordion-inner-border-radius: 0; }
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-active-bg: var(--lightgray-2); }
   .accordion.accordion .accordion-button {
     box-shadow: none; }
 
