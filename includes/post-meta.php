@@ -216,6 +216,9 @@ Block::make(__('Swiper'))
             ->add_fields('spacebetween', array(
                 Field::make('text', 'spacebetween', __('spaceBetween'))->set_attribute('type', 'number'),
             ))
+            ->add_fields('slidesperview', array(
+                Field::make('text', 'slidesperview', __('slidesPerView')),
+            ))
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
@@ -223,6 +226,12 @@ Block::make(__('Swiper'))
         'carbon-fields/swiper-wrapper',
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+        $atts = [];
+        $swiper_options = $fields['swiper_options'];
+        foreach ($swiper_options as $swiper_option) {
+            $type = $swiper_option['_type'];
+            echo $type;
+        }
 ?>
     <div class="swiper-slider-holder" <?= $attributes['className'] ?>>
         <div class="swiper swiper-slider-block">
