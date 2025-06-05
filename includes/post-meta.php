@@ -240,17 +240,17 @@ Block::make(__('Swiper'))
             switch ($type) {
                 case 'autoplay':
                     $delay = isset($swiper_option['delay']) ? $swiper_option['delay'] : 3000;
-                    $disableoninteraction = isset($swiper_option['disableoninteraction']) ? 'true' : 'false';
+                    $disableoninteraction = isset($swiper_option['disableoninteraction']) ? true : false;
                     $atts['autoplay'] = array(
                         "delay" => $delay,
                         "disableOnInteraction" => $disableoninteraction,
                     );
                     break;
                 case 'spacebetween':
-                    $atts['spaceBetween'] = $swiper_option['spacebetween'];
+                    $atts['spaceBetween'] = (float)$swiper_option['spacebetween'];
                     break;
                 case 'slidesperview':
-                    $atts['slidesPerView'] = $swiper_option['slidesperview'];
+                    $atts['slidesPerView'] = (float)$swiper_option['slidesperview'];
                     break;
                 case 'pagination_navigation':
                     if ($swiper_option['has_pagination']) {
