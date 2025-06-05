@@ -11543,15 +11543,22 @@ img {
   display: flex;
   align-items: center;
   position: absolute;
+  justify-content: flex-end;
   right: 0;
   bottom: 0;
   width: 50%;
   --swiper-navigation-color: var(--bs-white);
   --swiper-pagination-bullet-inactive-color: var(--bs-white);
   --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-navigation-size: 10px; }
+  --swiper-navigation-size: 10px;
+  --gap: 40px; }
   .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div {
-    position: static; }
+    position: static;
+    transform: none;
+    margin: 0;
+    gap: var(--gap); }
+    .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination {
+      width: auto; }
 
 @media (min-width: 1500px) {
   .container {
