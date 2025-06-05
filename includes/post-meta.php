@@ -508,7 +508,7 @@ Block::make(__('Listing Title'))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
-    <?= __listing_title(get_the_ID()) ?>
+    <?= __listing_title(get_the_ID(), 'h3', 'fs-24 fw-semibold') ?>
 <?php
     });
 
