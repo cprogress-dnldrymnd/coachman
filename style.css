@@ -11614,7 +11614,10 @@ img {
   z-index: 9999; }
 
 .accordion.accordion {
-  --bs-accordion-border-width: 0; }
+  --bs-accordion-border-width: 0;
+  --bs-accordion-inner-border-radius: 0; }
+  .accordion.accordion .accordion-button {
+    box-shadow: none; }
 
 @media (min-width: 1500px) {
   .container {
