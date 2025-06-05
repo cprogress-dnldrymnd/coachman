@@ -387,6 +387,9 @@ img {
             }
         }
     }
+    @include responsive(xs-sm) {
+        gap: 20px;
+    }
 }
 
 .swiper-slider-holder {
