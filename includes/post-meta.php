@@ -545,5 +545,10 @@ Container::make('term_meta', __('Model Properties'))
                     'post_type' => 'page',
                 )
             ))
-            ->set_max(1)
+            ->set_max(1),
+        Field::make('complex', 'Technical details')
+            ->add_fields(array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('rich_text', 'description', __('Description')),
+            ))
     ));
