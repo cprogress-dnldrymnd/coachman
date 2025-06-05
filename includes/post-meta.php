@@ -208,6 +208,7 @@ Block::make(__('Tabs Content Item'))
 Block::make(__('Swiper'))
     ->add_fields(array(
         Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>"),
+        Field::make('text', 'swiper_id', __('Swiper ID')),
         Field::make('complex', 'swiper_options')
             ->add_fields('autoplay', array(
                 Field::make('text', 'delay', __('delay'))->set_attribute('type', 'number'),
@@ -219,6 +220,10 @@ Block::make(__('Swiper'))
             ->add_fields('slidesperview', array(
                 Field::make('text', 'slidesperview', __('slidesPerView')),
             ))
+            ->add_fields('pagination_navigation', array(
+                Field::make('checkbox', 'has_pagination', __('Has Pagination')),
+                Field::make('checkbox', 'has_navigation', __('Has Navigation')),
+            ))
             ->set_duplicate_groups_allowed(false)
     ))
     ->set_inner_blocks(true)
@@ -228,6 +233,7 @@ Block::make(__('Swiper'))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
         $atts = [];
+        $swiper_id = $fields['swiper_id'];
         $swiper_options = $fields['swiper_options'];
         foreach ($swiper_options as $swiper_option) {
             $type = $swiper_option['_type'];
@@ -235,19 +241,36 @@ Block::make(__('Swiper'))
                 case 'autoplay':
                     $delay = isset($swiper_option['delay']) ? $swiper_option['delay'] : 3000;
                     $disableoninteraction = isset($swiper_option['disableoninteraction']) ? 'true' : 'false';
-                    $atts[] = "data-swiper-autoplay='{\"delay\":$delay, \"disableOnInteraction\":$disableoninteraction}'";
+                    $atts['autoplay'] = array(
+                        "delay" => $delay,
+                        "disableOnInteraction" => $disableoninteraction,
+                    );
                     break;
                 case 'spacebetween':
-                    $atts[] = "data-swiper-space-between='{$swiper_option['spacebetween']}'";
+                    $atts['spaceBetween'] = $swiper_option['spacebetween'];
                     break;
                 case 'slidesperview':
-                    $atts[] = "data-swiper-slides-per-view='{$swiper_option['slidesperview']}'";
+                    $atts['slidesPerView'] = $swiper_option['slidesperview'];
+                    break;
+                case 'pagination_navigation':
+                    if ($swiper_option['has_pagination']) {
+                        $atts['pagination'] = array(
+                            "el" => "$swiper_id .swiper-pagination",
+                            "clickable" => true,
+                        );
+                    }
+                    if ($swiper_option['has_navigation']) {
+                        $atts['navigation'] = array(
+                            "nextEl" => "$swiper_id .swiper-button-next",
+                            "prevEl" => "$swiper_id .swiper-button-prev",
+                        );
+                    }
                     break;
             }
         }
-        $atts_string = implode(' ', $atts);
+        $atts_json = json_encode($atts);
 ?>
-    <div class="swiper-slider-holder" <?= $attributes['className'] ?> <?= $atts_string ?>>
+    <div class="swiper-slider-holder" <?= $attributes['className'] ?> <?= $atts_json ?>>
         <div class="swiper swiper-slider-block">
             <?= $inner_blocks ?>
         </div>

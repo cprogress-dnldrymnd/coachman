@@ -76,6 +76,11 @@ function swiper_sliders() {
         spaceBetween: 20,
         freeMode: true,
     });
+
+    jQuery('.swiper-slider-holder').each(function (index, element) {
+        // element == this
+
+    });
     var swiper_slider_block = new Swiper(".swiper-slider-block", {
         breakpoints: {
             slidesPerView: 1,
@@ -85,6 +90,9 @@ function swiper_sliders() {
             el: ".swiper-pagination",
         },
     });
+
+
+
     var swiper_listing_taxonomy = new Swiper(".swiper-listings-taxonomy", {
         slidesPerView: 'auto',
         spaceBetween: 40,
