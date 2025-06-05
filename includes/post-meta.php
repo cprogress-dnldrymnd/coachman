@@ -502,6 +502,15 @@ Block::make(__('Caravan/Motohomes Models'))
 
 <?php
     });
+Block::make(__('Listing Title'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Listing Title</div>"),
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <?= __listing_title(get_the_ID()) ?>
+<?php
+    });
 
 Block::make(__('Listing Feature'))
     ->add_fields(array(

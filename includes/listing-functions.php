@@ -378,7 +378,7 @@ function get_taxonomy_terms_wpdb($taxonomy)
 }
 
 
-function __listing_title($post_id)
+function __listing_title($post_id, $tag = false, $class = '')
 {
     ob_start();
     $post_type = get_post_type($post_id);
@@ -393,7 +393,9 @@ function __listing_title($post_id)
 ?>
     <div class="title-box d-flex gap-3 align-items-center">
         <?= wp_get_attachment_image($logo, 'medium') ?>
+        <?= $tag ? "<$tag class='$class'>" : '' ?>
         <?= $final_title ?>
+        <?= $tag ? "</$tag>" : '' ?>
     </div>
 <?php
     return ob_get_clean();
