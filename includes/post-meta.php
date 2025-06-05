@@ -570,30 +570,32 @@ Block::make(__('Model Technical Details'))
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
                 </svg>
             </button>
-            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
-                <div class="title-box d-flex gap-3 align-items-center">
-                    <h2><?= wp_get_attachment_image($logo, 'medium') ?></h2>
-                </div>
-                <p class="fs-22 mb-4">Technical details</p>
-                <div class="accordion" id="accordionTechnicalDetails">
-                    <?php foreach ($technical_details as $key => $technical_detail) { ?>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fs-17 fw-semibold <?= $key == 0 ? '' : 'collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $key ?>" aria-expanded="<?= $key == 0 ? 'true' : 'false' ?>" aria-controls="collapse<?= $key ?>">
-                                    <?= $technical_detail['heading'] ?>
-                                </button>
-                            </h2>
-                            <div id="collapse<?= $key ?>" class="accordion-collapse collapse <?= $key == 0 ? 'show' : '' ?>" data-bs-parent="#accordionTechnicalDetails">
-                                <div class="accordion-body checklists-holder bg-lightgray-2 fs-14">
-                                    <?= wpautop($technical_detail['description']) ?>
+            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5 d-flex h-100 flex-column justify-content-between"> 
+                <div class="top">
+                    <div class="title-box d-flex gap-3 align-items-center">
+                        <h2><?= wp_get_attachment_image($logo, 'medium') ?></h2>
+                    </div>
+                    <p class="fs-22 mb-4">Technical details</p>
+                    <div class="accordion" id="accordionTechnicalDetails">
+                        <?php foreach ($technical_details as $key => $technical_detail) { ?>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fs-17 fw-semibold <?= $key == 0 ? '' : 'collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $key ?>" aria-expanded="<?= $key == 0 ? 'true' : 'false' ?>" aria-controls="collapse<?= $key ?>">
+                                        <?= $technical_detail['heading'] ?>
+                                    </button>
+                                </h2>
+                                <div id="collapse<?= $key ?>" class="accordion-collapse collapse <?= $key == 0 ? 'show' : '' ?>" data-bs-parent="#accordionTechnicalDetails">
+                                    <div class="accordion-body checklists-holder bg-lightgray-2 fs-14">
+                                        <?= wpautop($technical_detail['description']) ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
-
-                <?= do_shortcode('[template template_id=426]'); ?>
-
+                <div class="bottom">
+                    <?= do_shortcode('[template template_id=426]'); ?>
+                </div>
             </div>
         </div>
     </div>
