@@ -313,6 +313,22 @@ Block::make(__('Swiper Pagination'))
 <?php
     });
 
+Block::make(__('Swiper Navigation'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>-Swipper Navigation</div>"),
+    ))
+    ->set_parent('carbon-fields/swiper')
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <div class="swiper-navigation-holder">
+        <div class="container">
+            <div class="swiper-button-prev"> </div>
+            <div class="swiper-button-next"> </div>
+        </div>
+    </div>
+<?php
+    });
+
 
 Block::make(__('Swiper Slide'))
     ->add_fields(array(
