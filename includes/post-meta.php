@@ -242,8 +242,8 @@ Block::make(__('Swiper'))
                     $delay = isset($swiper_option['delay']) ? $swiper_option['delay'] : 3000;
                     $disableoninteraction = isset($swiper_option['disableoninteraction']) ? true : false;
                     $atts['autoplay'] = array(
-                        "delay" => $delay,
-                        "disableOnInteraction" => $disableoninteraction,
+                        'delay' => $delay,
+                        'disableOnInteraction' => $disableoninteraction,
                     );
                     break;
                 case 'spacebetween':
@@ -255,14 +255,14 @@ Block::make(__('Swiper'))
                 case 'pagination_navigation':
                     if ($swiper_option['has_pagination']) {
                         $atts['pagination'] = array(
-                            "el" => ".swiper-pagination",
-                            "clickable" => true,
+                            'el' => '#' . $swiper_id . ' .swiper-pagination',
+                            'clickable' => true,
                         );
                     }
                     if ($swiper_option['has_navigation']) {
                         $atts['navigation'] = array(
-                            "nextEl" => "#$swiper_id .swiper-button-next",
-                            "prevEl" => "#$swiper_id .swiper-button-prev",
+                            'nextEl' => '#' . $swiper_id . ' .swiper-button-next',
+                            'prevEl' => '#' . $swiper_id . ' .swiper-button-prev',
                         );
                     }
                     break;
