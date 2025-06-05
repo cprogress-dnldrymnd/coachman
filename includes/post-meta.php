@@ -271,7 +271,7 @@ Block::make(__('Swiper'))
         $atts_json = json_encode($atts);
 ?>
     <div class="swiper-slider-holder" <?= $attributes['className'] ?> <?= $atts_json ?>>
-        <div class="swiper swiper-slider-block" <?= $swiper_id ?>>
+        <div class="swiper swiper-slider-block" id="<?= $swiper_id ?>">
             <?= $inner_blocks ?>
         </div>
     </div>
