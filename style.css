@@ -11552,16 +11552,17 @@ img {
   --swiper-pagination-bullet-inactive-color: var(--bs-white);
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-navigation-size: 10px;
-  --gap: 40px;
+  --gap: 1.5vw;
   gap: var(--gap);
-  line-height: 1; }
+  line-height: 0; }
   .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div {
     position: static;
     transform: none;
     margin: 0; }
     .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination {
       width: auto;
-      gap: var(--gap); }
+      gap: var(--gap);
+      display: flex; }
       .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div {
         margin: 0; }
 

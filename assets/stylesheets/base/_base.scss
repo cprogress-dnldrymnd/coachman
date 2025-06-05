@@ -358,7 +358,7 @@ img {
     --swiper-pagination-bullet-inactive-color: var(--bs-white);
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-navigation-size: 10px;
-    --gap: 40px;
+    --gap: 1.5vw;
     gap: var(--gap);
     line-height: 0;
     > div {
@@ -368,7 +368,7 @@ img {
         &.swiper-pagination {
             width: auto;
             gap: var(--gap);
-
+            display: flex;
             > div {
                 margin: 0;
             }
