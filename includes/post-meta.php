@@ -247,10 +247,10 @@ Block::make(__('Swiper'))
                     );
                     break;
                 case 'spacebetween':
-                    $atts['spaceBetween'] = (float)$swiper_option['spacebetween'];
+                    $atts['spaceBetween'] = $swiper_option['spacebetween'];
                     break;
                 case 'slidesperview':
-                    $atts['slidesPerView'] = (float)$swiper_option['slidesperview'];
+                    $atts['slidesPerView'] =$swiper_option['slidesperview'];
                     break;
                 case 'pagination_navigation':
                     if ($swiper_option['has_pagination']) {
