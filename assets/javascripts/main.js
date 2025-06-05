@@ -79,6 +79,7 @@ function swiper_sliders() {
 
     jQuery('.swiper-slider-holder').each(function (index, element) {
         $atts = jQuery(this).attr('swiper_atts');
+        $atts = JSON.parse($atts);
         $id = '#' + jQuery(this).find('.swiper').attr('id');
         console.log($id);
         console.log($atts);
