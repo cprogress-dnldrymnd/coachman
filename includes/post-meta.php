@@ -240,7 +240,7 @@ Block::make(__('Swiper'))
             switch ($type) {
                 case 'autoplay':
                     $delay = isset($swiper_option['delay']) ? $swiper_option['delay'] : 3000;
-                    $disableoninteraction = isset($swiper_option['disableoninteraction']) ? true : false;
+                    $disableoninteraction = isset($swiper_option['disableoninteraction']) ? 'true' : 'false';
                     $atts['autoplay'] = array(
                         'delay' => $delay,
                         'disableOnInteraction' => $disableoninteraction,
@@ -256,7 +256,7 @@ Block::make(__('Swiper'))
                     if ($swiper_option['has_pagination']) {
                         $atts['pagination'] = array(
                             'el' => '#' . $swiper_id . ' .swiper-pagination',
-                            'clickable' => true,
+                            'clickable' => 'true',
                         );
                     }
                     if ($swiper_option['has_navigation']) {
