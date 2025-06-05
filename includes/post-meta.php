@@ -551,4 +551,5 @@ Container::make('term_meta', __('Model Properties'))
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('rich_text', 'description', __('Description')),
             ))
+            ->set_header_template('<%- heading %>')
     ));
