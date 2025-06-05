@@ -11564,11 +11564,14 @@ img {
       gap: var(--gap);
       display: flex;
       counter-reset: section; }
-      .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div {
+      .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet {
         margin: 0;
         width: auto;
-        height: auto; }
-        .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div:before {
+        height: auto;
+        border-bottom: 1px solid transparent; }
+        .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          border-bottom: 1px solid var(--bs-white); }
+        .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet:before {
           content: counter(section); }
 
 @media (min-width: 1500px) {
