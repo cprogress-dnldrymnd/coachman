@@ -11584,17 +11584,20 @@ img {
   .swiper-slider-holder.swiper-nav-style-2 .swiper {
     padding-bottom: 50px; } }
 
-.checklists {
+.checklists,
+.checklists ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 20px; }
-  .checklists li {
+  .checklists li,
+  .checklists ul li {
     display: flex;
     align-items: center;
     gap: 10px; }
-    .checklists li:before {
+    .checklists li:before,
+    .checklists ul li:before {
       content: "";
       display: inline-block;
       width: 14px;
@@ -11609,6 +11612,9 @@ img {
 
 .offcanvas-backdrop.offcanvas-backdrop {
   z-index: 9999; }
+
+.accordion.accordion {
+  --bs-accordion-border-width: 0; }
 
 @media (min-width: 1500px) {
   .container {

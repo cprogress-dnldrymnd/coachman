@@ -402,7 +402,8 @@ img {
     }
 }
 
-.checklists {
+.checklists,
+.checklists ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -426,4 +427,8 @@ img {
 
 .offcanvas-backdrop.offcanvas-backdrop {
     z-index: 9999;
+}
+
+.accordion.accordion {
+    --bs-accordion-border-width: 0;
 }
