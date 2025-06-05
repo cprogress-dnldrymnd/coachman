@@ -11549,7 +11549,7 @@ img {
   width: 50%;
   --swiper-navigation-color: var(--bs-white);
   --swiper-pagination-color: var(--bs-white);
-  --swiper-pagination-bullet-inactive-color: var(--bs-white);
+  --swiper-pagination-bullet-inactive-color: currentColor;
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-navigation-size: 10px;
   --gap: 1.5vw;
@@ -11571,7 +11571,7 @@ img {
         background-color: transparent;
         border-radius: 0; }
         .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-          border-bottom: 1px solid var(--bs-white); }
+          border-bottom: 1px solid currentColor; }
         .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet:before {
           counter-increment: section;
           content: counter(section);

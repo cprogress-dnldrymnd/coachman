@@ -353,9 +353,9 @@ img {
     right: 0;
     bottom: 0;
     width: 50%;
-    --swiper-navigation-color: var(--bs-white);
-    --swiper-pagination-color: var(--bs-white);
-    --swiper-pagination-bullet-inactive-color: var(--bs-white);
+    --swiper-navigation-color: currentColor;
+    --swiper-pagination-color: currentColor;
+    --swiper-pagination-bullet-inactive-color: currentColor;
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-navigation-size: 10px;
     --gap: 1.5vw;
@@ -377,7 +377,7 @@ img {
                 background-color: transparent;
                 border-radius: 0;
                 &.swiper-pagination-bullet-active {
-                    border-bottom: 1px solid var(--bs-white);
+                    border-bottom: 1px solid currentColor
                 }
                 &:before {
                     counter-increment: section;
