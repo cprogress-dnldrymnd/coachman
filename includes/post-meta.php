@@ -255,14 +255,14 @@ Block::make(__('Swiper'))
                 case 'pagination_navigation':
                     if ($swiper_option['has_pagination']) {
                         $atts['pagination'] = array(
-                            "el" => "$swiper_id .swiper-pagination",
+                            "el" => "#$swiper_id .swiper-pagination",
                             "clickable" => true,
                         );
                     }
                     if ($swiper_option['has_navigation']) {
                         $atts['navigation'] = array(
-                            "nextEl" => "$swiper_id .swiper-button-next",
-                            "prevEl" => "$swiper_id .swiper-button-prev",
+                            "nextEl" => "#$swiper_id .swiper-button-next",
+                            "prevEl" => "#$swiper_id .swiper-button-prev",
                         );
                     }
                     break;
