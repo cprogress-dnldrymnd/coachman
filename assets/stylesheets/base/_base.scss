@@ -359,14 +359,19 @@ img {
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-navigation-size: 10px;
     --gap: 40px;
+    gap: var(--gap);
+    line-height: 0;
     > div {
         position: static;
         transform: none;
         margin: 0;
-        gap: var(--gap);
         &.swiper-pagination {
             width: auto;
             gap: var(--gap);
+
+            > div {
+                margin: 0;
+            }
         }
     }
 }

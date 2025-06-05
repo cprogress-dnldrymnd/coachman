@@ -11552,15 +11552,18 @@ img {
   --swiper-pagination-bullet-inactive-color: var(--bs-white);
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-navigation-size: 10px;
-  --gap: 40px; }
+  --gap: 40px;
+  gap: var(--gap);
+  line-height: 1; }
   .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div {
     position: static;
     transform: none;
-    margin: 0;
-    gap: var(--gap); }
+    margin: 0; }
     .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination {
       width: auto;
       gap: var(--gap); }
+      .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div {
+        margin: 0; }
 
 @media (min-width: 1500px) {
   .container {
