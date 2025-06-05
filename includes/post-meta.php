@@ -225,6 +225,7 @@ Block::make(__('Swiper'))
                 Field::make('checkbox', 'has_navigation', __('Has Navigation')),
             ))
             ->set_duplicate_groups_allowed(false)
+            ->set_collapsed(true)
     ))
     ->set_inner_blocks(true)
     ->set_inner_blocks_position('below')
