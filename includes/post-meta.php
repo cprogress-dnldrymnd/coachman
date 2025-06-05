@@ -532,6 +532,30 @@ Block::make(__('Listing Buttons'))
 <?php
     });
 
+
+Block::make(__('Model Technical Details'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Listing Buttons</div>"),
+        Field::make('complex', 'model')
+            ->add_fields('caravan', array(
+                Field::make('text', 'taxonomy', __('Caravan Model'))->set_default_value('caravan_model')->set_classes('hidden'),
+                Field::make('select', 'model', __('Caravan Model'))
+                    ->add_options(get_taxonomy_terms_wpdb('caravan_model'))
+            ))
+            ->add_fields('motorhome', array(
+                Field::make('text', 'taxonomy', __('Motorhome Model'))->set_default_value('motorhome_model')->set_classes('hidden'),
+                Field::make('select', 'model', __('Motorhome Model'))
+                    ->add_options(get_taxonomy_terms_wpdb('motorhome_model'))
+            ))
+            ->set_max(1)
+            ->set_duplicate_groups_allowed(false)
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+    <?= __listing_buttons(get_the_ID()) ?>
+<?php
+    });
+
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
     ->or_where('term_taxonomy', '=', 'motorhome_model')
