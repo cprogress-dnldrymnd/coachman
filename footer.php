@@ -17,18 +17,12 @@
 </footer>
 
 <div class="backdrop"></div>
-<div class="d-none">
-    <?= do_shortcode('[template template_id=1719]') ?>
-    <?= do_shortcode('[template template_id=1602]') ?>
-    <?= do_shortcode('[template template_id=1618]') ?>
-</div>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 <?php
-get_template_part('template-parts/offcanvas/finance-calculator');
-get_template_part('template-parts/offcanvas/reserve-form');
 get_template_part('template-parts/offcanvas/menu');
 ?>
 
