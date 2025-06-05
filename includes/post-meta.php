@@ -572,7 +572,7 @@ Block::make(__('Model Technical Details'))
                 <div class="title-box d-flex gap-3 align-items-center">
                     <h2><?= wp_get_attachment_image($logo, 'medium') ?></h2>
                 </div>
-                <p class="fs-22">360° Walkthrough</p>
+                <p class="fs-22">Technical details</p>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
