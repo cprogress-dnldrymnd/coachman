@@ -82,7 +82,7 @@ function swiper_sliders() {
         $id = jQuery(this).find('.swiper').attr('id');
         console.log($id);
         console.log($atts);
-        var swiper_slider_block = new Swiper('.swiper-slider-block', $atts);
+        var swiper_slider_block = new Swiper($id, $atts);
     });
 
 
