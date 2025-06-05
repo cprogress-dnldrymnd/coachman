@@ -401,3 +401,17 @@ img {
         }
     }
 }
+
+
+.checklists {
+    list-style: none;
+    padding: 0;
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include before {
+            content: '';
+        }
+    }   
+}

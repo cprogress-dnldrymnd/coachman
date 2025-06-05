@@ -11584,6 +11584,10 @@ img {
   .swiper-slider-holder.swiper-nav-style-2 .swiper {
     padding-bottom: 50px; } }
 
+.checklists {
+  list-style: none;
+  padding: 0; }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
