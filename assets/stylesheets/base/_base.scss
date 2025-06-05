@@ -369,8 +369,14 @@ img {
             width: auto;
             gap: var(--gap);
             display: flex;
+            counter-reset: section;
             > div {
                 margin: 0;
+                width: auto;
+                height: auto;
+                &:before {
+                    content: counter(section);
+                }
             }
         }
     }

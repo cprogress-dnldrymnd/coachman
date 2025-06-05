@@ -11562,9 +11562,12 @@ img {
     .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination {
       width: auto;
       gap: var(--gap);
-      display: flex; }
+      display: flex;
+      counter-reset: section; }
       .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div {
         margin: 0; }
+        .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div:before {
+          content: counter(section); }
 
 @media (min-width: 1500px) {
   .container {
