@@ -11581,7 +11581,7 @@ img {
       gap: 20px; } }
 
 @media screen and (max-width: 991px) {
-  .swiper-slider-holder.swiper-nav-style-2 {
+  .swiper-slider-holder.swiper-nav-style-2 .swiper {
     padding-bottom: 50px; } }
 
 @media (min-width: 1500px) {

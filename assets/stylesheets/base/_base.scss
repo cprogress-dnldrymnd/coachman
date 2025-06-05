@@ -395,7 +395,9 @@ img {
 .swiper-slider-holder {
     &.swiper-nav-style-2 {
         @include responsive(xs-sm) {
-            padding-bottom: 50px;
+            .swiper {
+                padding-bottom: 50px;
+            }
         }
     }
 }
