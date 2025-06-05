@@ -255,7 +255,7 @@ Block::make(__('Swiper'))
                 case 'pagination_navigation':
                     if ($swiper_option['has_pagination']) {
                         $atts['pagination'] = array(
-                            "el" => "#$swiper_id .swiper-pagination",
+                            "el" => ".swiper-pagination",
                             "clickable" => true,
                         );
                     }
