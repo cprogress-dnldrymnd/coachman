@@ -11543,7 +11543,11 @@ img {
   display: flex;
   position: absolute;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  width: 50%;
+  --swiper-navigation-color: var(--bs-white);
+  --swiper-pagination-bullet-inactive-color: var(--bs-white);
+  --swiper-pagination-bullet-inactive-opacity: 1; }
   .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div {
     position: static; }
 
