@@ -554,7 +554,7 @@ Block::make(__('Model Technical Details'))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
     <div class="wp-block-button is-style-fill">
-        <a class="wp-block-button__link has-white-theme-color has-maroon-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:0px">
+        <a class="wp-block-button__link w-auto has-white-theme-color has-maroon-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:0px">
             <?= $fields['button_text'] ?>
         </a>
     </div>
