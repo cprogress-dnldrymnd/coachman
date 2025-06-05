@@ -377,7 +377,7 @@ img {
                 background-color: transparent;
                 border-radius: 0;
                 &.swiper-pagination-bullet-active {
-                    border-bottom: 1px solid currentColor
+                    border-bottom: 1px solid currentColor;
                 }
                 &:before {
                     counter-increment: section;
@@ -402,7 +402,6 @@ img {
     }
 }
 
-
 .checklists {
     list-style: none;
     padding: 0;
@@ -414,7 +413,13 @@ img {
         align-items: center;
         gap: 10px;
         @include before {
-            content: '';
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 7px;
+            border-left: 2px solid var(--maroon);
+            border-bottom: 2px solid var(--maroon);
+            @include transform(rotate(-45deg));
         }
-    }   
+    }
 }
