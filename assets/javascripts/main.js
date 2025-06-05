@@ -80,6 +80,8 @@ function swiper_sliders() {
     jQuery('.swiper-slider-holder').each(function (index, element) {
         $atts = jQuery(this).attr('swiper_atts');
         $id = jQuery(this).find('.swiper').attr('id');
+        console.log($id);
+        console.log($atts);
         var swiper_slider_block = new Swiper($id, $atts);
     });
 
