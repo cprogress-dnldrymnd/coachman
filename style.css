@@ -11924,6 +11924,15 @@ img {
     .w-100-sm > * {
       max-width: 100% !important; } }
 
+@media screen and (max-width: 991px) {
+  .columns-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px; } }
+@media screen and (max-width: 575px) {
+  .columns-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px; } }
+
 body {
   font-family: "pennypacker-semiwide", sans-serif;
   color: var(--text-color);
