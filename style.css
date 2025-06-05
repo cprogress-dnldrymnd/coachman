@@ -11607,6 +11607,9 @@ img {
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
 
+.offcanvas-backdrop.offcanvas-backdrop {
+  z-index: 9999; }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
