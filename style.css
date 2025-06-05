@@ -11585,19 +11585,19 @@ img {
     padding-bottom: 50px; } }
 
 .checklists,
-.checklists ul {
+.checklists-holder ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 20px; }
   .checklists li,
-  .checklists ul li {
+  .checklists-holder ul li {
     display: flex;
     align-items: center;
     gap: 10px; }
     .checklists li:before,
-    .checklists ul li:before {
+    .checklists-holder ul li:before {
       content: "";
       display: inline-block;
       width: 14px;
