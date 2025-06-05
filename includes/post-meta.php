@@ -586,6 +586,7 @@ Block::make(__('Model Technical Details'))
                             <div id="collapse<?= $key ?>" class="accordion-collapse collapse <?= $key == 0 ? 'show' : '' ?>" data-bs-parent="#accordionTechnicalDetails">
                                 <div class="accordion-body checklists-holder bg-lightgray-2 fs-14">
                                     <?= wpautop($technical_detail['description']) ?>
+                                    <?= do_shortcode('[template template_id=426]'); ?>
                                 </div>
                             </div>
                         </div>
