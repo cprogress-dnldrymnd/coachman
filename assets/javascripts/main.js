@@ -78,18 +78,11 @@ function swiper_sliders() {
     });
 
     jQuery('.swiper-slider-holder').each(function (index, element) {
-        // element == this
+        $atts = jQuery(this).attr('swiper_atts');
+        $id = jQuery(this).find('.swipeer').attr('id');
+        var swiper_slider_block = new Swiper($id, $atts);
+    });
 
-    });
-    var swiper_slider_block = new Swiper(".swiper-slider-block", {
-        breakpoints: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
 
 
 
