@@ -11565,7 +11565,9 @@ img {
       display: flex;
       counter-reset: section; }
       .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div {
-        margin: 0; }
+        margin: 0;
+        width: auto;
+        height: auto; }
         .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination > div:before {
           content: counter(section); }
 
