@@ -120,7 +120,9 @@
     max-width: 900px;
     .wp-block-buttons {
         > .wp-block-button {
-            flex-grow: 1;
+            @include responsive(mobile-lg) {
+                flex-grow: 1;
+            }
         }
     }
 }
