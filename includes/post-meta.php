@@ -223,6 +223,11 @@ Block::make(__('Swiper'))
             ->add_fields('pagination_navigation', array(
                 Field::make('checkbox', 'has_pagination', __('Has Pagination')),
                 Field::make('checkbox', 'has_navigation', __('Has Navigation')),
+                Field::make('select', 'style', __('Pagination & Navigation Style'))
+                    ->set_options(array(
+                        '' => 'Default',
+                        'style-2' => 'Style 2',
+                    )),
             ))
             ->set_duplicate_groups_allowed(false)
             ->set_collapsed(true)
@@ -236,6 +241,7 @@ Block::make(__('Swiper'))
         $atts = [];
         $swiper_id = $fields['swiper_id'];
         $swiper_options = $fields['swiper_options'];
+        $style = '';
         foreach ($swiper_options as $swiper_option) {
             $type = $swiper_option['_type'];
             switch ($type) {
@@ -254,6 +260,7 @@ Block::make(__('Swiper'))
                     $atts['slidesPerView'] = $swiper_option['slidesperview'] ? $swiper_option['slidesperview'] : 1;
                     break;
                 case 'pagination_navigation':
+                    $style = isset($swiper_option['style']) ? $swiper_option['style'] : '';
                     if ($swiper_option['has_pagination']) {
                         $atts['pagination'] = array(
                             'el' => '#' . $swiper_id . ' .swiper-pagination',
@@ -275,6 +282,11 @@ Block::make(__('Swiper'))
         <div class="swiper swiper-slider-block" id="<?= $swiper_id ?>">
             <?= $inner_blocks ?>
         </div>
+        <?php if ($style == 'style-2') { ?>
+            <div class="swiper-pagination-navigation-style-2">
+
+            </div>
+        <?php } ?>
     </div>
 <?php
     });
