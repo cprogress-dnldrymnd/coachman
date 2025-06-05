@@ -554,7 +554,7 @@ Block::make(__('Model Technical Details'))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
         $model_id = $fields['model'][0]['model'];
         $logo = get__term_meta($model_id, 'logo', true);
-        $technical_details = carbon_get_term_meta($technical_details, 'page');
+        $technical_details = carbon_get_term_meta($model_id, 'technical_details');
 
 
 ?>
