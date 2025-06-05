@@ -574,7 +574,7 @@ Block::make(__('Model Technical Details'))
                 <div class="title-box d-flex gap-3 align-items-center">
                     <h2><?= wp_get_attachment_image($logo, 'medium') ?></h2>
                 </div>
-                <p class="fs-22 mb-5">Technical details</p>
+                <p class="fs-22 mb-4">Technical details</p>
                 <div class="accordion" id="accordionTechnicalDetails">
                     <?php foreach ($technical_details as $key => $technical_detail) { ?>
                         <div class="accordion-item">
