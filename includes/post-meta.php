@@ -230,10 +230,23 @@ Block::make(__('Swiper'))
         $swiper_options = $fields['swiper_options'];
         foreach ($swiper_options as $swiper_option) {
             $type = $swiper_option['_type'];
-            echo $type;
+            switch ($type) {
+                case 'autoplay':
+                    $delay = isset($swiper_option['delay']) ? $swiper_option['delay'] : 3000;
+                    $disableoninteraction = isset($swiper_option['disableoninteraction']) ? 'true' : 'false';
+                    $atts[] = "data-swiper-autoplay='{\"delay\":$delay, \"disableOnInteraction\":$disableoninteraction}'";
+                    break;
+                case 'spacebetween':
+                    $atts[] = "data-swiper-space-between='{$swiper_option['spacebetween']}'";
+                    break;
+                case 'slidesperview':
+                    $atts[] = "data-swiper-slides-per-view='{$swiper_option['slidesperview']}'";
+                    break;
+            }
         }
+        $atts_string = implode(' ', $atts);
 ?>
-    <div class="swiper-slider-holder" <?= $attributes['className'] ?>>
+    <div class="swiper-slider-holder" <?= $attributes['className'] ?> <?= $atts_string ?>>
         <div class="swiper swiper-slider-block">
             <?= $inner_blocks ?>
         </div>
