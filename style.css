@@ -11568,7 +11568,8 @@ img {
         width: auto;
         height: auto;
         border-bottom: 1px solid transparent;
-        background-color: transparent; }
+        background-color: transparent;
+        border-radius: 0; }
         .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
           border-bottom: 1px solid var(--bs-white); }
         .swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2.swiper-pagination-navigation-style-2 > div.swiper-pagination .swiper-pagination-bullet:before {
