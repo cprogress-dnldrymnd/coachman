@@ -416,3 +416,12 @@
     overflow: unset !important;
     z-index: 9999;
 }
+
+.w-100-sm {
+    @include responsive(xs-sm) {
+        width: 100% !important;
+        > * {
+            max-width: 100% !important;
+        }
+    }
+}
