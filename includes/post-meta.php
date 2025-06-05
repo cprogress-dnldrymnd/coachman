@@ -227,7 +227,6 @@ Block::make(__('Swiper'))
                     ->set_options(array(
                         '' => 'Default',
                         'style-2' => 'Style 2',
-                        'style-2 style--2-pos-heading' => 'Style 2 Position Above Heading',
                     )),
             ))
             ->set_duplicate_groups_allowed(false)
