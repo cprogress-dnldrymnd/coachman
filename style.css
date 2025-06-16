@@ -12016,13 +12016,13 @@ a {
     color: var(--maroon); }
 
 h1, .h1 {
-  font-size: 4.25rem; }
+  font-size: 68px; }
   @media screen and (max-width: 991px) {
     h1, .h1 {
-      font-size: 3.5rem; } }
+      font-size: 56px; } }
   @media screen and (max-width: 767px) {
     h1, .h1 {
-      font-size: 3rem; } }
+      font-size: 48px; } }
   @media screen and (max-width: 575px) {
     h1, .h1 {
       font-size: 2.5rem; } }
@@ -12078,30 +12078,108 @@ h5, .h5 {
 
 .fs-48 {
   font-size: 48px; }
+  @media screen and (max-width: 991px) {
+    .fs-48 {
+      font-size: 36px; } }
+  @media screen and (max-width: 767px) {
+    .fs-48 {
+      font-size: 32px; } }
+  @media screen and (max-width: 575px) {
+    .fs-48 {
+      font-size: 28px; } }
 
 .fs-35 {
   font-size: 35px; }
+  @media screen and (max-width: 991px) {
+    .fs-35 {
+      font-size: 30px; } }
+  @media screen and (max-width: 767px) {
+    .fs-35 {
+      font-size: 28px; } }
+  @media screen and (max-width: 575px) {
+    .fs-35 {
+      font-size: 24px; } }
 
 .fs-32 {
   font-size: 32px; }
+  @media screen and (max-width: 991px) {
+    .fs-32 {
+      font-size: 28px; } }
+  @media screen and (max-width: 767px) {
+    .fs-32 {
+      font-size: 26px; } }
+  @media screen and (max-width: 575px) {
+    .fs-32 {
+      font-size: 22px; } }
 
 .fs-26 {
   font-size: 26px; }
+  @media screen and (max-width: 991px) {
+    .fs-26 {
+      font-size: 24px; } }
+  @media screen and (max-width: 767px) {
+    .fs-26 {
+      font-size: 22px; } }
+  @media screen and (max-width: 575px) {
+    .fs-26 {
+      font-size: 20px; } }
 
 .fs-25 {
   font-size: 25; }
+  @media screen and (max-width: 991px) {
+    .fs-25 {
+      font-size: 23px; } }
+  @media screen and (max-width: 767px) {
+    .fs-25 {
+      font-size: 21px; } }
+  @media screen and (max-width: 575px) {
+    .fs-25 {
+      font-size: 19px; } }
 
 .fs-24 {
   font-size: 24px; }
-
-.fs-22 {
-  font-size: 22px; }
+  @media screen and (max-width: 991px) {
+    .fs-24 {
+      font-size: 22px; } }
+  @media screen and (max-width: 767px) {
+    .fs-24 {
+      font-size: 20px; } }
+  @media screen and (max-width: 575px) {
+    .fs-24 {
+      font-size: 18px; } }
 
 .fs-23 {
   font-size: 23px; }
+  @media screen and (max-width: 991px) {
+    .fs-23 {
+      font-size: 21px; } }
+  @media screen and (max-width: 767px) {
+    .fs-23 {
+      font-size: 19px; } }
+  @media screen and (max-width: 575px) {
+    .fs-23 {
+      font-size: 17px; } }
+
+.fs-22 {
+  font-size: 22px; }
+  @media screen and (max-width: 991px) {
+    .fs-22 {
+      font-size: 21px; } }
+  @media screen and (max-width: 767px) {
+    .fs-22 {
+      font-size: 19px; } }
+  @media screen and (max-width: 575px) {
+    .fs-22 {
+      font-size: 17px; } }
 
 .fs-18 {
   font-size: 18px; }
+  @media screen and (max-width: 767px) {
+    .fs-18 {
+      font-size: 17px; } }
+  @media screen and (max-width: 575px) {
+    .fs-18 {
+      font-size: 16px; } }
 
 .fs-16 {
   font-size: 16px; }
