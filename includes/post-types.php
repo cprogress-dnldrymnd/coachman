@@ -188,6 +188,21 @@ $Testimonials->publicly_queryable = true;
 $Testimonials->show_in_admin_bar = false;
 $Testimonials->has_archive = false;
 */
+
+
+$Press_Reviews = new newPostType();
+$Press_Reviews->key = 'reviews_post_type';
+$Press_Reviews->name = 'Press Reviews';
+$Press_Reviews->singular_name = 'Press Review';
+$Press_Reviews->icon = 'dashicons-video-alt3';
+$Press_Reviews->show_in_rest = true;
+$Press_Reviews->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Press_Reviews->exclude_from_search = true;
+$Press_Reviews->publicly_queryable = true;
+$Press_Reviews->show_in_admin_bar = false;
+$Press_Reviews->has_archive = false;
+
+
 $Caravans = new newPostType();
 $Caravans->key = 'caravan';
 $Caravans->name = 'Caravans';
