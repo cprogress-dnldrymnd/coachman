@@ -57,7 +57,21 @@ add_action('init', function () {
 
 function action_wp_enqueue_scripts_admin()
 {
-    wp_enqueue_style('style---theme', theme_dir . 'style.css');
     wp_enqueue_style('style---admin', theme_dir . 'admin/admin.css');
 }
 add_action('admin_enqueue_scripts', 'action_wp_enqueue_scripts_admin', 20);
+
+
+
+
+
+
+
+/**
+ * Enqueue Editor assets.
+ */
+function example_enqueue_editor_assets()
+{
+    wp_enqueue_style('child-style', theme_dir . '/style.css');
+}
+add_action('enqueue_block_editor_assets', 'example_enqueue_editor_assets');
