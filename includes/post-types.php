@@ -202,6 +202,18 @@ $Press_Reviews->publicly_queryable = true;
 $Press_Reviews->show_in_admin_bar = false;
 $Press_Reviews->has_archive = false;
 
+$Events = new newPostType();
+$Events->key = 'events_post_type';
+$Events->name = 'Events';
+$Events->singular_name = 'Event';
+$Events->icon = 'dashicons-video-alt3';
+$Events->show_in_rest = true;
+$Events->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Events->exclude_from_search = true;
+$Events->publicly_queryable = true;
+$Events->show_in_admin_bar = false;
+$Events->has_archive = false;
+
 
 $Caravans = new newPostType();
 $Caravans->key = 'caravan';
