@@ -4,7 +4,7 @@
     <?php while (have_posts()) { ?>
         <div class="title-description py-5">
             <div class="container">
-                <h1 class="fs-35 mp-"><?php the_title() ?></h1>
+                <h1 class="m-0"><?php the_title() ?></h1>
             </div>
         </div>
         <div class="site-content--inner background-white rounded overflow-hidden has-lightgray-2-background-color">
