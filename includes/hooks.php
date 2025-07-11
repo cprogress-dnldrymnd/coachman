@@ -64,9 +64,6 @@ add_action('admin_enqueue_scripts', 'action_wp_enqueue_scripts_admin', 20);
 
 
 
-
-
-
 /**
  * Enqueue Editor assets.
  */
@@ -75,3 +72,28 @@ function example_enqueue_editor_assets()
     wp_enqueue_style('child-style', theme_dir . '/style.css');
 }
 add_action('enqueue_block_editor_assets', 'example_enqueue_editor_assets');
+
+
+add_filter('register_post_type_args', 'my_custom_post_type_permalink_modifier', 10, 2);
+
+function custom_post_type_url_from_meta($permalink, $post, $leavename)
+{
+    // Define your custom post type slug and the meta key for the URL
+    $custom_post_type = 'downloads'; // <-- IMPORTANT: Change this to your CPT slug
+    $pdf_url = wp_get_attachment_url(get__post_meta('file'));
+
+    // Check if it's our target custom post type
+    if ($post->post_type == $custom_post_type) {
+        // Get the custom URL from post meta
+        $custom_url = get_post_meta($post->ID, $pdf_url, true);
+
+        // If a custom URL exists and is not empty, use it
+        if (! empty($custom_url)) {
+            return esc_url_raw($custom_url);
+        }
+    }
+
+    // If no custom URL, return the original permalink
+    return $permalink;
+}
+add_filter('post_type_link', 'custom_post_type_url_from_meta', 10, 3);
