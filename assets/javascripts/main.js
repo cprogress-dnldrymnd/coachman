@@ -9,6 +9,9 @@ jQuery(document).ready(function () {
     updateScrollStatus();
 });
 
+function isScrollOnTop() {
+    return jQuery(window).scrollTop() === 0;
+}
 
 function updateScrollStatus() {
     if (isScrollOnTop()) {
