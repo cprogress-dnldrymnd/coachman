@@ -574,3 +574,9 @@ img {
     justify-content: space-between;
     cursor: pointer;
 }
+.accordion--content {
+    > div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

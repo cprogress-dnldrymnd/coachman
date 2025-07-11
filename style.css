@@ -11746,6 +11746,10 @@ img {
   justify-content: space-between;
   cursor: pointer; }
 
+.accordion--content > div {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
