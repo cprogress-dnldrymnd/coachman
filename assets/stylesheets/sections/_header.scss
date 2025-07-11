@@ -1,5 +1,7 @@
 #masthead {
     z-index: 9999;
+    position: sticky;
+    top: var(--admin-bar-height);
     &.header-transparent {
         position: absolute;
         left: 0;
