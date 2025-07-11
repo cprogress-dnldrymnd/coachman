@@ -33,7 +33,7 @@ Container::make('post_meta', __('Caravan Properties'))
     ));
 
 Container::make('post_meta', __('Brochure Settings'))
-    ->where('post_type', '=', 'brochures_post_type')
+    ->where('post_type', '=', 'downloads')
     ->add_fields(array(
         Field::make('file', 'file', __('File'))
             ->set_type(array('application/pdf'))
