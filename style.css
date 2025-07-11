@@ -11751,6 +11751,23 @@ img {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+.default-template h1, .default-template .h1,
+.default-template h2,
+.default-template .h2,
+.default-template h3,
+.default-template .h3,
+.default-template h4,
+.default-template .h4,
+.default-template h5,
+.default-template .h5,
+.default-template h6,
+.default-template .h6 {
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+@media screen and (min-width: 992px) {
+  .default-template h2, .default-template .h2 {
+    font-size: 40px; } }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }

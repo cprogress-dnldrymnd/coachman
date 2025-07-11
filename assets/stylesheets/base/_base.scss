@@ -581,3 +581,15 @@ img {
         padding-bottom: 20px;
     }
 }
+
+.default-template {
+    @include headings {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    h2 {
+        @include responsive(md-lg) {
+            font-size: 40px;
+        }
+    }
+}
