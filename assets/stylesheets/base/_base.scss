@@ -449,3 +449,20 @@ img {
         color: var(--bs-black);
     }
 }
+
+.nav-buttons.nav-buttons {
+    li {
+        max-width: 170px;
+        width: 100%;
+        a {
+            background-color: transparent;
+            padding: 13px;
+            border: 1px solid;
+        }
+        &.current-menu-item {
+            a {
+                background-color: var(--bs-black);
+            }
+        }
+    }
+}

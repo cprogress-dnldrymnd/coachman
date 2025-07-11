@@ -11630,6 +11630,16 @@ img {
     box-shadow: none;
     color: var(--bs-black); }
 
+.nav-buttons.nav-buttons li {
+  max-width: 170px;
+  width: 100%; }
+  .nav-buttons.nav-buttons li a {
+    background-color: transparent;
+    padding: 13px;
+    border: 1px solid; }
+  .nav-buttons.nav-buttons li.current-menu-item a {
+    background-color: var(--bs-black); }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
