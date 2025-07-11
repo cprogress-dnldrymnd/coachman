@@ -232,7 +232,7 @@ function handle_csv_upload_and_import()
 
         // Extract data from CSV columns
         $post_title     = sanitize_text_field($data[0]); // First column: Post Title
-        $post_content = render_blocks(parse_blocks(wpautop($data[1]))); // Second column: Taxonomy Terms (comma-separated)
+        $post_content = render_block(parse_blocks(wpautop($data[1]))); // Second column: Taxonomy Terms (comma-separated)
         $taxonomy_terms = sanitize_text_field($data[2]); // Second column: Taxonomy Terms (comma-separated)
 
         // --- 1. Validate extracted data ---
