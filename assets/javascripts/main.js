@@ -10,9 +10,6 @@ jQuery(document).ready(function () {
 });
 
 function sticky_header() {
-    // Get a reference to the status message element
-    const $scrollStatus = jQuery('#scrollStatus');
-
     /**
      * @function isScrollOnTop
      * @description Checks if the window's scroll position is at the very top (0 pixels).
