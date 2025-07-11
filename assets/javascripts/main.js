@@ -11,11 +11,9 @@ jQuery(document).ready(function () {
 
 function updateScrollStatus() {
     if (jQuery(window).scrollTop() === 0) {
-        // If at the top, update text and apply 'success' styling
-        console.log('You are at the top!');
+        jQuery('body').addClass('sticky--header');
     } else {
-        // If not at the top, update text and apply 'warning' styling
-        console.log('You are at the top!');
+        jQuery('body').removeClass('sticky--header');
     }
 }
 
