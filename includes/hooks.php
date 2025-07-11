@@ -79,12 +79,11 @@ function custom_post_type_url_from_meta($permalink, $post, $leavename)
 {
     // Define your custom post type slug and the meta key for the URL
     $custom_post_type = 'downloads'; // <-- IMPORTANT: Change this to your CPT slug
-    $pdf_url = wp_get_attachment_url(get__post_meta('file'));
 
     // Check if it's our target custom post type
     if ($post->post_type == $custom_post_type) {
         // Get the custom URL from post meta
-        $custom_url = get_post_meta($post->ID, $pdf_url, true);
+        $custom_url = wp_get_attachment_url(get__post_meta('file'));
 
         // If a custom URL exists and is not empty, use it
         if (! empty($custom_url)) {
