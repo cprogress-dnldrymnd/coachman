@@ -311,3 +311,15 @@ $Motorhome_Model->args = array(
         'slug'         => 'motorhome-model',
     )
 );
+
+$Brochure = new newPostType();
+$Brochure->key = 'brochures_post_type';
+$Brochure->name = 'Brochures';
+$Brochure->singular_name = 'Brochure';
+$Brochure->icon = 'dashicons-video-alt3';
+$Brochure->show_in_rest = true;
+$Brochure->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Brochure->exclude_from_search = true;
+$Brochure->publicly_queryable = true;
+$Brochure->show_in_admin_bar = false;
+$Brochures->has_archive = false;
