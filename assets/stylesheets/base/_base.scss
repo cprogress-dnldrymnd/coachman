@@ -449,7 +449,7 @@ img {
     --bs-accordion-border-width: 0;
     --bs-accordion-inner-border-radius: 0;
     --bs-accordion-active-bg: var(--lightgray-2);
-    .accordion-button {
+    .accordion--button {
         box-shadow: none;
         color: var(--bs-black);
     }
@@ -506,4 +506,74 @@ img {
             }
         }
     }
+}
+
+.plus-minus {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    position: relative;
+    margin: 0;
+    @include transition(500ms);
+    @include before-after {
+        content: "";
+        background-color: currentColor;
+        position: absolute;
+    }
+    @include before {
+        width: 2px;
+        height: 18px;
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+    @include after {
+        width: 18px;
+        height: 2px;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+}
+.accordion--item {
+    overflow: hidden;
+    position: relative;
+    @include transition(500ms);
+    * {
+        @include transition(500ms);
+    }
+    &.initialized {
+        .accordion--content {
+            display: block;
+            height: 0;
+        }
+        &.active {
+            background-color: var(--wp--preset--color--white) !important;
+            .accordion--content {
+                height: calc(var(--accordion_content_height));
+            }
+            .plus-minus {
+                @include transform(rotate(45deg));
+            }
+        }
+    }
+    &:not(.active) {
+        &:not(.initialized) {
+            .accordion--content {
+                display: none;
+            }
+        }
+
+        @include on-event {
+            background-color: var(--wp--preset--color--forest-gray) !important;
+            * {
+                color: var(--wp--preset--color--white) !important;
+            }
+        }
+    }
+}
+.accordion--button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wp--preset--spacing--20);
+    cursor: pointer;
 }

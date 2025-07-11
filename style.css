@@ -11631,7 +11631,7 @@ img {
   --bs-accordion-border-width: 0;
   --bs-accordion-inner-border-radius: 0;
   --bs-accordion-active-bg: var(--lightgray-2); }
-  .accordion.accordion .accordion-button {
+  .accordion.accordion .accordion--button {
     box-shadow: none;
     color: var(--bs-black); }
 
@@ -11671,6 +11671,81 @@ img {
     width: 4px;
     height: 4px;
     border-radius: 50%; }
+
+.plus-minus {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  position: relative;
+  margin: 0;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
+  .plus-minus:before, .plus-minus:after {
+    content: "";
+    background-color: currentColor;
+    position: absolute; }
+  .plus-minus:before {
+    width: 2px;
+    height: 18px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .plus-minus:after {
+    width: 18px;
+    height: 2px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.accordion--item {
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
+  .accordion--item * {
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms; }
+  .accordion--item.initialized .accordion--content {
+    display: block;
+    height: 0; }
+  .accordion--item.initialized.active {
+    background-color: var(--wp--preset--color--white) !important; }
+    .accordion--item.initialized.active .accordion--content {
+      height: calc(var(--accordion_content_height)); }
+    .accordion--item.initialized.active .plus-minus {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+  .accordion--item:not(.active):not(.initialized) .accordion--content {
+    display: none; }
+  .accordion--item:not(.active):hover, .accordion--item:not(.active):active, .accordion--item:not(.active):focus {
+    background-color: var(--wp--preset--color--forest-gray) !important; }
+    .accordion--item:not(.active):hover *, .accordion--item:not(.active):active *, .accordion--item:not(.active):focus * {
+      color: var(--wp--preset--color--white) !important; }
+
+.accordion--button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--wp--preset--spacing--20);
+  cursor: pointer; }
 
 @media (min-width: 1500px) {
   .container {
