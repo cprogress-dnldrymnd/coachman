@@ -35,7 +35,8 @@ Container::make('post_meta', __('Caravan Properties'))
 Container::make('post_meta', __('Brochure Settings'))
     ->where('post_type', '=', 'brochures_post_type')
     ->add_fields(array(
-        Field::make('file', 'file', __('File')),
+        Field::make('file', 'file', __('File'))
+            ->set_type(array('application/pdf'))
     ));
 
 $style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Pennypacker; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
