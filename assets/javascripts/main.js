@@ -11,9 +11,9 @@ jQuery(document).ready(function () {
 
 function updateScrollStatus() {
     if (jQuery(window).scrollTop() === 0) {
-        jQuery('body').addClass('sticky--header');
-    } else {
         jQuery('body').removeClass('sticky--header');
+    } else {
+        jQuery('body').addClass('sticky--header');
     }
 }
 

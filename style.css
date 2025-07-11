@@ -12552,7 +12552,12 @@ h5, .h5 {
 #masthead {
   z-index: 9999;
   position: sticky;
-  top: var(--admin-bar-height); }
+  top: var(--admin-bar-height);
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -ms-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
   #masthead.header-transparent {
     position: fixed;
     left: 0;
