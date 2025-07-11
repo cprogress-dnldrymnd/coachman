@@ -6,44 +6,27 @@ jQuery(document).ready(function () {
     listings();
     read_more();
     accordion();
-    sticky_header();
+    updateScrollStatus();
 });
 
-function sticky_header() {
-    /**
-     * @function isScrollOnTop
-     * @description Checks if the window's scroll position is at the very top (0 pixels).
-     * @returns {boolean} True if scroll position is 0, false otherwise.
-     */
-    function isScrollOnTop() {
-        // scrollTop() returns the vertical scroll position of the scrollbar for the selected element.
-        // For the window, it returns the scroll position of the document.
-        return jQuery(window).scrollTop() === 0;
+
+function updateScrollStatus() {
+    if (isScrollOnTop()) {
+        // If at the top, update text and apply 'success' styling
+        console.log('You are at the top!');
+    } else {
+        // If not at the top, update text and apply 'warning' styling
+        console.log('You are at the top!');
     }
-
-    /**
-     * @function updateScrollStatus
-     * @description Updates the UI message based on the current scroll position.
-     */
-    function updateScrollStatus() {
-        if (isScrollOnTop()) {
-            // If at the top, update text and apply 'success' styling
-            console.log('You are at the top!');
-        } else {
-            // If not at the top, update text and apply 'warning' styling
-            console.log('You are at the top!');
-        }
-    }
-
-    // Attach the updateScrollStatus function to the window's scroll event
-    jQuery(window).on('scroll', function () {
-        updateScrollStatus();
-    });
-
-    // Call it once on load to set the initial status
-    updateScrollStatus();
 }
 
+// Attach the updateScrollStatus function to the window's scroll event
+jQuery(window).on('scroll', function () {
+    updateScrollStatus();
+});
+
+// Call it once on load to set the initial status
+updateScrollStatus();
 function accordion() {
     if (jQuery('.accordion--custom').length > 0) {
         jQuery('.accordion--item').each(function (index, element) {
