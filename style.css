@@ -11953,6 +11953,10 @@ img {
     flex-direction: column-reverse; } }
 
 @media screen and (max-width: 767px) {
+  .swap-col-767 {
+    flex-direction: column-reverse; } }
+
+@media screen and (max-width: 767px) {
   .w-100-mobile > * {
     width: 100%; } }
 

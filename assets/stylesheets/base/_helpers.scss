@@ -245,6 +245,12 @@
     }
 }
 
+.swap-col-767 {
+    @include responsive(xs) {
+        flex-direction: column-reverse;
+    }
+}
+
 .w-100-mobile > * {
     @include responsive(xs) {
         width: 100%;
