@@ -32,6 +32,12 @@ Container::make('post_meta', __('Caravan Properties'))
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
     ));
 
+Container::make('post_meta', __('Brochure Settings'))
+    ->where('post_type', '=', 'brochures_post_type')
+    ->add_fields(array(
+        Field::make('file', 'file', __('File')),
+    ));
+
 $style = 'style="font-weight: bold;  background-color: #45c324; color: #fff; padding: 15px; border-radius: 5px; font-family: Pennypacker; text-transform: uppercase; letter-spacing: 1px; font-size: 20px;"';
 
 Block::make(__('Icon'))
@@ -570,7 +576,7 @@ Block::make(__('Model Technical Details'))
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
                 </svg>
             </button>
-            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5 d-flex h-100 flex-column justify-content-between gap-3"> 
+            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5 d-flex h-100 flex-column justify-content-between gap-3">
                 <div class="top">
                     <div class="title-box d-flex gap-3 align-items-center">
                         <h2><?= wp_get_attachment_image($logo, 'medium') ?></h2>
