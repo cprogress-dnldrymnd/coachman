@@ -11516,10 +11516,13 @@ img {
       border-bottom-color: var(--bs-white); }
 
 .wp-block-button__link.wp-block-button__link,
-.wp-block-read-more {
+.wp-block-read-more.wp-block-read-more {
   font-size: inherit;
   padding: 18px 25px;
   font-size: 15px; }
+  .wp-block-button__link.wp-block-button__link.border,
+  .wp-block-read-more.wp-block-read-more.border {
+    border-color: currentColor !important; }
 
 .wp-block-post-title.wp-block-post-title.wp-block-post-title.has-background {
   padding: 0; }

@@ -318,6 +318,9 @@ img {
     font-size: inherit;
     padding: 18px 25px;
     font-size: 15px;
+    &.border {
+        border-color: currentColor !important;
+    }
 }
 .wp-block-post-title.wp-block-post-title.wp-block-post-title {
     &.has-background {
