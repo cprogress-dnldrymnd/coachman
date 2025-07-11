@@ -25,7 +25,7 @@ function accordion() {
             $this.addClass('initialized');
             $accordion_button.click(function (e) {
                 $this.addClass('clicked');
-                $this.parent().find('.accordion-item:not(.clicked)').removeClass('active');
+                $this.parent().find('.accordion--item:not(.clicked)').removeClass('active');
                 $this.toggleClass('active');
                 $this.removeClass('clicked');
                 e.preventDefault();
