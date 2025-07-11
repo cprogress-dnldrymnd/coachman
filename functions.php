@@ -114,57 +114,108 @@ add_shortcode('template', 'template');
  *
  * To run this script:
  * 1. Place this code in your theme's functions.php file or a custom plugin.
- * 2. Update the $csv_file_path variable to your CSV file's actual location.
- * 3. Temporarily add an action hook to trigger the function (e.g., add_action('admin_init', 'import_downloads_from_csv');).
- * 4. Visit any page in your WordPress admin area to execute the import.
- * 5. REMOVE or COMMENT OUT the action hook after the import is complete.
+ * 2. Access the importer via the new "Downloads CSV Importer" menu item under "Tools" in your WordPress admin.
  */
 
-function import_downloads_from_csv() {
+/**
+ * Adds a new menu item under 'Tools' in the WordPress admin.
+ */
+function my_csv_importer_admin_menu() {
+    add_management_page(
+        'Downloads CSV Importer',          // Page title
+        'Downloads CSV Importer',          // Menu title
+        'manage_options',                  // Capability required to access
+        'downloads-csv-importer',          // Menu slug
+        'my_csv_importer_page_content'     // Function to display the page content
+    );
+}
+add_action( 'admin_menu', 'my_csv_importer_admin_menu' );
+
+/**
+ * Displays the content of the admin page for the CSV importer.
+ * Handles CSV file upload and triggers the import process.
+ */
+function my_csv_importer_page_content() {
     // Check if the current user has capabilities to manage options (e.g., Administrator)
-    // This prevents unauthorized execution of the import script.
     if ( ! current_user_can( 'manage_options' ) ) {
-        error_log( 'CSV Import: User does not have sufficient permissions to run the import.' );
-        return;
+        wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
     }
 
-    // Define the path to your CSV file.
-    // IMPORTANT: Change this to the actual path of your CSV file on the server.
-    // Example: ABSPATH . 'wp-content/uploads/downloads.csv'
-    // Example: get_template_directory() . '/downloads.csv'
-    $csv_file_path = '/path/to/your/downloads.csv'; // <<<--- UPDATE THIS PATH
-
-    // Check if the CSV file exists
-    if ( ! file_exists( $csv_file_path ) ) {
-        error_log( 'CSV Import Error: CSV file not found at ' . $csv_file_path );
-        echo '<div class="notice notice-error"><p>CSV Import Error: CSV file not found. Please check the path.</p></div>';
-        return;
+    // Handle CSV upload and import if the form is submitted
+    if ( isset( $_POST['submit_csv_import'] ) && check_admin_referer( 'csv_import_nonce', 'csv_import_nonce_field' ) ) {
+        handle_csv_upload_and_import();
     }
+    ?>
+    <div class="wrap">
+        <h1>Downloads CSV Importer</h1>
+        <p>Upload a CSV file to import downloads into your 'downloads' custom post type.</p>
+        <p>The CSV file should have the following columns in order:</p>
+        <ol>
+            <li><strong>Post Title:</strong> The title of the download post.</li>
+            <li><strong>Taxonomy Terms:</strong> Comma-separated terms for the 'downloads_category' taxonomy (e.g., "Reports, Annual").</li>
+            <li><strong>PDF Link:</strong> The full URL to the PDF file to be uploaded.</li>
+        </ol>
 
+        <form action="" method="post" enctype="multipart/form-data">
+            <?php wp_nonce_field( 'csv_import_nonce', 'csv_import_nonce_field' ); ?>
+            <table class="form-table">
+                <tbody>
+                    <tr>
+                        <th scope="row"><label for="csv_file">Select CSV File</label></th>
+                        <td><input type="file" name="csv_file" id="csv_file" accept=".csv" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <?php submit_button( 'Import CSV', 'primary', 'submit_csv_import' ); ?>
+        </form>
+    </div>
+    <?php
+}
+
+/**
+ * Handles the uploaded CSV file and initiates the import process.
+ */
+function handle_csv_upload_and_import() {
     // Include WordPress necessary files for media handling
     require_once( ABSPATH . 'wp-admin/includes/file.php' );
     require_once( ABSPATH . 'wp-admin/includes/media.php' );
     require_once( ABSPATH . 'wp-admin/includes/image.php' );
 
-    // Open the CSV file for reading
-    $handle = fopen( $csv_file_path, 'r' );
-
-    if ( $handle === FALSE ) {
-        error_log( 'CSV Import Error: Could not open CSV file for reading.' );
-        echo '<div class="notice notice-error"><p>CSV Import Error: Could not open CSV file.</p></div>';
+    if ( ! isset( $_FILES['csv_file'] ) || empty( $_FILES['csv_file']['tmp_name'] ) ) {
+        add_settings_error( 'csv_import_errors', 'csv_file_missing', 'No CSV file uploaded. Please select a file.', 'error' );
         return;
     }
 
-    // Initialize a counter for imported posts
+    $csv_file = $_FILES['csv_file'];
+
+    // Validate file type
+    $file_type = wp_check_filetype( $csv_file['name'], null );
+    if ( $file_type['ext'] !== 'csv' ) {
+        add_settings_error( 'csv_import_errors', 'invalid_file_type', 'Invalid file type. Please upload a CSV file.', 'error' );
+        return;
+    }
+
+    // Get the temporary path of the uploaded file
+    $csv_tmp_path = $csv_file['tmp_name'];
+
+    // Open the CSV file for reading
+    $handle = fopen( $csv_tmp_path, 'r' );
+
+    if ( $handle === FALSE ) {
+        add_settings_error( 'csv_import_errors', 'file_open_error', 'Could not open uploaded CSV file for reading.', 'error' );
+        return;
+    }
+
+    // Initialize counters
     $imported_count = 0;
     $skipped_count = 0;
     $row_number = 0;
 
     // Loop through each row in the CSV file
-    while ( ( $data = fgetcsv( $handle, 1000, ',' ) ) !== FALSE ) {
+    while ( ( $data = fgetcsv( $handle, 0, ',' ) ) !== FALSE ) { // Using 0 for max_len for unlimited line length
         $row_number++;
 
-        // Skip the header row if your CSV has one (assuming first row is header)
+        // Skip the header row (assuming first row is header)
         if ( $row_number === 1 ) {
             continue;
         }
@@ -290,12 +341,14 @@ function import_downloads_from_csv() {
     // Close the CSV file
     fclose( $handle );
 
-    // Provide a summary message
+    // Provide a summary message and display it to the user
     $message = "CSV Import Finished: Successfully imported {$imported_count} downloads. Skipped {$skipped_count} rows.";
-    error_log( $message );
-    echo '<div class="notice notice-success"><p>' . $message . '</p></div>';
+    add_settings_error( 'csv_import_messages', 'csv_import_success', $message, 'success' );
+    settings_errors( 'csv_import_messages' ); // Display success message
 }
 
-// Example of how to trigger this function (for one-time execution):
-// add_action('admin_init', 'import_downloads_from_csv');
-// REMEMBER TO REMOVE OR COMMENT OUT THE LINE ABOVE AFTER THE IMPORT IS COMPLETE!
+// Display any errors or success messages from the import process
+function display_csv_import_admin_notices() {
+    settings_errors( 'csv_import_errors' ); // Display error messages
+}
+add_action( 'admin_notices', 'display_csv_import_admin_notices' );
