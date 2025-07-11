@@ -9,12 +9,8 @@ jQuery(document).ready(function () {
     updateScrollStatus();
 });
 
-function isScrollOnTop() {
-    return jQuery(window).scrollTop() === 0;
-}
-
 function updateScrollStatus() {
-    if (isScrollOnTop()) {
+    if (jQuery(window).scrollTop() === 0) {
         // If at the top, update text and apply 'success' styling
         console.log('You are at the top!');
     } else {
@@ -28,8 +24,6 @@ jQuery(window).on('scroll', function () {
     updateScrollStatus();
 });
 
-// Call it once on load to set the initial status
-updateScrollStatus();
 function accordion() {
     if (jQuery('.accordion--custom').length > 0) {
         jQuery('.accordion--item').each(function (index, element) {
