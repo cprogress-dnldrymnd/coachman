@@ -11638,7 +11638,9 @@ img {
     padding: 13px;
     border: 1px solid; }
   .nav-buttons.nav-buttons li.current-menu-item a {
-    background-color: var(--bs-black); }
+    width: 100%;
+    background-color: var(--bs-black);
+    color: var(--bs-white); }
 
 @media (min-width: 1500px) {
   .container {

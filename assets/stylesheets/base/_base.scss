@@ -458,10 +458,13 @@ img {
             background-color: transparent;
             padding: 13px;
             border: 1px solid;
+            font-size: 15px;
         }
         &.current-menu-item {
             a {
+                width: 100%;
                 background-color: var(--bs-black);
+                color: var(--bs-white);
             }
         }
     }
