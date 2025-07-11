@@ -120,7 +120,8 @@ add_shortcode('template', 'template');
 /**
  * Adds a new menu item under 'Tools' in the WordPress admin.
  */
-function my_csv_importer_admin_menu() {
+function my_csv_importer_admin_menu()
+{
     add_management_page(
         'Downloads CSV Importer',          // Page title
         'Downloads CSV Importer',          // Menu title
@@ -129,23 +130,24 @@ function my_csv_importer_admin_menu() {
         'my_csv_importer_page_content'     // Function to display the page content
     );
 }
-add_action( 'admin_menu', 'my_csv_importer_admin_menu' );
+add_action('admin_menu', 'my_csv_importer_admin_menu');
 
 /**
  * Displays the content of the admin page for the CSV importer.
  * Handles CSV file upload and triggers the import process.
  */
-function my_csv_importer_page_content() {
+function my_csv_importer_page_content()
+{
     // Check if the current user has capabilities to manage options (e.g., Administrator)
-    if ( ! current_user_can( 'manage_options' ) ) {
-        wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+    if (! current_user_can('manage_options')) {
+        wp_die(__('You do not have sufficient permissions to access this page.'));
     }
 
     // Handle CSV upload and import if the form is submitted
-    if ( isset( $_POST['submit_csv_import'] ) && check_admin_referer( 'csv_import_nonce', 'csv_import_nonce_field' ) ) {
+    if (isset($_POST['submit_csv_import']) && check_admin_referer('csv_import_nonce', 'csv_import_nonce_field')) {
         handle_csv_upload_and_import();
     }
-    ?>
+?>
     <div class="wrap">
         <h1>Downloads CSV Importer</h1>
         <p>Upload a CSV file to import downloads into your 'downloads' custom post type.</p>
@@ -157,7 +159,7 @@ function my_csv_importer_page_content() {
         </ol>
 
         <form action="" method="post" enctype="multipart/form-data">
-            <?php wp_nonce_field( 'csv_import_nonce', 'csv_import_nonce_field' ); ?>
+            <?php wp_nonce_field('csv_import_nonce', 'csv_import_nonce_field'); ?>
             <table class="form-table">
                 <tbody>
                     <tr>
@@ -166,32 +168,33 @@ function my_csv_importer_page_content() {
                     </tr>
                 </tbody>
             </table>
-            <?php submit_button( 'Import CSV', 'primary', 'submit_csv_import' ); ?>
+            <?php submit_button('Import CSV', 'primary', 'submit_csv_import'); ?>
         </form>
     </div>
-    <?php
+<?php
 }
 
 /**
  * Handles the uploaded CSV file and initiates the import process.
  */
-function handle_csv_upload_and_import() {
+function handle_csv_upload_and_import()
+{
     // Include WordPress necessary files for media handling
-    require_once( ABSPATH . 'wp-admin/includes/file.php' );
-    require_once( ABSPATH . 'wp-admin/includes/media.php' );
-    require_once( ABSPATH . 'wp-admin/includes/image.php' );
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    require_once(ABSPATH . 'wp-admin/includes/media.php');
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
 
-    if ( ! isset( $_FILES['csv_file'] ) || empty( $_FILES['csv_file']['tmp_name'] ) ) {
-        add_settings_error( 'csv_import_errors', 'csv_file_missing', 'No CSV file uploaded. Please select a file.', 'error' );
+    if (! isset($_FILES['csv_file']) || empty($_FILES['csv_file']['tmp_name'])) {
+        add_settings_error('csv_import_errors', 'csv_file_missing', 'No CSV file uploaded. Please select a file.', 'error');
         return;
     }
 
     $csv_file = $_FILES['csv_file'];
 
     // Validate file type
-    $file_type = wp_check_filetype( $csv_file['name'], null );
-    if ( $file_type['ext'] !== 'csv' ) {
-        add_settings_error( 'csv_import_errors', 'invalid_file_type', 'Invalid file type. Please upload a CSV file.', 'error' );
+    $file_type = wp_check_filetype($csv_file['name'], null);
+    if ($file_type['ext'] !== 'csv') {
+        add_settings_error('csv_import_errors', 'invalid_file_type', 'Invalid file type. Please upload a CSV file.', 'error');
         return;
     }
 
@@ -199,10 +202,10 @@ function handle_csv_upload_and_import() {
     $csv_tmp_path = $csv_file['tmp_name'];
 
     // Open the CSV file for reading
-    $handle = fopen( $csv_tmp_path, 'r' );
+    $handle = fopen($csv_tmp_path, 'r');
 
-    if ( $handle === FALSE ) {
-        add_settings_error( 'csv_import_errors', 'file_open_error', 'Could not open uploaded CSV file for reading.', 'error' );
+    if ($handle === FALSE) {
+        add_settings_error('csv_import_errors', 'file_open_error', 'Could not open uploaded CSV file for reading.', 'error');
         return;
     }
 
@@ -212,143 +215,96 @@ function handle_csv_upload_and_import() {
     $row_number = 0;
 
     // Loop through each row in the CSV file
-    while ( ( $data = fgetcsv( $handle, 0, ',' ) ) !== FALSE ) { // Using 0 for max_len for unlimited line length
+    while (($data = fgetcsv($handle, 0, ',')) !== FALSE) { // Using 0 for max_len for unlimited line length
         $row_number++;
 
         // Skip the header row (assuming first row is header)
-        if ( $row_number === 1 ) {
+        if ($row_number === 1) {
             continue;
         }
 
         // Ensure we have at least 3 columns (Title, Category, PDF Link)
-        if ( count( $data ) < 3 ) {
-            error_log( "CSV Import Warning: Skipping row $row_number due to insufficient columns. Data: " . implode( ',', $data ) );
+        if (count($data) < 3) {
+            error_log("CSV Import Warning: Skipping row $row_number due to insufficient columns. Data: " . implode(',', $data));
             $skipped_count++;
             continue;
         }
 
         // Extract data from CSV columns
-        $post_title     = sanitize_text_field( $data[0] ); // First column: Post Title
-        $taxonomy_terms = sanitize_text_field( $data[1] ); // Second column: Taxonomy Terms (comma-separated)
-        $pdf_url        = esc_url_raw( $data[2] );         // Third column: PDF Link
+        $post_title     = sanitize_text_field($data[0]); // First column: Post Title
+        $post_content = sanitize_text_field($data[1]); // Second column: Taxonomy Terms (comma-separated)
+        $taxonomy_terms = sanitize_text_field($data[2]); // Second column: Taxonomy Terms (comma-separated)
 
         // --- 1. Validate extracted data ---
-        if ( empty( $post_title ) ) {
-            error_log( "CSV Import Warning: Skipping row $row_number due to empty post title. Data: " . implode( ',', $data ) );
+        if (empty($post_title)) {
+            error_log("CSV Import Warning: Skipping row $row_number due to empty post title. Data: " . implode(',', $data));
             $skipped_count++;
             continue;
         }
 
         // Check if a post with this title already exists to prevent duplicates
-        $existing_post = get_page_by_title( $post_title, OBJECT, 'downloads' );
-        if ( $existing_post ) {
-            error_log( "CSV Import Warning: Skipping row $row_number. Post with title '{$post_title}' already exists (ID: {$existing_post->ID})." );
+        $existing_post = get_page_by_title($post_title, OBJECT, 'downloads');
+        if ($existing_post) {
+            error_log("CSV Import Warning: Skipping row $row_number. Post with title '{$post_title}' already exists (ID: {$existing_post->ID}).");
             $skipped_count++;
             continue;
-        }
-
-        // --- 2. Upload PDF file ---
-        $pdf_attachment_id = 0;
-        if ( ! empty( $pdf_url ) ) {
-            // Set a temporary filename for the downloaded file
-            $filename = basename( parse_url( $pdf_url, PHP_URL_PATH ) );
-            if ( empty( $filename ) || ! preg_match( '/\.pdf$/i', $filename ) ) {
-                $filename = sanitize_title( $post_title ) . '.pdf';
-            }
-
-            // Prepare the file array for media_handle_sideload
-            $file_array = array(
-                'name'     => $filename,
-                'tmp_name' => download_url( $pdf_url ) // Download the file to a temporary location
-            );
-
-            // Check for download errors
-            if ( is_wp_error( $file_array['tmp_name'] ) ) {
-                error_log( "CSV Import Error: Failed to download PDF from URL '{$pdf_url}' for post '{$post_title}'. Error: " . $file_array['tmp_name']->get_error_message() );
-                // Continue without PDF, but create the post
-                $file_array['tmp_name'] = ''; // Clear tmp_name to prevent errors in media_handle_sideload
-            }
-
-            // Sideload the image into the WordPress media library
-            if ( ! empty( $file_array['tmp_name'] ) ) {
-                $pdf_attachment_id = media_handle_sideload( $file_array, 0, $post_title ); // 0 for post_id as it's not attached to a post yet
-
-                // Check for media sideload errors
-                if ( is_wp_error( $pdf_attachment_id ) ) {
-                    error_log( "CSV Import Error: Failed to sideload PDF '{$filename}' for post '{$post_title}'. Error: " . $pdf_attachment_id->get_error_message() );
-                    $pdf_attachment_id = 0; // Reset ID if error
-                } else {
-                    error_log( "CSV Import Success: PDF '{$filename}' uploaded with ID: {$pdf_attachment_id} for post '{$post_title}'." );
-                }
-            }
-        } else {
-            error_log( "CSV Import Warning: No PDF URL provided for post '{$post_title}' in row $row_number." );
         }
 
         // --- 3. Create the 'downloads' post ---
         $post_data = array(
             'post_title'    => $post_title,
+            'post_content' => $post_content,
             'post_status'   => 'publish', // Or 'draft' if you want to review them first
-            'post_type'     => 'downloads', // Your custom post type name
+            'post_type'     => 'faqs', // Your custom post type name
             'post_author'   => get_current_user_id(), // Assign to the current user
         );
 
         // Insert the post into the database
-        $post_id = wp_insert_post( $post_data );
+        $post_id = wp_insert_post($post_data);
 
-        if ( is_wp_error( $post_id ) ) {
-            error_log( "CSV Import Error: Failed to create post '{$post_title}'. Error: " . $post_id->get_error_message() );
+        if (is_wp_error($post_id)) {
+            error_log("CSV Import Error: Failed to create post '{$post_title}'. Error: " . $post_id->get_error_message());
             $skipped_count++;
             continue;
-        } elseif ( $post_id === 0 ) {
-            error_log( "CSV Import Error: wp_insert_post returned 0 for post '{$post_title}'." );
+        } elseif ($post_id === 0) {
+            error_log("CSV Import Error: wp_insert_post returned 0 for post '{$post_title}'.");
             $skipped_count++;
             continue;
         } else {
             $imported_count++;
-            error_log( "CSV Import Success: Post '{$post_title}' created with ID: {$post_id}." );
+            error_log("CSV Import Success: Post '{$post_title}' created with ID: {$post_id}.");
         }
 
         // --- 4. Assign Taxonomy Terms ---
-        if ( ! empty( $taxonomy_terms ) ) {
-            $terms_array = explode( ',', $taxonomy_terms );
-            $terms_array = array_map( 'trim', $terms_array ); // Trim whitespace from terms
+        if (! empty($taxonomy_terms)) {
+            $terms_array = explode(',', $taxonomy_terms);
+            $terms_array = array_map('trim', $terms_array); // Trim whitespace from terms
 
             // Set the terms for the 'downloads_category' taxonomy
-            $set_terms_result = wp_set_object_terms( $post_id, $terms_array, 'downloads_category', false ); // false = append terms, true = replace terms
+            $set_terms_result = wp_set_object_terms($post_id, $terms_array, 'faqs_category', false); // false = append terms, true = replace terms
 
-            if ( is_wp_error( $set_terms_result ) ) {
-                error_log( "CSV Import Error: Failed to set terms '{$taxonomy_terms}' for post ID {$post_id}. Error: " . $set_terms_result->get_error_message() );
+            if (is_wp_error($set_terms_result)) {
+                error_log("CSV Import Error: Failed to set terms '{$taxonomy_terms}' for post ID {$post_id}. Error: " . $set_terms_result->get_error_message());
             } else {
-                error_log( "CSV Import Success: Terms '{$taxonomy_terms}' assigned to post ID {$post_id}." );
+                error_log("CSV Import Success: Terms '{$taxonomy_terms}' assigned to post ID {$post_id}.");
             }
         } else {
-            error_log( "CSV Import Warning: No taxonomy terms provided for post ID {$post_id}." );
-        }
-
-        // --- 5. Set Post Meta for PDF ID ---
-        if ( $pdf_attachment_id > 0 ) {
-            $update_meta_result = update_post_meta( $post_id, '_file', $pdf_attachment_id );
-
-            if ( $update_meta_result === false ) {
-                error_log( "CSV Import Error: Failed to set post meta '_file' for post ID {$post_id} with attachment ID {$pdf_attachment_id}." );
-            } else {
-                error_log( "CSV Import Success: Post meta '_file' set for post ID {$post_id} with attachment ID {$pdf_attachment_id}." );
-            }
+            error_log("CSV Import Warning: No taxonomy terms provided for post ID {$post_id}.");
         }
     }
 
     // Close the CSV file
-    fclose( $handle );
+    fclose($handle);
 
     // Provide a summary message and display it to the user
     $message = "CSV Import Finished: Successfully imported {$imported_count} downloads. Skipped {$skipped_count} rows.";
-    add_settings_error( 'csv_import_messages', 'csv_import_success', $message, 'success' );
-    settings_errors( 'csv_import_messages' ); // Display success message
+    add_settings_error('csv_import_messages', 'csv_import_success', $message, 'success');
+    settings_errors('csv_import_messages'); // Display success message
 }
 
 // Display any errors or success messages from the import process
-function display_csv_import_admin_notices() {
-    settings_errors( 'csv_import_errors' ); // Display error messages
+function display_csv_import_admin_notices()
+{
+    settings_errors('csv_import_errors'); // Display error messages
 }
-add_action( 'admin_notices', 'display_csv_import_admin_notices' );
+add_action('admin_notices', 'display_csv_import_admin_notices');
