@@ -10,7 +10,6 @@ jQuery(document).ready(function () {
 
 function accordion() {
     if (jQuery('.accordion--custom').length > 0) {
-
         jQuery('.accordion--item').each(function (index, element) {
             var $this = jQuery(this);
             $accordion_button = $this.find('.accordion--button');
