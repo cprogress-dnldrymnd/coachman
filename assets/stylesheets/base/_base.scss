@@ -461,6 +461,10 @@ img {
             font-size: 15px;
             width: 100%;
             text-align: center;
+            @include on-event {
+                background-color: var(--bs-black);
+                color: var(--bs-white);
+            }
         }
         &.current-menu-item {
             a {
