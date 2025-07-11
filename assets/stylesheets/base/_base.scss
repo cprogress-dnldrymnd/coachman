@@ -533,6 +533,11 @@ img {
         @include transform(translateY(-50%));
     }
 }
+.accordion--custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .accordion--item {
     overflow: hidden;
     position: relative;
