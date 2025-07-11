@@ -11637,9 +11637,10 @@ img {
     background-color: transparent;
     padding: 13px;
     border: 1px solid;
-    font-size: 15px; }
-  .nav-buttons.nav-buttons li.current-menu-item a {
+    font-size: 15px;
     width: 100%;
+    text-align: center; }
+  .nav-buttons.nav-buttons li.current-menu-item a {
     background-color: var(--bs-black);
     color: var(--bs-white); }
 
