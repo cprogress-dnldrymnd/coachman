@@ -609,26 +609,6 @@ Block::make(__('Model Technical Details'))
 <?php
     });
 
-Block::make(__('Download Button'))
-    ->add_fields(array(
-        Field::make('html', 'html_start')->set_html("<div $style>Icon</div>"),
-
-    ))
-    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-
-?>
-
-    <div class="download-button-box <?= $attributes['className'] ?>">
-        <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-            <div class="wp-block-button">
-                <a href="<?= get__post_meta('file') ?>" target="_blank" class="wp-block-button__link has-white-theme-color has-maroon-background-color has-text-color has-background has-link-color wp-element-button" style="border-radius:0px">
-                    Download
-                </a>
-            </div>
-        </div>
-    </div>
-<?php
-    });
 
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
