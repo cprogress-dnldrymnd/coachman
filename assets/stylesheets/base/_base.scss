@@ -330,6 +330,10 @@ img {
         }
     }
 }
+.wp-load-more__button.wp-load-more__button {
+    background-color: var(--maroon);
+    color: var(--bs-white);
+}
 .wp-block-embed__wrapper {
     position: relative;
     padding: 28.1% 0;
@@ -475,3 +479,4 @@ img {
         }
     }
 }
+
