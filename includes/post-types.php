@@ -410,3 +410,15 @@ $Downloads_Category->args = array(
         'slug'         => 'Downloads-category',
     )
 );
+
+$FAQs = new newPostType();
+$FAQs->key = 'faqs';
+$FAQs->name = 'FAQs';
+$FAQs->singular_name = 'FAQ';
+$FAQs->icon = 'dashicons-video-alt3';
+$FAQs->show_in_rest = true;
+$FAQs->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$FAQs->exclude_from_search = true;
+$FAQs->publicly_queryable = true;
+$FAQs->show_in_admin_bar = false;
+$FAQs->has_archive = false;
