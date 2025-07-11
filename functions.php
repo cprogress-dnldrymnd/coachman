@@ -292,7 +292,6 @@ function handle_csv_upload_and_import()
             error_log("CSV Import Warning: No taxonomy terms provided for post ID {$post_id}.");
         }
     }
-
     // Close the CSV file
     fclose($handle);
 
