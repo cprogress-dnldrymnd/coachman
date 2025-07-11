@@ -11531,7 +11531,8 @@ img {
 
 .wp-load-more__button.wp-load-more__button {
   background-color: var(--maroon);
-  color: var(--bs-white); }
+  color: var(--bs-white);
+  border-radius: 0; }
 
 .wp-block-embed__wrapper {
   position: relative;
