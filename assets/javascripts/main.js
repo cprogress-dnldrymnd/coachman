@@ -5,8 +5,34 @@ jQuery(document).ready(function () {
     // search_stock();
     listings();
     read_more();
+    accordion();
 });
 
+function accordion() {
+    if (jQuery('.accordion--custom').length > 0) {
+
+        jQuery('.accordion--item').each(function (index, element) {
+            var $this = jQuery(this);
+            $accordion_button = $this.find('.accordion--button');
+            $accordion_content = $this.find('.accordion--content');
+            jQuery('<span class="plus-minus"></span>').appendTo($accordion_button);
+
+            $accordion_button_height = $accordion_button.outerHeight();
+            $accordion_content_height = $accordion_content.outerHeight();
+
+            $this.css('--accordion_button_height', $accordion_button_height + 'px');
+            $this.css('--accordion_content_height', $accordion_content_height + 'px');
+            $this.addClass('initialized');
+            $accordion_button.click(function (e) {
+                $this.addClass('clicked');
+                $this.parent().find('.accordion-item:not(.clicked)').removeClass('active');
+                $this.toggleClass('active');
+                $this.removeClass('clicked');
+                e.preventDefault();
+            });
+        });
+    }
+}
 function read_more() {
     jQuery('.read-more-button').click(function (e) {
         jQuery('.read-more-content').removeClass('d-none');
