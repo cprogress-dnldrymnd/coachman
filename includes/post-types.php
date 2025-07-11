@@ -422,3 +422,38 @@ $FAQs->exclude_from_search = true;
 $FAQs->publicly_queryable = true;
 $FAQs->show_in_admin_bar = false;
 $FAQs->has_archive = false;
+
+$FAQS_Category = new newTaxonomy();
+$FAQS_Category->taxonomy = 'faqs_category';
+$FAQS_Category->post_type = 'faqs';
+$FAQS_Category->args = array(
+    'label'        => 'FAQS Category',
+    'labels' => array(
+        'name'                       => _x('FAQS Category', 'Taxonomy General Name', 'text_domain'),
+        'singular_name'              => _x('FAQS Category', 'Taxonomy Singular Name', 'text_domain'),
+        'menu_name'                  => __('FAQS Category', 'text_domain'),
+        'all_items'                  => __('All FAQS Category', 'text_domain'),
+        'parent_item'                => __('Parent FAQS Category', 'text_domain'),
+        'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+        'new_item_name'              => __('New Item Name', 'text_domain'),
+        'add_new_item'               => __('Add New Item', 'text_domain'),
+        'edit_item'                  => __('Edit Item', 'text_domain'),
+        'update_item'                => __('Update Item', 'text_domain'),
+        'view_item'                  => __('View Item', 'text_domain'),
+        'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+        'add_or_remove_items'        => __('Add or remove FAQS Category', 'text_domain'),
+        'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+        'popular_items'              => __('Popular FAQS Category', 'text_domain'),
+        'search_items'               => __('Search FAQS Category', 'text_domain'),
+        'not_found'                  => __('Not Found', 'text_domain'),
+        'no_terms'                   => __('No FAQS Category', 'text_domain'),
+        'items_list'                 => __('Items list', 'text_domain'),
+        'items_list_navigation'      => __('Items list navigation', 'text_domain'),
+    ),
+    'hierarchical' => true,
+    'query_var'    => true,
+    'show_in_rest' => true,
+    'rewrite'      => array(
+        'slug'         => 'faqs-category',
+    )
+);
