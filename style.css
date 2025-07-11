@@ -11641,7 +11641,8 @@ img {
     width: 100%;
     text-align: center; }
     .nav-buttons.nav-buttons li a:hover, .nav-buttons.nav-buttons li a:active, .nav-buttons.nav-buttons li a:focus {
-      background-color: var(); }
+      background-color: var(--bs-black);
+      color: var(--bs-white); }
   .nav-buttons.nav-buttons li.current-menu-item a {
     background-color: var(--bs-black);
     color: var(--bs-white); }

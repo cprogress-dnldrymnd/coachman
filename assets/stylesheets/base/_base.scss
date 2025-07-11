@@ -470,6 +470,7 @@ img {
             a {
                 background-color: var(--bs-black);
                 color: var(--bs-white);
+                pointer-events: none;
             }
         }
     }
