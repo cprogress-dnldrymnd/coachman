@@ -74,7 +74,10 @@ function example_enqueue_editor_assets()
 add_action('enqueue_block_editor_assets', 'example_enqueue_editor_assets');
 
 
-
+/**
+ * 1. Modify the permalink for the custom post type.
+ * This changes the URL that WordPress generates (e.g., in `get_permalink()`).
+ */
 function custom_post_type_url_from_meta($permalink, $post, $leavename)
 {
     // Define your custom post type slug and the meta key for the URL
@@ -95,3 +98,25 @@ function custom_post_type_url_from_meta($permalink, $post, $leavename)
     return $permalink;
 }
 add_filter('post_type_link', 'custom_post_type_url_from_meta', 10, 3);
+/**
+ * 2. Handle redirection from the original CPT URL to the custom URL.
+ * This ensures that if someone tries to access the original CPT slug URL,
+ * they are redirected to the URL specified in the meta field.
+ */
+function redirect_custom_post_type_to_meta_url()
+{
+    // Define your custom post type slug and the meta key for the URL
+    $custom_post_type = 'downloads'; // <-- IMPORTANT: Change this to your CPT slug
+
+    // Check if it's a single post of our target custom post type
+    if (is_singular($custom_post_type)) {
+        global $post;
+        $custom_url = wp_get_attachment_url(get__post_meta('file'));
+        // If a custom URL exists and is not empty, perform the redirect
+        if (! empty($custom_url) && $custom_url !== get_permalink($post->ID)) {
+            wp_redirect(esc_url_raw($custom_url), 301); // 301 is a permanent redirect
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'redirect_custom_post_type_to_meta_url');
