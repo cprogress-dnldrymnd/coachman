@@ -25,6 +25,12 @@ body {
     &.sticky--header {
         #masthead {
             background-color: var(--bs-white);
+            .svg-logo {
+                color: var(--logo-color);
+            }
+            .menu-burger .bar {
+                background-color: var(--bs-black);
+            }
         }
     }
 }

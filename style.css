@@ -12572,6 +12572,10 @@ h5, .h5 {
 
 body.sticky--header #masthead {
   background-color: var(--bs-white); }
+  body.sticky--header #masthead .svg-logo {
+    color: var(--logo-color); }
+  body.sticky--header #masthead .menu-burger .bar {
+    background-color: var(--bs-black); }
 
 .menu-burger {
   --burger-width: 40px;
