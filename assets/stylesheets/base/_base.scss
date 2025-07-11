@@ -546,7 +546,6 @@ img {
             height: 0;
         }
         &.active {
-            background-color: var(--wp--preset--color--white) !important;
             .accordion--content {
                 height: calc(var(--accordion_content_height));
             }
@@ -561,19 +560,11 @@ img {
                 display: none;
             }
         }
-
-        @include on-event {
-            background-color: var(--wp--preset--color--forest-gray) !important;
-            * {
-                color: var(--wp--preset--color--white) !important;
-            }
-        }
     }
 }
 .accordion--button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--wp--preset--spacing--20);
     cursor: pointer;
 }

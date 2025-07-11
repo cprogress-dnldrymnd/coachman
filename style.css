@@ -11723,28 +11723,21 @@ img {
   .accordion--item.initialized .accordion--content {
     display: block;
     height: 0; }
-  .accordion--item.initialized.active {
-    background-color: var(--wp--preset--color--white) !important; }
-    .accordion--item.initialized.active .accordion--content {
-      height: calc(var(--accordion_content_height)); }
-    .accordion--item.initialized.active .plus-minus {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg); }
+  .accordion--item.initialized.active .accordion--content {
+    height: calc(var(--accordion_content_height)); }
+  .accordion--item.initialized.active .plus-minus {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
   .accordion--item:not(.active):not(.initialized) .accordion--content {
     display: none; }
-  .accordion--item:not(.active):hover, .accordion--item:not(.active):active, .accordion--item:not(.active):focus {
-    background-color: var(--wp--preset--color--forest-gray) !important; }
-    .accordion--item:not(.active):hover *, .accordion--item:not(.active):active *, .accordion--item:not(.active):focus * {
-      color: var(--wp--preset--color--white) !important; }
 
 .accordion--button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--wp--preset--spacing--20);
   cursor: pointer; }
 
 @media (min-width: 1500px) {
