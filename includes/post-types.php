@@ -312,6 +312,20 @@ $Motorhome_Model->args = array(
     )
 );
 
+
+$Careers = new newPostType();
+$Careers->key = 'careers';
+$Careers->name = 'Careers';
+$Careers->singular_name = 'Career';
+$Careers->icon = 'dashicons-video-alt3';
+$Careers->show_in_rest = true;
+$Careers->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Careers->exclude_from_search = true;
+$Careers->publicly_queryable = true;
+$Careers->show_in_admin_bar = false;
+$Careers->has_archive = false;
+
+
 $Downloads = new newPostType();
 $Downloads->key = 'downloads';
 $Downloads->name = 'Downloads';
