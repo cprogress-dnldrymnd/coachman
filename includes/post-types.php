@@ -322,4 +322,4 @@ $Brochure->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerp
 $Brochure->exclude_from_search = true;
 $Brochure->publicly_queryable = true;
 $Brochure->show_in_admin_bar = false;
-$Brochures->has_archive = false;
+$Brochure->has_archive = false;
