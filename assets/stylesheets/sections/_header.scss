@@ -2,6 +2,7 @@
     z-index: 9999;
     position: sticky;
     top: var(--admin-bar-height);
+    @include transition(500ms);
     &.header-transparent {
         position: fixed;
         left: 0;
@@ -17,6 +18,13 @@
         }
         & + #main {
             margin-top: 0;
+        }
+    }
+}
+body {
+    &.sticky--header {
+        #masthead {
+            background-color: var(--bs-white);
         }
     }
 }
