@@ -11521,9 +11521,9 @@ img {
   padding: 18px 25px;
   font-size: 15px; }
 
-.wp-block-post-title.has-background {
+.wp-block-post-title.wp-block-post-title.wp-block-post-title.has-background {
   padding: 0; }
-  .wp-block-post-title.has-background > a {
+  .wp-block-post-title.wp-block-post-title.wp-block-post-title.has-background > a {
     padding: 18px 25px; }
 
 .wp-block-embed__wrapper {
@@ -11750,6 +11750,9 @@ img {
 
 .text-red {
   color: var(--red-color) !important; }
+
+.mw-700 {
+  max-width: 700; }
 
 .mw-600 {
   max-width: 600px; }
