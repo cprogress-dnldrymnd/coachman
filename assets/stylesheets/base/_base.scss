@@ -313,12 +313,20 @@ img {
         }
     }
 }
-.wp-block-button__link.wp-block-button__link, .wp-block-read-more {
+.wp-block-button__link.wp-block-button__link,
+.wp-block-read-more {
     font-size: inherit;
     padding: 18px 25px;
     font-size: 15px;
 }
-
+.wp-block-post-title.wp-block-post-title.wp-block-post-title {
+    &.has-background {
+        padding: 0;
+        > a {
+            padding: 18px 25px;
+        }
+    }
+}
 .wp-block-embed__wrapper {
     position: relative;
     padding: 28.1% 0;

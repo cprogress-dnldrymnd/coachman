@@ -11515,10 +11515,16 @@ img {
     .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:hover, .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:active, .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:focus {
       border-bottom-color: var(--bs-white); }
 
-.wp-block-button__link.wp-block-button__link, .wp-block-read-more {
+.wp-block-button__link.wp-block-button__link,
+.wp-block-read-more {
   font-size: inherit;
   padding: 18px 25px;
   font-size: 15px; }
+
+.wp-block-post-title.has-background {
+  padding: 0; }
+  .wp-block-post-title.has-background > a {
+    padding: 18px 25px; }
 
 .wp-block-embed__wrapper {
   position: relative;
