@@ -173,25 +173,7 @@ function my_csv_importer_page_content()
     </div>
 <?php
 }
-function my_convert_classic_to_blocks( $post_content ) {
-    // Use DOMDocument or a similar HTML parser for more robust parsing
-    // For simple cases, you might even use regular expressions, but be cautious.
 
-    // Example: Convert <p> tags to paragraph blocks
-    $content = preg_replace( '/<p>(.*?)<\/p>/s', ''."\n".'<p>$1</p>'."\n".'', $post_content );
-
-    // Example: Convert <h2> tags to heading blocks
-    $content = preg_replace( '/<h2>(.*?)<\/h2>/s', ''."\n".'<h2>$1</h2>'."\n".'', $content );
-
-    // ... repeat for other common tags (ul, ol, img, etc.)
-
-    // Handle the remaining "classic" content that couldn't be converted
-    // It might be left in a single "classic" block or raw HTML
-    if ( ! str_contains( $content, ''."\n". $content ."\n".'';
-    }
-
-    return $content;
-}
 /**
  * Handles the uploaded CSV file and initiates the import process.
  */
@@ -250,7 +232,7 @@ function handle_csv_upload_and_import()
 
         // Extract data from CSV columns
         $post_title     = sanitize_text_field($data[0]); // First column: Post Title
-        $post_content = my_convert_classic_to_blocks(wpautop($data[1])); // Second column: Taxonomy Terms (comma-separated)
+        $post_content = (wpautop($data[1])); // Second column: Taxonomy Terms (comma-separated)
         $taxonomy_terms = sanitize_text_field($data[2]); // Second column: Taxonomy Terms (comma-separated)
 
         // --- 1. Validate extracted data ---
