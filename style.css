@@ -12554,7 +12554,7 @@ h5, .h5 {
   position: sticky;
   top: var(--admin-bar-height); }
   #masthead.header-transparent {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: var(--admin-bar-height); }
