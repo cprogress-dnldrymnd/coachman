@@ -28,10 +28,11 @@
     <?php
     $header_style = get__post_meta('header_style');
     $header_style_val =  $header_style ? $header_style : 'header-default';
+    $header = get__theme_option('header');
     ?>
     <header id="masthead" class="site-header <?= $header_style_val ?>" role="banner">
         <?php
-        echo do_shortcode('[template template_id=25508]');
+        echo do_shortcode('[template template_id=' . $header . ']');
         ?>
     </header>
     <main id="main" class="main-content" role="main">
