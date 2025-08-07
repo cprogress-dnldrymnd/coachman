@@ -690,4 +690,5 @@ Container::make('theme_options', __('Theme Options'))
         Field::make('select', 'header', __('Default Header'))
             ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['header'], 'template')),
         Field::make('select', 'footer', __('Default Footer'))
+            ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['footer'], 'template')),
     ));
