@@ -13,7 +13,7 @@
 
 ?>
 <footer class="main-footer">
-    <?php echo do_shortcode('[template template_id=396]'); ?>
+    <?php echo do_shortcode('[template template_id=25506]'); ?>
 </footer>
 
 </div><!-- #page -->
