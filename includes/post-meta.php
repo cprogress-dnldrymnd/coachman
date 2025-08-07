@@ -631,3 +631,10 @@ Container::make('term_meta', __('Model Properties'))
             ))
             ->set_header_template('<%- heading %>')
     ));
+
+
+Container::make('theme_options', __('Theme Options'))
+    ->add_fields(array(
+        Field::make('select', 'header', __('Facebook URL')),
+        Field::make('select', 'footer', __('Footer Text'))
+    ));
