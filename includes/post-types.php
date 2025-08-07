@@ -136,7 +136,6 @@ class newTaxonomy
         return $columns;
     }
 }
-/*
 $Templates = new newPostType();
 $Templates->key = 'template';
 $Templates->name = 'Templates';
@@ -149,6 +148,8 @@ $Templates->publicly_queryable = true;
 $Templates->show_in_admin_bar = true;
 $Templates->has_archive = false;
 
+
+/*
 
 
 $Videos = new newPostType();
