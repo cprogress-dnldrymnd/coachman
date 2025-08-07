@@ -635,6 +635,59 @@ Container::make('term_meta', __('Model Properties'))
 
 Container::make('theme_options', __('Theme Options'))
     ->add_fields(array(
-        Field::make('select', 'header', __('Facebook URL')),
+        Field::make('select', 'header', __('Facebook URL'))
+            ->set_options(get_posts_by_taxonomy_wpdb('template_category', 43, 'template')),
         Field::make('select', 'footer', __('Footer Text'))
     ));
+
+/**
+ * Safely retrieves posts by a given taxonomy and term using WPDB.
+ *
+ * @param string $taxonomy The taxonomy slug (e.g., 'category', 'product_cat').
+ * @param array $terms An array of term slugs (e.g., ['electronics', 'apparel']).
+ * @param string $post_type The post type slug (e.g., 'post', 'product').
+ * @return array An array of post IDs as keys and post titles as values, or an empty array if no posts are found.
+ */
+function get_posts_by_taxonomy_wpdb($taxonomy, $terms, $post_type = 'post')
+{
+    global $wpdb;
+
+    // Sanitize the input to prevent SQL injection.
+    // The implode and array_fill create a string of placeholders for the IN clause.
+    $terms_in_clause = implode(', ', array_fill(0, count($terms), '%s'));
+
+    // Build the query string with placeholders.
+    // We use aliases (p, tr, tt, t) to make the query more readable.
+    $sql = "
+        SELECT p.ID, p.post_title
+        FROM {$wpdb->posts} AS p
+        INNER JOIN {$wpdb->term_relationships} AS tr ON (p.ID = tr.object_id)
+        INNER JOIN {$wpdb->term_taxonomy} AS tt ON (tr.term_taxonomy_id = tt.term_taxonomy_id)
+        INNER JOIN {$wpdb->terms} AS t ON (t.term_id = tt.term_id)
+        WHERE 1=1
+        AND p.post_type = %s
+        AND p.post_status = 'publish'
+        AND tt.taxonomy = %s
+        AND t.slug IN ({$terms_in_clause})
+    ";
+
+    // Prepare the arguments for the query.
+    // The first argument is the post type, second is the taxonomy,
+    // and the rest are the term slugs.
+    $query_args = array_merge([$post_type, $taxonomy], $terms);
+
+    // Prepare the SQL statement for security.
+    $prepared_sql = $wpdb->prepare($sql, $query_args);
+
+    // Get the results as an array of objects.
+    $posts = $wpdb->get_results($prepared_sql);
+
+    $post_list = [];
+    if ($posts) {
+        foreach ($posts as $post) {
+            $post_list[$post->ID] = $post->post_title;
+        }
+    }
+
+    return $post_list;
+}
