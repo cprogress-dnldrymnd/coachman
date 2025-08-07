@@ -688,6 +688,6 @@ function get_posts_by_taxonomy_wpdb($taxonomy, $terms, $post_type = 'post')
 Container::make('theme_options', __('Theme Options'))
     ->add_fields(array(
         Field::make('select', 'header', __('Default Header'))
-            ->set_options(get_posts_by_taxonomy_wpdb('template_category', [43], 'template')),
+            ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['header'], 'template')),
         Field::make('select', 'footer', __('Default Footer'))
     ));
