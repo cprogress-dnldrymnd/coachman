@@ -636,7 +636,7 @@ Container::make('term_meta', __('Model Properties'))
 Container::make('theme_options', __('Theme Options'))
     ->add_fields(array(
         Field::make('select', 'header', __('Facebook URL'))
-            ->set_options(get_posts_by_taxonomy_wpdb('template_category', 43, 'template')),
+            ->set_options(get_posts_by_taxonomy_wpdb('template_category', [43], 'template')),
         Field::make('select', 'footer', __('Footer Text'))
     ));
 
