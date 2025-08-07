@@ -130,5 +130,7 @@ function prevent_term_deletion($term, $taxonomy)
     if ($taxonomy === 'template_category' && in_array($term, array(42, 43))) { // Replace with your term IDs
         // Block deletion
         wp_die('You cannot delete this term.');
+        wp_admin_notice('You cannot delete this term.');
+        
     }
 }
