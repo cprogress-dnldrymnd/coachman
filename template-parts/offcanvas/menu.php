@@ -8,7 +8,7 @@
         </button>
         <div class="offcanvas-body--inner background-white rounded overflow-hidden">
             <?php
-            echo do_shortcode('[template template_id=394]');
+            echo do_shortcode('[template template_id=25503]');
             ?>
         </div>
     </div>
