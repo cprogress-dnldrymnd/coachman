@@ -127,7 +127,7 @@ add_action('pre_delete_term', 'prevent_term_deletion', 10, 2);
 function prevent_term_deletion($term, $taxonomy)
 {
     // Replace 'your_taxonomy' with the actual taxonomy slug
-    if ($taxonomy === 'template_category' && in_array($term, array(42, 2, 3))) { // Replace with your term IDs
+    if ($taxonomy === 'template_category' && in_array($term, array(42, 43))) { // Replace with your term IDs
         // Block deletion
         wp_die('You cannot delete this term.');
     }
