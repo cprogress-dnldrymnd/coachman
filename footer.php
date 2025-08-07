@@ -10,10 +10,11 @@
  * @package orca
  */
 
+$footer = get__theme_option('footer');
 
 ?>
 <footer class="main-footer">
-    <?php echo do_shortcode('[template template_id=25506]'); ?>
+    <?php echo do_shortcode('[template template_id=' . $footer . ']'); ?>
 </footer>
 
 </div><!-- #page -->
