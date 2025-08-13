@@ -35,7 +35,7 @@ function ajax_details() {
                 post_id: post_id,
             },
             success: function (response) {
-                console.log(response);
+                jQuery('#listing--details--results').html(response)
             },
             error: function (error) {
                 console.error('Error:', error);
