@@ -132,8 +132,3 @@ function prevent_term_deletion($term, $taxonomy)
         wp_die('You cannot delete this term.');
     }
 }
-
-
-// Add the function to the 'the_content' filter with a high priority.
-// A high priority ensures this function runs before the default wpautop filter.
-add_filter('the_content', 'my_custom_disable_autop_for_post_type', 9);
