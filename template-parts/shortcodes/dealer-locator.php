@@ -27,12 +27,21 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     </div>
 </div>
 <?php if (isset($_GET['wpsl-search-input'])) { ?>
+    <style id="wpsl-custom-style">
+        #wpsl-result-list,
+        #wpsl-gmap {
+            opacity: 1;
+        }
+    </style>
     <script>
         jQuery(document).ready(function() {
             jQuery('input[name="wpsl-search-input"]').val('<?= $_GET['wpsl-search-input'] ?>');
             setTimeout(function() {
                 jQuery('#wpsl-search-btn').click();
             }, 500);
+            setTimeout(function() {
+                jQuery('#wpsl-custom-style').remove();
+            }, 600);
         });
     </script>
 
