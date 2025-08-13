@@ -11,7 +11,7 @@ function custom_templates($templates)
     $templates[] = array(
         'id'   => 'custom',
         'name' => 'Custom template',
-        'path' => get_stylesheet_directory() . '/' . 'wpsl-templates/custom.php',
+        'path' => get_stylesheet_directory() . '/wpsl-templates/custom.php',
     );
 
     return $templates;
