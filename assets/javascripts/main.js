@@ -142,8 +142,10 @@ function mega_menu() {
 
     }
 
-    jQuery('.no--submenu .nav-link').click(function (e) {
-        e.preventDefault();
+
+    jQuery('.no--submenu .nav-link').each(function (index, element) {
+        jQuery(this).removeAttr('data-bs-toggle');
+        jQuery(this).removeAttr('data-bs-target');
     });
 }
 
