@@ -10,7 +10,6 @@ function template($atts)
             $atts
         )
     );
-    remove_filter('the_content', 'wpautop');
 
     $content_post = get_post($template_id);
     $content = $content_post->post_content;
@@ -19,7 +18,6 @@ function template($atts)
     return $content;
 }
 add_shortcode('template', 'template');
-add_filter('the_content', 'wpautop');
 
 function latest_deals()
 {
