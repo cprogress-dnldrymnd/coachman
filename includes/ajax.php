@@ -33,6 +33,27 @@ function dealer_details_ajax()
 			<?= $_post->post_content ?>
 		</div>
 
+		<ul class="meta--details">
+			<?php if ($wpsl_phone) { ?>
+				<li>
+					<span class="label">Phone:</span>
+					<span class="value"><a href="tel:<?= $wpsl_phone ?>"><?= $wpsl_phone ?></a></span>
+				</li>
+			<?php } ?>
+			<?php if ($wpsl_email) { ?>
+				<li>
+					<span class="label">Email:</span>
+					<span class="value"><a href="mailto:<?= $wpsl_email ?>"><?= $wpsl_email ?></a></span>
+				</li>
+			<?php } ?>
+			<?php if ($wpsl_url) { ?>
+				<li>
+					<span class="label">Website:</span>
+					<span class="value"><a href="<?= $wpsl_url ?>" target="_blank"><?= $wpsl_url ?></a></span>
+				</li>
+			<?php } ?>
+		</ul>
+
 		<div class="listings--posts mt-5">
 			<h4 class="fw-semibold mb-4">Caravans In Stock</h4>
 			<div class="row g-3">
