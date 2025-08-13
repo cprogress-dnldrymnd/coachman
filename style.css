@@ -12852,6 +12852,10 @@ body.sticky--header #masthead {
     right: 0;
     bottom: 0;
     z-index: 1; }
+  .listings--inner.has-model-layout .bi-dash {
+    display: none; }
+  .listings--inner.has-model-layout.active .bi-dash {
+    display: block; }
   @media screen and (min-width: 992px) {
     .listings--inner.has-model-layout .listing--model-link {
       display: none; } }

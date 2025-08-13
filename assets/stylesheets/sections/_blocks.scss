@@ -34,6 +34,17 @@
         z-index: 1;
     }
     &.has-model-layout {
+        .bi-dash {
+            display: none;
+        }
+        &.active {
+            .bi-plus {
+                display: none;
+            }
+            .bi-dash {
+                display: block;
+            }
+        }
         @include responsive(md-lg) {
             .listing--model-link {
                 display: none;
