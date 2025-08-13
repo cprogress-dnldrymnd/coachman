@@ -130,3 +130,23 @@
         }
     }
 }
+
+.listing--buttons {
+    display: flex;
+    align-items: center;
+    .btn {
+        padding: 0;
+        border: none;
+        a {
+            padding: 18px 25px;
+            font-size: 15px;
+            border: 1px solid;
+        }
+        &.btn-appointment {
+            a {
+                background-color: var(--wp--preset--color--maroon);
+                border-color: var(--wp--preset--color--maroon);
+            }
+        }
+    }
+}

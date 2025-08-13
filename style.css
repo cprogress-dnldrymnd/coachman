@@ -12724,6 +12724,20 @@ body.sticky--header #masthead {
       max-width: 540px;
       margin-left: auto; }
 
+.listing--buttons {
+  display: flex;
+  align-items: center; }
+  .listing--buttons .btn {
+    padding: 0;
+    border: none; }
+    .listing--buttons .btn a {
+      padding: 18px 25px;
+      font-size: 15px;
+      border: 1px solid; }
+    .listing--buttons .btn.btn-appointment a {
+      background-color: var(--wp--preset--color--maroon);
+      border-color: var(--wp--preset--color--maroon); }
+
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
   bottom: 50px;
