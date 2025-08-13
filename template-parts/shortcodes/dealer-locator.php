@@ -26,3 +26,5 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
         <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
     </div>
 </div>
+
+<?= wpautop(do_shortcode('[modal id=25605]')) ?>
