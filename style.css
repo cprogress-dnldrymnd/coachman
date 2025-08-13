@@ -12773,6 +12773,9 @@ body.sticky--header #masthead {
 .request--appointment--dealer .form-control {
   background-color: var(--wp--preset--color--lightgray-2); }
 
+.offcanvas-end---modal {
+  overflow: auto; }
+
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
   bottom: 50px;
