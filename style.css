@@ -12674,10 +12674,13 @@ body.sticky--header #masthead {
     .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
       max-width: 1720px; } }
   .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
-    display: flex; }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
     .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
       float: none;
-      display: flex; }
+      display: flex;
+      align-items: center; }
 .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
   background-color: var(--wp--preset--color--lightgray-2);
   margin: 0;
