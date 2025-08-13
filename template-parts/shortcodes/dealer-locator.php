@@ -23,6 +23,8 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     </div>
 
     <div class="dealer--locator">
-        <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
+        <div class="container">
+            <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
+        </div>
     </div>
 </div>
