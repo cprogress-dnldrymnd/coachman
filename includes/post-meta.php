@@ -406,7 +406,7 @@ Block::make(__('Caravan/Motohomes Models'))
             <div class="<?= $class1 ?>">
                 <div class="<?= $class2 ?>">
                     <?php foreach ($fields['posts'] as $post) { ?>
-                        <?php foreach ($post['model'] as $key => $model) { ?>
+                        <?php foreach ($post['model'] as $model) { ?>
                             <?php
                             $terms[$model] = array(
                                 'post_type' => $post['_type'],
@@ -461,16 +461,16 @@ Block::make(__('Caravan/Motohomes Models'))
         </div>
     </div>
     <?php if ($fields['display_model_layouts']) { ?>
-        <?php foreach ($terms as $term) { ?>
+        <?php foreach ($terms as $key => $term) { ?>
             <?php
                 $args = array(
-                    'post_type' => $term['_type'],
+                    'post_type' => $term['post_type'],
                     'numberposts' => -1,
                     'tax_query' => array(
                         array(
-                            'taxonomy' => $post['taxonomy'],
+                            'taxonomy' => $term['taxonomy'],
                             'field' => 'term_id',
-                            'terms' => $term['term_id']
+                            'terms' => $key
                         ),
                     ),
                 );
