@@ -35,7 +35,7 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
             $new_text = $originalText.replace('[dealer_name]', $dealerName);
 
 
-            jQuery(this).closest('h5').text('Appointment with ' + $new_text);
+            jQuery(this).parents('.store--listing').find('h5').text($new_text);
 
             console.log($new_text);
             console.log($dealerName);
