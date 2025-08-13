@@ -25,7 +25,7 @@ function dealer() {
 function ajax_details() {
     jQuery('body').on('click', '.btn-stock a', function () {
         var $this = jQuery(this);
-        var post_id = $this.parents('.store--listing').attr('data-store-idid');
+        var post_id = $this.parents('.store--listing').attr('data-store-id');
         console.log(post_id);
         jQuery.ajax({
             url: ajax_params.ajax_url,
