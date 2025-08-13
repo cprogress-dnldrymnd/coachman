@@ -12728,6 +12728,10 @@ body.sticky--header #masthead {
         border-bottom: 1px solid #000;
         padding-bottom: 40px;
         margin-bottom: 40px; }
+        .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li h4, .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .h4 {
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 20px; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
 

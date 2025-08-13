@@ -43,7 +43,7 @@ function custom_listing_template()
 
     // Check if we need to show the distance.
     if (!$wpsl_settings['hide_distance']) {
-        $listing_template .= "\t\t" . '<%= distance %> ' . esc_html($wpsl_settings['distance_unit']) . '' . "\r\n";
+        $listing_template .= "\t\t" . '<div class="distance"><%= distance %> ' . esc_html($wpsl_settings['distance_unit']) . '</div>' . "\r\n";
     }
     $listing_template .= "<div class='listing--buttons'>";
     $listing_template .= "<div class='btn btn-appointment'><a>Request Appointment</a></div>";
