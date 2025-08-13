@@ -12690,7 +12690,8 @@ body.sticky--header #masthead {
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores {
     max-height: 800px;
     overflow: auto;
-    max-width: 540px; }
+    max-width: 540px;
+    margin-left: auto; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
