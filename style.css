@@ -12732,6 +12732,13 @@ body.sticky--header #masthead {
           font-size: 18px;
           font-weight: 400;
           margin-bottom: 20px; }
+        .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .distance {
+          display: flex;
+          align-items: center;
+          gap: 10px; }
+          .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .distance svg {
+            width: 14px;
+            height: auto; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
 
