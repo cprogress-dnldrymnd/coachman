@@ -100,10 +100,11 @@
             #wpsl-result-list {
                 background-color: var(--wp--preset--color--lightgray-2);
                 margin: 0;
-                padding-top: 40px;
-                padding-bottom: 40px;
+
                 width: 33.5%;
                 #wpsl-stores {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
                     max-height: 800px;
                     overflow: auto;
                     max-width: 540px;
