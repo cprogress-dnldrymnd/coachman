@@ -160,7 +160,7 @@ Block::make(__('Tabs Navigation Item'))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
-    <li class="swiper-slide nav-item" role="presentation">
+    <li class="swiper-slide nav-item <?= $attributes['className'] ?>" role="presentation">
         <button class="nav-link" id="<?= $fields['tab_item_id'] ?>" data-bs-toggle="tab" data-bs-target="#<?= $fields['tab_item_id'] ?>-pane" type="button" role="tab" aria-controls="<?= $fields['tab_item_title'] ?>-pane">
             <?= $inner_blocks ?>
         </button>
