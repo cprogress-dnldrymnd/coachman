@@ -12688,8 +12688,9 @@ body.sticky--header #masthead {
   padding-bottom: 40px;
   width: 33.5%; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores {
-    max-width: 800px;
-    overflow: auto; }
+    max-height: 800px;
+    overflow: auto;
+    max-width: 540px; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
