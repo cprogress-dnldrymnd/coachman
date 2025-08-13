@@ -209,5 +209,7 @@
 }
 
 .offcanvas-end---modal {
-    overflow: auto;
+    .offcanvas-body--inner {
+        overflow: auto;
+    }
 }
