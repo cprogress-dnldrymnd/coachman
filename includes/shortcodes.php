@@ -19,6 +19,7 @@ function template($atts)
     return $content;
 }
 add_shortcode('template', 'template');
+add_filter('the_content', 'wpautop');
 
 function latest_deals()
 {
