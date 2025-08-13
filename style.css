@@ -12721,7 +12721,7 @@ body.sticky--header #masthead {
       padding-bottom: 40px;
       max-height: 800px;
       overflow: auto;
-      max-width: 540px;
+      max-width: 660px;
       margin-left: auto; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
@@ -12743,6 +12743,10 @@ body.sticky--header #masthead {
       background-color: var(--wp--preset--color--maroon);
       border-color: var(--wp--preset--color--maroon);
       color: #fff; }
+    .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
+      border: none; }
+    .listing--buttons.listing--buttons.listing--buttons .btn:not(.bnt-stock) a {
+      text-decoration: none; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;

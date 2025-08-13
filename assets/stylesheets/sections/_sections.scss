@@ -123,11 +123,11 @@
                     padding-bottom: 40px;
                     max-height: 800px;
                     overflow: auto;
-                    max-width: 540px;
+                    max-width: 660px;
                     margin-left: auto;
                 }
             }
-            #wpsl-gmap{
+            #wpsl-gmap {
                 width: 60%;
             }
         }
@@ -157,6 +157,16 @@
         }
         &.btn-direction {
             a {
+            }
+        }
+        &.btn-stock {
+            a {
+                border: none;
+            }
+        }
+        &:not(.bnt-stock) {
+            a {
+                text-decoration: none;
             }
         }
     }
