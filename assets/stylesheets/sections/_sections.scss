@@ -65,9 +65,12 @@
                 #wpsl-search-wrap {
                     form {
                         display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
                         > div {
                             float: none;
                             display: flex;
+                            align-items: center;
                         }
                     }
                 }
@@ -77,6 +80,7 @@
                 margin: 0;
                 padding-top: 40px;
                 padding-bottom: 40px;
+                width: 33.5%;
                 #wpsl-stores {
                     max-width: 800px;
                     overflow: auto;
