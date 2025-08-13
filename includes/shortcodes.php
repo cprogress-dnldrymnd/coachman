@@ -52,10 +52,48 @@ function listing_grid_full_details($atts)
 add_shortcode('listing_grid_full_details', 'listing_grid_full_details');
 
 
-function dealer_locator() {
+function dealer_locator()
+{
     ob_start();
     get_template_part('template-parts/shortcodes/dealer-locator');
     return ob_get_clean();
 }
 
 add_shortcode('dealer_locator', 'dealer_locator');
+
+
+function modal($atts)
+{
+    ob_start();
+    shortcode_atts(
+        array(
+            'id' => '',
+            'heading' => '',
+        ),
+        $atts
+    );
+
+?>
+    <div class="offcanvas offcanvas--technical-details offcanvas-end" tabindex="-1" id="offCanvasModelSpecs-8" aria-labelledby="offCanvasModelSpecs-8Label">
+        <div class="offcanvas-body p-0 overflow-hidden">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
+                </svg>
+            </button>
+            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5 d-flex h-100 flex-column justify-content-between gap-3">
+                <div class="top">
+                    <div class="title-box d-flex gap-3 align-items-center">
+                        <h2><img loading="lazy" decoding="async" width="300" height="300" src="https://coachman.theprogressteam.com/wp-content/uploads/2025/06/travelmaster-logo-black.svg" class="attachment-medium size-medium" alt="" style="border-bottom-color: rgba(0, 0, 0, 0);"></h2>
+                    </div>
+                    <p class="fs-22 mb-4"><?= $heading ?></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+    return ob_get_clean();
+}
+
+add_shortcode('modal', 'modal');

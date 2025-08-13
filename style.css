@@ -12741,7 +12741,8 @@ body.sticky--header #masthead {
             width: 14px;
             height: auto; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .wpsl-contact-details {
-          margin-top: 30px; }
+          margin-top: 30px;
+          font-weight: 500; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
 
