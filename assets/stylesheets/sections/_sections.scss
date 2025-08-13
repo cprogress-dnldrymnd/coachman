@@ -41,11 +41,20 @@
         .wpsl-search {
             background-color: transparent;
         }
-        #wpsl-search-wrap form {
-            display: flex;
-            > div {
-                float: none;
-                display: flex;
+        #wpsl-wrap {
+            .wpsl-search {
+                #wpsl-search-wrap {
+                    form {
+                        display: flex;
+                        > div {
+                            float: none;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            .wpsl-wrap {
+                background-color: var(--wp--preset--color--lightgray-2);
             }
         }
     }

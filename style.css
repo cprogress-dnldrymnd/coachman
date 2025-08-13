@@ -12656,11 +12656,13 @@ body.sticky--header #masthead {
 
 .dealer--locator--holder .dealer--locator .wpsl-search {
   background-color: transparent; }
-.dealer--locator--holder .dealer--locator #wpsl-search-wrap form {
+.dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
   display: flex; }
-  .dealer--locator--holder .dealer--locator #wpsl-search-wrap form > div {
+  .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
     float: none;
     display: flex; }
+.dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-wrap {
+  background-color: var(--wp--preset--color--lightgray-2) !important; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
