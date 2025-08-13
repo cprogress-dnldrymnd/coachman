@@ -133,33 +133,6 @@ function prevent_term_deletion($term, $taxonomy)
     }
 }
 
-/**
- * Disable wpautop on the_content for a specific post type.
- *
- * This function removes the automatic paragraph and line break filtering
- * from the 'the_content' filter for the specified post type.
- *
- * @param string $content The content to filter.
- * @return string The filtered content.
- */
-function my_custom_disable_autop_for_post_type($content)
-{
-    // Specify the post type you want to target.
-    // Replace 'your_post_type' with the slug of your custom post type.
-    $target_post_type = '';
-
-    // Check if we are on a single post of the target post type.
-    // is_singular() is a good check for both posts and pages.
-    global $post;
-    if ($post->post_type == 'template') {
-        // If it's the target post type, remove the wpautop filter.
-        remove_filter('the_content', 'wpautop');
-        // You can also remove the shortcode formatting filter if needed.
-        // remove_filter('the_content', 'shortcode_unautop');
-    }
-
-    return $content;
-}
 
 // Add the function to the 'the_content' filter with a high priority.
 // A high priority ensures this function runs before the default wpautop filter.
