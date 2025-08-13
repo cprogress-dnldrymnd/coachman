@@ -21,6 +21,11 @@ img {
 }
 .nav-item {
     &.no--submenu {
+        .nav-link {
+            @include after {
+                display: none;
+            }
+        }
         a {
             @include before {
                 position: absolute;

@@ -11279,6 +11279,8 @@ img {
 .nav-link a {
   text-decoration: none; }
 
+.nav-item.no--submenu .nav-link:after {
+  display: none; }
 .nav-item.no--submenu a:before {
   position: absolute;
   content: "";
