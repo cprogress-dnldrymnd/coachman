@@ -11,10 +11,6 @@ function template($atts)
         )
     );
 
-    if (get_post_type($template_id) == 'template') {
-        remove_filter('the_content', 'wpautop');
-    }
-
     $content_post = get_post($template_id);
     $content = $content_post->post_content;
     $content = apply_filters('the_content', $content);
