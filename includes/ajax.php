@@ -29,7 +29,7 @@ function dealer_details_ajax()
 			<?= $_post->post_content ?>
 		</div>
 
-		<ul class="meta--details">
+		<ul class="meta--details mt-4">
 			<?php if ($wpsl_phone) { ?>
 				<li>
 					<span class="label">Phone:</span>
@@ -50,8 +50,8 @@ function dealer_details_ajax()
 			<?php } ?>
 		</ul>
 
-		<div class="listings--posts mt-5">
-			<h4 class="fw-semibold mb-4">Caravans In Stock</h4>
+		<div class="listings--posts mt-4">
+			<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
 			<div class="row g-3">
 				<?php foreach ($posts_listings as $posts_listing) { ?>
 					<div class="col-lg-6">
