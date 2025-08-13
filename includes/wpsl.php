@@ -38,10 +38,6 @@ function custom_listing_template()
     $listing_template .= "\t\t\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
     $listing_template .= "\t\t\t" . '</p>' . "\r\n";
 
-    // Check if the 'appointment_url' contains data before including it.
-    $listing_template .= "\t\t\t" . '<% if ( appointment_url ) { %>' . "\r\n";
-    $listing_template .= "\t\t\t" . '<p><a href="<%= appointment_url %>">' . __('Make an Appointment', 'wpsl') . '</a></p>' . "\r\n";
-    $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
 
     $listing_template .= "\t\t" . '</div>' . "\r\n";
 
