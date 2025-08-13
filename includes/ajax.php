@@ -4,9 +4,11 @@ add_action('wp_ajax_dealer_details_ajax', 'dealer_details_ajax');
 function dealer_details_ajax()
 {
 	$post_id = $_POST['post_id'];
+	$_post = get_post($post_id)
 ?>
 	<div class="dealer--details">
-		<h3><?= get_the_title($post_id) ?></h3>
+		<h3><?= $_post->post_title ?></h3>
+		<?= $_post->post_content ?>
 	</div>
 <?php
 	die();
