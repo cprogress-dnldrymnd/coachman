@@ -192,6 +192,19 @@
             a {
                 border: none !important;
                 text-decoration: underline;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .wpcf7-spinner {
+                    display: none;
+                    visibility: visible;
+                    margin: 0;
+                }
+            }
+            &.loading {
+                .wpcf7-spinner {
+                    display: block;
+                }
             }
         }
         &:not(.btn-stock) {
