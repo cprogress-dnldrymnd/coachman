@@ -28,12 +28,13 @@ function dealer_details_ajax()
 	$posts_listings = get_posts($args);
 ?>
 	<div class="dealer--details">
-		<h3 class="mb-4"><?= $_post->post_title ?></h3>
+		<h3 class="mb-4 fw-semibold"><?= $_post->post_title ?></h3>
 		<div class="dealer--desc">
 			<?= $_post->post_content ?>
 		</div>
 
 		<div class="listings--posts ">
+			<h4 class="fw-semibold">Caravans In Stock</h4>
 			<div class="container  py-5">
 				<div class="row g-3">
 					<?php foreach ($posts_listings as $posts_listing) { ?>
