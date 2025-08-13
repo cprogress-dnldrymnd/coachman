@@ -33,9 +33,9 @@ function dealer_details_ajax()
 			<?= $_post->post_content ?>
 		</div>
 
-		<div class="listings--posts ">
-			<h4 class="fw-semibold">Caravans In Stock</h4>
-			<div class="container  py-5">
+		<div class="listings--posts mt-5">
+			<h4 class="fw-semibold mb-4">Caravans In Stock</h4>
+			<div class="container">
 				<div class="row g-3">
 					<?php foreach ($posts_listings as $posts_listing) { ?>
 						<div class="col-lg-6">
