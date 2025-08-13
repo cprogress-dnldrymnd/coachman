@@ -133,3 +133,11 @@ function prevent_term_deletion($term, $taxonomy)
         
     }
 }
+
+function remove_wpautop_for_post_type() {
+    // Check if we are on a single post page and if it's the specific post type
+    if ( get_post_type() == 'template' ) {
+        remove_filter( 'the_content', 'wpautop' );
+    }
+}
+add_action( 'wp', 'remove_wpautop_for_post_type' );

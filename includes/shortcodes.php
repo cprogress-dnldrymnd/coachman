@@ -19,6 +19,7 @@ function template($atts)
 }
 add_shortcode('template', 'template');
 
+
 function latest_deals()
 {
     ob_start();
