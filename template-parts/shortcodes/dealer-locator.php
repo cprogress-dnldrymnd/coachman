@@ -3,12 +3,14 @@ $dealer_cat = get_terms(array(
     'taxonomy' => 'wpsl_store_category',
     'hide_empty' => false,
 ));
+
+$category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 'caravan-dealers';
 ?>
 <div class="swiper swiper-nav-tabs-swiper nav-tabs-swiper overflow-visible sm-margin-bottom nav-tabs-swiper-js">
     <ul class="swiper-wrapper nav nav-tabs  flex-row " id="Dealers-Navigation" role="tablist" aria-live="polite">
         <?php foreach ($dealer_cat as $dealer) { ?>
             <li class="swiper-slide nav-item">
-                <a class="nav-link <?= isset($_GET['category']) && $_GET['category'] == $dealer->slug ? 'active' : '' ?>" href="?category=<?= $dealer->slug ?>">
+                <a class="nav-link <?= $category == $dealer->slug ? 'active' : '' ?>" href="?category=<?= $dealer->slug ?>">
                     <p><?= $dealer->name ?></p>
                 </a>
             </li>
