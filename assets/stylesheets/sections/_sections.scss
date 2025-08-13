@@ -145,7 +145,7 @@
         a {
             padding: 18px 25px;
             font-size: 15px;
-            border: 1px solid;
+            border: 1px solid !important;
             display: block;
         }
         &.btn-appointment {
@@ -161,10 +161,10 @@
         }
         &.btn-stock {
             a {
-                border: none;
+                border: none !important;
             }
         }
-        &:not(.bnt-stock) {
+        &:not(.btn-stock) {
             a {
                 text-decoration: none;
             }

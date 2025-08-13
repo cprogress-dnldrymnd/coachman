@@ -12737,14 +12737,14 @@ body.sticky--header #masthead {
     .listing--buttons.listing--buttons.listing--buttons .btn a {
       padding: 18px 25px;
       font-size: 15px;
-      border: 1px solid;
+      border: 1px solid !important;
       display: block; }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
       background-color: var(--wp--preset--color--maroon);
       border-color: var(--wp--preset--color--maroon);
       color: #fff; }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
-      border: none; }
+      border: none !important; }
     .listing--buttons.listing--buttons.listing--buttons .btn:not(.bnt-stock) a {
       text-decoration: none; }
 
