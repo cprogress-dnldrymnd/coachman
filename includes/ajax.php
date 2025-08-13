@@ -35,20 +35,18 @@ function dealer_details_ajax()
 
 		<div class="listings--posts mt-5">
 			<h4 class="fw-semibold mb-4">Caravans In Stock</h4>
-			<div class="container">
-				<div class="row g-3">
-					<?php foreach ($posts_listings as $posts_listing) { ?>
-						<div class="col-lg-6">
-							<div class="listings--posts--grid bg-lightgray-2 p-4">
-								<h3 class="fs-24"><?= __listing_title($posts_listing->ID) ?></h3>
-								<div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
-									<?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
-								</div>
-								<?= __listing_features($posts_listing->ID) ?>
+			<div class="row g-3">
+				<?php foreach ($posts_listings as $posts_listing) { ?>
+					<div class="col-lg-6">
+						<div class="listings--posts--grid bg-lightgray-2 p-4">
+							<h3 class="fs-24"><?= __listing_title($posts_listing->ID) ?></h3>
+							<div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
+								<?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
 							</div>
+							<?= __listing_features($posts_listing->ID) ?>
 						</div>
-					<?php } ?>
-				</div>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
