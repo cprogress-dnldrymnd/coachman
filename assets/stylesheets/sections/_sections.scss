@@ -75,6 +75,12 @@
             #wpsl-result-list {
                 background-color: var(--wp--preset--color--lightgray-2);
                 margin: 0;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                #wpsl-stores {
+                    max-width: 800px;
+                    overflow: auto;
+                }
             }
         }
     }
