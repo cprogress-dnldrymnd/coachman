@@ -27,4 +27,4 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     </div>
 </div>
 
-<?= wpautop(do_shortcode('[modal id=25605]')) ?>
+   <?= do_shortcode('[template template_id=25605]') ?>
