@@ -12852,7 +12852,9 @@ body.sticky--header #masthead {
     right: 0;
     bottom: 0;
     z-index: 1; }
-  .listings--inner.has-model-layout .bi-dash {
+  .listings--inner.has-model-layout .bi-dash:not {
+    display: none; }
+  .listings--inner.has-model-layout.active .bi-plus {
     display: none; }
   .listings--inner.has-model-layout.active .bi-dash {
     display: block; }

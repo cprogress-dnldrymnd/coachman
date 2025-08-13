@@ -35,14 +35,13 @@
     }
     &.has-model-layout {
         .bi-dash {
-            display: none;
+            &:not(.active) {
+                display: none;
+            }
         }
         &.active {
             .bi-plus {
                 display: none;
-            }
-            .bi-dash {
-                display: block;
             }
         }
         @include responsive(md-lg) {
