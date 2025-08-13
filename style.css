@@ -12771,7 +12771,7 @@ body.sticky--header #masthead {
       text-decoration: none; }
 
 .request--appointment--dealer .form-control {
-  background-color: red; }
+  background-color: var(--wp--preset--color--lightgray-2) red; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
