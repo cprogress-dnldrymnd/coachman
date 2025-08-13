@@ -12723,6 +12723,11 @@ body.sticky--header #masthead {
       overflow: auto;
       max-width: 660px;
       margin-left: auto; }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li {
+        padding: 0;
+        border-bottom: 1px solid #000;
+        padding-bottom: 40px;
+        margin-bottom: 40px; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
 
@@ -12745,7 +12750,7 @@ body.sticky--header #masthead {
       color: #fff; }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
       border: none !important; }
-    .listing--buttons.listing--buttons.listing--buttons .btn:not(.bnt-stock) a {
+    .listing--buttons.listing--buttons.listing--buttons .btn:not(.btn-stock) a {
       text-decoration: none; }
 
 .swiper-slider-holder .swiper-pagination-holder {

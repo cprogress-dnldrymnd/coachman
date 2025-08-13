@@ -29,7 +29,7 @@ function custom_listing_template()
     $listing_template = '<li  data-store-id="<%= id %>">' . "\r\n";
     $listing_template .= "\t\t" . '<div>' . "\r\n";
     $listing_template .= "\t\t\t" . '<p><%= thumb %>' . "\r\n";
-    $listing_template .= "\t\t\t\t" . wpsl_store_header_template('listing') . "\r\n";
+    $listing_template .= "\t\t\t\t" . '<h4>' . wpsl_store_header_template('listing') . '</h4>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<span class="wpsl-street"><%= address %></span>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<span class="wpsl-street"><%= address2 %></span>' . "\r\n";
