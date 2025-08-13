@@ -22,13 +22,15 @@ img {
 .nav-item {
     &.no--submenu {
         a {
-            position: absolute;
-            content: "";
-            z-index: 1;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            @include before {
+                position: absolute;
+                content: "";
+                z-index: 1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
     }
 }

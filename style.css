@@ -11279,7 +11279,7 @@ img {
 .nav-link a {
   text-decoration: none; }
 
-.nav-item.no--submenu a {
+.nav-item.no--submenu a:before {
   position: absolute;
   content: "";
   z-index: 1;
