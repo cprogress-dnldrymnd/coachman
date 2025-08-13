@@ -9,11 +9,7 @@ function dealer_details_ajax()
 	$wpsl_phone = get__post_meta_by_id($post_id, 'wpsl_phone');
 	$wpsl_email = get__post_meta_by_id($post_id, 'wpsl_email');
 	$wpsl_url = get__post_meta_by_id($post_id, 'wpsl_url');
-	echo '<pre>';
-	var_dump(get_post_meta($post_id));
 
-	var_dump($stocks);
-	echo '</pre>';
 	$stocks_ids = [];
 	foreach ($stocks as $stock) {
 		$stocks_ids[] = $stock['id'];
