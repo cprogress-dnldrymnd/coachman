@@ -50,3 +50,12 @@ function listing_grid_full_details($atts)
 }
 
 add_shortcode('listing_grid_full_details', 'listing_grid_full_details');
+
+
+function dealer_locator() {
+    ob_start();
+    get_template_part('template-parts/shortcodes/dealer-locator');
+    return ob_get_clean();
+}
+
+add_shortcode('dealer_locator', 'dealer_locator')
