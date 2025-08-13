@@ -12736,6 +12736,7 @@ body.sticky--header #masthead {
     width: 60%; }
 
 .listing--buttons.listing--buttons.listing--buttons {
+  margin-top: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
