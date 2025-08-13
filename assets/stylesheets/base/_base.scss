@@ -14,6 +14,12 @@ img {
     border-color: var(--dark);
     line-height: 1;
 }
+
+.nav-link {
+    a {
+        text-decoration: none;
+    }
+}
 .nav-tabs {
     --bs-nav-link-font-size: inherit;
     --bs-nav-link-color: var(--bs-black);
