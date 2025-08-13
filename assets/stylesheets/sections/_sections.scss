@@ -200,10 +200,10 @@
                     visibility: visible;
                     margin: 0;
                 }
-            }
-            &.loading {
-                .wpcf7-spinner {
-                    display: block;
+                &.loading {
+                    .wpcf7-spinner {
+                        display: block;
+                    }
                 }
             }
         }

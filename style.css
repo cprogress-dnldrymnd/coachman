@@ -12774,8 +12774,8 @@ body.sticky--header #masthead {
         display: none;
         visibility: visible;
         margin: 0; }
-    .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock.loading .wpcf7-spinner {
-      display: block; }
+      .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a.loading .wpcf7-spinner {
+        display: block; }
     .listing--buttons.listing--buttons.listing--buttons .btn:not(.btn-stock) a {
       text-decoration: none; }
 
