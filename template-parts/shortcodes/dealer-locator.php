@@ -38,6 +38,8 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
 
             jQuery(this).closest('h4').text('Appointment with ' + $new_text);
 
+            console.log($new_text)
+
         });
     });
 
