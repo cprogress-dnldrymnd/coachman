@@ -26,5 +26,3 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
         <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
     </div>
 </div>
-
-   <?= do_shortcode('[template template_id=25605]') ?>
