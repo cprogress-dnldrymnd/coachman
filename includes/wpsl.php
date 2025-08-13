@@ -45,9 +45,10 @@ function custom_listing_template()
     if (!$wpsl_settings['hide_distance']) {
         $listing_template .= "\t\t" . '<%= distance %> ' . esc_html($wpsl_settings['distance_unit']) . '' . "\r\n";
     }
-    $listing_template .= "<div class='listing--buttons';>";
-    $listing_template .= "<div>";
-    $listing_template .= "\t\t" . '<%= createDirectionUrl() %>' . "\r\n";
+    $listing_template .= "<div class='listing--buttons'>";
+    $listing_template .= "<div class='btn btn-appointment'><a>Request Appointment</a></div>";
+    $listing_template .= "\t\t" . '<div class="btn btn-direction"><%= createDirectionUrl() %></div>' . "\r\n";
+    $listing_template .= "<div class='btn btn-appointment'><a>View Stock</a></div>";
     $listing_template .= "</div>";
 
     $listing_template .= "\t" . '</li>' . "\r\n";
