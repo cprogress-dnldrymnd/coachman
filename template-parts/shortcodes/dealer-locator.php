@@ -29,8 +29,8 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
 <?php if (isset($_GET['wpsl-search-input'])) { ?>
     <script>
         jQuery(document).ready(function() {
-            console.log('xxx');
             jQuery('input[name="wpsl-search-input"]').val('<?= $_GET['wpsl-search-input'] ?>');
+            jQuery('#wpsl-search-btn').click();
         });
     </script>
 
