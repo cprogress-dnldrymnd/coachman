@@ -33,7 +33,7 @@ function dealer_details_ajax()
 			<?= $_post->post_content ?>
 		</div>
 
-		<div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+		<div class="listings--posts bg-lightgray-2">
 			<div class="container  py-5">
 				<div class="row g-3">
 					<?php foreach ($posts_listings as $posts_listing) { ?>
