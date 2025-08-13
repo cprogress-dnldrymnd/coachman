@@ -2,6 +2,7 @@
 $dealer_cat = get_terms(array(
     'taxonomy' => 'wpsl_store_category',
     'hide_empty' => false,
+    'orderby' => 'ID',
 ));
 
 $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 'caravan-dealers';
