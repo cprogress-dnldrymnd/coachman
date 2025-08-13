@@ -11,17 +11,6 @@ jQuery(document).ready(function () {
     ajax_details();
 });
 
-jQuery(window).scroll(function () {
-    // Get the current vertical scroll position of the window
-    var scrollPosition = $(window).scrollTop();
-
-    if(scrollPosition > 100) {
-        jQuery('body').addClass('scrolled');
-    } else {
-        jQuery('body').removeClass('scrolled');
-    }
-  
-});
 
 function dealer() {
     jQuery('body').on('click', '.btn-appointment a', function () {

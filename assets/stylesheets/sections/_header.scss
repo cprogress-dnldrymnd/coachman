@@ -23,6 +23,10 @@
 }
 body {
     &.sticky--header {
+        #main-header {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
         #masthead {
             background-color: var(--bs-white);
             .svg-logo {
