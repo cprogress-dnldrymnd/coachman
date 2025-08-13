@@ -43,6 +43,23 @@
         }
         #wpsl-wrap {
             .wpsl-search {
+                padding-left: 12px;
+                padding-right: 12px;
+                @media (min-width: 1500px) {
+                    max-width: 1420px;
+                }
+
+                @media (min-width: 1600px) {
+                    max-width: 1520px;
+                }
+
+                @media (min-width: 1700px) {
+                    max-width: 1620px;
+                }
+
+                @media (min-width: 1800px) {
+                    max-width: 1720px;
+                }
                 #wpsl-search-wrap {
                     form {
                         display: flex;
