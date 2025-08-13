@@ -12740,6 +12740,8 @@ body.sticky--header #masthead {
           .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .distance svg {
             width: 14px;
             height: auto; }
+        .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .wpsl-contact-details {
+          margin-top: 30px; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
 

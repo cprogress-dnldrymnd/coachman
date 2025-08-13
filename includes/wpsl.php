@@ -40,7 +40,7 @@ function custom_listing_template()
     $listing_template .= "\t\t\t" . '</div>' . "\r\n";
 
     if ($wpsl_settings['show_contact_details']) {
-        $listing_template .= "\t\t\t" . '<p class="wpsl-contact-details">' . "\r\n";
+        $listing_template .= "\t\t\t" . '<div class="wpsl-contact-details">' . "\r\n";
         $listing_template .= "\t\t\t" . '<% if ( phone ) { %>' . "\r\n";
         $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('phone_label', __('Phone', 'wpsl'))) . '</strong>: <%= formatPhoneNumber( phone ) %></span>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
@@ -50,7 +50,7 @@ function custom_listing_template()
         $listing_template .= "\t\t\t" . '<% if ( email ) { %>' . "\r\n";
         $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('email_label', __('Email', 'wpsl'))) . '</strong>: <%= email %></span>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
-        $listing_template .= "\t\t\t" . '</p>' . "\r\n";
+        $listing_template .= "\t\t\t" . '</div>' . "\r\n";
     }
 
 
