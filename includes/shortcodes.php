@@ -15,7 +15,7 @@ function template($atts)
     $content = $content_post->post_content;
     $content = apply_filters('the_content', $content);
 
-    return $content;
+    return get_post_type().$content;
 }
 add_shortcode('template', 'template');
 
