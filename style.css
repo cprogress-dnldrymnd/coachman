@@ -11276,6 +11276,11 @@ img {
   border-color: var(--dark);
   line-height: 1; }
 
+.btn--bordered a:hover, .btn--bordered a:active, .btn--bordered a:focus {
+  border-color: var(--wp--preset--color--text) !important;
+  background-color: var(--wp--preset--color--text) !important;
+  color: var(--bs-white) !important; }
+
 .nav-link a {
   text-decoration: none; }
 
@@ -12623,6 +12628,8 @@ body.sticky--header #masthead {
       width: 25px;
       height: 20px; } }
 
+#offCanvasMenu .container {
+  padding: 0 !important; }
 #offCanvasMenu .listings-taxonomy-wrapper {
   --bs-gutter-x: 3rem;
   --bs-gutter-y: 3rem; }

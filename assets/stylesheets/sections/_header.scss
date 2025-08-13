@@ -70,6 +70,9 @@ body {
 }
 
 #offCanvasMenu {
+    .container {
+        padding: 0 !important;
+    }
     .listings-taxonomy-wrapper {
         --bs-gutter-x: 3rem;
         --bs-gutter-y: 3rem;
