@@ -398,6 +398,7 @@ Block::make(__('Caravan/Motohomes Models'))
             $class2 = 'listings-taxonomy-wrapper row g-3';
             $class3 = 'col-lg-12';
         }
+        $terms = [];
 ?>
 
     <div class="listings listings-style-1" style="--padding: 50% 0; --fit: contain;">
@@ -407,6 +408,10 @@ Block::make(__('Caravan/Motohomes Models'))
                     <?php foreach ($fields['posts'] as $post) { ?>
                         <?php foreach ($post['model'] as $key => $model) { ?>
                             <?php
+                            $terms[$model] = array(
+                                'post_type' => $post['_type'],
+                                'taxonomy' => $post['taxonomy'],
+                            );
                             $logo = get__term_meta($model, 'logo', true);
                             $image = get__term_meta($model, 'image', true);
                             $page = carbon_get_term_meta($model, 'page');
@@ -424,7 +429,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             $posts_listings = get_posts($args);
                             ?>
                             <div class="<?= $class3 ?> ">
-                                <div class="listings--inner h-100 p-4  <?= $fields['display_model_layouts'] ? 'listings--inner--js has-model-layout' : '' ?>" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>-<?= $post['taxonomy'] ?>">
+                                <div class="listings--inner h-100 p-4  <?= $fields['display_model_layouts'] ? 'listings--inner--js has-model-layout' : '' ?>" listing-target="#listings--posts-<?= $model ?>">
                                     <?php if ($page) { ?>
                                         <a href="<?= get_the_permalink($page[0]['id']) ?>" class="listing--model-link"></a>
                                     <?php } ?>
@@ -456,55 +461,53 @@ Block::make(__('Caravan/Motohomes Models'))
         </div>
     </div>
     <?php if ($fields['display_model_layouts']) { ?>
-        <?php foreach ($fields['posts'] as $key => $post) { ?>
-            <?php foreach ($post['model'] as $key => $model) { ?>
-                <?php
-                    $args = array(
-                        'post_type' => $post['_type'],
-                        'numberposts' => -1,
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => $post['taxonomy'],
-                                'field' => 'term_id',
-                                'terms' => $model,
-                            ),
+        <?php foreach ($terms as $term) { ?>
+            <?php
+                $args = array(
+                    'post_type' => $term['_type'],
+                    'numberposts' => -1,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => $post['taxonomy'],
+                            'field' => 'term_id',
+                            'terms' => $term['term_id']
                         ),
-                    );
-                    $posts_listings = get_posts($args);
-                    $page = carbon_get_term_meta($model, 'page');
+                    ),
+                );
+                $posts_listings = get_posts($args);
+                $page = carbon_get_term_meta($term, 'page');
 
-                ?>
-                <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>-<?= $post['taxonomy'] ?>">
-                    <div class="container  py-5">
-                        <div class="row g-3">
-                            <?php foreach ($posts_listings as $posts_listing) { ?>
+            ?>
+            <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $model ?>">
+                <div class="container  py-5">
+                    <div class="row g-3">
+                        <?php foreach ($posts_listings as $posts_listing) { ?>
 
-                                <div class="col-lg-3">
-                                    <div class="listings--posts--grid bg-white p-4">
-                                        <h3 class="fs-24"><?= __listing_title($posts_listing->ID) ?></h3>
-                                        <div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
-                                            <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
-                                        </div>
-                                        <?= __listing_features($posts_listing->ID) ?>
-                                        <?php if ($page) { ?>
-                                            <div class="listing--buttons mt-2">
-                                                <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
-                                                    <li>
-                                                        <a class="py-2 px-0 text-decoration-none" href="<?= get_the_permalink($page[0]['id']) ?>">
-                                                            Explore
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        <?php } ?>
-
+                            <div class="col-lg-3">
+                                <div class="listings--posts--grid bg-white p-4">
+                                    <h3 class="fs-24"><?= __listing_title($posts_listing->ID) ?></h3>
+                                    <div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
+                                        <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                     </div>
+                                    <?= __listing_features($posts_listing->ID) ?>
+                                    <?php if ($page) { ?>
+                                        <div class="listing--buttons mt-2">
+                                            <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
+                                                <li>
+                                                    <a class="py-2 px-0 text-decoration-none" href="<?= get_the_permalink($page[0]['id']) ?>">
+                                                        Explore
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <?php } ?>
+
                                 </div>
-                            <?php } ?>
-                        </div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
-            <?php } ?>
+            </div>
         <?php } ?>
     <?php } ?>
 <?php
