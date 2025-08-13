@@ -105,7 +105,9 @@ function modal($atts)
                 </svg>
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5 d-flex h-100 flex-column justify-content-between gap-3">
-                <?= do_shortcode('[template template_id=25605]') ?>
+                <div>
+                    <?= do_shortcode('[template template_id=25605]') ?>
+                </div>
             </div>
         </div>
     </div>
