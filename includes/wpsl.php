@@ -67,7 +67,7 @@ function custom_listing_template()
     $listing_template .= "<div class='listing--buttons'>";
     $listing_template .= "<div class='btn btn-appointment'><a data-bs-toggle='offcanvas' data-bs-target='#offCanvas25605' aria-controls='offCanvas25605'>Request Appointment</a></div>";
     $listing_template .= "\t\t" . '<div class="btn btn-direction"><%= createDirectionUrl() %></div>' . "\r\n";
-    $listing_template .= "<div class='btn btn-stock'><a data-bs-toggle='offcanvas' data-bs-target='#offCanvas25765' aria-controls='offCanvas25765'>View Stock <span class='wpcf7-spinner'></span></a></div>";
+    $listing_template .= "<div class='btn btn-stock'><a data-bs-toggle='offcanvas' >View Stock <span class='wpcf7-spinner'></span></a></div>";
     $listing_template .= "</div>";
 
     $listing_template .= "\t" . '</li>' . "\r\n";
