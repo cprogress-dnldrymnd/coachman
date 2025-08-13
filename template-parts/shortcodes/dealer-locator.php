@@ -41,7 +41,7 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
             }, 500);
             setTimeout(function() {
                 jQuery('#wpsl-custom-style').remove();
-            }, 600);
+            }, 501);
         });
     </script>
 
