@@ -31,7 +31,7 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     jQuery(document).ready(function() {
         jQuery('body').on('click', '.btn-appointment a', function() {
             $originalText = jQuery('.request--appointment--dealer h5').text();
-            $dealerName = jQuery(this).find('h5').text();
+            $dealerName = jQuery(this).parents('store--listing').find('h5').text();
             $new_text = $originalText.replace('[dealer_name]', $dealerName);
 
 
