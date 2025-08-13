@@ -22,7 +22,7 @@ function custom_templates($templates)
 function custom_admin_marker_dir()
 {
 
-    $admin_marker_dir = get_stylesheet_directory() . 'wpsl-templates/wpsl-markers/';
+    $admin_marker_dir = get_stylesheet_directory() . '/wpsl-templates/wpsl-markers/';
 
     return $admin_marker_dir;
 }
