@@ -141,6 +141,10 @@ function mega_menu() {
         jQuery('body').css('--admin-bar-height', $admin_bar + 'px');
 
     }
+
+    jQuery('.no--submenu .nav-link').click(function (e) {
+        e.preventDefault();
+    });
 }
 
 function fancybox() {
