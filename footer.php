@@ -17,7 +17,7 @@ $footer = get__theme_option('footer');
     <?php echo do_shortcode('[template template_id=' . $footer . ']'); ?>
 </footer>
 <?php
-if (is_page(https://coachman.theprogressteam.com/wp-admin/post.php?post=564&action=edit)) {
+if (is_page(564)) {
     echo do_shortcode('[modal id=25605]');
 } ?>
 
