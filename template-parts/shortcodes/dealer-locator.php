@@ -31,16 +31,14 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     jQuery(document).ready(function() {
         jQuery('body').on('click', '.btn-appointment a', function() {
             $originalText = jQuery('.request--appointment--dealer h5').text();
-            $dealerName = jQuery(this).closest('h4').text();
-            jQuery('.request--appointment--dealer h5').text($originalText.replace('[dealer_name]', $dealerName));
+            $dealerName = jQuery(this).closest('h5').text();
             $new_text = $originalText.replace('[dealer_name]', $dealerName);
 
 
-            jQuery(this).closest('h4').text('Appointment with ' + $new_text);
+            jQuery(this).closest('h5').text('Appointment with ' + $new_text);
 
             console.log($new_text)
 
         });
     });
-
 </script>
