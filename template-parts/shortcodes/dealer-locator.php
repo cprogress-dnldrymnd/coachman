@@ -8,7 +8,7 @@ $dealer_cat = get_terms(array(
     <ul class="swiper-wrapper nav nav-tabs  flex-row " id="Dealers-Navigation" role="tablist" aria-live="polite">
         <?php foreach ($dealer_cat as $dealer) { ?>
             <li class="swiper-slide nav-item">
-                <a class="nav-link" href="?category=<?= $dealer->slug ?>">
+                <a class="nav-link <?= isset($_GET['category']) && $_GET['category'] == $dealer->slug ? 'active' : '' ?>" href="?category=<?= $dealer->slug ?>">
                     <p><?= $dealer->name ?></p>
                 </a>
             </li>
