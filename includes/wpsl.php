@@ -16,3 +16,4 @@ function custom_templates($templates)
 
     return $templates;
 }
+add_filter( 'wpsl_templates', 'custom_templates' );
