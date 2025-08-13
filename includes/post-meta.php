@@ -136,7 +136,7 @@ Block::make(__('Tabs Navigation'))
             $class2 = 'nav nav-tabs gap-1';
         }
         ?>
-        <div class="<?= $class1 ?> overflow-visible sm-margin-bottom nav-tabs-swiper-js">
+        <div class="<?= $class1 ?> overflow-visible sm-margin-bottom nav-tabs-swiper-js <?= $attributes['className'] ?>">
             <ul class="<?= $class2 ?>  <?= $fields['direction'] ?> <?= $fields['style'] ?>" id="<?= $fields['tab_id'] ?>" role="tablist">
                 <?= $inner_blocks ?>
             </ul>
