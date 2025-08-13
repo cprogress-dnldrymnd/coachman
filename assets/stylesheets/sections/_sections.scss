@@ -69,20 +69,29 @@
                         display: flex;
                         align-items: center;
                         flex-wrap: wrap;
+                        gap: 10px;
                         > div {
                             float: none;
                             display: flex;
                             align-items: center;
+                            gap: 10px;
                         }
 
                         div label {
                             width: auto;
+                            margin: 0;
                         }
                         .wpsl-input {
                             margin: 0;
+                            input {
+                                border-radius: 0;
+                            }
                         }
                         .wpsl-dropdown {
                             width: auto;
+                             .wpsl-selected-item {
+                                border-radius: 0;
+                             }
                         }
                         .wpsl-select-wrap {
                             margin: 0;

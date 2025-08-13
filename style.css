@@ -12680,17 +12680,22 @@ body.sticky--header #masthead {
       .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
         display: flex;
         align-items: center;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        gap: 10px; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
           float: none;
           display: flex;
-          align-items: center; }
+          align-items: center;
+          gap: 10px; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
-          width: auto; }
+          width: auto;
+          margin: 0; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
           margin: 0; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown {
           width: auto; }
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown .wpsl-selected-item {
+            border-radius: 0; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap {
           margin: 0; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
