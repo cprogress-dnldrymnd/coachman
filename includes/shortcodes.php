@@ -95,7 +95,7 @@ function modal($atts)
         )
     );
 ?>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvas<?= $id ?>" aria-labelledby="offCanvas<?= $id ?>Label">
+    <div class="offcanvas offcanvas-end offcanvas-end---modal" tabindex="-1" id="offCanvas<?= $id ?>" aria-labelledby="offCanvas<?= $id ?>Label">
         <div class="offcanvas-body p-0 overflow-hidden">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
