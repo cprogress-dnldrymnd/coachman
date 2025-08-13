@@ -34,8 +34,8 @@
         z-index: 1;
     }
     &.has-model-layout {
-        .bi-dash {
-            &:not(.active) {
+        &:not(.active) {
+            .bi-dash {
                 display: none;
             }
         }
