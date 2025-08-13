@@ -24,7 +24,7 @@ add_filter('wpsl_listing_template', 'custom_listing_template');
 function custom_listing_template()
 {
 
-    global $wpsl_settings;
+    global $wpsl_settings, $wpsl;
 
     $listing_template = '<li  data-store-id="<%= id %>">' . "\r\n";
     $listing_template .= "\t\t" . '<div>' . "\r\n";
