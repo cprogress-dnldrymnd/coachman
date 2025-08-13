@@ -28,6 +28,10 @@ function action_wp_enqueue_scripts()
     wp_enqueue_script('swiper', vendor_dir . 'swiper/js/swiper-bundle.min.js');
     wp_enqueue_script('fancybox', vendor_dir . 'fancybox/js/fancybox.umd.js');
     wp_enqueue_script('main', assets_dir . 'javascripts/main.js');
+    wp_localize_script('main', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('ajax_nonce'),
+    ));
 }
 add_action('wp_enqueue_scripts', 'action_wp_enqueue_scripts', 20);
 

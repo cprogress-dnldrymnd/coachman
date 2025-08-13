@@ -9,6 +9,31 @@ jQuery(document).ready(function () {
     updateScrollStatus();
 });
 
+function ajax() {
+    jQuery('.archive--ajax').click(function (e) {
+        e.preventDefault();
+        var $this = jQuery(this);
+        var post_id = $this.attr('post-id');
+        var taxonomy_terms = $this.attr('taxonomy-terms');
+
+        jQuery.ajax({
+            url: ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'archive_ajax',
+                post_id: post_id,
+                taxonomy_terms: taxonomy_terms
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+}
+
 function updateScrollStatus() {
     if (jQuery(window).scrollTop() === 0) {
         jQuery('body').removeClass('sticky--header');
