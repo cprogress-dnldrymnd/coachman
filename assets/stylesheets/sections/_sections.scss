@@ -25,7 +25,7 @@
     z-index: 999;
     left: 0;
     right: 0;
-    box-shadow: 0px -5px 16px #0000001F;
+    box-shadow: 0px -5px 16px #0000001f;
 }
 
 .delear-details {
@@ -38,6 +38,12 @@
 
 .dealer--locator--holder {
     .dealer--locator {
-
+        #wpsl-search-wrap form {
+            display: flex;
+            > div {
+                float: none;
+                display: flex;
+            }
+        }
     }
 }
