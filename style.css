@@ -12570,8 +12570,10 @@ h5, .h5 {
   #masthead.header-default + #main {
     margin-top: 0; }
 
+#main-header {
+  transition: 500ms; }
+
 body.sticky--header #main-header {
-  transition: 500ms;
   padding-top: 10px !important;
   padding-bottom: 10px !important; }
 body.sticky--header #masthead {
