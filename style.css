@@ -12658,7 +12658,9 @@ body.sticky--header #masthead {
   background-color: transparent; }
 .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
   padding-left: 12px;
-  padding-right: 12px; }
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto; }
   @media (min-width: 1500px) {
     .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
       max-width: 1420px; } }
