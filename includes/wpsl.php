@@ -50,6 +50,9 @@ function custom_listing_template()
         $listing_template .= "\t\t\t" . '<% if ( email ) { %>' . "\r\n";
         $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('email_label', __('Email', 'wpsl'))) . '</strong>: <%= email %></span>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
+           $listing_template .= "\t\t\t" . '<% if ( url ) { %>' . "\r\n";
+        $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('url_label', __('Website', 'wpsl'))) . '</strong>: <%= url %></span>' . "\r\n";
+        $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
         $listing_template .= "\t\t\t" . '</div>' . "\r\n";
     }
 
