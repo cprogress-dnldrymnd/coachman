@@ -12574,8 +12574,8 @@ h5, .h5 {
   transition: 500ms; }
 
 body.sticky--header #main-header {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important; }
+  padding-top: 8px !important;
+  padding-bottom: 8px !important; }
 body.sticky--header #masthead {
   background-color: var(--bs-white); }
   body.sticky--header #masthead .svg-logo {
