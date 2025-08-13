@@ -1,5 +1,28 @@
 <?php
 
+function template($atts)
+{
+    extract(
+        shortcode_atts(
+            array(
+                'template_id' => '',
+            ),
+            $atts
+        )
+    );
+
+    $style = '<style type="text/css" data-type="vc_shortcodes-custom-css"> ' . get_post_meta($template_id, '_wpb_shortcodes_custom_css', true) . ' </style>';
+
+    $content_post = get_post($template_id);
+    $content = $content_post->post_content;
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]&gt;', $content);
+
+    return $style . $content;
+}
+
+add_shortcode('template', 'template');
+
 function latest_deals()
 {
     ob_start();
@@ -65,16 +88,16 @@ add_shortcode('dealer_locator', 'dealer_locator');
 function modal($atts)
 {
     ob_start();
-    shortcode_atts(
-        array(
-            'id' => '',
-            'heading' => '',
-        ),
-        $atts
+    extract(
+        shortcode_atts(
+            array(
+                'id'    => ''
+            ),
+            $atts
+        )
     );
-
 ?>
-    <div class="offcanvas offcanvas--technical-details offcanvas-end" tabindex="-1" id="offCanvasModelSpecs-8" aria-labelledby="offCanvasModelSpecs-8Label">
+    <div class="offcanvas offcanvas--technical-details offcanvas-end" tabindex="-1" id="offCanvas<?= $id ?>" aria-labelledby="offCanvas<?= $id ?>Label">
         <div class="offcanvas-body p-0 overflow-hidden">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -86,8 +109,8 @@ function modal($atts)
                     <div class="title-box d-flex gap-3 align-items-center">
                         <h2><img loading="lazy" decoding="async" width="300" height="300" src="https://coachman.theprogressteam.com/wp-content/uploads/2025/06/travelmaster-logo-black.svg" class="attachment-medium size-medium" alt="" style="border-bottom-color: rgba(0, 0, 0, 0);"></h2>
                     </div>
-                    <p class="fs-22 mb-4"><?= $heading ?></p>
 
+                    <?= do_shortcode('[template template_id=25605]') ?>
                 </div>
             </div>
         </div>
