@@ -12692,6 +12692,8 @@ body.sticky--header #masthead {
           margin: 0; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
           margin: 0; }
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input input {
+            border-radius: 0; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown {
           width: auto; }
           .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown .wpsl-selected-item {
