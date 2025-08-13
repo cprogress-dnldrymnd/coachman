@@ -12776,6 +12776,9 @@ body.sticky--header #masthead {
 .offcanvas-end---modal .offcanvas-body--inner {
   overflow: auto; }
 
+.dealer--details .listings--posts {
+  display: block !important; }
+
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
   bottom: 50px;

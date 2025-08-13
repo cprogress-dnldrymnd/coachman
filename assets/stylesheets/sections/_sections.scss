@@ -213,3 +213,8 @@
         overflow: auto;
     }
 }
+.dealer--details {
+    .listings--posts {
+        display: block !important;
+    }
+}

@@ -37,7 +37,7 @@ function dealer_details_ajax()
 			<div class="container  py-5">
 				<div class="row g-3">
 					<?php foreach ($posts_listings as $posts_listing) { ?>
-						<div class="col-lg-3">
+						<div class="col-lg-4">
 							<div class="listings--posts--grid bg-white p-4">
 								<h3 class="fs-24"><?= __listing_title($posts_listing->ID) ?></h3>
 								<div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
