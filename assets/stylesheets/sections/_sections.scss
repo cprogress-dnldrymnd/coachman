@@ -65,6 +65,11 @@
                 }
                 #wpsl-search-wrap {
                     margin-bottom: 30px;
+                    div {
+                        display: flex !important;
+                        gap: 10px;
+                        margin: 0;
+                    }
                     form {
                         display: flex;
                         align-items: center;
@@ -89,9 +94,9 @@
                         }
                         .wpsl-dropdown {
                             width: auto;
-                             .wpsl-selected-item {
+                            .wpsl-selected-item {
                                 border-radius: 0;
-                             }
+                            }
                         }
                         .wpsl-select-wrap {
                             margin: 0;
@@ -103,6 +108,9 @@
                             border: none;
                             color: #fff;
                             padding: 10px 20px;
+                        }
+                        #wpsl-radius {
+                            margin: 0;
                         }
                     }
                 }
