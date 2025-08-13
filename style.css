@@ -12662,7 +12662,7 @@ body.sticky--header #masthead {
     float: none;
     display: flex; }
 .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-wrap {
-  background-color: var(--wp--preset--color--lightgray-2) !important; }
+  background-color: var(--wp--preset--color--lightgray-2); }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
