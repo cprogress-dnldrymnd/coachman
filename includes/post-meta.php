@@ -410,8 +410,6 @@ Block::make(__('Caravan/Motohomes Models'))
                             $logo = get__term_meta($model, 'logo', true);
                             $image = get__term_meta($model, 'image', true);
                             $page = carbon_get_term_meta($model, 'page');
-
-
                             $args = array(
                                 'post_type' => $post['_type'],
                                 'numberposts' => -1,
@@ -426,7 +424,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             $posts_listings = get_posts($args);
                             ?>
                             <div class="<?= $class3 ?> ">
-                                <div class="listings--inner h-100 p-4  <?= $fields['display_model_layouts'] ? 'listings--inner--js has-model-layout' : '' ?>" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                                <div class="listings--inner h-100 p-4  <?= $fields['display_model_layouts'] ? 'listings--inner--js has-model-layout' : '' ?>" listing-target="#listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>-<?= $post['taxonomy'] ?>">
                                     <?php if ($page) { ?>
                                         <a href="<?= get_the_permalink($page[0]['id']) ?>" class="listing--model-link"></a>
                                     <?php } ?>
@@ -476,7 +474,7 @@ Block::make(__('Caravan/Motohomes Models'))
                     $page = carbon_get_term_meta($model, 'page');
 
                 ?>
-                <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>">
+                <div class="listings--posts bg-lightgray-2" id="listings--posts-<?= $key ?>-<?= $post['_type'] ?>-<?= $model ?>-<?= $post['taxonomy'] ?>">
                     <div class="container  py-5">
                         <div class="row g-3">
                             <?php foreach ($posts_listings as $posts_listing) { ?>
@@ -509,7 +507,6 @@ Block::make(__('Caravan/Motohomes Models'))
             <?php } ?>
         <?php } ?>
     <?php } ?>
-
 <?php
     });
 Block::make(__('Listing Title'))
