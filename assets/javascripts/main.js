@@ -23,6 +23,7 @@ function dealer() {
 }
 
 function ajax_details() {
+    const bsOffcanvas = new bootstrap.Offcanvas('#offCanvas25765');
     jQuery('body').on('click', '.btn-stock a', function () {
         var $this = jQuery(this);
         var post_id = $this.parents('.store--listing').attr('data-store-id');
@@ -37,7 +38,6 @@ function ajax_details() {
             },
             success: function (response) {
                 jQuery('#listing--details--results').html(response);
-                const bsOffcanvas = new bootstrap.Offcanvas('#offCanvas25765');
                 bsOffcanvas.show();
                 $this.removeClass('loading');
 
@@ -47,6 +47,11 @@ function ajax_details() {
             }
         });
     });
+
+
+    bsOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+        jQuery('#listing--details--results').html('');
+    })
 }
 
 function updateScrollStatus() {
