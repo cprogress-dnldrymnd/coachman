@@ -37,6 +37,10 @@ function ajax_details() {
             },
             success: function (response) {
                 jQuery('#listing--details--results').html(response);
+
+                var myModalEl = document.getElementById('offCanvas25765');
+                var modal = bootstrap.Modal.getInstance(myModalEl);
+                modal.show();
                 $this.removeClass('loading');
 
             },
