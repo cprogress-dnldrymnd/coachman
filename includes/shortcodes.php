@@ -11,14 +11,13 @@ function template($atts)
         )
     );
 
-    $style = '<style type="text/css" data-type="vc_shortcodes-custom-css"> ' . get_post_meta($template_id, '_wpb_shortcodes_custom_css', true) . ' </style>';
 
     $content_post = get_post($template_id);
     $content = $content_post->post_content;
     $content = apply_filters('the_content', $content);
     $content = str_replace(']]>', ']]&gt;', $content);
 
-    return $style . $content;
+    return $content;
 }
 
 add_shortcode('template', 'template');
