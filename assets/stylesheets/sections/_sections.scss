@@ -38,6 +38,9 @@
 
 .dealer--locator--holder {
     .dealer--locator {
+        .wpsl-search {
+            background-color: transparent;
+        }
         #wpsl-search-wrap form {
             display: flex;
             > div {

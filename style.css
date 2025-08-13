@@ -12654,10 +12654,13 @@ body.sticky--header #masthead {
 .delear-details .logo-box img {
   max-width: 140px; }
 
+.dealer--locator--holder .dealer--locator .wpsl-search {
+  background-color: transparent; }
 .dealer--locator--holder .dealer--locator #wpsl-search-wrap form {
   display: flex; }
   .dealer--locator--holder .dealer--locator #wpsl-search-wrap form > div {
-    float: none; }
+    float: none;
+    display: flex; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;

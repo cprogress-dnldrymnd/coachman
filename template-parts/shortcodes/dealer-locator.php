@@ -22,9 +22,7 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
         </div>
     </div>
 
-    <div class="dealer--locator has-lightgray-2-background-color has-background">
-        <div class="container">
-            <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
-        </div>
+    <div class="dealer--locator">
+        <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
     </div>
 </div>
