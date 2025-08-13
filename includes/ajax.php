@@ -8,7 +8,9 @@ function dealer_details_ajax()
 ?>
 	<div class="dealer--details">
 		<h3><?= $_post->post_title ?></h3>
-		<?= $_post->post_content ?>
+		<div class="dealer--desc">
+			<?= $_post->post_content ?>
+		</div>
 	</div>
 <?php
 	die();
