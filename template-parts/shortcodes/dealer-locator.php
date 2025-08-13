@@ -36,7 +36,6 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
 
 
             jQuery('.request--appointment--dealer h5').text('');
-            jQuery('.request--appointment--dealer h5').text($new_text);
 
             console.log($new_text);
             console.log($dealerName);
