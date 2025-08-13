@@ -72,6 +72,21 @@
                             display: flex;
                             align-items: center;
                         }
+
+                        div label {
+                            width: auto;
+                        }
+                        .wpsl-select-wrap {
+                            margin: 0;
+                        }
+                        #wpsl-search-btn {
+                            background-color: var(--wp--preset--color--maroon) !important;
+                            background-image: none;
+                            border-radius: 0;
+                            border: none;
+                            color: #fff;
+                            padding: 10px 20px;
+                        }
                     }
                 }
             }

@@ -12681,6 +12681,15 @@ body.sticky--header #masthead {
       float: none;
       display: flex;
       align-items: center; }
+    .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
+      width: auto; }
+    .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
+      background-color: var(--wp--preset--color--maroon) !important;
+      background-image: none;
+      border-radius: 0;
+      border: none;
+      color: #fff;
+      padding: 10px 20px; }
 .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
   background-color: var(--wp--preset--color--lightgray-2);
   margin: 0;
