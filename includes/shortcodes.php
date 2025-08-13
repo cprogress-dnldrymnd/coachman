@@ -58,4 +58,4 @@ function dealer_locator() {
     return ob_get_clean();
 }
 
-add_shortcode('dealer_locator', 'dealer_locator')
+add_shortcode('dealer_locator', 'dealer_locator');
