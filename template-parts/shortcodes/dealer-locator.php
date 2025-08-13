@@ -30,7 +30,7 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     <style id="wpsl-custom-style">
         #wpsl-result-list,
         #wpsl-gmap {
-            opacity: 1;
+            opacity: 0;
         }
     </style>
     <script>
