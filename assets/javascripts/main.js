@@ -7,22 +7,32 @@ jQuery(document).ready(function () {
     read_more();
     accordion();
     updateScrollStatus();
+    dealer();
 });
 
+function dealer() {
+    jQuery('body').on('click', '.btn-appointment a', function () {
+        $originalText = jQuery('.request--appointment--dealer h5').text();
+        $dealerName = jQuery(this).parents('.store--listing').find('h4').text();
+        $new_text = $originalText.replace('[dealer_name]', $dealerName);
+
+        jQuery('.request--appointment--dealer h5').text($new_text);
+
+    });
+}
+
 function ajax() {
-    jQuery('.archive--ajax').click(function (e) {
+    jQuery('body').on('click', '.btn-stock a', function () {
         e.preventDefault();
         var $this = jQuery(this);
         var post_id = $this.attr('post-id');
-        var taxonomy_terms = $this.attr('taxonomy-terms');
 
         jQuery.ajax({
-            url: ajaxurl,
+            url: ajax_params.ajax_url,
             type: 'POST',
             data: {
-                action: 'archive_ajax',
+                action: 'dealer_details_ajax',
                 post_id: post_id,
-                taxonomy_terms: taxonomy_terms
             },
             success: function (response) {
                 console.log(response);
