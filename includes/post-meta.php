@@ -692,3 +692,20 @@ Container::make('theme_options', __('Theme Options'))
         Field::make('select', 'footer', __('Default Footer'))
             ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['footer'], 'template')),
     ));
+
+
+Container::make('post_meta', __('Dealer Settings'))
+    ->where('post_type', '=', 'wpsl_stores')
+    ->add_fields(array(
+        Field::make('association', 'stocks', __('Stocks'))
+            ->set_types(array(
+                array(
+                    'type'      => 'post',
+                    'post_type' => 'caravan',
+                ),
+                array(
+                    'type'      => 'post',
+                    'post_type' => 'motorhome',
+                ),
+            ))
+    ));
