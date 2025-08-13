@@ -121,7 +121,7 @@ function listings() {
         jQuery('.listings--posts').not(jQuery($target)).removeClass('active');
         jQuery(this).toggleClass('active');
 
-        jQuery($target).toggleClass('active');
+        jQuery(this).parents('.tab-pane').find($target).toggleClass('active');
 
         e.preventDefault();
 
