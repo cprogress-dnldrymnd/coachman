@@ -115,7 +115,7 @@ function listings() {
     });*/
 
     jQuery('.listings--inner--js').click(function (e) {
-        jQuery('.listings--inner--js').removeClass('active');
+        jQuery('.listings--inner--js').not(this).removeClass('active');
         jQuery('.listings--posts').removeClass('active');
         jQuery(this).toggleClass('active');
 
