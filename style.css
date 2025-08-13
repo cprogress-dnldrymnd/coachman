@@ -12683,6 +12683,8 @@ body.sticky--header #masthead {
       align-items: center; }
     .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
       width: auto; }
+    .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap {
+      margin: 0; }
     .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
       background-color: var(--wp--preset--color--maroon) !important;
       background-image: none;
