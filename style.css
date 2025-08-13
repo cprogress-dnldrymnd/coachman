@@ -12762,7 +12762,8 @@ body.sticky--header #masthead {
       border-color: var(--wp--preset--color--maroon);
       color: #fff; }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
-      border: none !important; }
+      border: none !important;
+      text-decoration: underline; }
     .listing--buttons.listing--buttons.listing--buttons .btn:not(.btn-stock) a {
       text-decoration: none; }
 

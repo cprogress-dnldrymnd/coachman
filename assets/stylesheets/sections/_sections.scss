@@ -187,6 +187,7 @@
         &.btn-stock {
             a {
                 border: none !important;
+                text-decoration: underline;
             }
         }
         &:not(.btn-stock) {
