@@ -19,7 +19,7 @@ function custom_templates($templates)
     return $templates;
 }
 
-define( 'WPSL_MARKER_URI', dirname( get_bloginfo( 'stylesheet_url') ) . '/wpsl-markers/' );
+define( 'WPSL_MARKER_URI', dirname( get_bloginfo( 'stylesheet_url') ) . '/wpsl-templates/wpsl-markers/' );
 
 function custom_admin_marker_dir()
 {
