@@ -21,6 +21,9 @@
         }
     }
 }
+#main-header {
+    transition: 500ms;
+}
 body {
     &.sticky--header {
         #main-header {
