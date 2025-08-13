@@ -8,6 +8,7 @@ jQuery(document).ready(function () {
     accordion();
     updateScrollStatus();
     dealer();
+    ajax_details();
 });
 
 function dealer() {
@@ -21,7 +22,7 @@ function dealer() {
     });
 }
 
-function ajax() {
+function ajax_details() {
     jQuery('body').on('click', '.btn-stock a', function () {
         e.preventDefault();
         var $this = jQuery(this);
