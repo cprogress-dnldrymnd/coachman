@@ -26,7 +26,7 @@ function custom_listing_template()
 
     global $wpsl_settings, $wpsl;
 
-    $listing_template = '<li  data-store-id="<%= id %>">' . "\r\n";
+    $listing_template = '<li class="store--listing"  data-store-id="<%= id %>">' . "\r\n";
     $listing_template .= "\t\t" . '<div>' . "\r\n";
     $listing_template .= "\t\t\t" . '<%= thumb %>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<h4>' . wpsl_store_header_template('listing') . '</h4>' . "\r\n";
