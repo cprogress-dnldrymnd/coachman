@@ -106,10 +106,6 @@ function modal($atts)
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5 d-flex h-100 flex-column justify-content-between gap-3">
                 <div class="top">
-                    <div class="title-box d-flex gap-3 align-items-center">
-                        <h2><img loading="lazy" decoding="async" width="300" height="300" src="https://coachman.theprogressteam.com/wp-content/uploads/2025/06/travelmaster-logo-black.svg" class="attachment-medium size-medium" alt="" style="border-bottom-color: rgba(0, 0, 0, 0);"></h2>
-                    </div>
-
                     <?= do_shortcode('[template template_id=25605]') ?>
                 </div>
             </div>
