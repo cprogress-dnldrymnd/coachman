@@ -48,8 +48,9 @@ function ajax_details() {
         });
     });
 
+    const myOffcanvas = document.getElementById('offCanvas25765')
 
-    bsOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+    myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
         jQuery('#listing--details--results').html('');
     })
 }
