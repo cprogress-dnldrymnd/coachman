@@ -12715,7 +12715,7 @@ body.sticky--header #masthead {
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
     background-color: var(--wp--preset--color--lightgray-2);
     margin: 0;
-    width: 33.5%; }
+    width: 40%; }
     .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores {
       padding-top: 40px;
       padding-bottom: 40px;
@@ -12723,20 +12723,26 @@ body.sticky--header #masthead {
       overflow: auto;
       max-width: 540px;
       margin-left: auto; }
+  .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
+    width: 60%; }
 
 .listing--buttons {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; }
   .listing--buttons .btn {
     padding: 0;
     border: none; }
     .listing--buttons .btn a {
       padding: 18px 25px;
       font-size: 15px;
-      border: 1px solid; }
+      border: 1px solid;
+      display: block; }
     .listing--buttons .btn.btn-appointment a {
       background-color: var(--wp--preset--color--maroon);
-      border-color: var(--wp--preset--color--maroon); }
+      border-color: var(--wp--preset--color--maroon);
+      color: #fff; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;

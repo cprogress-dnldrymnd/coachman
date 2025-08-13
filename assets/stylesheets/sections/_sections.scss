@@ -117,7 +117,7 @@
                 background-color: var(--wp--preset--color--lightgray-2);
                 margin: 0;
 
-                width: 33.5%;
+                width: 40%;
                 #wpsl-stores {
                     padding-top: 40px;
                     padding-bottom: 40px;
@@ -127,13 +127,18 @@
                     margin-left: auto;
                 }
             }
+            #wpsl-gmap{
+                width: 60%;
+            }
         }
     }
 }
 
-.listing--buttons {
+.listing--buttons.listing--buttons.listing--buttons {
     display: flex;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
     .btn {
         padding: 0;
         border: none;
@@ -141,11 +146,17 @@
             padding: 18px 25px;
             font-size: 15px;
             border: 1px solid;
+            display: block;
         }
         &.btn-appointment {
             a {
                 background-color: var(--wp--preset--color--maroon);
                 border-color: var(--wp--preset--color--maroon);
+                color: #fff;
+            }
+        }
+        &.btn-direction {
+            a {
             }
         }
     }
