@@ -48,7 +48,7 @@ function custom_listing_template()
     $listing_template .= "<div class='listing--buttons'>";
     $listing_template .= "<div class='btn btn-appointment'><a>Request Appointment</a></div>";
     $listing_template .= "\t\t" . '<div class="btn btn-direction"><%= createDirectionUrl() %></div>' . "\r\n";
-    $listing_template .= "<div class='btn btn-appointment'><a>View Stock</a></div>";
+    $listing_template .= "<div class='btn btn-stock'><a>View Stock</a></div>";
     $listing_template .= "</div>";
 
     $listing_template .= "\t" . '</li>' . "\r\n";
