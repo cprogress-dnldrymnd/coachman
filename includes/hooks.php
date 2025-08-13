@@ -140,4 +140,4 @@ function remove_wpautop_for_post_type() {
         remove_filter( 'the_content', 'wpautop' );
     }
 }
-add_action( 'wp', 'remove_wpautop_for_post_type' );
+add_action( 'init', 'remove_wpautop_for_post_type' );
