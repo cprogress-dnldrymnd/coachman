@@ -26,6 +26,7 @@ function ajax_details() {
     jQuery('body').on('click', '.btn-stock a', function () {
         var $this = jQuery(this);
         var post_id = $this.parents('.store--listing').attr('data-store-id');
+        $this.addClass('loading');
         console.log(post_id);
         jQuery.ajax({
             url: ajax_params.ajax_url,
@@ -35,7 +36,9 @@ function ajax_details() {
                 post_id: post_id,
             },
             success: function (response) {
-                jQuery('#listing--details--results').html(response)
+                jQuery('#listing--details--results').html(response);
+                $this.removeClass('loading');
+
             },
             error: function (error) {
                 console.error('Error:', error);
