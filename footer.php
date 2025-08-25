@@ -22,7 +22,26 @@ if (is_page(564)) {
     echo do_shortcode('[modal id=25765]');
 }
 
-
+if (is_page()) {
+    $templates = get_posts(array(
+        'post_type' => 'template',
+        'fields' => 'ids',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'template_category',
+                'field'    => 'slug',
+                'terms'    => 'modal'
+            )
+        ),
+        'meta_query' => array(
+            array(
+                'key'   => '_display_on',
+                'value' => get_the_ID(),
+                'compare' => 'LIKE',
+            )
+        )
+    ));
+}
 
 
 ?>
