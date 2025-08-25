@@ -110,3 +110,13 @@ body {
         width: 244px;
     }
 }
+
+.header--navigation {
+    .nav-link {
+        &:not(.active) {
+            & + .tab-pane {
+                display: none;
+            }
+        }
+    }
+}

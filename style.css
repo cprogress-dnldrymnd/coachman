@@ -12742,6 +12742,9 @@ body.sticky--header #masthead {
 .svg-logo.svg-logo svg {
   width: 244px; }
 
+.header--navigation .nav-link:not(.active) + .tab-pane {
+  display: none; }
+
 .bottom-footer .container > div {
   border-top: 1px solid #D3D3D3;
   padding-top: 30px;
