@@ -620,11 +620,6 @@ Block::make(__('Partner'))
             ->set_duplicate_groups_allowed(false)
             ->set_collapsed(true)
     ))
-    ->set_inner_blocks(true)
-    ->set_inner_blocks_position('below')
-    ->set_allowed_inner_blocks(array(
-        'carbon-fields/swiper-wrapper',
-    ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
         $atts = [];
         $swiper_id = $fields['swiper_id'];
