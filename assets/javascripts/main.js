@@ -260,23 +260,18 @@ function swiper_sliders() {
             jQuery(this).attr('class', 'swiper-team-slider');
             jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
             jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper'));
-            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide w-auto');
-            jQuery(this).find('.swiper-slide').each(function (index, element) {
-                $width = jQuery(this).find('>div').outerWidth();
-                jQuery(this).css('--width', $width + 'px');
-            });
+            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
 
             $id = 'swiper-team-slider-' + index;
             jQuery(this).attr('id', $id);
 
-            var swiper_logo_slider = new Swiper('#' + $id, {
+            var swiper_team_slider = new Swiper('#' + $id, {
                 loop: true,
-                freeMode: true,
-                slidesPerView: 'auto',
-                spaceBetween: 0,
+                slidesPerView: 1,
+                spaceBetween: 25,
                 speed: 3000,
                 autoplay: {
-                    delay: 0,
+                    delay: 5000,
                     disableOnInteraction: false
                 },
             });
