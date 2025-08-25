@@ -73,11 +73,11 @@
 }
 
 .listings--posts {
-    display: none;
-    //  height: 0;
+    height: 0;
     overflow: hidden;
+    @include transition(500ms);
     &.active {
-        //height: var(--height);
+        height: var(--height);
         display: block;
     }
 }
