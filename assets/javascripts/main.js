@@ -192,8 +192,8 @@ function swiper_sliders() {
 
     if (jQuery('.swiper-post').length > 0) {
         jQuery('.swiper-post').each(function (index, element) {
-            $pagination = jQuery('<div class="swiper-pagination"></div>');
-            $navigation = jQuery('<div class="swiper-nav-holder"> <div class="swiper-button-prev swiper-button"></div> <div class="swiper-button-next swiper-button"></div> </div>');
+            //$pagination = jQuery('<div class="swiper-pagination"></div>');
+            //$navigation = jQuery('<div class="swiper-nav-holder"> <div class="swiper-button-prev swiper-button"></div> <div class="swiper-button-next swiper-button"></div> </div>');
 
             if (window.innerWidth > 767) {
                 $pagination.insertBefore(jQuery(this).find('.swiper-wrapper'));
@@ -220,6 +220,27 @@ function swiper_sliders() {
                     prevEl: '#' + $id + ' .swiper-button-prev',
                 },
 
+            });
+        });
+    }
+
+
+    if (jQuery('.swiper-logo-slider').length > 0) {
+        jQuery('.swiper-logo-slider').each(function (index, element) {
+
+            jQuery(this).find('.wp-block-post').addClass('swiper-slide');
+            $id = 'swiper-logo-slider-' + index;
+            jQuery(this).attr('id', $id);
+
+            var swiper_logo_slider = new Swiper('#' + $id, {
+                freeMode: true,
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                speed: 3000,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                },
             });
         });
     }

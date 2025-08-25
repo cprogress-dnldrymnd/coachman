@@ -634,3 +634,9 @@ img {
         height: 52px;
     }
 }
+
+.swiper-logo-slider {
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+}
