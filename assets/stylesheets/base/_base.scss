@@ -706,6 +706,9 @@ img {
         --swiper-pagination-bullet-size: 22px;
         --swiper-pagination-bullet-horizontal-gap: 0;
         --swiper-pagination-bullet-inactive-opacity: 1;
+        > div {
+            flex-grow: 1;
+        }
         @include before {
             content: "";
             height: 2px;

@@ -11836,9 +11836,11 @@ img {
   --swiper-pagination-bullet-size: 22px;
   --swiper-pagination-bullet-horizontal-gap: 0;
   --swiper-pagination-bullet-inactive-opacity: 1; }
+  .swiper-slider-timeline .swiper-pagination-style--timeline > div {
+    flex-grow: 1; }
   .swiper-slider-timeline .swiper-pagination-style--timeline:before {
     content: "";
-    height: 1px;
+    height: 2px;
     background-color: var(--wp--preset--color--white-theme);
     position: absolute;
     top: 50%;
