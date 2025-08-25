@@ -630,7 +630,9 @@ Block::make(__('Partner'))
                 case 'partner_logo':
                     $attachment_id = get__post_meta('logo');
                     $size = 'medium';
+                    echo '<div class="partner-logo">';
                     echo wp_get_attachment_image($attachment_id, $size);
+                    echo '<div>';
                     break;
                 case 'partner_website':
                     $website = get__post_meta('website');

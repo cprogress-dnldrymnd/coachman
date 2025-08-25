@@ -11787,6 +11787,9 @@ img {
   .default-template h2, .default-template .h2 {
     font-size: 40px; } }
 
+.partner-logo img {
+  max-height: 32px; }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
@@ -12149,6 +12152,10 @@ img {
 
 .image--3-2 img {
   aspect-ratio: 3/2;
+  object-fit: cover; }
+
+.image--4-2 img {
+  aspect-ratio: 4/2;
   object-fit: cover; }
 
 body {
