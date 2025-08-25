@@ -365,7 +365,7 @@ $Careers->has_archive = false;
 
 $Careers_Category = new newTaxonomy();
 $Careers_Category->taxonomy = 'careers_category';
-$Careers_Category->post_type = 'Careers';
+$Careers_Category->post_type = 'careers';
 $Careers_Category->args = array(
     'label'        => 'Careers Category',
     'labels' => array(
