@@ -11788,7 +11788,8 @@ img {
     font-size: 40px; } }
 
 .partner-logo img {
-  max-height: 32px; }
+  width: auto;
+  height: 32px; }
 
 @media (min-width: 1500px) {
   .container {
