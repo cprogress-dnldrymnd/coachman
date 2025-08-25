@@ -700,7 +700,6 @@ img {
         display: flex;
         justify-content: space-between;
         gap: 10px;
-        z-index: -1;
         --swiper-pagination-bullet-inactive-color: #404040;
         --swiper-pagination-bullet-opacity: 1;
         --swiper-pagination-color: #fff;
@@ -711,6 +710,8 @@ img {
             flex-grow: 1;
         }
         @include before {
+        z-index: -1;
+
             content: "";
             height: 2px;
             background-color: var(--wp--preset--color--white-theme);
