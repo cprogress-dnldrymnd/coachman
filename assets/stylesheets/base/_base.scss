@@ -639,6 +639,10 @@ img {
     overflow: hidden;
     .swiper-wrapper {
         transition-timing-function: linear !important;
+        .swiper-slide {
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
         img {
             height: 80px;
             width: auto;

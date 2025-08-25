@@ -231,7 +231,7 @@ function swiper_sliders() {
             jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
             jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper'));
             jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
-            $width = jQuery(this).find('img').outerWidth();
+            $width = jQuery(this).find('.swiper-slide').outerWidth();
             jQuery(this).find('.swiper-slide').css('width', $width + 'px');
 
             $id = 'swiper-logo-slider-' + index;
@@ -241,7 +241,7 @@ function swiper_sliders() {
                 loop: true,
                 freeMode: true,
                 slidesPerView: 'auto',
-                spaceBetween: 30,
+                spaceBetween: 0,
                 speed: 3000,
                 autoplay: {
                     delay: 0,
