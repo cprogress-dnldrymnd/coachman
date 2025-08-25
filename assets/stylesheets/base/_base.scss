@@ -700,6 +700,7 @@ img {
         display: flex;
         justify-content: space-between;
         gap: 10px;
+        z-index: -1;
         --swiper-pagination-bullet-inactive-color: #404040;
         --swiper-pagination-bullet-opacity: 1;
         --swiper-pagination-color: #fff;
