@@ -693,6 +693,16 @@ img {
     }
     .swiper-pagination-style--timeline {
         bottom: auto;
-        top: var(--image-height);
+        top: calc(var(--image-height) + 70px);
+        @include before {
+            content: "";
+            height: 1px;
+            background-color: var(--wp--preset--color--white-theme);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            @include transform(translateY(-50%));
+        }
     }
 }

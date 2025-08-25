@@ -11824,7 +11824,20 @@ img {
     opacity: 0; }
 .swiper-slider-timeline .swiper-pagination-style--timeline {
   bottom: auto;
-  top: var(--image-height); }
+  top: calc(var(--image-height) + 70px); }
+  .swiper-slider-timeline .swiper-pagination-style--timeline:before {
+    content: "";
+    height: 1px;
+    background-color: var(--wp--preset--color--white-theme);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: trans;
+    -moz-transform: trans;
+    -ms-transform: trans;
+    -o-transform: trans;
+    transform: trans; }
 
 @media (min-width: 1500px) {
   .container {
