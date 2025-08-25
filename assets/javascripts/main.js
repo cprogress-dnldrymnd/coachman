@@ -9,6 +9,7 @@ jQuery(document).ready(function () {
     updateScrollStatus();
     dealer();
     ajax_details();
+    careers();
 });
 
 function careers() {
