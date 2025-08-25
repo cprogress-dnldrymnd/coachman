@@ -505,4 +505,3 @@ $Partners->exclude_from_search = true;
 $Partners->publicly_queryable = true;
 $Partners->show_in_admin_bar = false;
 $Partners->has_archive = false;
-?
