@@ -269,11 +269,7 @@ function swiper_sliders() {
                 loop: true,
                 slidesPerView: 1,
                 spaceBetween: 25,
-                speed: 3000,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false
-                },
+                speed: 5000,
             });
         });
     }
