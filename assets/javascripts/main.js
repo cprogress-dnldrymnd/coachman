@@ -15,8 +15,11 @@ jQuery(document).ready(function () {
 function careers() {
     jQuery('a[href="#careers--modal"]').click(function (e) {
         const bsOffcanvasCareers = new bootstrap.Offcanvas('#offCanvas26165');
+
+        $job_title = jQuery(this).parents('.accordion--item').find('.wp-block-post-title');
+        jQuery('.job--title').text($job_title);
+
         bsOffcanvasCareers.show();
-        console.log('xxx');
         e.preventDefault();
     });
 }
