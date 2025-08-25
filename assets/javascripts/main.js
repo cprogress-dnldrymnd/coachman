@@ -257,6 +257,18 @@ function swiper_sliders() {
 
     if (jQuery('.swiper-team-slider').length > 0) {
         jQuery('.swiper-team-slider').each(function (index, element) {
+            $pagination = jQuery('<div class="swiper-pagination"></div>');
+            $navigation = jQuery('<div class="swiper-nav-holder"> <div class="swiper-button-prev swiper-button"></div> <div class="swiper-button-next swiper-button"></div> </div>');
+
+            if (window.innerWidth > 767) {
+                $pagination.insertBefore(jQuery(this).find('.swiper-wrapper'));
+                $navigation.insertAfter(jQuery(this).find('.swiper-wrapper'));
+
+            } else {
+                $pagination.insertAfter(jQuery(this).find('.swiper-wrapper'));
+
+            }
+
             jQuery(this).attr('class', 'swiper-team-slider');
             jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper p-0');
             jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper'));
