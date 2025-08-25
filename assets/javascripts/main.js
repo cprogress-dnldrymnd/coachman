@@ -236,6 +236,7 @@ function swiper_sliders() {
             jQuery(this).attr('id', $id);
 
             var swiper_logo_slider = new Swiper('#' + $id, {
+                loop: true,
                 freeMode: true,
                 slidesPerView: 'auto',
                 spaceBetween: 30,
