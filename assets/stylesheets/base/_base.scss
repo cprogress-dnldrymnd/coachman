@@ -697,6 +697,8 @@ img {
     .swiper-pagination-style--timeline {
         bottom: auto;
         top: calc(var(--image-height) + 70px);
+        display: flex;
+        justify-content: space-between;
         @include before {
             content: "";
             height: 1px;

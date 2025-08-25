@@ -11826,7 +11826,9 @@ img {
   margin-bottom: 150px; }
 .swiper-slider-timeline .swiper-pagination-style--timeline {
   bottom: auto;
-  top: calc(var(--image-height) + 70px); }
+  top: calc(var(--image-height) + 70px);
+  display: flex;
+  justify-content: space-between; }
   .swiper-slider-timeline .swiper-pagination-style--timeline:before {
     content: "";
     height: 1px;
