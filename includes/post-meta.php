@@ -757,3 +757,17 @@ Container::make('post_meta', __('Partner Settings'))
         Field::make('image', 'logo', __('Logo')),
         Field::make('text', 'website', __('Website'))->set_attribute('type', 'url'),
     ));
+
+
+Container::make('post_meta', __('Template Settings'))
+    ->where('post_type', '=', 'template')
+    ->set_context('side')
+    ->add_fields(array(
+        Field::make('association', 'display_on', __('Display On'))
+            ->set_types(array(
+                array(
+                    'type'      => 'page',
+                    'post_type' => 'post',
+                ),
+            ))
+    ));

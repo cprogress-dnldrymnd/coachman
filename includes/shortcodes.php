@@ -114,7 +114,8 @@ function modal($atts)
 }
 add_shortcode('modal', 'modal');
 
-function post_title() {
+function post_title()
+{
     return get_the_title();
 }
 add_shortcode('post_title', 'post_title');
