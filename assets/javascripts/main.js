@@ -230,8 +230,8 @@ function swiper_sliders() {
             jQuery(this).attr('class', 'swiper-logo-slider');
             jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
             jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper'));
-            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
-            $width = jQuery(this).find('.swiper-slide').outerWidth();
+            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide w-auto');
+            $width = jQuery(this).find('.swiper-slide > div').outerWidth();
             jQuery(this).find('.swiper-slide').css('width', $width + 'px');
 
             $id = 'swiper-logo-slider-' + index;
