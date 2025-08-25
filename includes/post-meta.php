@@ -630,25 +630,10 @@ Block::make(__('Partner'))
                 case 'partner_logo':
                     $attachment_id = get__post_meta('logo');
                     $size = 'medium';
-                    return $attachment_id;
+                    echo wp_get_attachment_image_url($attachment_id, $size);
                     break;
             }
         }
-        $atts_json = json_encode($atts);
-?>
-    <div class="swiper-slider-holder swiper-nav-<?= $style ?>" <?= $attributes['className'] ?> swiper_atts='<?= $atts_json ?>'>
-        <div class="swiper swiper-slider-block" id="<?= $swiper_id ?>">
-            <?= $inner_blocks ?>
-
-            <?php if ($style == 'style-2') { ?>
-                <div class="swiper-pagination-navigation-style-2">
-
-                </div>
-            <?php } ?>
-        </div>
-
-    </div>
-<?php
     });
 
 
