@@ -229,6 +229,8 @@ function swiper_sliders() {
         jQuery('.swiper-logo-slider').each(function (index, element) {
             jQuery(this).attr('class', 'swiper-logo-slider');
             jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
+            jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).parent());
+
             jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide w-auto');
 
             $id = 'swiper-logo-slider-' + index;
