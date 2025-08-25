@@ -692,6 +692,7 @@ img {
         }
     }
     .swiper-pagination-style--timeline {
-        
+        bottom: auto;
+        top: var(--image-height);
     }
 }
