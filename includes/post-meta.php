@@ -762,7 +762,7 @@ Container::make('post_meta', __('Partner Settings'))
 Container::make('post_meta', __('Template Settings'))
     ->where('post_type', '=', 'template')
     ->add_fields(array(
-        Field::make('association', 'display_on', __('Display On'))
+        Field::make('association', 'display_on', __('Display Template On'))
             ->set_types(array(
                 array(
                     'type'      => 'post',
