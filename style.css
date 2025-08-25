@@ -12147,6 +12147,10 @@ img {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 20px; } }
 
+.image--3-2 img {
+  aspect-ratio: 3/2;
+  object-fit: cover; }
+
 body {
   font-family: "pennypacker-semiwide", sans-serif;
   color: var(--text-color);
