@@ -748,4 +748,5 @@ Container::make('post_meta', __('Partner Settings'))
     ->set_context('side')
     ->add_fields(array(
         Field::make('image', 'logo', __('Logo')),
+        Field::make('text', 'website', __('Website'))->set_attribute('type', 'url'),
     ));
