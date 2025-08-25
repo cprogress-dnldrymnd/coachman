@@ -225,6 +225,8 @@ function swiper_sliders() {
     }
 
 
+
+
     if (jQuery('.swiper-logo-slider').length > 0) {
         jQuery('.swiper-logo-slider').each(function (index, element) {
             jQuery(this).attr('class', 'swiper-logo-slider');
@@ -253,5 +255,31 @@ function swiper_sliders() {
         });
     }
 
+    if (jQuery('.swiper-team-slider').length > 0) {
+        jQuery('.swiper-team-slider').each(function (index, element) {
+            jQuery(this).attr('class', 'swiper-team-slider');
+            jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
+            jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper'));
+            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide w-auto');
+            jQuery(this).find('.swiper-slide').each(function (index, element) {
+                $width = jQuery(this).find('>div').outerWidth();
+                jQuery(this).css('--width', $width + 'px');
+            });
 
+            $id = 'swiper-team-slider-' + index;
+            jQuery(this).attr('id', $id);
+
+            var swiper_logo_slider = new Swiper('#' + $id, {
+                loop: true,
+                freeMode: true,
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                speed: 3000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false
+                },
+            });
+        });
+    }
 }
