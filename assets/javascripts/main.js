@@ -285,4 +285,34 @@ function swiper_sliders() {
             });
         });
     }
+    if (jQuery('.swiper-slider-timeline').length > 0) {
+        jQuery('.swiper-slider-timeline').each(function (index, element) {
+            $pagination = jQuery('<div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
+            $navigation = jQuery('<div class="swiper-nav-holder"> <div class="swiper-button-prev swiper-button"></div> <div class="swiper-button-next swiper-button"></div> </div>');
+
+            $pagination.insertAfter(jQuery(this).find('.swiper-wrapper'));
+
+
+            jQuery(this).attr('class', 'swiper-slider-timeline');
+            jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper p-0');
+            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
+
+            $id = 'swiper-slider-timeline-' + index;
+            jQuery(this).attr('id', $id);
+
+            var swiper_team_slider = new Swiper('#' + $id, {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 25,
+                pagination: {
+                    el: '#' + $id + ' .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '#' + $id + ' .swiper-button-next',
+                    prevEl: '#' + $id + ' .swiper-button-prev',
+                },
+            });
+        });
+    }
 }
