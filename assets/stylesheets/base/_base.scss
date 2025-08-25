@@ -347,6 +347,14 @@ img {
         }
     }
 }
+.wp-block-button__link {
+    &.has-maroon-background-color {
+        @include on-event {
+            color: var(--bs-white) !important
+            background-color: var(--bs-black);
+        }
+    }
+}
 .wp-block-button__link.wp-block-button__link,
 .wp-block-read-more.wp-block-read-more {
     font-size: inherit;
