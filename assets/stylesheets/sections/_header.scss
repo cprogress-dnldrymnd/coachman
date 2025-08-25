@@ -135,20 +135,23 @@ body {
             &:not(.active) {
                 & + .tab-pane {
                     display: none;
-                    padding-bottom: 20px;
                 }
             }
 
             & + .tab-pane {
                 margin-top: 20px;
+                padding: 20px;
             }
         }
     }
 }
-#offCanvasMenu {
-    .offcanvas-body {
-        @include responsive(xs) {
+@include responsive(xs) {
+    #offCanvasMenu {
+        .offcanvas-body {
             overflow: auto !important;
+        }
+        .listings-taxonomy-holder {
+            max-width: 100%;
         }
     }
 }

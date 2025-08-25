@@ -12765,15 +12765,14 @@ body.sticky--header #masthead {
         -o-transform: rotate(90deg);
         transform: rotate(90deg); }
     .header--navigation.header--navigation.header--navigation .nav-link:not(.active) + .tab-pane {
-      display: none;
-      padding-bottom: 20px; }
+      display: none; }
     .header--navigation.header--navigation.header--navigation .nav-link + .tab-pane {
-      margin-top: 20px; } }
+      margin-top: 20px;
+      padding: 20px; } }
 
 @media screen and (max-width: 767px) {
   #offCanvasMenu .offcanvas-body {
     overflow: auto !important; } }
-
 .bottom-footer .container > div {
   border-top: 1px solid #D3D3D3;
   padding-top: 30px;
