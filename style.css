@@ -11626,9 +11626,8 @@ img {
   gap: 20px; }
   .checklists li,
   .checklists-holder ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px; }
+    position: relative;
+    padding-left: 24px; }
     .checklists li:before,
     .checklists-holder ul li:before {
       content: "";
@@ -11641,7 +11640,10 @@ img {
       -moz-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
+      transform: rotate(-45deg);
+      position: absolute;
+      left: 0;
+      top: 0; }
 
 .offcanvas-backdrop.offcanvas-backdrop {
   z-index: 9999; }

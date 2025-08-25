@@ -460,9 +460,8 @@ img {
     flex-direction: column;
     gap: 20px;
     li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        position: relative;
+        padding-left: 24px;
         @include before {
             content: "";
             display: inline-block;
@@ -471,6 +470,9 @@ img {
             border-left: 2px solid var(--maroon);
             border-bottom: 2px solid var(--maroon);
             @include transform(rotate(-45deg));
+            position: absolute;
+            left: 0;
+            top: 6px;
         }
     }
 }
@@ -695,7 +697,6 @@ img {
         margin-bottom: 150px;
     }
     .swiper-pagination-navigation-style-2 {
-        
     }
     .swiper-pagination-style--timeline {
         bottom: auto;
@@ -713,7 +714,7 @@ img {
             flex-grow: 1;
         }
         @include before {
-        z-index: -1;
+            z-index: -1;
 
             content: "";
             height: 2px;
