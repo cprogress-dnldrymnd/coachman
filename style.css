@@ -12744,6 +12744,9 @@ body.sticky--header #masthead {
 
 .header--navigation .nav-link:not(.active) + .tab-pane {
   display: none; }
+@media screen and (max-width: 767px) {
+  .header--navigation .offcanvas-body {
+    overflow: auto !important; } }
 
 .bottom-footer .container > div {
   border-top: 1px solid #D3D3D3;

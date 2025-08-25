@@ -119,4 +119,9 @@ body {
             }
         }
     }
+    .offcanvas-body{
+        @include responsive(xs) {
+            overflow: auto !important;
+        }
+    }
 }
