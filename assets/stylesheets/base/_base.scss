@@ -574,7 +574,7 @@ img {
     flex-direction: column;
     gap: 20px;
 }
-.accordion--item {
+.accordion--item:not(.block-editor-block-list__block) {
     overflow: hidden;
     position: relative;
     @include transition(500ms);
