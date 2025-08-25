@@ -33,36 +33,38 @@ function dealer() {
 }
 
 function ajax_details() {
-    const bsOffcanvas = new bootstrap.Offcanvas('#offCanvas25765');
-    jQuery('body').on('click', '.btn-stock a', function () {
-        var $this = jQuery(this);
-        var post_id = $this.parents('.store--listing').attr('data-store-id');
-        $this.addClass('loading');
-        console.log(post_id);
-        jQuery.ajax({
-            url: ajax_params.ajax_url,
-            type: 'POST',
-            data: {
-                action: 'dealer_details_ajax',
-                post_id: post_id,
-            },
-            success: function (response) {
-                jQuery('#listing--details--results').html(response);
-                bsOffcanvas.show();
-                $this.removeClass('loading');
+    if (jQuery('#offCanvas25765').length > 0) {
+        const bsOffcanvas = new bootstrap.Offcanvas('#offCanvas25765');
+        jQuery('body').on('click', '.btn-stock a', function () {
+            var $this = jQuery(this);
+            var post_id = $this.parents('.store--listing').attr('data-store-id');
+            $this.addClass('loading');
+            console.log(post_id);
+            jQuery.ajax({
+                url: ajax_params.ajax_url,
+                type: 'POST',
+                data: {
+                    action: 'dealer_details_ajax',
+                    post_id: post_id,
+                },
+                success: function (response) {
+                    jQuery('#listing--details--results').html(response);
+                    bsOffcanvas.show();
+                    $this.removeClass('loading');
 
-            },
-            error: function (error) {
-                console.error('Error:', error);
-            }
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                }
+            });
         });
-    });
 
-    const myOffcanvas = document.getElementById('offCanvas25765')
+        const myOffcanvas = document.getElementById('offCanvas25765')
 
-    myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
-        jQuery('#listing--details--results').html('');
-    })
+        myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+            jQuery('#listing--details--results').html('');
+        })
+    }
 }
 
 function updateScrollStatus() {
