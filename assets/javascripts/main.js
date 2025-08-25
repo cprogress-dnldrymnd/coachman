@@ -289,7 +289,7 @@ function swiper_sliders() {
         jQuery('.swiper-slider-timeline').each(function (index, element) {
             $navigation = jQuery('<div class="swiper-pagination swiper-pagination-style--timeline"></div<div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div></div> <div class="swiper-button-next"></div> </div>');
 
-            $pagination.insertAfter(jQuery(this).find('.swiper-wrapper'));
+            $navigation.insertAfter(jQuery(this).find('.swiper-wrapper'));
 
 
             jQuery(this).attr('class', 'swiper-slider-timeline');
