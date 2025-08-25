@@ -350,7 +350,7 @@ img {
 .wp-block-button__link {
     &.has-maroon-background-color {
         @include on-event {
-            color: var(--bs-white) !important
+            color: var(--bs-white) !important;
             background-color: var(--bs-black);
         }
     }
