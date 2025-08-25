@@ -11796,9 +11796,10 @@ img {
   .swiper-logo-slider .swiper-wrapper {
     transition-timing-function: linear !important; }
     .swiper-logo-slider .swiper-wrapper .swiper-slide {
-      padding-left: 1vw;
-      padding-right: 1vw;
       width: var(--width) !important; }
+      .swiper-logo-slider .swiper-wrapper .swiper-slide > div {
+        padding-left: 1vw;
+        padding-right: 1vw; }
     .swiper-logo-slider .swiper-wrapper img {
       height: 80px;
       width: auto; }
