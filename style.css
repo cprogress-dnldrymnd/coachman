@@ -12765,7 +12765,8 @@ body.sticky--header #masthead {
         -o-transform: rotate(90deg);
         transform: rotate(90deg); }
     .header--navigation.header--navigation.header--navigation .nav-link:not(.active) + .tab-pane {
-      display: none; }
+      display: none;
+      padding-bottom: 20px; }
     .header--navigation.header--navigation.header--navigation .nav-link + .tab-pane {
       margin-top: 20px; } }
 
