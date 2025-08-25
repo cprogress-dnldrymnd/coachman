@@ -233,7 +233,7 @@ function swiper_sliders() {
             jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide w-auto');
             jQuery(this).find('.swiper-slide').each(function (index, element) {
                 $width = jQuery(this).find('>div').outerWidth();
-                jQuery(this).find('.swiper-slide').css('--width', $width + 'px');
+                jQuery(this).css('--width', $width + 'px');
             });
 
             $id = 'swiper-logo-slider-' + index;
