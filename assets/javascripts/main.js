@@ -240,7 +240,7 @@ function swiper_sliders() {
                 spaceBetween: 0,
                 speed: 3000,
                 autoplay: {
-                    delay: 5000,
+                    delay: 0,
                     disableOnInteraction: false
                 },
             });
