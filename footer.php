@@ -31,18 +31,15 @@ if (is_page()) {
 			'taxonomy' => 'template_category',
 			'field'    => 'slug',
 			'terms'    => 'modal'
-		)
-        ),
+		)),
         'meta_query' => array(
             array(
                 'key'   => '_display_on',
                 'value' => get_the_ID(),
                 'compare' => 'LIKE',
-            )
-        )
+            ))
     ));
 
-    do_shortcode('[modal id=25765]')
 }
 
 
