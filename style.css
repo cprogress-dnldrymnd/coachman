@@ -11822,6 +11822,9 @@ img {
     opacity: 0; }
   .swiper-slider-timeline .swiper-slide:not(.swiper-slide-active) .entry-content {
     opacity: 0; }
+.swiper-slider-timeline .swiper-pagination-style--timeline {
+  bottom: auto;
+  top: var(--image-height); }
 
 @media (min-width: 1500px) {
   .container {
