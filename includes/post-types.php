@@ -517,3 +517,17 @@ $Teams->exclude_from_search = true;
 $Teams->publicly_queryable = true;
 $Teams->show_in_admin_bar = false;
 $Teams->has_archive = false;
+
+
+
+$Timeline = new newPostType();
+$Timeline->key = 'timeline';
+$Timeline->name = 'Timeline';
+$Timeline->singular_name = 'Timeline';
+$Timeline->icon = 'dashicons-video-alt3';
+$Timeline->show_in_rest = true;
+$Timeline->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Timeline->exclude_from_search = true;
+$Timeline->publicly_queryable = true;
+$Timeline->show_in_admin_bar = false;
+$Timeline->has_archive = false;
