@@ -112,11 +112,7 @@ body {
 }
 
 .header--navigation.header--navigation.header--navigation {
-    .mega--menu-tab-holder {
-        @include responsive(xs) {
-            padding: 0 !important;
-        }
-    }
+   
     .nav-link {
         @include responsive(xs) {
             background-color: transparent !important;
@@ -125,7 +121,7 @@ body {
             }
             &.active {
                 background-color: var(--lightgray-2) !important;
-                & + .tabe-pane {
+                & + .tab-pane {
                     background-color: var(--lightgray-2) !important;
                 }
                 @include after {
