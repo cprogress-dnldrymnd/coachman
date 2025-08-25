@@ -19,8 +19,8 @@ function careers() {
         $job_title = jQuery(this).parents('.accordion--item').find('.wp-block-post-title').text();
         $job_category = jQuery(this).parents('.accordion--item').find('.careers--category').clone();
         jQuery('.job--title').text($job_title);
+        jQuery('input[name="job_title"]').val($job_title);
         jQuery('.job--category').html($job_category);
-
 
         bsOffcanvasCareers.show();
         e.preventDefault();
