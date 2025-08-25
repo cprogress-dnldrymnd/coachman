@@ -11536,7 +11536,7 @@ img {
 
 .wp-block-button__link.has-maroon-background-color:hover, .wp-block-button__link.has-maroon-background-color:active, .wp-block-button__link.has-maroon-background-color:focus {
   color: var(--bs-white) !important;
-  background-color: var(--bs-black); }
+  background-color: var(--bs-black) !important; }
 
 .wp-block-button__link.wp-block-button__link,
 .wp-block-read-more.wp-block-read-more {
