@@ -691,6 +691,9 @@ img {
             }
         }
     }
+    .wp-block-post-featured-image {
+        margin-bottom: 150px;
+    }
     .swiper-pagination-style--timeline {
         bottom: auto;
         top: calc(var(--image-height) + 70px);
