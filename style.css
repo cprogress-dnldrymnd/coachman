@@ -12764,7 +12764,6 @@ body.sticky--header #masthead {
     .header--navigation.header--navigation.header--navigation .nav-link:not(.active) + .tab-pane {
       display: none; }
     .header--navigation.header--navigation.header--navigation .nav-link + .tab-pane {
-      margin-top: 20px;
       padding: 20px; } }
 
 @media screen and (max-width: 767px) {
