@@ -703,8 +703,8 @@ img {
             background-color: var(--wp--preset--color--white-theme);
             position: absolute;
             top: 50%;
-            left: 0;
-            right: 0;
+            left: -100vw;
+            right: -100vw;
             @include transform(translateY(-50%));
         }
     }
