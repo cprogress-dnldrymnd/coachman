@@ -616,14 +616,14 @@ Block::make(__('Partner'))
             ->add_fields('partner_logo', array(
                 Field::make('html', 'html_start')->set_html("<div $style>Partner Logo Block</div>"),
             ))
+            ->add_fields('partner_website', array(
+                Field::make('html', 'html_start')->set_html("<div $style>Partner Website</div>"),
+            ))
             ->set_duplicate_groups_allowed(false)
             ->set_collapsed(true)
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
-        $atts = [];
-        $swiper_id = $fields['swiper_id'];
         $partner_blocks = $fields['partner_blocks'];
-        $style = '';
         foreach ($partner_blocks as $partner_block) {
             $type = $partner_block['_type'];
             switch ($type) {
@@ -631,6 +631,11 @@ Block::make(__('Partner'))
                     $attachment_id = get__post_meta('logo');
                     $size = 'medium';
                     echo wp_get_attachment_image($attachment_id, $size);
+                    break;
+                case 'partner_website':
+                    $website = get__post_meta('website');
+                    $size = 'medium';
+                    echo '<a class="border wp-block-read-more" href="' . $website . '" target="_blank">Visit ' . get_the_title() . '</a>';
                     break;
             }
         }
