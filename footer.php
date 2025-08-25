@@ -21,10 +21,21 @@ if (is_page(564)) {
     echo do_shortcode('[modal id=25605]');
     echo do_shortcode('[modal id=25765]');
 }
-if (is_page(564)) {
-    echo do_shortcode('[modal id=25605]');
-    echo do_shortcode('[modal id=25765]');
+
+if (is_page()) {
+    $templates = get_posts(array(
+        'post_type' => 'template',
+        'meta_query' => array(
+            array(
+                'key'   => '_display_on',
+                'value' => get_the_ID(),
+            )
+        )
+    ));
+    var_dump($templates);
 }
+
+
 ?>
 
 </div><!-- #page -->
