@@ -160,12 +160,17 @@ function mega_menu() {
         jQuery('body').css('--admin-bar-height', $admin_bar + 'px');
 
     }
-
-
     jQuery('.no--submenu .nav-link').each(function (index, element) {
         jQuery(this).removeAttr('data-bs-toggle');
         jQuery(this).removeAttr('data-bs-target');
     });
+
+    if (window.innerWidth < 768) {
+        jQuery('.header--navigation .tab-pane').each(function (index, element) {
+            $id = jQuery(this).attr('id');
+            jQuery(this).insertAfter('button[data-bs-target="#' + $id + '"]');
+        });
+    }
 }
 
 function fancybox() {
