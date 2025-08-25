@@ -17,7 +17,10 @@ function careers() {
         const bsOffcanvasCareers = new bootstrap.Offcanvas('#offCanvas26165');
 
         $job_title = jQuery(this).parents('.accordion--item').find('.wp-block-post-title').text();
+        $job_category = jQuery(this).parents('.accordion--item').find('.careers--category').html();
         jQuery('.job--title').text($job_title);
+        jQuery('.job--category').html($job_category);
+
 
         bsOffcanvasCareers.show();
         e.preventDefault();
