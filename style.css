@@ -11830,7 +11830,8 @@ img {
   display: flex;
   justify-content: space-between;
   --swiper-pagination-bullet-inactive-color: #404040;
-  --swiper-pagination-bullet-opacity: 1; }
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-color: #fff; }
   .swiper-slider-timeline .swiper-pagination-style--timeline:before {
     content: "";
     height: 1px;
