@@ -709,3 +709,11 @@ Container::make('post_meta', __('Dealer Settings'))
                 ),
             ))
     ));
+
+
+Container::make('post_meta', __('Partner Settings'))
+    ->where('post_type', '=', 'partners')
+    ->set_context('side')
+    ->add_fields(array(
+        Field::make('image', 'logo', __('Logo')),
+    ));
