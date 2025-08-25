@@ -112,6 +112,7 @@ function modal($atts)
 <?php
     return ob_get_clean();
 }
+add_shortcode('modal', 'modal');
 
 function post_title() {
     return get_the_title();
