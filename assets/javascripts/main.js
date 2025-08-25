@@ -286,7 +286,7 @@ function swiper_sliders() {
     }
     if (jQuery('.swiper-slider-timeline').length > 0) {
         jQuery('.swiper-slider-timeline').each(function (index, element) {
-            $navigation = jQuery('<div class="swiper-pagination swiper-pagination-style--timeline"> </div> <div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-button-next"></div> </div>');
+            $navigation = jQuery('<div class="swiper-pagination swiper-pagination-style--timeline"> </div> <div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev">Prev</div> <div class="swiper-button-next">Next</div> </div>');
 
             $navigation.insertAfter(jQuery(this).find('.swiper-wrapper'));
 
