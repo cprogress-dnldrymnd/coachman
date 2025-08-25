@@ -611,8 +611,7 @@ Block::make(__('Model Technical Details'))
 
 Block::make(__('Partner'))
     ->add_fields(array(
-        Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>"),
-        Field::make('text', 'swiper_id', __('Swiper ID')),
+        Field::make('html', 'html_1')->set_html("<div $style>Partner Blocks</div>"),
         Field::make('complex', 'partner_blocks')
             ->add_fields('partner_logo', array(
                 Field::make('html', 'html_start')->set_html("<div $style>Partner Logo Block</div>"),
@@ -631,7 +630,7 @@ Block::make(__('Partner'))
                 case 'partner_logo':
                     $attachment_id = get__post_meta('logo');
                     $size = 'medium';
-                    return wp_get_attachment_image_url($attachment_id, $size);
+                    return $attachment_id;
                     break;
             }
         }
