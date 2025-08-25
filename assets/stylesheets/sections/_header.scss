@@ -118,8 +118,13 @@ body {
                 display: none;
             }
         }
+        & + .tab-pane {
+            margin-top: 20px;
+        }
     }
-    .offcanvas-body{
+}
+#offCanvasMenu {
+    .offcanvas-body {
         @include responsive(xs) {
             overflow: auto !important;
         }
