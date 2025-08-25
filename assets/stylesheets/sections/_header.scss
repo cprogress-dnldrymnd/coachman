@@ -112,7 +112,6 @@ body {
 }
 
 .header--navigation.header--navigation.header--navigation {
-   
     .nav-link {
         @include responsive(xs) {
             background-color: transparent !important;
@@ -136,6 +135,12 @@ body {
 
             & + .tab-pane {
                 padding: 20px;
+                .listings-taxonomy-wrapper {
+                    > div {
+                        flex: 0 0 auto;
+                        width: 50%;
+                    }
+                }
             }
         }
     }

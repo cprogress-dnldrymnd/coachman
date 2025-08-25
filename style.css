@@ -12764,7 +12764,10 @@ body.sticky--header #masthead {
     .header--navigation.header--navigation.header--navigation .nav-link:not(.active) + .tab-pane {
       display: none; }
     .header--navigation.header--navigation.header--navigation .nav-link + .tab-pane {
-      padding: 20px; } }
+      padding: 20px; }
+      .header--navigation.header--navigation.header--navigation .nav-link + .tab-pane .listings-taxonomy-wrapper > div {
+        flex: 0 0 auto;
+        width: 50%; } }
 
 @media screen and (max-width: 767px) {
   #offCanvasMenu .offcanvas-body {
