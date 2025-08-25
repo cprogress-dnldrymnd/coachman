@@ -12743,6 +12743,9 @@ body.sticky--header #masthead {
   width: 244px; }
 
 @media screen and (max-width: 767px) {
+  .header--navigation.header--navigation.header--navigation .mega--menu-tab-holder {
+    padding: 0 !important; } }
+@media screen and (max-width: 767px) {
   .header--navigation.header--navigation.header--navigation .nav-link {
     background-color: transparent !important; }
     .header--navigation.header--navigation.header--navigation .nav-link:after {
