@@ -25,6 +25,7 @@ if (is_page(564)) {
 if (is_page()) {
     $templates = get_posts(array(
         'post_type' => 'template',
+        'fields' => 'ids',
         'meta_query' => array(
             array(
                 'key'   => '_display_on',
