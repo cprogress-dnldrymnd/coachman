@@ -609,6 +609,55 @@ Block::make(__('Model Technical Details'))
 <?php
     });
 
+Block::make(__('Partner'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Swiper</div>"),
+        Field::make('text', 'swiper_id', __('Swiper ID')),
+        Field::make('complex', 'partner_blocks')
+            ->add_fields('partner_logo', array(
+                Field::make('html', 'html_start')->set_html("<div $style>Partner Logo Block</div>"),
+            ))
+            ->set_duplicate_groups_allowed(false)
+            ->set_collapsed(true)
+    ))
+    ->set_inner_blocks(true)
+    ->set_inner_blocks_position('below')
+    ->set_allowed_inner_blocks(array(
+        'carbon-fields/swiper-wrapper',
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+        $atts = [];
+        $swiper_id = $fields['swiper_id'];
+        $partner_blocks = $fields['partner_blocks'];
+        $style = '';
+        foreach ($partner_blocks as $partner_block) {
+            $type = $partner_block['_type'];
+            switch ($type) {
+                case 'partner_logo':
+                    $attachment_id = get__post_meta('logo');
+                    $size = 'medium';
+                    return wp_get_attachment_image_url($attachment_id, $size);
+                    break;
+            }
+        }
+        $atts_json = json_encode($atts);
+?>
+    <div class="swiper-slider-holder swiper-nav-<?= $style ?>" <?= $attributes['className'] ?> swiper_atts='<?= $atts_json ?>'>
+        <div class="swiper swiper-slider-block" id="<?= $swiper_id ?>">
+            <?= $inner_blocks ?>
+
+            <?php if ($style == 'style-2') { ?>
+                <div class="swiper-pagination-navigation-style-2">
+
+                </div>
+            <?php } ?>
+        </div>
+
+    </div>
+<?php
+    });
+
+
 
 Container::make('term_meta', __('Model Properties'))
     ->where('term_taxonomy', '=', 'caravan_model')
@@ -684,6 +733,10 @@ function get_posts_by_taxonomy_wpdb($taxonomy, $terms, $post_type = 'post')
 
     return $post_list;
 }
+
+
+
+
 
 Container::make('theme_options', __('Theme Options'))
     ->add_fields(array(
