@@ -735,3 +735,10 @@ img {
         }
     }
 }
+
+.careers--category {
+    a {
+        pointer-events: none;
+        text-decoration: none;
+    }
+}
