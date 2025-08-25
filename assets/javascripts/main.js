@@ -237,7 +237,7 @@ function swiper_sliders() {
             var swiper_logo_slider = new Swiper('#' + $id, {
                 freeMode: true,
                 slidesPerView: 'auto',
-                spaceBetween: 0,
+                spaceBetween: 30,
                 speed: 3000,
                 autoplay: {
                     delay: 0,
