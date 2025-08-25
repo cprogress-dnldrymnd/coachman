@@ -17,10 +17,6 @@ $footer = get__theme_option('footer');
     <?php echo do_shortcode('[template template_id=' . $footer . ']'); ?>
 </footer>
 <?php
-if (is_page(564)) {
-    echo do_shortcode('[modal id=25605]');
-    echo do_shortcode('[modal id=25765]');
-}
 
 if (is_page()) {
     $templates = get_posts(array(
@@ -41,6 +37,10 @@ if (is_page()) {
             )
         )
     ));
+
+    foreach ($templates as $template) {
+        echo do_shortcode('[modal id=' . $template . ']');
+    }
 }
 
 
