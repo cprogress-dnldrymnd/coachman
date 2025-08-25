@@ -227,8 +227,10 @@ function swiper_sliders() {
 
     if (jQuery('.swiper-logo-slider').length > 0) {
         jQuery('.swiper-logo-slider').each(function (index, element) {
-
-            jQuery(this).find('.wp-block-post').addClass('swiper-slide');
+            jQuery(this).attr('class', 'swiper-logo-slider');
+            jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
+            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
+            
             $id = 'swiper-logo-slider-' + index;
             jQuery(this).attr('id', $id);
 
