@@ -662,3 +662,12 @@ img {
         /* Fully opaque */ rgba(0, 0, 0, 0) 100% /* Fully transparent */
     );
 }
+
+.swiper-team-slider.swiper-team-slider.swiper-team-slider.swiper-team-slider {
+    .swiper-pagination-navigation-style-2 {
+        position: static;
+        transition: none;
+        width: 100%;
+        justify-content: center;    
+    }
+}

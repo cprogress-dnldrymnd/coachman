@@ -11807,6 +11807,12 @@ img {
 .gradient-overlay {
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 20%, black 80%, rgba(0, 0, 0, 0) 100%); }
 
+.swiper-team-slider.swiper-team-slider.swiper-team-slider.swiper-team-slider .swiper-pagination-navigation-style-2 {
+  position: static;
+  transition: none;
+  width: 100%;
+  justify-content: center; }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
