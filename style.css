@@ -12748,17 +12748,21 @@ body.sticky--header #masthead {
     padding-right: 0;
     background-color: transparent !important; }
     .header--navigation.header--navigation.header--navigation .nav-link:after {
-      -webkit-transition: 500ms;
-      -moz-transition: 500ms;
-      -ms-transition: 500ms;
-      -o-transition: 500ms;
-      transition: 500ms; }
-    .header--navigation.header--navigation.header--navigation .nav-link.active:after {
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      transform: rotate(90deg); }
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+      transition: 300ms; }
+    .header--navigation.header--navigation.header--navigation .nav-link.active {
+      background-color: var(--lightgray-2) !important; }
+      .header--navigation.header--navigation.header--navigation .nav-link.active + .tabe-pane {
+        background-color: var(--lightgray-2) !important; }
+      .header--navigation.header--navigation.header--navigation .nav-link.active:after {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg); }
     .header--navigation.header--navigation.header--navigation .nav-link:not(.active) + .tab-pane {
       display: none; }
     .header--navigation.header--navigation.header--navigation .nav-link + .tab-pane {

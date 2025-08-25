@@ -118,9 +118,13 @@ body {
             padding-right: 0;
             background-color: transparent !important;
             @include after {
-                @include transition(500ms);
+                @include transition(300ms);
             }
             &.active {
+                background-color: var(--lightgray-2) !important;
+                & + .tabe-pane {
+                    background-color: var(--lightgray-2) !important;
+                }
                 @include after {
                     @include transform(rotate(90deg));
                 }
