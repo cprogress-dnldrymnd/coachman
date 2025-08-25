@@ -11828,7 +11828,9 @@ img {
   bottom: auto;
   top: calc(var(--image-height) + 70px);
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  --swiper-pagination-bullet-inactive-color: #404040;
+  --swiper-pagination-bullet-opacity: 1; }
   .swiper-slider-timeline .swiper-pagination-style--timeline:before {
     content: "";
     height: 1px;
