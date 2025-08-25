@@ -11796,6 +11796,9 @@ img {
   .swiper-logo-slider .swiper-wrapper {
     transition-timing-function: linear !important; }
 
+.gradient-overlay {
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 20%, black 80%, rgba(0, 0, 0, 0) 100%); }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
