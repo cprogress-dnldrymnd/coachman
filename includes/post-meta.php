@@ -765,8 +765,8 @@ Container::make('post_meta', __('Template Settings'))
         Field::make('association', 'display_on', __('Display On'))
             ->set_types(array(
                 array(
-                    'type'      => 'page',
-                    'post_type' => 'post',
+                    'type'      => 'post',
+                    'post_type' => 'page',
                 ),
             ))
     ));
