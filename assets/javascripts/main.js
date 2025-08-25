@@ -11,6 +11,13 @@ jQuery(document).ready(function () {
     ajax_details();
 });
 
+function careers() {
+    jQuery('a[href="#careers--modal"]').click(function (e) {
+        const bsOffcanvasCareers = new bootstrap.Offcanvas('#offCanvas26165');
+        bsOffcanvasCareers.show();
+        e.preventDefault();
+    });
+}
 
 function dealer() {
     jQuery('body').on('click', '.btn-appointment a', function () {
@@ -103,7 +110,7 @@ function read_more() {
 }
 
 function listings() {
-   
+
     if (jQuery('.nav-tabs-swiper-js:not(.no-active--onload)').length > 0) {
         jQuery('.nav-tabs-swiper-js:not(.no-active--onload) .nav-item:first-child .nav-link').click();
     }
