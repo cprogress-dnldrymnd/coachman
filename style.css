@@ -11791,8 +11791,10 @@ img {
   width: auto;
   height: 52px; }
 
-.swiper-logo-slider .swiper-wrapper {
-  transition-timing-function: linear !important; }
+.swiper-logo-slider {
+  overflow: hidden; }
+  .swiper-logo-slider .swiper-wrapper {
+    transition-timing-function: linear !important; }
 
 @media (min-width: 1500px) {
   .container {

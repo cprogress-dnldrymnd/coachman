@@ -636,6 +636,7 @@ img {
 }
 
 .swiper-logo-slider {
+    overflow: hidden;
     .swiper-wrapper {
         transition-timing-function: linear !important;
     }
