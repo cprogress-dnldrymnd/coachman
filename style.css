@@ -12744,8 +12744,6 @@ body.sticky--header #masthead {
 
 @media screen and (max-width: 767px) {
   .header--navigation.header--navigation.header--navigation .nav-link {
-    padding-left: 0;
-    padding-right: 0;
     background-color: transparent !important; }
     .header--navigation.header--navigation.header--navigation .nav-link:after {
       -webkit-transition: 300ms;

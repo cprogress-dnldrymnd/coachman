@@ -112,10 +112,13 @@ body {
 }
 
 .header--navigation.header--navigation.header--navigation {
+    .mega--menu-tab-holder {
+        @include responsive(xs) {
+            padding: 0 !important;
+        }
+    }
     .nav-link {
         @include responsive(xs) {
-            padding-left: 0;
-            padding-right: 0;
             background-color: transparent !important;
             @include after {
                 @include transition(300ms);
