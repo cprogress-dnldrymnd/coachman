@@ -27,19 +27,20 @@ if (is_page()) {
         'post_type' => 'template',
         'fields' => 'ids',
         'tax_query' => array(
-		array(
-			'taxonomy' => 'template_category',
-			'field'    => 'slug',
-			'terms'    => 'modal'
-		)),
+            array(
+                'taxonomy' => 'template_category',
+                'field'    => 'slug',
+                'terms'    => 'modal'
+            )
+        ),
         'meta_query' => array(
             array(
                 'key'   => '_display_on',
                 'value' => get_the_ID(),
                 'compare' => 'LIKE',
-            ))
+            )
+        )
     ));
-
 }
 
 
