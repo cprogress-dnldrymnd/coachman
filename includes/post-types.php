@@ -505,3 +505,15 @@ $Partners->exclude_from_search = true;
 $Partners->publicly_queryable = true;
 $Partners->show_in_admin_bar = false;
 $Partners->has_archive = false;
+
+$Teams = new newPostType();
+$Teams->key = 'teams';
+$Teams->name = 'Teams';
+$Teams->singular_name = 'Team';
+$Teams->icon = 'dashicons-video-alt3';
+$Teams->show_in_rest = true;
+$Teams->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Teams->exclude_from_search = true;
+$Teams->publicly_queryable = true;
+$Teams->show_in_admin_bar = false;
+$Teams->has_archive = false;
