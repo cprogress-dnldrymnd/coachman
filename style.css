@@ -12746,8 +12746,9 @@ body.sticky--header #masthead {
   display: none; }
 .header--navigation .nav-link + .tab-pane {
   margin-top: 20px; }
+
 @media screen and (max-width: 767px) {
-  .header--navigation .offcanvas-body {
+  #offCanvasMenu .offcanvas-body {
     overflow: auto !important; } }
 
 .bottom-footer .container > div {
