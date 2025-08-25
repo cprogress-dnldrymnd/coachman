@@ -259,7 +259,7 @@ function swiper_sliders() {
         jQuery('.swiper-team-slider').each(function (index, element) {
             jQuery(this).attr('class', 'swiper-team-slider');
             jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper');
-            jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper'));
+            jQuery(this).find('.wp-block-post').clone().appendTo(jQuery(this).find('.swiper-wrapper p-0'));
             jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
 
             $id = 'swiper-team-slider-' + index;
