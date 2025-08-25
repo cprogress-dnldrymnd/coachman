@@ -493,3 +493,15 @@ $FAQS_Category->args = array(
         'slug'         => 'faqs-category',
     )
 );
+
+$Partners = new newPostType();
+$Partners->key = 'partners';
+$Partners->name = 'Partners';
+$Partners->singular_name = 'Partner';
+$Partners->icon = 'dashicons-video-alt3';
+$Partners->show_in_rest = true;
+$Partners->supports = array('title', 'editor', 'revisions', 'thumbnail', 'excerpt');
+$Partners->exclude_from_search = true;
+$Partners->publicly_queryable = true;
+$Partners->show_in_admin_bar = false;
+$Partners->has_archive = false;
