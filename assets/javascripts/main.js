@@ -276,6 +276,14 @@ function swiper_sliders() {
                 slidesPerView: 1,
                 spaceBetween: 25,
                 speed: 5000,
+                pagination: {
+                    el: '#' + $id + ' .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '#' + $id + ' .swiper-button-next',
+                    prevEl: '#' + $id + ' .swiper-button-prev',
+                },
             });
         });
     }
