@@ -29,6 +29,7 @@ if (is_page()) {
             array(
                 'key'   => '_display_on',
                 'value' => get_the_ID(),
+                'compare' => 'LIKE',
             )
         )
     ));
