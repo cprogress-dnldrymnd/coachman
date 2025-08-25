@@ -699,13 +699,16 @@ img {
         top: calc(var(--image-height) + 70px);
         display: flex;
         justify-content: space-between;
+        gap: 10px;
         --swiper-pagination-bullet-inactive-color: #404040;
         --swiper-pagination-bullet-opacity: 1;
         --swiper-pagination-color: #fff;
         --swiper-pagination-bullet-size: 22px;
+        --swiper-pagination-bullet-horizontal-gap: 0;
+        --swiper-pagination-bullet-inactive-opacity: 1;
         @include before {
             content: "";
-            height: 1px;
+            height: 2px;
             background-color: var(--wp--preset--color--white-theme);
             position: absolute;
             top: 50%;
