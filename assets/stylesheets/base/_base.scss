@@ -642,7 +642,7 @@ img {
         .swiper-slide {
             padding-left: 1vw;
             padding-right: 1vw;
-            width: auto;
+            width: var(--width) !important;
         }
         img {
             height: 80px;
