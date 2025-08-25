@@ -113,13 +113,27 @@ body {
 
 .header--navigation {
     .nav-link {
-        &:not(.active) {
-            & + .tab-pane {
-                display: none;
+        @include responsive(xs) {
+            padding-left: 0;
+            padding-right: 0;
+            background-color: transparent !important;
+            @include after {
+                @include transition(500ms);
             }
-        }
-        & + .tab-pane {
-            margin-top: 20px;
+            &.active {
+                @include after {
+                    @include transform(rotate(90deg));
+                }
+            }
+            &:not(.active) {
+                & + .tab-pane {
+                    display: none;
+                }
+            }
+
+            & + .tab-pane {
+                margin-top: 20px;
+            }
         }
     }
 }

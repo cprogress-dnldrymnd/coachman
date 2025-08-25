@@ -12742,10 +12742,27 @@ body.sticky--header #masthead {
 .svg-logo.svg-logo svg {
   width: 244px; }
 
-.header--navigation .nav-link:not(.active) + .tab-pane {
-  display: none; }
-.header--navigation .nav-link + .tab-pane {
-  margin-top: 20px; }
+@media screen and (max-width: 767px) {
+  .header--navigation .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent !important; }
+    .header--navigation .nav-link:after {
+      -webkit-transition: 500ms;
+      -moz-transition: 500ms;
+      -ms-transition: 500ms;
+      -o-transition: 500ms;
+      transition: 500ms; }
+    .header--navigation .nav-link.active:after {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    .header--navigation .nav-link:not(.active) + .tab-pane {
+      display: none; }
+    .header--navigation .nav-link + .tab-pane {
+      margin-top: 20px; } }
 
 @media screen and (max-width: 767px) {
   #offCanvasMenu .offcanvas-body {
