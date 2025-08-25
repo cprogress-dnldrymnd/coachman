@@ -114,3 +114,9 @@ function modal($atts)
 }
 
 add_shortcode('modal', 'modal');
+
+function partner_logo() {
+    $partner_logo = get__post_meta('partner_logo');
+    return get_the_ID();
+}
+add_shortcode('partner_logo', 'partner_logo');
