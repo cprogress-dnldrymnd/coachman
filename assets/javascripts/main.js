@@ -274,7 +274,6 @@ function swiper_sliders() {
                 loop: true,
                 slidesPerView: 1,
                 spaceBetween: 25,
-                speed: 5000,
                 pagination: {
                     el: '#' + $id + ' .swiper-pagination',
                     clickable: true,
