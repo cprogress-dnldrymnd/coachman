@@ -12964,15 +12964,17 @@ body.sticky--header #masthead {
       @media screen and (max-width: 767px) {
         .listing--buttons.listing--buttons.listing--buttons .btn a {
           padding: 0; } }
-    @media (min-width: 768px) {
-      .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
-        background-color: var(--wp--preset--color--maroon);
-        border-color: var(--wp--preset--color--maroon);
-        color: #fff; } }
-    @media screen and (max-width: 767px) {
-      .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
-        color: var(--wp--preset--color--maroon);
-        border: none; } }
+    .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
+      justify-content: center; }
+      @media (min-width: 768px) {
+        .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
+          background-color: var(--wp--preset--color--maroon);
+          border-color: var(--wp--preset--color--maroon);
+          color: #fff; } }
+      @media screen and (max-width: 767px) {
+        .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
+          color: var(--wp--preset--color--maroon);
+          border: none; } }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
       border: none !important;
       text-decoration: underline;
