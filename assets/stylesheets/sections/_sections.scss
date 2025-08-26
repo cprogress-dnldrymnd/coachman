@@ -75,6 +75,13 @@
                         align-items: center;
                         flex-wrap: wrap;
                         gap: 10px;
+                        select {
+                            padding: 17px 20px;
+                            font-size: 15px;
+                            border-color: var(--dark);
+                            line-height: 1;
+                            width: 100% !important;
+                        }
                         > div {
                             float: none;
                             display: flex;
@@ -93,7 +100,7 @@
                                 width: 100% !important;
                             }
                             @include responsive(xs) {
-                               flex-direction: column;
+                                flex-direction: column;
                             }
                         }
                         .wpsl-dropdown {
