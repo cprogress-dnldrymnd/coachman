@@ -97,7 +97,7 @@
                             line-height: 1;
                             align-items: center;
                             @include responsive(md-lg) {
-                                    white-space: nowrap;
+                                white-space: nowrap;
                             }
                         }
                         .wpsl-input {
@@ -136,6 +136,7 @@
                             padding: 17px 20px;
                             @include responsive(xs) {
                                 width: 100%;
+                                margin: 0;
                             }
                         }
                         #wpsl-radius {

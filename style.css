@@ -12887,7 +12887,8 @@ body.sticky--header #masthead {
           padding: 17px 20px; }
           @media screen and (max-width: 767px) {
             .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
-              width: 100%; } }
+              width: 100%;
+              margin: 0; } }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-radius {
           margin: 0; }
           @media screen and (max-width: 767px) {
