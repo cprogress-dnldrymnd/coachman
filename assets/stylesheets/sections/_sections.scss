@@ -244,7 +244,7 @@
                 }
                 @include responsive(xs) {
                     color: var(--wp--preset--color--maroon);
-                    border: none;
+                    border: none !important
                 }
             }
            
