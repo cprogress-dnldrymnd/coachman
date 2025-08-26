@@ -11832,6 +11832,12 @@ img {
   width: 100%;
   justify-content: center; }
 
+.swiper-pagination-navigation-style-2--static {
+  position: static;
+  transition: none;
+  width: 100%;
+  justify-content: center; }
+
 @media screen and (min-width: 992px) {
   .swiper-slider-timeline .swiper-slide.swiper-slide-active .entry-content {
     margin-right: -30%; } }

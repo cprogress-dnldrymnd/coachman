@@ -702,7 +702,12 @@ img {
         justify-content: center;
     }
 }
-
+.swiper-pagination-navigation-style-2--static.swiper-pagination-navigation-style-2--static.swiper-pagination-navigation-style-2--static.swiper-pagination-navigation-style-2--static {
+    position: static;
+    transition: none;
+    width: 100%;
+    justify-content: center;
+}
 .swiper-slider-timeline {
     .swiper-slide {
         &.swiper-slide-active {
