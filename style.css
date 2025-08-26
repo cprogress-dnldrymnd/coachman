@@ -12973,7 +12973,7 @@ body.sticky--header #masthead {
       @media screen and (max-width: 767px) {
         .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
           color: var(--wp--preset--color--maroon);
-          border: none; } }
+          border: none !important; } }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
       border: none !important;
       text-decoration: underline;
