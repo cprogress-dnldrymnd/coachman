@@ -225,6 +225,7 @@
     .btn {
         padding: 0;
         border: none;
+        flex-grow: 1;
         a {
             padding: 18px 25px;
             font-size: 15px;
@@ -236,6 +237,10 @@
                 background-color: var(--wp--preset--color--maroon);
                 border-color: var(--wp--preset--color--maroon);
                 color: #fff;
+                justify-content: center;
+            }
+            @include responsive(xs) {
+                width: 100%;
             }
         }
         &.btn-direction {

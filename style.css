@@ -12954,7 +12954,8 @@ body.sticky--header #masthead {
   flex-wrap: wrap; }
   .listing--buttons.listing--buttons.listing--buttons .btn {
     padding: 0;
-    border: none; }
+    border: none;
+    flex-grow: 1; }
     .listing--buttons.listing--buttons.listing--buttons .btn a {
       padding: 18px 25px;
       font-size: 15px;
@@ -12963,7 +12964,11 @@ body.sticky--header #masthead {
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
       background-color: var(--wp--preset--color--maroon);
       border-color: var(--wp--preset--color--maroon);
-      color: #fff; }
+      color: #fff;
+      justify-content: center; }
+    @media screen and (max-width: 767px) {
+      .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment {
+        width: 100%; } }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
       border: none !important;
       text-decoration: underline;
