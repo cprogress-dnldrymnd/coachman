@@ -230,7 +230,7 @@ function swiper_sliders() {
 
             var swiper_team_slider = new Swiper('#' + $id, {
                 loop: true,
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 25,
            
                 navigation: {
