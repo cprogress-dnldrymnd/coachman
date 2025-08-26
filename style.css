@@ -11553,6 +11553,10 @@ img {
   .wp-block-button__link.wp-block-button__link.border,
   .wp-block-read-more.wp-block-read-more.border {
     border-color: currentColor !important; }
+  @media screen and (max-width: 767px) {
+    .wp-block-button__link.wp-block-button__link,
+    .wp-block-read-more.wp-block-read-more {
+      padding: 15px 20px; } }
 
 .wp-block-post-title.wp-block-post-title.wp-block-post-title.has-background {
   padding: 0; }

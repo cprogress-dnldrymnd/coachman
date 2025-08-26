@@ -379,6 +379,10 @@ img {
     &.border {
         border-color: currentColor !important;
     }
+    @include responsive(xs) {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
 }
 .wp-block-post-title.wp-block-post-title.wp-block-post-title {
     &.has-background {
