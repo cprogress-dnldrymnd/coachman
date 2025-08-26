@@ -827,6 +827,9 @@ img {
 }
 .product--buttons {
     > div {
+        a {
+            min-height: 61px;
+        }
         @include responsive(xs) {
             width: 100%;
         }
