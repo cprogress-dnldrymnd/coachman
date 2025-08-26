@@ -249,6 +249,9 @@ $Events->exclude_from_search = true;
 $Events->publicly_queryable = true;
 $Events->show_in_admin_bar = false;
 $Events->has_archive = false;
+$Events->rewrite = array(
+    'slug'         => 'events',
+);
 
 
 $Caravans = new newPostType();
