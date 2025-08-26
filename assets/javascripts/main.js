@@ -216,7 +216,7 @@ function swiper_sliders() {
 
     if (jQuery('.swiper-post--style-1').length > 0) {
         jQuery('.swiper-post--style-1').each(function (index, element) {
-            $pagination = jQuery('<div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
+            $pagination = jQuery('<div class="swiper-pagination-navigation-style-2 d-none d-lg-block"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
 
             $pagination.insertAfter(jQuery(this).find('.swiper-wrapper'));
 
