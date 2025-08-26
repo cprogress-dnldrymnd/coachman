@@ -354,6 +354,12 @@ img {
             background-color: var(--bs-black) !important;
         }
     }
+    &.has-white-theme-background-color {
+        @include on-event {
+            color: var(--bs-white) !important;
+            background-color: var(--bs-black) !important;
+        }
+    }
 }
 .wp-block-button {
     &.is-style-outline--1 {
