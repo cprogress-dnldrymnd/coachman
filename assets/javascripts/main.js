@@ -228,11 +228,21 @@ function swiper_sliders() {
             $id = 'swiper-post--style-1-' + index;
             jQuery(this).attr('id', $id);
 
-            var swiper_team_slider = new Swiper('#' + $id, {
+            var swiper_post_style_1 = new Swiper('#' + $id, {
                 loop: true,
                 slidesPerView: 3,
                 spaceBetween: 25,
-           
+                breakpoints: {
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
                 navigation: {
                     nextEl: '#' + $id + ' .swiper-button-next',
                     prevEl: '#' + $id + ' .swiper-button-prev',
