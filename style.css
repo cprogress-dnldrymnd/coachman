@@ -12975,6 +12975,9 @@ body.sticky--header #masthead {
       @media screen and (max-width: 767px) {
         .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
           color: var(--wp--preset--color--maroon); } }
+      @media screen and (max-width: 480px) {
+        .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
+          width: 100%; } }
     @media screen and (max-width: 480px) {
       .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment {
         width: 100%; } }

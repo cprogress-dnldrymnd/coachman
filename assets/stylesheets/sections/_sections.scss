@@ -247,6 +247,10 @@
                 @include responsive(xs) {
                     color: var(--wp--preset--color--maroon);
                 }
+                @include responsive(xxs) {
+                    border: 1px solid !important;
+                    padding: 10px;
+                }
             }
             @include responsive(xxs) {
                 width: 100%;
@@ -280,7 +284,6 @@
                 text-decoration: none;
             }
         }
-       
     }
 }
 
