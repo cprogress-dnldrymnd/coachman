@@ -601,7 +601,7 @@ Block::make(__('Model Technical Details'))
                     </div>
                 </div>
                 <div class="bottom">
-                    <?= do_shortcode('[template template_id=426]'); ?>
+                    <?= do_shortcode('[template template_id=26276]'); ?>
                 </div>
             </div>
         </div>
