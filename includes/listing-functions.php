@@ -127,7 +127,7 @@ function __listing_buttons($post_id)
                 <div class="embed-holder position-relative mb-5">
                     <iframe src="<?= $_360_walkthrough ?>" frameborder="0"></iframe>
                 </div>
-                <?= do_shortcode('[template template_id=426]'); ?>
+                <?= do_shortcode('[template template_id=26276]'); ?>
             </div>
         </div>
     </div>
@@ -142,12 +142,45 @@ function __listing_buttons($post_id)
                 <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
                 <p class="fs-22">Range Tour</p>
                 <div class="embed-holder position-relative mb-5">
-                    <iframe src="<?= $video ?>" frameborder="0"></iframe>
+                    <iframe src="<?= getYoutubeEmbedUrl($video) ?>" frameborder="0"></iframe>
                 </div>
-                <?= do_shortcode('[template template_id=426]'); ?>
+                <?= do_shortcode('[template template_id=26276]'); ?>
             </div>
         </div>
     </div>
 <?php
     return ob_get_clean();
+}
+
+/**
+ * Gets the YouTube embed URL from any type of YouTube link.
+ *
+ * This function handles common YouTube URL formats including:
+ * - https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ * - https://youtu.be/dQw4w9WgXcQ
+ * - https://www.youtube.com/embed/dQw4w9WgXcQ
+ *
+ * It uses a regular expression to extract the unique video ID and then
+ * constructs the standard embed URL.
+ *
+ * @param string $url The YouTube video URL.
+ * @return string|false The embed URL or false if the URL is not a valid YouTube link.
+ */
+function getYoutubeEmbedUrl($url)
+{
+    // A regular expression to match and capture the video ID from various YouTube URL formats.
+    // The pattern looks for 'v=', '/embed/', or '.be/' followed by an 11-character video ID.
+    $pattern = '/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:watch|embed)\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/';
+
+    // Use preg_match to find the pattern in the provided URL.
+    if (preg_match($pattern, $url, $matches)) {
+        // If a match is found, the video ID is in the second element of the $matches array.
+        $videoId = $matches[1];
+
+        // Construct the standard embed URL using the extracted video ID.
+        return 'https://www.youtube.com/embed/' . $videoId;
+    }
+
+    // If no match is found, the URL is not a valid YouTube video link.
+    return false;
 }
