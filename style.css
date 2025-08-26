@@ -11539,8 +11539,7 @@ img {
   background-color: var(--bs-black) !important; }
 
 .wp-block-button.is-style-outline--1 .wp-block-button__link:hover, .wp-block-button.is-style-outline--1 .wp-block-button__link:active, .wp-block-button.is-style-outline--1 .wp-block-button__link:focus {
-  color: var(--bs-white) !important;
-  background-color: var(--bs-black) !important; }
+  background-color: var(--bs-white) !important; }
 
 .wp-block-button__link.wp-block-button__link,
 .wp-block-read-more.wp-block-read-more {
