@@ -246,6 +246,10 @@ function swiper_sliders() {
                     nextEl: '#' + $id + ' .swiper-button-next',
                     prevEl: '#' + $id + ' .swiper-button-prev',
                 },
+                pagination: {
+                    el: '#' + $id + ' .swiper-pagination',
+                    clickable: true,
+                },
             });
         });
     }
