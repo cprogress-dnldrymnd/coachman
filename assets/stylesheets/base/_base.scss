@@ -732,7 +732,7 @@ img {
             margin-bottom: 150px;
         }
     }
-  
+
     .swiper-pagination-style--timeline {
         bottom: auto;
         top: calc(var(--image-height) + 70px);
@@ -779,7 +779,16 @@ img {
 .wp-block-buttons {
     &.gap-5 {
         @include responsive(xs) {
-            gap: 10px !important
+            gap: 10px !important;
+        }
+    }
+}
+#ExteriorGallery {
+    .swiper-pagination-navigation-style-2 {
+        @include responsive(xs) {
+            position: static;
+            width: 100%;
+            justify-content: center;
         }
     }
 }

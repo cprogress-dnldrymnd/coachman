@@ -11893,6 +11893,12 @@ img {
   .wp-block-buttons.gap-5 {
     gap: 10px !important; } }
 
+@media screen and (max-width: 767px) {
+  #ExteriorGallery .swiper-pagination-navigation-style-2 {
+    position: static;
+    width: 100%;
+    justify-content: center; } }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
