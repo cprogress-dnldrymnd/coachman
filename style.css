@@ -11847,10 +11847,12 @@ img {
     opacity: 0; }
   .swiper-slider-timeline .swiper-slide:not(.swiper-slide-active) .entry-content {
     opacity: 0; }
-.swiper-slider-timeline .wp-block-post-featured-image {
-  margin-bottom: 150px; }
+@media (min-width: 768px) {
+  .swiper-slider-timeline .wp-block-post-featured-image {
+    margin-bottom: 150px; } }
 .swiper-slider-timeline .swiper-pagination-style--timeline {
   bottom: auto;
+  top: calc(var(--image-height) + 70px);
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -11882,9 +11884,6 @@ img {
   @media screen and (max-width: 480px) {
     .swiper-slider-timeline .swiper-pagination-style--timeline {
       --swiper-pagination-bullet-size: 10px; } }
-@media (min-width: 768px) {
-  .swiper-slider-timeline {
-    top: calc(var(--image-height) + 70px); } }
 
 .careers--category a {
   pointer-events: none;

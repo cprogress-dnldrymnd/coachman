@@ -728,13 +728,14 @@ img {
         }
     }
     .wp-block-post-featured-image {
-        margin-bottom: 150px;
+        @include responsive(sm-lg) {
+            margin-bottom: 150px;
+        }
     }
-    .swiper-pagination-navigation-style-2 {
-    }
+  
     .swiper-pagination-style--timeline {
         bottom: auto;
-
+        top: calc(var(--image-height) + 70px);
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -765,9 +766,6 @@ img {
         @include responsive(xxs) {
             --swiper-pagination-bullet-size: 10px;
         }
-    }
-    @include responsive(sm-lg) {
-        top: calc(var(--image-height) + 70px);
     }
 }
 
