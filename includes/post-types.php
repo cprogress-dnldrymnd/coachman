@@ -237,6 +237,10 @@ $Press_Reviews->exclude_from_search = true;
 $Press_Reviews->publicly_queryable = true;
 $Press_Reviews->show_in_admin_bar = false;
 $Press_Reviews->has_archive = false;
+$Events->rewrite = array(
+    'slug'         => 'press-reviews',
+);
+
 
 $Events = new newPostType();
 $Events->key = 'events_post_type';
