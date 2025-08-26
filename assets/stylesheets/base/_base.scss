@@ -345,6 +345,12 @@ img {
             }
         }
     }
+    &:not(.is-style-outline) {
+        .wp-block-button__link {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
 }
 .wp-block-button__link {
     &.has-maroon-background-color {
