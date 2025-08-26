@@ -90,6 +90,12 @@
                             margin: 0;
                             input {
                                 border-radius: 0;
+                                width: 100% !important;
+                            }
+                            @include responsive(xs) {
+                                > div {
+                                    width: 100%;
+                                }
                             }
                         }
                         .wpsl-dropdown {
@@ -115,6 +121,9 @@
                         }
                         #wpsl-radius {
                             margin: 0;
+                            @include responsive(xs) {
+                                flex-direction: column;
+                            }
                         }
                     }
                 }
