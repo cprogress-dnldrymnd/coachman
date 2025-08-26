@@ -213,24 +213,30 @@ function swiper_sliders() {
 
     });
 
+
     if (jQuery('.swiper-post--style-1').length > 0) {
         jQuery('.swiper-post--style-1').each(function (index, element) {
-            $navigation = jQuery('<div class="swiper-nav-holder"> <div class="swiper-button-prev swiper-button"></div> <div class="swiper-button-next swiper-button"></div> </div>');
-            $navigation.insertAfter(jQuery(this).find('.swiper-wrapper'));
+            $pagination = jQuery('<div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
 
-            jQuery(this).find('.wp-block-post').addClass('swiper-slide');
+            $pagination.insertAfter(jQuery(this).find('.swiper-wrapper'));
+
+
+            jQuery(this).attr('class', 'swiper-post--style-1');
+            jQuery(this).find('.swiper-wrapper').attr('class', 'swiper-wrapper p-0');
+            jQuery(this).find('.wp-block-post').attr('class', 'swiper-slide');
+
             $id = 'swiper-post--style-1-' + index;
             jQuery(this).attr('id', $id);
 
-            var swiper = new Swiper('#' + $id, {
-                spaceBetween: 20,
-                slidesPerView: 3,
-
+            var swiper_team_slider = new Swiper('#' + $id, {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 25,
+           
                 navigation: {
                     nextEl: '#' + $id + ' .swiper-button-next',
                     prevEl: '#' + $id + ' .swiper-button-prev',
                 },
-
             });
         });
     }
