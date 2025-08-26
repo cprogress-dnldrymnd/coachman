@@ -12896,7 +12896,7 @@ body.sticky--header #masthead {
       @media screen and (max-width: 991px) {
         .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores {
           max-height: unset;
-          height: auto; } }
+          height: auto !important; } }
     @media screen and (max-width: 991px) {
       .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
         width: 100%;
