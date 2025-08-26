@@ -462,3 +462,9 @@
         object-fit: cover;
     }
 }
+
+.w-lg-auto {
+    @include responsive(md-lg) {
+        width: auto !important;
+    }
+}
