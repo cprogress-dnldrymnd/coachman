@@ -93,9 +93,7 @@
                                 width: 100% !important;
                             }
                             @include responsive(xs) {
-                                > div {
-                                    width: 100%;
-                                }
+                               flex-direction: column;
                             }
                         }
                         .wpsl-dropdown {
@@ -108,6 +106,7 @@
                                 flex-direction: column;
                                 > div {
                                     width: 100%;
+                                    flex-direction: column;
                                 }
                             }
                         }
