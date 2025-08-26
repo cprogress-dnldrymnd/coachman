@@ -11538,6 +11538,10 @@ img {
   color: var(--bs-white) !important;
   background-color: var(--bs-black) !important; }
 
+.wp-block-button.is-style-outline--1 .wp-block-button__link:hover, .wp-block-button.is-style-outline--1 .wp-block-button__link:active, .wp-block-button.is-style-outline--1 .wp-block-button__link:focus {
+  color: var(--bs-white) !important;
+  background-color: var(--bs-black) !important; }
+
 .wp-block-button__link.wp-block-button__link,
 .wp-block-read-more.wp-block-read-more {
   font-size: inherit;
@@ -11861,9 +11865,9 @@ img {
   @media screen and (max-width: 767px) {
     .swiper-slider-timeline .swiper-pagination-style--timeline {
       --swiper-pagination-bullet-size: 15px; } }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 480px) {
     .swiper-slider-timeline .swiper-pagination-style--timeline {
-      --swiper-pagination-bullet-size: 15px; } }
+      --swiper-pagination-bullet-size: 10px; } }
 
 .careers--category a {
   pointer-events: none;

@@ -355,6 +355,15 @@ img {
         }
     }
 }
+.wp-block-button {
+    &.is-style-outline--1 {
+        .wp-block-button__link {
+            @include on-event {
+                background-color: var(--bs-white) !important;
+            }
+        }
+    }
+}
 .wp-block-button__link.wp-block-button__link,
 .wp-block-read-more.wp-block-read-more {
     font-size: inherit;
