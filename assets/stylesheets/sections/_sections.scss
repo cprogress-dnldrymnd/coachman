@@ -44,7 +44,6 @@
         #wpsl-wrap {
             margin: 0;
             .wpsl-search {
-               
                 #wpsl-search-wrap {
                     margin-bottom: 30px;
                     div {
@@ -145,9 +144,9 @@
                     padding-bottom: 40px;
                     max-height: 800px;
                     overflow: auto;
-                    margin-left: var(--margin, 92.5px);
                     @include responsive(md-lg) {
                         padding-left: 12px;
+                        margin-left: var(--margin, 92.5px);
                     }
                     ul {
                         li {
