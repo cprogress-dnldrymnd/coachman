@@ -246,9 +246,39 @@ function swiper_sliders() {
             });
         });
     }
+    if (jQuery('.swiper-post--style-1').length > 0) {
+        jQuery('.swiper-post--style-1').each(function (index, element) {
+            //$pagination = jQuery('<div class="swiper-pagination"></div>');
+            //$navigation = jQuery('<div class="swiper-nav-holder"> <div class="swiper-button-prev swiper-button"></div> <div class="swiper-button-next swiper-button"></div> </div>');
 
+            if (window.innerWidth > 767) {
+                $pagination.insertBefore(jQuery(this).find('.swiper-wrapper'));
+                $navigation.insertAfter(jQuery(this).find('.swiper-wrapper'));
 
+            } else {
+                $pagination.insertAfter(jQuery(this).find('.swiper-wrapper'));
 
+            }
+
+            jQuery(this).find('.wp-block-post').addClass('swiper-slide');
+            $id = 'swiper-post--style-1-' + index;
+            jQuery(this).attr('id', $id);
+
+            var swiper = new Swiper('#' + $id, {
+                spaceBetween: 20,
+                slidesPerView: 'auto',
+                pagination: {
+                    el: '#' + $id + ' .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '#' + $id + ' .swiper-button-next',
+                    prevEl: '#' + $id + ' .swiper-button-prev',
+                },
+
+            });
+        });
+    }
 
     if (jQuery('.swiper-logo-slider').length > 0) {
         jQuery('.swiper-logo-slider').each(function (index, element) {
