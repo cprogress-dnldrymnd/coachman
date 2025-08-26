@@ -12861,7 +12861,9 @@ body.sticky--header #masthead {
             width: 100% !important; }
           @media screen and (max-width: 767px) {
             .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
-              flex-direction: column; } }
+              flex-direction: column; }
+              .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input > div {
+                width: 100%; } }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown {
           width: auto;
           border-radius: 0; }
@@ -12885,6 +12887,9 @@ body.sticky--header #masthead {
           @media screen and (max-width: 767px) {
             .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-radius {
               flex-direction: column; } }
+        @media screen and (max-width: 767px) {
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
+            flex-direction: column; } }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
     background-color: var(--wp--preset--color--lightgray-2);
     margin: 0;
