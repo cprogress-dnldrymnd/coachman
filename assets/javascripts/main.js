@@ -10,7 +10,12 @@ jQuery(document).ready(function () {
     dealer();
     ajax_details();
     careers();
+    left__margin();
 });
+
+function left__margin() {
+    console.log(jQuery('.wpsl-search').css('margin-left'));
+}
 
 function careers() {
     jQuery('a[href="#careers--modal"]').click(function (e) {
