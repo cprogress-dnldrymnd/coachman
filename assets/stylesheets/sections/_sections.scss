@@ -75,7 +75,8 @@
                         align-items: center;
                         flex-wrap: wrap;
                         gap: 10px;
-                        select {
+                        select,
+                        .wpsl-search-input {
                             padding: 17px 20px;
                             font-size: 15px;
                             border-color: var(--dark);
@@ -92,6 +93,9 @@
                         div label {
                             width: auto;
                             margin: 0;
+                            display: flex;
+                            line-height: 1;
+                            align-items: center;
                         }
                         .wpsl-input {
                             margin: 0;
@@ -123,7 +127,7 @@
                             border-radius: 0;
                             border: none;
                             color: #fff;
-                            padding: 10px 20px;
+                            padding: 17px 20px;
                         }
                         #wpsl-radius {
                             margin: 0;
