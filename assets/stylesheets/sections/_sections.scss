@@ -163,8 +163,10 @@
                     padding-bottom: 40px;
                     max-height: 800px;
                     overflow: auto;
-                    padding-left: 12px;
                     margin-left: var(--margin, 92.5px);
+                    @include responsive(md-lg) {
+                        padding-left: 12px;
+                    }
                     ul {
                         li {
                             padding: 0;

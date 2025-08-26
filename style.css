@@ -12972,8 +12972,10 @@ body.sticky--header #masthead {
       padding-bottom: 40px;
       max-height: 800px;
       overflow: auto;
-      padding-left: 12px;
       margin-left: var(--margin, 92.5px); }
+      @media screen and (min-width: 992px) {
+        .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores {
+          padding-left: 12px; } }
       .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li {
         padding: 0;
         border-bottom: 1px solid #000;
