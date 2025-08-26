@@ -12895,6 +12895,9 @@ body.sticky--header #masthead {
           font-weight: 500; }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
+    @media screen and (max-width: 991px) {
+      .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
+        width: 100%; } }
 
 .listing--buttons.listing--buttons.listing--buttons {
   margin-top: 30px;

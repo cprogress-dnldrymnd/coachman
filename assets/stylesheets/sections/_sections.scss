@@ -154,9 +154,15 @@
                         }
                     }
                 }
+                @include responsive(xs-sm) {
+                    width: 100%;
+                }
             }
             #wpsl-gmap {
                 width: 60%;
+                @include responsive(xs-sm) {
+                    width: 100%;
+                }
             }
         }
     }
