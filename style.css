@@ -12893,6 +12893,9 @@ body.sticky--header #masthead {
         .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .wpsl-contact-details {
           margin-top: 30px;
           font-weight: 500; }
+    @media screen and (max-width: 991px) {
+      .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
+        width: 100%; } }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
     @media screen and (max-width: 991px) {
