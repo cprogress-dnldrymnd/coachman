@@ -733,6 +733,12 @@ img {
             right: -100vw;
             @include transform(translateY(-50%));
         }
+        @include responsive(xs) {
+            --swiper-pagination-bullet-size: 15px;
+        }
+        @include responsive(xxs) {
+            --swiper-pagination-bullet-size: 10px;
+        }
     }
 }
 

@@ -11858,6 +11858,12 @@ img {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
+  @media screen and (max-width: 767px) {
+    .swiper-slider-timeline .swiper-pagination-style--timeline {
+      --swiper-pagination-bullet-size: 15px; } }
+  @media screen and (max-width: 767px) {
+    .swiper-slider-timeline .swiper-pagination-style--timeline {
+      --swiper-pagination-bullet-size: 15px; } }
 
 .careers--category a {
   pointer-events: none;
