@@ -18,9 +18,6 @@ body {
 }
 p {
     font-weight: 300;
-    @include responsive(mobile) {
-        line-height: 1.1;
-    }
 }
 p:last-child {
     margin-bottom: 0 !important;

@@ -12264,9 +12264,6 @@ h6,
 
 p {
   font-weight: 300; }
-  @media screen and (max-width: 575px) {
-    p {
-      line-height: 1.1; } }
 
 p:last-child {
   margin-bottom: 0 !important; }
