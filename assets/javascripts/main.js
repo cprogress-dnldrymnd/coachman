@@ -126,13 +126,13 @@ function listings() {
     }
 
 
-    jQuery('.listings--posts > div').each(function (index, element) {
-        $height = jQuery(this).outerHeight();
-        jQuery(this).parent().css('--height', $height + 'px');
-
-    });
 
     jQuery('.listings--inner--js').click(function (e) {
+        jQuery('.listings--posts > div').each(function (index, element) {
+            $height = jQuery(this).outerHeight();
+            jQuery(this).parent().css('--height', $height + 'px');
+        });
+
         var $target = jQuery(this).attr('listing-target');
 
         jQuery('.listings--inner--js').not(this).removeClass('active');
@@ -316,7 +316,7 @@ function swiper_sliders() {
             if (window.innerWidth > 767) {
                 $navigation = jQuery('<div class="swiper-pagination swiper-pagination-style--timeline d-none d-lg-block"> </div> <div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-button-next"></div> </div>');
             } else {
-                $navigation  = jQuery('<div class="swiper-pagination-navigation-style-2 swiper-pagination-navigation-style-2--static mt-4"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
+                $navigation = jQuery('<div class="swiper-pagination-navigation-style-2 swiper-pagination-navigation-style-2--static mt-4"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
             }
 
             $navigation.insertAfter(jQuery(this).find('.swiper-wrapper'));
