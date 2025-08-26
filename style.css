@@ -11816,8 +11816,8 @@ img {
     .swiper-logo-slider .swiper-wrapper .swiper-slide {
       width: var(--width) !important; }
       .swiper-logo-slider .swiper-wrapper .swiper-slide > div {
-        padding-left: 1vw;
-        padding-right: 1vw; }
+        padding-left: 3vw;
+        padding-right: 3vw; }
     .swiper-logo-slider .swiper-wrapper img {
       height: 80px;
       width: auto; }
