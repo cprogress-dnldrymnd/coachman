@@ -232,6 +232,7 @@
             display: block;
             @include responsive(xs) {
                 padding: 0;
+                border: none !important;
             }
         }
         &.btn-appointment {
@@ -244,10 +245,8 @@
                 }
                 @include responsive(xs) {
                     color: var(--wp--preset--color--maroon);
-                    border: none !important
                 }
             }
-           
         }
         &.btn-direction {
             a {
