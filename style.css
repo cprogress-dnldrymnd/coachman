@@ -12872,97 +12872,80 @@ body.sticky--header #masthead {
   background-color: transparent; }
 .dealer--locator--holder .dealer--locator #wpsl-wrap {
   margin: 0; }
-  .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-left: auto;
-    margin-right: auto; }
-    @media (min-width: 1500px) {
-      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
-        max-width: 1420px; } }
-    @media (min-width: 1600px) {
-      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
-        max-width: 1520px; } }
-    @media (min-width: 1700px) {
-      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
-        max-width: 1620px; } }
-    @media (min-width: 1800px) {
-      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search {
-        max-width: 1720px; } }
-    .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap {
-      margin-bottom: 30px; }
-      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap div {
-        display: flex !important;
-        gap: 10px;
-        margin: 0; }
-      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
+  .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap {
+    margin-bottom: 30px; }
+    .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap div {
+      display: flex !important;
+      gap: 10px;
+      margin: 0; }
+    .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px; }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form select,
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-input {
+        padding: 17px 20px;
+        font-size: 15px;
+        border-color: var(--dark);
+        line-height: 1;
+        width: 100% !important; }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
+        float: none;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         gap: 10px; }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form select,
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-input {
-          padding: 17px 20px;
-          font-size: 15px;
-          border-color: var(--dark);
-          line-height: 1;
-          width: 100% !important; }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
-          float: none;
-          display: flex;
-          align-items: center;
-          gap: 10px; }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
-          width: auto;
-          margin: 0;
-          display: flex;
-          line-height: 1;
-          align-items: center; }
-          @media screen and (min-width: 992px) {
-            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
-              white-space: nowrap; } }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
-          margin: 0; }
-          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input input {
-            border-radius: 0;
-            width: 100% !important; }
-          @media screen and (max-width: 767px) {
-            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
-              flex-direction: column; }
-              .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input > div {
-                width: 100%; } }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown {
-          width: auto;
-          border-radius: 0; }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap {
-          margin: 0; }
-          @media screen and (max-width: 767px) {
-            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap {
-              flex-direction: column; }
-              .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap > div {
-                width: 100%;
-                flex-direction: column; } }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
-          background-color: var(--wp--preset--color--maroon) !important;
-          background-image: none;
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
+        width: auto;
+        margin: 0;
+        display: flex;
+        line-height: 1;
+        align-items: center; }
+        @media screen and (min-width: 992px) {
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form div label {
+            white-space: nowrap; } }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
+        margin: 0; }
+        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input input {
           border-radius: 0;
-          border: none;
-          color: #fff;
-          padding: 17px 20px; }
-          @media screen and (max-width: 767px) {
-            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
-              width: 100%;
-              margin: 0; } }
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-radius {
-          margin: 0; }
-          @media screen and (max-width: 767px) {
-            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-radius {
-              flex-direction: column; } }
+          width: 100% !important; }
         @media screen and (max-width: 767px) {
-          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input {
             flex-direction: column; }
-            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
+            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-input > div {
               width: 100%; } }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-dropdown {
+        width: auto;
+        border-radius: 0; }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap {
+        margin: 0; }
+        @media screen and (max-width: 767px) {
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap {
+            flex-direction: column; }
+            .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-select-wrap > div {
+              width: 100%;
+              flex-direction: column; } }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
+        background-color: var(--wp--preset--color--maroon) !important;
+        background-image: none;
+        border-radius: 0;
+        border: none;
+        color: #fff;
+        padding: 17px 20px; }
+        @media screen and (max-width: 767px) {
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-btn {
+            width: 100%;
+            margin: 0; } }
+      .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-radius {
+        margin: 0; }
+        @media screen and (max-width: 767px) {
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-radius {
+            flex-direction: column; } }
+      @media screen and (max-width: 767px) {
+        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form {
+          flex-direction: column; }
+          .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form > div {
+            width: 100%; } }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
     background-color: var(--wp--preset--color--lightgray-2);
     margin: 0;

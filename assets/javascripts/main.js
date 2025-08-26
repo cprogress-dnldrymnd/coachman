@@ -10,10 +10,11 @@ jQuery(document).ready(function () {
     dealer();
     ajax_details();
     careers();
-    left__margin();
+    find_dealer();
 });
 
-function left__margin() {
+function find_dealer() {
+    jQuery('.wpsl-search').addClass('container');
     jQuery('body').css('--margin', jQuery('.wpsl-search').css('margin-left'));
 }
 
