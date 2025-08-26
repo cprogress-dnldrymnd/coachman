@@ -804,3 +804,11 @@ img {
         }
     }
 }
+
+.product--buttons {
+    > div {
+        @include responsive(xs) {
+            width: 100%;
+        }
+    }
+}
