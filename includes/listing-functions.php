@@ -140,7 +140,7 @@ function __listing_buttons($post_id)
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
                 <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
-                <p class="fs-22">Video Tour</p>
+                <p class="fs-22">Range Tour</p>
                 <div class="embed-holder position-relative mb-5">
                     <iframe src="<?= $video ?>" frameborder="0"></iframe>
                 </div>
