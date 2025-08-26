@@ -12954,8 +12954,7 @@ body.sticky--header #masthead {
   flex-wrap: wrap; }
   .listing--buttons.listing--buttons.listing--buttons .btn {
     padding: 0;
-    border: none;
-    flex-grow: 1; }
+    border: none; }
     .listing--buttons.listing--buttons.listing--buttons .btn a {
       padding: 18px 25px;
       font-size: 15px;
