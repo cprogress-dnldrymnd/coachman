@@ -11889,6 +11889,10 @@ img {
   pointer-events: none;
   text-decoration: none; }
 
+@media screen and (max-width: 767px) {
+  .wp-block-buttons.gap-5 {
+    gap: 10px !important; } }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }

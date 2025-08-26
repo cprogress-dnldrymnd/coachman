@@ -775,3 +775,11 @@ img {
         text-decoration: none;
     }
 }
+
+.wp-block-buttons {
+    &.gap-5 {
+        @include responsive(xs) {
+            gap: 10px !important
+        }
+    }
+}
