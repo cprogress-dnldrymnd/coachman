@@ -11894,7 +11894,7 @@ img {
     gap: 10px !important; } }
 
 @media screen and (max-width: 767px) {
-  #ExteriorGallery .swiper-pagination-navigation-style-2 {
+  #InteriorGallery .swiper-pagination-navigation-style-2 {
     position: static;
     width: 100%;
     justify-content: center; } }
