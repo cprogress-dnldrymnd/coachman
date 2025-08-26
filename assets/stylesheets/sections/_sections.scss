@@ -237,6 +237,7 @@
         }
         &.btn-appointment {
             a {
+                justify-content: center;
                 @include responsive(sm-lg) {
                     background-color: var(--wp--preset--color--maroon);
                     border-color: var(--wp--preset--color--maroon);
@@ -244,6 +245,7 @@
                 }
                 @include responsive(xs) {
                     color: var(--wp--preset--color--maroon);
+                    border: none;
                 }
             }
            

@@ -12971,7 +12971,8 @@ body.sticky--header #masthead {
         color: #fff; } }
     @media screen and (max-width: 767px) {
       .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
-        color: var(--wp--preset--color--maroon); } }
+        color: var(--wp--preset--color--maroon);
+        border: none; } }
     .listing--buttons.listing--buttons.listing--buttons .btn.btn-stock a {
       border: none !important;
       text-decoration: underline;
