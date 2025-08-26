@@ -12960,7 +12960,8 @@ body.sticky--header #masthead {
       padding: 18px 25px;
       font-size: 15px;
       border: 1px solid !important;
-      display: block; }
+      display: block;
+      justify-content: center; }
       @media screen and (max-width: 767px) {
         .listing--buttons.listing--buttons.listing--buttons .btn a {
           padding: 0;
@@ -12977,7 +12978,8 @@ body.sticky--header #masthead {
           color: var(--wp--preset--color--maroon); } }
       @media screen and (max-width: 480px) {
         .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
-          width: 100%; } }
+          border: 1px solid !important;
+          padding: 10px; } }
     @media screen and (max-width: 480px) {
       .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment {
         width: 100%; } }

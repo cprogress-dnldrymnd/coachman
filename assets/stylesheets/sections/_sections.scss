@@ -231,6 +231,8 @@
             font-size: 15px;
             border: 1px solid !important;
             display: block;
+            justify-content: center;
+
             @include responsive(xs) {
                 padding: 0;
                 border: none !important;
