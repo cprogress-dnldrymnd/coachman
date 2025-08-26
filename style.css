@@ -11556,7 +11556,8 @@ img {
   @media screen and (max-width: 767px) {
     .wp-block-button__link.wp-block-button__link,
     .wp-block-read-more.wp-block-read-more {
-      padding: 15px 20px; } }
+      padding: 15px 20px;
+      font-size: 14px; } }
 
 .wp-block-post-title.wp-block-post-title.wp-block-post-title.has-background {
   padding: 0; }
