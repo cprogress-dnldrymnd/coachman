@@ -11523,7 +11523,7 @@ img {
   font-size: 15px; }
   .wp-block-button.wp-block-button.is-style-outline .wp-block-button__link {
     border-width: 1px;
-    padding: 16px 25px; }
+    padding: 15px 25px; }
   .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link {
     border-radius: 0px;
     padding: 0;
@@ -11533,9 +11533,6 @@ img {
     border-bottom-color: var(--bs-black); }
     .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:hover, .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:active, .wp-block-button.wp-block-button.is-style-outline-v2 .wp-block-button__link:focus {
       border-bottom-color: var(--bs-white); }
-  .wp-block-button.wp-block-button:not(.is-style-outline) .wp-block-button__link {
-    padding-top: 15px;
-    padding-bottom: 15px; }
 
 .wp-block-button__link.has-maroon-background-color:hover, .wp-block-button__link.has-maroon-background-color:active, .wp-block-button__link.has-maroon-background-color:focus {
   color: var(--bs-white) !important;
