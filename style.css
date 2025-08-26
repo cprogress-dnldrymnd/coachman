@@ -12961,11 +12961,17 @@ body.sticky--header #masthead {
       font-size: 15px;
       border: 1px solid !important;
       display: block; }
-    .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
-      background-color: var(--wp--preset--color--maroon);
-      border-color: var(--wp--preset--color--maroon);
-      color: #fff;
-      justify-content: center; }
+      @media screen and (max-width: 767px) {
+        .listing--buttons.listing--buttons.listing--buttons .btn a {
+          padding: 0; } }
+    @media (min-width: 768px) {
+      .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
+        background-color: var(--wp--preset--color--maroon);
+        border-color: var(--wp--preset--color--maroon);
+        color: #fff; } }
+    @media screen and (max-width: 767px) {
+      .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment a {
+        color: var(--wp--preset--color--maroon); } }
     @media screen and (max-width: 767px) {
       .listing--buttons.listing--buttons.listing--buttons .btn.btn-appointment {
         width: 100%; } }

@@ -231,17 +231,22 @@
             font-size: 15px;
             border: 1px solid !important;
             display: block;
+            @include responsive(xs) {
+                padding: 0;
+            }
         }
         &.btn-appointment {
             a {
-                background-color: var(--wp--preset--color--maroon);
-                border-color: var(--wp--preset--color--maroon);
-                color: #fff;
-                justify-content: center;
+                @include responsive(sm-lg) {
+                    background-color: var(--wp--preset--color--maroon);
+                    border-color: var(--wp--preset--color--maroon);
+                    color: #fff;
+                }
+                @include responsive(xs) {
+                    color: var(--wp--preset--color--maroon);
+                }
             }
-            @include responsive(xs) {
-                width: 100%;
-            }
+           
         }
         &.btn-direction {
             a {
