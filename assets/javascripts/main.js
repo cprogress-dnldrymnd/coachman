@@ -230,7 +230,6 @@ function swiper_sliders() {
 
             var swiper_post_style_1 = new Swiper('#' + $id, {
                 loop: true,
-                slidesPerView: 3,
                 spaceBetween: 25,
                 breakpoints: {
                     575: {
