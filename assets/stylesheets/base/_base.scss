@@ -365,7 +365,8 @@ img {
     &.is-style-outline--1 {
         .wp-block-button__link {
             @include on-event {
-                background-color: var(--bs-white) !important;
+                background-color: var(--maroon) !important;
+                color: var(--bs-white) !important;
             }
         }
     }
