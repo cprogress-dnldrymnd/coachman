@@ -153,15 +153,22 @@
                             }
                         }
                     }
+                    @include responsive(xs-sm) {
+                        max-height: unset;
+                        height: auto !important;
+                    }
                 }
                 @include responsive(xs-sm) {
                     width: 100%;
+                    padding-left: 20px;
+                    padding-right: 20px;
                 }
             }
             #wpsl-gmap {
                 width: 60%;
                 @include responsive(xs-sm) {
                     width: 100%;
+                    margin: 0;
                 }
             }
         }

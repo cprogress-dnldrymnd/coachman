@@ -12893,14 +12893,21 @@ body.sticky--header #masthead {
         .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores ul li .wpsl-contact-details {
           margin-top: 30px;
           font-weight: 500; }
+      @media screen and (max-width: 991px) {
+        .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list #wpsl-stores {
+          max-height: unset;
+          height: auto; } }
     @media screen and (max-width: 991px) {
       .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-result-list {
-        width: 100%; } }
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px; } }
   .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
     width: 60%; }
     @media screen and (max-width: 991px) {
       .dealer--locator--holder .dealer--locator #wpsl-wrap #wpsl-gmap {
-        width: 100%; } }
+        width: 100%;
+        margin: 0; } }
 
 .listing--buttons.listing--buttons.listing--buttons {
   margin-top: 30px;
