@@ -249,9 +249,8 @@ img {
 
 .offcanvas.offcanvas {
     max-width: 1000px;
-    width: 100%;
     z-index: 99999999;
-
+    width: calc(100% - 90px);
     .btn-close.btn-close {
         position: absolute;
         left: 0;
@@ -273,7 +272,7 @@ img {
             width: 30px;
             height: 30px;
             padding: 10px;
-            transform: translateX(-120%);
+            transform: translateX(-190%);
             background-size: 15px;
         }
     }
@@ -305,7 +304,7 @@ img {
         }
     }
     @include responsive(xs-sm) {
-        max-width: 85%;
+        max-width: 85% !important;
     }
 }
 
