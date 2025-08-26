@@ -98,6 +98,12 @@
                         }
                         .wpsl-select-wrap {
                             margin: 0;
+                            @include responsive(xs) {
+                                flex-direction: column;
+                                > div {
+                                    width: 100%;
+                                }
+                            }
                         }
                         #wpsl-search-btn {
                             background-color: var(--wp--preset--color--maroon) !important;
