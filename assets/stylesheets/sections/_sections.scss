@@ -157,15 +157,14 @@
             #wpsl-result-list {
                 background-color: var(--wp--preset--color--lightgray-2);
                 margin: 0;
-
                 width: 40%;
                 #wpsl-stores {
                     padding-top: 40px;
                     padding-bottom: 40px;
                     max-height: 800px;
                     overflow: auto;
-                    max-width: 660px;
-                    margin-left: auto;
+                    padding-left: 12px;
+                    margin-left: var(--margin, 92.5px);
                     ul {
                         li {
                             padding: 0;

@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
 });
 
 function left__margin() {
-    console.log(jQuery('.wpsl-search').css('margin-left'));
+    jQuery('body').css('--margin', jQuery('.wpsl-search').css('margin-left') + 'px');
 }
 
 function careers() {
