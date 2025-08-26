@@ -12837,7 +12837,7 @@ body.sticky--header #masthead {
         flex-wrap: wrap;
         gap: 10px; }
         .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form select,
-        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form .wpsl-search-input {
+        .dealer--locator--holder .dealer--locator #wpsl-wrap .wpsl-search #wpsl-search-wrap form #wpsl-search-input {
           padding: 17px 20px;
           font-size: 15px;
           border-color: var(--dark);
