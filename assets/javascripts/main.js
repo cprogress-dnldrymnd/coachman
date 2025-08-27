@@ -172,7 +172,7 @@ function mega_menu() {
     });
 
     jQuery('#offCanvasMenu .nav-item:not(.no--submenu) .nav-link').click(function (e) { 
-        jQuery('.header--navigation').removeClass('mega-menu--not-active');
+        jQuery('#offCanvasMenu').removeClass('mega-menu--not-active');
         e.preventDefault();
     });
 

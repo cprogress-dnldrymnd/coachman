@@ -1,4 +1,4 @@
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offCanvasMenu"
+<div class="offcanvas offcanvas-start mega-menu--not-active" tabindex="-1" id="offCanvasMenu"
     aria-labelledby="offCanvasMenuLabel">
     <div class="offcanvas-body p-0 overflow-hidden">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">

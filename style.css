@@ -12849,7 +12849,8 @@ body.sticky--header #masthead {
     opacity: 0;
     visibility: hidden; }
   .mega-menu--not-active .btn-close.btn-close {
-    left: 500px; } }
+    left: 500px;
+    right: auto; } }
 .bottom-footer .container > div {
   border-top: 1px solid #d3d3d3;
   padding-top: 30px;
