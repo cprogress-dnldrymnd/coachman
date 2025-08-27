@@ -12839,6 +12839,10 @@ body.sticky--header #masthead {
     overflow: auto !important; }
   #offCanvasMenu .listings-taxonomy-holder {
     max-width: 100%; } }
+.mega-menu--not-active .mega-menu--right {
+  opacity: 0;
+  visibility: hidden; }
+
 .bottom-footer .container > div {
   border-top: 1px solid #d3d3d3;
   padding-top: 30px;
