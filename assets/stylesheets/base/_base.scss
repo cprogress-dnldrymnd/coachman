@@ -365,8 +365,8 @@ img {
     &.is-style-outline {
         .wp-block-button__link {
             @include on-event {
-                background-color: var(--black) !important;
-                border-color: var(--black) !important;
+                background-color: var(--bs-black) !important;
+                border-color: var(--bs-black) !important;
                 color: var(--bs-white) !important;
             }
         }
