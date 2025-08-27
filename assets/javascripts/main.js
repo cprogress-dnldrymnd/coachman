@@ -171,6 +171,11 @@ function mega_menu() {
         jQuery(this).removeAttr('data-bs-target');
     });
 
+    jQuery('#offCanvasMenu .nav-item:not(.no--submenu) .nav-link').click(function (e) { 
+        jQuery('.header--navigation').removeClass('mega-menu--not-active');
+        e.preventDefault();
+    });
+
     if (window.innerWidth < 768) {
         jQuery('.header--navigation .tab-pane').each(function (index, element) {
             $id = jQuery(this).attr('id');
