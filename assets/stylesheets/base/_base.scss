@@ -362,11 +362,11 @@ img {
     }
 }
 .wp-block-button {
-    &.is-style-outline--1 {
+    &.is-style-outline {
         .wp-block-button__link {
             @include on-event {
-                background-color: var(--maroon) !important;
-                border-color: var(--maroon) !important;
+                background-color: var(--black) !important;
+                border-color: var(--black) !important;
                 color: var(--bs-white) !important;
             }
         }
