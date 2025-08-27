@@ -320,7 +320,7 @@ function swiper_sliders() {
     if (jQuery('.swiper-slider-timeline').length > 0) {
         jQuery('.swiper-slider-timeline').each(function (index, element) {
             if (window.innerWidth > 767) {
-                $navigation = jQuery('<div class="swiper-pagination swiper-pagination-style--timeline d-none d-lg-block"> </div> <div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-button-next"></div> </div>');
+                $navigation = jQuery('<div class="swiper-pagination swiper-pagination-style--timeline d-none d-lg-flex"> </div> <div class="swiper-pagination-navigation-style-2"> <div class="swiper-button-prev"></div> <div class="swiper-button-next"></div> </div>');
             } else {
                 $navigation = jQuery('<div class="swiper-pagination-navigation-style-2 swiper-pagination-navigation-style-2--static mt-4"> <div class="swiper-button-prev"></div> <div class="swiper-pagination"></div> <div class="swiper-button-next"></div> </div>');
             }
