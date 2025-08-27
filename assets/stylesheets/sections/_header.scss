@@ -70,6 +70,8 @@ body {
 }
 
 #offCanvasMenu {
+    background-color: transparent;
+        border: none;
     .container {
         padding: 0 !important;
     }
@@ -155,7 +157,6 @@ body {
         }
     }
 }
-
 
 .mega-menu--not-active {
     .mega-menu--right {
