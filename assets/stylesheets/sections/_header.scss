@@ -161,7 +161,7 @@ body {
 }
 
 @include responsive(sm-lg) {
-    .mega-menu--not-active {
+    .mega-menu--not-active.mega-menu--not-active.mega-menu--not-active {
         .mega-menu--right {
             opacity: 0;
             visibility: hidden;

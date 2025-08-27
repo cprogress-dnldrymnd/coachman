@@ -12845,10 +12845,10 @@ body.sticky--header #masthead {
   #offCanvasMenu .listings-taxonomy-holder {
     max-width: 100%; } }
 @media (min-width: 768px) {
-  .mega-menu--not-active .mega-menu--right {
+  .mega-menu--not-active.mega-menu--not-active.mega-menu--not-active .mega-menu--right {
     opacity: 0;
     visibility: hidden; }
-  .mega-menu--not-active .btn-close.btn-close {
+  .mega-menu--not-active.mega-menu--not-active.mega-menu--not-active .btn-close.btn-close {
     left: 500px;
     right: auto; } }
 .bottom-footer .container > div {
