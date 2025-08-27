@@ -12778,7 +12778,6 @@ body.sticky--header #masthead {
       height: 20px; } }
 
 #offCanvasMenu {
-  background-color: transparent;
   border: none; }
   #offCanvasMenu .container {
     padding: 0 !important; }
@@ -12806,6 +12805,9 @@ body.sticky--header #masthead {
     max-width: 230px;
     margin-left: auto;
     margin-right: auto; }
+  @media screen and (min-width: 992px) {
+    #offCanvasMenu {
+      background-color: transparent; } }
 
 .svg-logo.svg-logo svg {
   width: 244px; }
@@ -12842,10 +12844,12 @@ body.sticky--header #masthead {
     overflow: auto !important; }
   #offCanvasMenu .listings-taxonomy-holder {
     max-width: 100%; } }
-.mega-menu--not-active .mega-menu--right {
-  opacity: 0;
-  visibility: hidden; }
-
+@media screen and (min-width: 992px) {
+  .mega-menu--not-active .mega-menu--right {
+    opacity: 0;
+    visibility: hidden; }
+  .mega-menu--not-active .btn-close.btn-close {
+    left: 500px; } }
 .bottom-footer .container > div {
   border-top: 1px solid #d3d3d3;
   padding-top: 30px;
