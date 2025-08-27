@@ -11543,6 +11543,7 @@ img {
 
 .wp-block-button.is-style-outline--1 .wp-block-button__link:hover, .wp-block-button.is-style-outline--1 .wp-block-button__link:active, .wp-block-button.is-style-outline--1 .wp-block-button__link:focus {
   background-color: var(--maroon) !important;
+  border-color: var(--maroon) !important;
   color: var(--bs-white) !important; }
 
 .wp-block-button__link.wp-block-button__link,

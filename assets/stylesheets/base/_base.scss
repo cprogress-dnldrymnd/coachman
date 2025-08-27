@@ -366,6 +366,7 @@ img {
         .wp-block-button__link {
             @include on-event {
                 background-color: var(--maroon) !important;
+                border-color: var(--maroon) !important;
                 color: var(--bs-white) !important;
             }
         }
