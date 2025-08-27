@@ -11541,7 +11541,7 @@ img {
   color: var(--bs-white) !important;
   background-color: var(--bs-black) !important; }
 
-.wp-block-button.is-style-outline--1 .wp-block-button__link:hover, .wp-block-button.is-style-outline--1 .wp-block-button__link:active, .wp-block-button.is-style-outline--1 .wp-block-button__link:focus {
+.wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:active, .wp-block-button.is-style-outline .wp-block-button__link:focus {
   background-color: var(--black) !important;
   border-color: var(--black) !important;
   color: var(--bs-white) !important; }
