@@ -12840,9 +12840,13 @@ body.sticky--header #masthead {
   #offCanvasMenu .listings-taxonomy-holder {
     max-width: 100%; } }
 .bottom-footer .container > div {
-  border-top: 1px solid #D3D3D3;
+  border-top: 1px solid #d3d3d3;
   padding-top: 30px;
   padding-bottom: 30px; }
+
+.main-footer .wp-block-button__link.has-maroon-background-color:hover, .main-footer .wp-block-button__link.has-maroon-background-color:active, .main-footer .wp-block-button__link.has-maroon-background-color:focus {
+  color: var(--bs-white) !important;
+  background-color: var(--maroon) !important; }
 
 .offcanvas-form--form-fields {
   padding: 30px; }
