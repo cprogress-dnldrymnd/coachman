@@ -28,6 +28,7 @@ function get_taxonomy_terms_wpdb($taxonomy)
     $results = $wpdb->get_results($query);
 
     // Check if any results were returned.
+    $terms_array[''] = 'Select model';
     if (! empty($results)) {
         // Loop through the results and populate the terms_array.
         foreach ($results as $term) {
