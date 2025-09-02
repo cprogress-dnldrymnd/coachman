@@ -210,6 +210,7 @@ function specification($post_id, $meta_key, $label)
 {
     $meta = get__post_meta_by_id($post_id, $meta_key);
     if($meta) {
+        $meta = wpautop($meta);
         return "<div class='specification'><div class='meta-label'><strong>$label</strong></div><div class='meta-value'>$meta</div></div>";
     }
 }
