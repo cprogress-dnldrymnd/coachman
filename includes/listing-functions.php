@@ -163,10 +163,8 @@ function __listing_buttons($post_id)
             </button>
             <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
                 <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
-                <p class="fs-22">Range Tour</p>
-                <div class="embed-holder position-relative mb-5">
-                    <iframe src="<?= getYoutubeEmbedUrl($Specification) ?>" frameborder="0"></iframe>
-                </div>
+                <p class="fs-22">Specification</p>
+                <?= specifications($post_id) ?>
                 <?= do_shortcode('[template template_id=26276]'); ?>
             </div>
         </div>
