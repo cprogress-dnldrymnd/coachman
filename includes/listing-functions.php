@@ -179,17 +179,17 @@ function specifications($post_id)
     ob_start();
 ?>
     <div class="specifications">
-        <?= specification($post_id, 'berths') ?>
+        <?= specification($post_id, 'berths', 'Berhs') ?>
     </div>
 <?php
     return ob_get_clean();
 }
 
-function specification($post_id, $meta_key)
+function specification($post_id, $meta_key, $label)
 {
     $meta = get__post_meta_by_id($post_id, $meta_key);
     if($meta) {
-        return "<div class='specification'>$meta</div>";
+        return "<div class='specification'><div><strong>$label</strong></div><div>$meta</div></div>";
     }
 }
 /**
