@@ -13080,7 +13080,8 @@ body.sticky--header #masthead {
   .specifications .specification {
     display: flex;
     align-items: center;
-    width: calc(50%- 20px); }
+    width: calc(50% - 20px);
+    flex: 0 0 auto; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
