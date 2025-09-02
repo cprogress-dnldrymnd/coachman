@@ -13083,8 +13083,6 @@ body.sticky--header #masthead {
     align-items: center;
     width: calc(50% - 20px);
     border-top: 1px solid;
-    border-bottom: 1px solid;
-    margin-top: -1px;
     padding: 10px 0;
     justify-content: space-between;
     gap: 20px; }
