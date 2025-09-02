@@ -13088,6 +13088,9 @@ body.sticky--header #masthead {
     padding: 10px 0;
     justify-content: space-between;
     gap: 20px; }
+    @media (max-width: 991px) {
+      .specifications .specification {
+        width: 100%; } }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;

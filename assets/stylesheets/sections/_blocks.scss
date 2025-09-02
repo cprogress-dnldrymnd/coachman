@@ -125,6 +125,9 @@
             height: 100%;
         }
     }
+    &.offcanvas--layouts--wide {
+        max-width: 1400px;
+    }
 }
 
 .offcanvas--technical-details.offcanvas--technical-details {
