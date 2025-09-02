@@ -17,7 +17,6 @@ Container::make('post_meta', __('Page Settings'))
     ));
 Container::make('post_meta', __('Caravan Properties'))
     ->where('post_type', '=', 'caravan')
-    ->or_where('post_type', '=', 'motorhome')
     ->add_fields(array(
         Field::make('text', 'price', __('Price'))->set_width(25)->set_attribute('type', 'number'),
         Field::make('text', 'length', __('Length'))->set_width(25),
@@ -42,12 +41,48 @@ Container::make('post_meta', __('Caravan Properties'))
         Field::make('text', 'tyre_pressure', __('Tyre Pressure (bar / psi at quoted MTPLM)'))->set_width(25),
         Field::make('textarea', 'bed_sizes', __('Bed Sizes'))->set_width(25),
         Field::make('text', 'mtplm', __('MTPLM'))->set_width(25),
-        Field::make('text', 'mass', __('Mass in Running Order**'))->set_width(25),
+        Field::make('text', 'mass', __('Mass in Running Order'))->set_width(25),
         Field::make('text', 'personal_payload', __('Personal Payload'))->set_width(25),
         Field::make('text', 'max_payload', __('Total / Maximum User Payload'))->set_width(25),
         Field::make('text', 'max_hitch_weight', __('Maximum Hitch Weight'))->set_width(25),
         Field::make('text', 'awning_size', __('Awning Size (Approx. for reference only)'))->set_width(25),
         Field::make('text', 'upper_mtplm', __('Upper MTPLM (Optional weight plate upgrade'))->set_width(75),
+
+        Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
+        Field::make('oembed', 'video', __('Video tour'))->set_width(50),
+    ));
+
+
+Container::make('post_meta', __('Motorhome Properties'))
+    ->where('post_type', '=', 'motorhome')
+    ->add_fields(array(
+        Field::make('text', 'price', __('Price'))->set_width(25)->set_attribute('type', 'number'),
+        Field::make('text', 'length', __('Length'))->set_width(25),
+        Field::make('text', 'layout', __('Layout'))->set_width(25),
+        Field::make('text', 'axles', __('Axles'))->set_width(25),
+        Field::make('select', 'berths', __('Berths'))->set_width(25)
+            ->set_options(array(
+                '2' => '2',
+                '3' => '3',
+                '4' => '4',
+                '5' => '5',
+                '6' => '6',
+            )),
+        Field::make('text', 'travelling_seats', __('Travelling Seats'))->set_width(25),
+        Field::make('text', 'overall_length', __('Overall Length'))->set_width(25),
+        Field::make('text', 'overall_width', __('Overall Width'))->set_width(25),
+        Field::make('text', 'overall_width_incl_mirrors', __('Overall Width (including mirrors extended)'))->set_width(25),
+        Field::make('text', 'track_width_front', __('Track Width (Front)'))->set_width(25),
+        Field::make('text', 'track_width_rear', __('Track Width (Rear)'))->set_width(25),
+        Field::make('text', 'overall_height_incl_aircon', __('Overall Height (including Air Conditioning)'))->set_width(25),
+        Field::make('text', 'wheelbase', __('Wheelbase'))->set_width(25),
+        Field::make('text', 'tyre_size', __('Tyre Size'))->set_width(25),
+        Field::make('text', 'tyre_pressure', __('Tyre Pressure (bar / psi at quoted MTPLM)'))->set_width(25),
+        Field::make('textarea', 'bed_sizes', __('Bed Sizes'))->set_width(25),
+        Field::make('text', 'mtplm', __('MTPLM'))->set_width(25),
+        Field::make('text', 'mass', __('Mass in Running Order'))->set_width(25),
+        Field::make('text', 'personal_payload', __('Personal Payload'))->set_width(25),
+        Field::make('text', 'max_gross_weight', __('Maximum Gross Weight'))->set_width(25),
 
         Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
