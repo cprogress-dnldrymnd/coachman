@@ -13165,11 +13165,18 @@ body.sticky--header #masthead {
   .listing--features li {
     border-bottom: 1px solid var(--dark); }
 
-.listing--buttons.listing--buttons button,
-.listing--buttons.listing--buttons a {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid; }
+.listing--buttons.listing--buttons {
+  margin-top: 20px; }
+  .listing--buttons.listing--buttons button,
+  .listing--buttons.listing--buttons a {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid; }
+    .listing--buttons.listing--buttons button:hover, .listing--buttons.listing--buttons button:active, .listing--buttons.listing--buttons button:focus,
+    .listing--buttons.listing--buttons a:hover,
+    .listing--buttons.listing--buttons a:active,
+    .listing--buttons.listing--buttons a:focus {
+      color: var(--maroon); }
 
 .offcanvas--layouts.offcanvas--layouts.offcanvas--layouts {
   max-width: 1200px; }
