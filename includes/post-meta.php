@@ -21,6 +21,7 @@ Container::make('post_meta', __('Caravan Properties'))
     ->add_fields(array(
         Field::make('text', 'price', __('Price'))->set_width(25)->set_attribute('type', 'number'),
         Field::make('text', 'length', __('Length'))->set_width(25),
+        Field::make('text', 'layout', __('Layout'))->set_width(25),
         Field::make('text', 'axles', __('Axles'))->set_width(25),
         Field::make('select', 'berths', __('Berths'))->set_width(25)
             ->set_options(array(
