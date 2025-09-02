@@ -20,7 +20,6 @@ Container::make('post_meta', __('Caravan Properties'))
     ->or_where('post_type', '=', 'motorhome')
     ->add_fields(array(
         Field::make('text', 'price', __('Price'))->set_width(25),
-
         Field::make('text', 'length', __('Length'))->set_width(25),
         Field::make('text', 'axles', __('Axles'))->set_width(25),
         Field::make('select', 'berths', __('Berths'))->set_width(25)
@@ -33,7 +32,7 @@ Container::make('post_meta', __('Caravan Properties'))
             )),
         Field::make('text', 'interior_length', __('Interior Length'))->set_width(25),
         Field::make('text', 'overall_length', __('Overall Length'))->set_width(25),
-        Field::make('text', 'overall_Width', __('Overall Width'))->set_width(25),
+        Field::make('text', 'overall_width', __('Overall Width'))->set_width(25),
         Field::make('text', 'overall_height', __('Overall Height (including T.V Aerial)'))->set_width(25),
         Field::make('text', 'maximum_headroom', __('Maximum Headroom'))->set_width(25),
         Field::make('text', 'wheel_rim', __('Wheel Rim'))->set_width(25),
