@@ -193,9 +193,6 @@ function specifications($post_id)
         <?= specification($post_id, 'track_width_front', 'Track Width (Front)') ?>
         <?= specification($post_id, 'track_width_rear', 'Track Width (Rear)') ?>
         <?= specification($post_id, 'wheelbase', 'Wheelbase') ?>
-        <?= specification($post_id, 'track_width_front', '') ?>
-        <?= specification($post_id, 'track_width_front', '') ?>
-        <?= specification($post_id, 'track_width_front', '') ?>
         
         <?= specification($post_id, 'maximum_headroom', 'Maximum Headroom') ?>
         <?= specification($post_id, 'wheel_rim', 'Wheel Rim') ?>
