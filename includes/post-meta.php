@@ -19,7 +19,8 @@ Container::make('post_meta', __('Caravan Properties'))
     ->where('post_type', '=', 'caravan')
     ->or_where('post_type', '=', 'motorhome')
     ->add_fields(array(
-        Field::make('select', 'berths', __('Berths'))
+        Field::make('text', 'price', __('Price'))->set_width(25),
+        Field::make('select', 'berths', __('Berths'))->set_width(25)
             ->set_options(array(
                 '2' => '2',
                 '3' => '3',
@@ -27,7 +28,7 @@ Container::make('post_meta', __('Caravan Properties'))
                 '5' => '5',
                 '6' => '6',
             )),
-        Field::make('text', 'length', __('Length')),
+        Field::make('text', 'length', __('Length'))->set_width(25),
         Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
     ));
