@@ -287,3 +287,15 @@
         display: block !important;
     }
 }
+
+.specifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    .specification {
+        display: flex;
+        align-items: center;
+        width: calc(50% - 20px);
+        flex: 0 0 auto;
+    }
+}
