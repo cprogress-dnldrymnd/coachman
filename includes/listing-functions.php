@@ -209,9 +209,13 @@ function specifications($post_id)
 function specification($post_id, $meta_key, $label)
 {
     $meta = get__post_meta_by_id($post_id, $meta_key);
-    if($meta) {
+    $currency = '';
+    if ($meta) {
         $meta = wpautop($meta);
-        return "<div class='specification'><div class='meta-label'><strong>$label</strong></div><div class='meta-value'>$meta</div></div>";
+        if ($meta_key == 'price') {
+            $currency = '£';
+        }
+        return "<div class='specification'><div class='meta-label'><strong>$label</strong></div><div class='meta-value'>$currency $meta</div></div>";
     }
 }
 /**
