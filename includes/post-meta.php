@@ -47,7 +47,7 @@ Container::make('post_meta', __('Caravan Properties'))
         Field::make('text', 'max_payload', __('Total / Maximum User Payload'))->set_width(25),
         Field::make('text', 'max_hitch_weight', __('Maximum Hitch Weight'))->set_width(25),
         Field::make('text', 'awning_size', __('Awning Size (Approx. for reference only)'))->set_width(25),
-        Field::make('text', 'upper_mtplm', __('Upper MTPLM (Optional weight plate upgrade'))->set_width(25),
+        Field::make('text', 'upper_mtplm', __('Upper MTPLM (Optional weight plate upgrade'))->set_width(75),
 
         Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
