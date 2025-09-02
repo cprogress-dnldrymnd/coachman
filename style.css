@@ -13185,6 +13185,8 @@ body.sticky--header #masthead {
       object-fit: cover;
       width: 100%;
       height: 100%; }
+  .offcanvas--layouts.offcanvas--layouts.offcanvas--layouts.offcanvas--layouts--wide {
+    max-width: 1400px; }
 
 .offcanvas--technical-details.offcanvas--technical-details {
   max-width: 900px; }
