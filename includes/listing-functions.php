@@ -99,14 +99,16 @@ function __listing_buttons($post_id)
 ?>
     <div class="listing--buttons mt-2">
         <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
-            <?php// if ($_360_walkthrough) { ?>
+            <? php // if ($_360_walkthrough) { 
+            ?>
             <!--
                 <li>
                     <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas360-<?= $post_id ?>" aria-controls="offCanvas360-<?= $post_id ?>">
                         360° Walkthrough
                     </button>
                 </li>-->
-            <?php //} ?>
+            <?php //} 
+            ?>
             <?php if ($video) { ?>
                 <li>
                     <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasVideo-<?= $post_id ?>" aria-controls="offCanvasVideo-<?= $post_id ?>">
@@ -121,7 +123,7 @@ function __listing_buttons($post_id)
             </li>
         </ul>
     </div>
-          <!--
+    <!--
     <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0 ">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -196,7 +198,7 @@ function specifications($post_id)
         <?= specification($post_id, 'track_width_front', 'Track Width (Front)') ?>
         <?= specification($post_id, 'track_width_rear', 'Track Width (Rear)') ?>
         <?= specification($post_id, 'wheelbase', 'Wheelbase') ?>
-        
+
         <?= specification($post_id, 'maximum_headroom', 'Maximum Headroom') ?>
         <?= specification($post_id, 'wheel_rim', 'Wheel Rim') ?>
         <?= specification($post_id, 'tyre_size', 'Tyre Size') ?>
@@ -218,10 +220,11 @@ function specifications($post_id)
 function specification($post_id, $meta_key, $label)
 {
     $meta = get__post_meta_by_id($post_id, $meta_key);
-    if ($meta_key == 'price') {
-        $meta = '£' . $meta;
-    }
+
     if ($meta) {
+        if ($meta_key == 'price') {
+            $meta = '£' . $meta;
+        }
         $meta = wpautop($meta);
         return "<div class='specification'><div class='meta-label'><strong>$label</strong></div><div class='meta-value'> $meta</div></div>";
     }
