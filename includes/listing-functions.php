@@ -183,9 +183,23 @@ function specifications($post_id)
         <?= specification($post_id, 'layout', 'Layout') ?>
         <?= specification($post_id, 'axles', 'Axles') ?>
         <?= specification($post_id, 'berths', 'Berths') ?>
-        <?= specification($post_id, 'berths', 'Interior Length') ?>
-        <?= specification($post_id, 'berths', 'Berhs') ?>
-        <?= specification($post_id, 'berths', 'Berhs') ?>
+        <?= specification($post_id, 'interior_length', 'Interior Length') ?>
+        <?= specification($post_id, 'overall_length', 'Overall Length') ?>
+        <?= specification($post_id, 'overall_width', 'Overall Width') ?>
+        <?= specification($post_id, 'overall_height_incl_tv', 'Overall Height (including T.V Aerial)') ?>
+        <?= specification($post_id, 'overall_height_incl_aircon', 'Overall Height (including Air Conditioning)') ?>
+        <?= specification($post_id, 'maximum_headroom', 'Maximum Headroom') ?>
+        <?= specification($post_id, 'wheel_rim', 'Wheel Rim') ?>
+        <?= specification($post_id, 'tyre_size', 'Tyre Size') ?>
+        <?= specification($post_id, 'tyre_pressure', 'Tyre Pressure (bar / psi at quoted MTPLM)') ?>
+        <?= specification($post_id, 'bed_sizes', 'Bed Sizes') ?>
+        <?= specification($post_id, 'mtplm', 'MTPLM') ?>
+        <?= specification($post_id, 'mass', 'Mass in Running Order') ?>
+        <?= specification($post_id, 'personal_payload', 'Personal Payload') ?>
+        <?= specification($post_id, 'max_payload', 'Total / Maximum User Payload') ?>
+        <?= specification($post_id, 'max_hitch_weight', 'Maximum Hitch Weight') ?>
+        <?= specification($post_id, 'awning_size', 'Awning Size (Approx. for reference only)') ?>
+        <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
         <?= specification($post_id, 'berths', 'Berhs') ?>
     </div>
 <?php
