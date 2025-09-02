@@ -179,6 +179,13 @@ function specifications($post_id)
     ob_start();
 ?>
     <div class="specifications">
+        <?= specification($post_id, 'price', 'Price') ?>
+        <?= specification($post_id, 'layout', 'Layout') ?>
+        <?= specification($post_id, 'axles', 'Axles') ?>
+        <?= specification($post_id, 'berths', 'Berths') ?>
+        <?= specification($post_id, 'berths', 'Interior Length') ?>
+        <?= specification($post_id, 'berths', 'Berhs') ?>
+        <?= specification($post_id, 'berths', 'Berhs') ?>
         <?= specification($post_id, 'berths', 'Berhs') ?>
     </div>
 <?php
