@@ -183,11 +183,20 @@ function specifications($post_id)
         <?= specification($post_id, 'layout', 'Layout') ?>
         <?= specification($post_id, 'axles', 'Axles') ?>
         <?= specification($post_id, 'berths', 'Berths') ?>
+        <?= specification($post_id, 'travelling_seats', 'Travelling Seats') ?>
         <?= specification($post_id, 'interior_length', 'Interior Length') ?>
         <?= specification($post_id, 'overall_length', 'Overall Length') ?>
         <?= specification($post_id, 'overall_width', 'Overall Width') ?>
         <?= specification($post_id, 'overall_height_incl_tv', 'Overall Height (including T.V Aerial)') ?>
         <?= specification($post_id, 'overall_height_incl_aircon', 'Overall Height (including Air Conditioning)') ?>
+        <?= specification($post_id, 'overall_width_incl_mirrors', 'Overall Width (including mirrors extended)') ?>
+        <?= specification($post_id, 'track_width_front', 'Track Width (Front)') ?>
+        <?= specification($post_id, 'track_width_rear', 'Track Width (Rear)') ?>
+        <?= specification($post_id, 'wheelbase', 'Wheelbase') ?>
+        <?= specification($post_id, 'track_width_front', '') ?>
+        <?= specification($post_id, 'track_width_front', '') ?>
+        <?= specification($post_id, 'track_width_front', '') ?>
+        
         <?= specification($post_id, 'maximum_headroom', 'Maximum Headroom') ?>
         <?= specification($post_id, 'wheel_rim', 'Wheel Rim') ?>
         <?= specification($post_id, 'tyre_size', 'Tyre Size') ?>
@@ -200,7 +209,7 @@ function specifications($post_id)
         <?= specification($post_id, 'max_hitch_weight', 'Maximum Hitch Weight') ?>
         <?= specification($post_id, 'awning_size', 'Awning Size (Approx. for reference only)') ?>
         <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
-        <?= specification($post_id, 'berths', 'Berhs') ?>
+        <?= specification($post_id, 'max_gross_weight', 'Maximum Gross Weight') ?>
     </div>
 <?php
     return ob_get_clean();
