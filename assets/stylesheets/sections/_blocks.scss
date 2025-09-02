@@ -106,6 +106,9 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid;
+        @include on-event {
+            color: var(--maroon)
+        }
     }
 }
 
