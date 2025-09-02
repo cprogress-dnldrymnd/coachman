@@ -20,6 +20,9 @@ Container::make('post_meta', __('Caravan Properties'))
     ->or_where('post_type', '=', 'motorhome')
     ->add_fields(array(
         Field::make('text', 'price', __('Price'))->set_width(25),
+
+        Field::make('text', 'length', __('Length'))->set_width(25),
+        Field::make('text', 'axles', __('Axles'))->set_width(25),
         Field::make('select', 'berths', __('Berths'))->set_width(25)
             ->set_options(array(
                 '2' => '2',
@@ -28,7 +31,15 @@ Container::make('post_meta', __('Caravan Properties'))
                 '5' => '5',
                 '6' => '6',
             )),
-        Field::make('text', 'length', __('Length'))->set_width(25),
+        Field::make('text', 'interior_length', __('Interior Length'))->set_width(25),
+        Field::make('text', 'overall_length', __('Overall Length'))->set_width(25),
+        Field::make('text', 'overall_Width', __('Overall Width'))->set_width(25),
+        Field::make('text', 'overall_height', __('Overall Height (including T.V Aerial)'))->set_width(25),
+        Field::make('text', 'maximum_headroom', __('Maximum Headroom'))->set_width(25),
+        Field::make('text', 'wheel_rim', __('Wheel Rim'))->set_width(25),
+        Field::make('text', 'tyre_size', __('Tyre Size'))->set_width(25),
+        Field::make('text', 'tyre_pressure', __('Tyre Pressure (bar / psi at quoted MTPLM)'))->set_width(25),
+        Field::make('textarea', 'bed_sizes', __('Bed Sizes'))->set_width(25),
         Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
     ));
