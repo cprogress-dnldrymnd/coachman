@@ -13076,12 +13076,17 @@ body.sticky--header #masthead {
 .specifications {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px; }
+  column-gap: 40px; }
   .specifications .specification {
     display: flex;
     align-items: center;
     width: calc(50% - 20px);
-    flex: 0 0 auto; }
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-top: -1px;
+    padding: 10px 0;
+    justify-content: space-between;
+    gap: 20px; }
 
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
