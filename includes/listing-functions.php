@@ -174,10 +174,24 @@ function __listing_buttons($post_id)
 }
 
 
-function specifications($post_id) {
-    
+function specifications($post_id)
+{
+    ob_start();
+?>
+    <div class="specifications">
+        <?= specification($post_id, 'berths') ?>
+    </div>
+<?php
+    return ob_get_clean();
 }
 
+function specification($post_id, $meta_key)
+{
+    $meta = get__post_meta_by_id($post_id, $meta_key);
+    if($meta) {
+        return "<div class='specification'>$meta</div>";
+    }
+}
 /**
  * Gets the YouTube embed URL from any type of YouTube link.
  *
