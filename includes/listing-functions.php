@@ -173,6 +173,11 @@ function __listing_buttons($post_id)
     return ob_get_clean();
 }
 
+
+function specifications($post_id) {
+    
+}
+
 /**
  * Gets the YouTube embed URL from any type of YouTube link.
  *
