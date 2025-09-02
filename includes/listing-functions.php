@@ -99,13 +99,14 @@ function __listing_buttons($post_id)
 ?>
     <div class="listing--buttons mt-2">
         <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
-            <?php if ($_360_walkthrough) { ?>
+            <?php// if ($_360_walkthrough) { ?>
+            <!--
                 <li>
                     <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas360-<?= $post_id ?>" aria-controls="offCanvas360-<?= $post_id ?>">
                         360° Walkthrough
                     </button>
-                </li>
-            <?php } ?>
+                </li>-->
+            <?php //} ?>
             <?php if ($video) { ?>
                 <li>
                     <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasVideo-<?= $post_id ?>" aria-controls="offCanvasVideo-<?= $post_id ?>">
@@ -120,6 +121,7 @@ function __listing_buttons($post_id)
             </li>
         </ul>
     </div>
+          <!--
     <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0 ">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -137,6 +139,7 @@ function __listing_buttons($post_id)
             </div>
         </div>
     </div>
+            -->
     <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvasVideo-<?= $post_id ?>" aria-labelledby="offCanvasVideo-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
