@@ -13091,6 +13091,9 @@ body.sticky--header #masthead {
       .specifications .specification {
         width: 100%; } }
 
+#listing--details--results .listings--posts {
+  height: auto !important; }
+
 .swiper-slider-holder .swiper-pagination-holder {
   position: absolute;
   bottom: 50px;
