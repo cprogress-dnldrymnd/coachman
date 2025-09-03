@@ -10,18 +10,6 @@ function dealer_details_ajax()
 	$wpsl_email = get_post_meta($post_id, 'wpsl_email', true);
 	$wpsl_url = get_post_meta($post_id, 'wpsl_url', true);
 
-	$stocks_ids = [];
-	foreach ($stocks as $stock) {
-		$stocks_ids[] = $stock['id'];
-	}
-
-	$args = array(
-		'post_type' => array('motorhome', 'caravan'),
-		'numberposts' => -1,
-		'include' => $stocks_ids
-
-	);
-	$posts_listings = get_posts($args);
 ?>
 	<div class="dealer--details">
 		<h3 class="mb-4 fw-semibold"><?= $_post->post_title ?></h3>
@@ -49,23 +37,19 @@ function dealer_details_ajax()
 				</li>
 			<?php } ?>
 		</ul>
-
-		<div class="listings--posts mt-4">
-			<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
-			<div class="row g-3">
-				<?php foreach ($posts_listings as $posts_listing) { ?>
-					<div class="col-lg-6">
-						<div class="listings--posts--grid bg-lightgray-2 p-4">
-							<h3 class="fs-24"><?= __listing_title($posts_listing->ID) ?></h3>
-							<div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
-								<?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
-							</div>
-							<?= __listing_features($posts_listing->ID) ?>
-						</div>
-					</div>
-				<?php } ?>
+		<?php if ($stocks) { ?>
+			<div class="listings--posts mt-4">
+				<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
+				<ul>
+					<?php
+					foreach ($stocks as $stock) {
+						echo '<li>' . get_the_title() . '</li> ';
+					}
+					?>
+				</ul>
 			</div>
-		</div>
+		<?php } ?>
+
 	</div>
 <?php
 	die();
