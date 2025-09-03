@@ -24,6 +24,12 @@ function dealer_details_ajax()
 	$posts_listings = get_posts($args);
 ?>
 	<div class="dealer--details">
+		<?php
+		if(current_user_can('administrator')) {
+			echo '<pre>';
+			echo '</pre>';
+		}
+		?>
 		<h3 class="mb-4 fw-semibold"><?= $_post->post_title ?></h3>
 		<div class="dealer--desc">
 			<?= $_post->post_content ?>
