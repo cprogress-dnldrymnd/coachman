@@ -27,6 +27,7 @@ function dealer_details_ajax()
 		<?php
 		if(current_user_can('administrator')) {
 			echo '<pre>';
+			var_dump($stocks_ids);
 			echo '</pre>';
 		}
 		?>
