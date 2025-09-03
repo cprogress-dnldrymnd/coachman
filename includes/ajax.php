@@ -43,7 +43,7 @@ function dealer_details_ajax()
 				<ul>
 					<?php
 					foreach ($stocks as $stock) {
-						echo '<li>' . get_the_title() . '</li> ';
+						echo '<li>' . get_the_title($stock['id']) . '</li> ';
 					}
 					?>
 				</ul>
