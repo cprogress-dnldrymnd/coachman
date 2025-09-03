@@ -38,6 +38,7 @@ function dealer_details_ajax()
 			<?php } ?>
 		</ul>
 		<?php if ($stocks) { ?>
+			<!--
 			<div class="listings--posts mt-4">
 				<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
 				<ul>
@@ -47,7 +48,7 @@ function dealer_details_ajax()
 					}
 					?>
 				</ul>
-			</div>
+			</div>-->
 		<?php } ?>
 
 	</div>
