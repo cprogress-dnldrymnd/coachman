@@ -38,10 +38,29 @@ function dealer_details_ajax()
 			<?php } ?>
 		</ul>
 		<?php if ($stocks) { ?>
+			<?php
+			$years = [];
+			foreach ($stocks as $stock) {
+				foreach ($stock['years'] as $year) {
+					if (!in_array($year, $years)) {
+						$years[] = $year;
+					}
+				}
+			}
+			?>
+
 			<div class="listings--posts mt-4">
 				<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
 				<table>
 					<?php
+					echo '<tr>';
+					echo '<th>Model</th>';
+					foreach ($years as $year) {
+						echo '<th>' . $year . '</th>';
+					}
+					echo '<th>Model</th>';
+					echo '</tr>';
+
 					foreach ($stocks as $stock) {
 						echo '<tr>';
 						echo '<td>' . $stock['listing_name'] . '</td> ';
