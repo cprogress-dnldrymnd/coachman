@@ -797,7 +797,7 @@ Container::make('post_meta', __('Dealer Settings'))
                 Field::make('text', 'listing_name', __('Listing Name')),
                 Field::make('complex', 'years', __('Years'))
                     ->add_fields(array(
-                        Field::make('text', 'year', __('Year')),
+                        Field::make('text', 'year', __('Year'))->set_attribute('type', 'number'),
                     ))
                     ->set_layout('tabbed-horizontal')
                     ->set_header_template('<%- year %>')
