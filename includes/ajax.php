@@ -38,17 +38,18 @@ function dealer_details_ajax()
 			<?php } ?>
 		</ul>
 		<?php if ($stocks) { ?>
-			<!--
 			<div class="listings--posts mt-4">
 				<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
-				<ul>
+				<table>
 					<?php
 					foreach ($stocks as $stock) {
-						echo '<li>' . get_the_title($stock['id']) . '</li> ';
+						echo '<tr>';
+						echo '<td>' . $stock['listing_name'] . '</td> ';
+						echo '</tr>';
 					}
 					?>
-				</ul>
-			</div>-->
+				</table>
+			</div>
 		<?php } ?>
 
 	</div>
