@@ -800,6 +800,7 @@ Container::make('post_meta', __('Dealer Settings'))
                         Field::make('text', 'year', __('Year')),
                     ))
                     ->set_layout('tabbed-horizontal')
+                    ->set_header_template('<%- year %>')
             ))
             ->set_layout('grid')
             ->set_header_template('<%- listing_name %>')
