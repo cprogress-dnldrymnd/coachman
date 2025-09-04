@@ -792,17 +792,16 @@ Container::make('theme_options', __('Theme Options'))
 Container::make('post_meta', __('Dealer Settings'))
     ->where('post_type', '=', 'wpsl_stores')
     ->add_fields(array(
-        Field::make('association', 'stocks', __('Stocks'))
-            ->set_types(array(
-                array(
-                    'type'      => 'post',
-                    'post_type' => 'caravan',
-                ),
-                array(
-                    'type'      => 'post',
-                    'post_type' => 'motorhome',
-                ),
+        Field::make('complex', 'stocks', __('Stocks'))
+            ->add_fields(array(
+                Field::make('text', 'listing_name', __('Listing')),
+                Field::make('complex', 'years', __('Years'))
+                    ->add_fields(array(
+                        Field::make('text', 'year', __('Year')),
+                    ))
+                    ->set_layout('tabbed-horizontal')
             ))
+            ->set_layout('grid')
     ));
 
 
