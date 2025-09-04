@@ -60,12 +60,19 @@ function dealer_details_ajax()
 					}
 					echo '</tr>';
 
+					$stock_years = [];
 					foreach ($stocks as $stock) {
+
+						foreach ($stock['years'] as $year) {
+							$stock_years[] = $year['year'];
+						}
 						echo '<tr>';
 						echo '<td>' . $stock['listing_name'] . '</td> ';
 						foreach ($years as $year) {
-							if (in_array($stock['year'], $years)) {
+							if (in_array($stock_years, $year)) {
 								echo '<td>Yes</td>';
+							} else {
+								echo '<td>No</td>';
 							}
 						}
 						echo '</tr>';
