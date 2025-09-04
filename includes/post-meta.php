@@ -794,7 +794,7 @@ Container::make('post_meta', __('Dealer Settings'))
     ->add_fields(array(
         Field::make('complex', 'stocks', __('Stocks'))
             ->add_fields(array(
-                Field::make('text', 'listing_name', __('Listing')),
+                Field::make('text', 'listing_name', __('Listing Name')),
                 Field::make('complex', 'years', __('Years'))
                     ->add_fields(array(
                         Field::make('text', 'year', __('Year')),
