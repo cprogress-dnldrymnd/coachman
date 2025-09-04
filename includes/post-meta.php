@@ -802,6 +802,8 @@ Container::make('post_meta', __('Dealer Settings'))
                     ->set_layout('tabbed-horizontal')
             ))
             ->set_layout('grid')
+            ->set_header_template('<%- listing_name %>')
+
     ));
 
 
