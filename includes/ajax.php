@@ -42,8 +42,8 @@ function dealer_details_ajax()
 			$years = [];
 			foreach ($stocks as $stock) {
 				foreach ($stock['years'] as $year) {
-					if (!in_array($year, $years)) {
-						$years[] = $year;
+					if (!in_array($year['year'], $years)) {
+						$years[] = $year['year'];
 					}
 				}
 			}
