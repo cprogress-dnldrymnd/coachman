@@ -72,7 +72,7 @@ function dealer_details_ajax()
 							if (in_array($year, $stock_years)) {
 								echo '<td>Yes</td>';
 							} else {
-								echo '<td>No</td>';
+								echo '<td></td>';
 							}
 						}
 						echo '</tr>';
