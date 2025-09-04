@@ -51,7 +51,7 @@ function dealer_details_ajax()
 
 			<div class="listings--posts mt-4">
 				<h4 class="fw-semibold mb-3">Caravans In Stock</h4>
-				<table>
+				<table class="table">
 					<?php
 					echo '<tr>';
 					echo '<th>Model</th>';
