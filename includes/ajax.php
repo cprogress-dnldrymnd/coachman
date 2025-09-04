@@ -76,6 +76,7 @@ function dealer_details_ajax()
 							}
 						}
 						echo '</tr>';
+						$stock_years = [];
 					}
 					?>
 				</table>
