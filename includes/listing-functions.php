@@ -185,6 +185,7 @@ function specifications($post_id)
 ?>
     <div class="specifications">
         <?= specification($post_id, 'price', 'Price') ?>
+        <?= specification($post_id, 'base_vehicle', 'Base Vehicle') ?>
         <?= specification($post_id, 'layout', 'Layout') ?>
         <?= specification($post_id, 'axles', 'Axles') ?>
         <?= specification($post_id, 'berths', 'Berths') ?>
