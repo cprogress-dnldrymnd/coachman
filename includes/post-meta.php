@@ -83,6 +83,7 @@ Container::make('post_meta', __('Motorhome Properties'))
         Field::make('text', 'mass', __('Mass in Running Order'))->set_width(25),
         Field::make('text', 'personal_payload', __('Personal Payload'))->set_width(25),
         Field::make('text', 'max_gross_weight', __('Maximum Gross Weight'))->set_width(25),
+        Field::make('text', 'base_vehicle', __('Base Vehicle'))->set_width(100),
 
         Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
