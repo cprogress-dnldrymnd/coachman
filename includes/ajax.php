@@ -47,7 +47,7 @@ function dealer_details_ajax()
 					}
 				}
 			}
-						asort($years);
+			sort($years);
 
 			?>
 
