@@ -837,6 +837,7 @@ img {
 }
 
 .tick-icon {
+    position: relative;
     text-align: center;
     @include before {
         content: "";
@@ -845,9 +846,9 @@ img {
         height: 7px;
         border-left: 2px solid var(--maroon);
         border-bottom: 2px solid var(--maroon);
-        @include transform(rotate(-45deg));
+        @include transform(rotate(-45deg) translateX(-50%));
         position: absolute;
-        left: 0;
-        top: 6px;
+        left: 50%;
+        top: 5px;
     }
 }

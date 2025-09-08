@@ -11928,6 +11928,7 @@ img {
     width: 100%; } }
 
 .tick-icon {
+  position: relative;
   text-align: center; }
   .tick-icon:before {
     content: "";
@@ -11936,14 +11937,14 @@ img {
     height: 7px;
     border-left: 2px solid var(--maroon);
     border-bottom: 2px solid var(--maroon);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) translateX(-50%);
+    -moz-transform: rotate(-45deg) translateX(-50%);
+    -ms-transform: rotate(-45deg) translateX(-50%);
+    -o-transform: rotate(-45deg) translateX(-50%);
+    transform: rotate(-45deg) translateX(-50%);
     position: absolute;
-    left: 0;
-    top: 6px; }
+    left: 50%;
+    top: 50%; }
 
 @media (min-width: 1500px) {
   .container {
