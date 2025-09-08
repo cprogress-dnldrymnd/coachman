@@ -11944,7 +11944,7 @@ img {
     transform: rotate(-45deg) translateX(-50%);
     position: absolute;
     left: 50%;
-    top: 50%; }
+    top: 5px; }
 
 @media (min-width: 1500px) {
   .container {
