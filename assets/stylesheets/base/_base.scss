@@ -345,7 +345,6 @@ img {
             }
         }
     }
-   
 }
 .wp-block-button__link {
     &.has-maroon-background-color {
@@ -834,5 +833,14 @@ img {
         @include responsive(xs) {
             width: 100%;
         }
+    }
+}
+
+.tick-icon {
+    text-align: center;
+    svg {
+        width: 22px;
+        height: 22px;
+        color: green;
     }
 }

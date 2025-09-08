@@ -11927,6 +11927,13 @@ img {
   .product--buttons > div {
     width: 100%; } }
 
+.tick-icon {
+  text-align: center; }
+  .tick-icon svg {
+    width: 22px;
+    height: 22px;
+    color: green; }
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1420px; } }
