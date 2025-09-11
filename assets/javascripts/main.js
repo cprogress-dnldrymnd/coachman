@@ -43,7 +43,7 @@ function dealer() {
         jQuery('.request--appointment--dealer h5').text($new_text);
         jQuery('input[name="Dealer"]').val($dealerName);
         jQuery('input[name="Dealer_email"]').val($dealerEmail);
-
+        console.log($dealerEmail);
     });
 }
 
@@ -174,7 +174,7 @@ function mega_menu() {
         jQuery(this).removeAttr('data-bs-target');
     });
 
-    jQuery('#offCanvasMenu .nav-item:not(.no--submenu) .nav-link').click(function (e) { 
+    jQuery('#offCanvasMenu .nav-item:not(.no--submenu) .nav-link').click(function (e) {
         jQuery('#offCanvasMenu').removeClass('mega-menu--not-active');
         e.preventDefault();
     });
