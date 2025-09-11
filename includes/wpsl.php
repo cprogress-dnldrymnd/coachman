@@ -58,7 +58,7 @@ function custom_listing_template()
         $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('fax_label', __('Fax', 'wpsl'))) . '</strong>: <%= fax %></span>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% if ( email ) { %>' . "\r\n";
-        $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('email_label', __('Email', 'wpsl'))) . '</strong>: <span class="emailg"><%= email %><span></span>' . "\r\n";
+        $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('email_label', __('Email', 'wpsl'))) . '</strong>: <span class="email"><%= email %><span></span>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% } %>' . "\r\n";
         $listing_template .= "\t\t\t" . '<% if ( url ) { %>' . "\r\n";
         $listing_template .= "\t\t\t" . '<span><strong>' . esc_html($wpsl->i18n->get_translation('url_label', __('Website', 'wpsl'))) . '</strong>: <%= url %></span>' . "\r\n";
