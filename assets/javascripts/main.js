@@ -37,7 +37,7 @@ function dealer() {
     jQuery('body').on('click', '.btn-appointment a', function () {
         $originalText = jQuery('.request--appointment--dealer h5').text();
         $dealerName = jQuery(this).parents('.store--listing').find('h4').text();
-        $dealerEmail = jQuery(this).parents('.store--listing').find('email').text();
+        $dealerEmail = jQuery(this).parents('.store--listing').find('.email').text();
         $new_text = $originalText.replace('[dealer_name]', $dealerName);
 
         jQuery('.request--appointment--dealer h5').text($new_text);
