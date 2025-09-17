@@ -844,3 +844,15 @@ Container::make('post_meta', __('Events Settings'))
         Field::make('date', 'event_date', __('Event Start Date')),
         Field::make('date', 'event_end_date', __('Event End Date'))
     ));
+
+
+Block::make(__('Event Date'))
+    ->add_fields(array(
+        Field::make('html', 'html_1')->set_html("<div $style>Event Date</div>"),
+    ))
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+        $event_date = get__post_meta('event_date');
+        if ($event_date) {
+            echo date('F j, Y', strtotime($event_date));
+        }
+    });

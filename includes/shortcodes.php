@@ -129,14 +129,3 @@ function pdf_file()
     }
 }
 add_shortcode('pdf_file', 'pdf_file');
-
-function event_date()
-{
-    $event_date = get__post_meta('event_date');
-    if ($event_date) {
-        return date('F j, Y', strtotime($event_date));
-    }
-    return '';
-}
-
-add_shortcode('event_date', 'event_date');
