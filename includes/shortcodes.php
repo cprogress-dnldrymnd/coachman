@@ -138,3 +138,5 @@ function event_date()
     }
     return '';
 }
+
+add_shortcode('event_date', 'event_date');
