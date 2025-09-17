@@ -298,12 +298,18 @@ function query_loop_block_query_vars__artist($query, $block)
 {
 
     if (get_the_ID() == 123) {
+        $today = date('Y-m-d');
         $query['meta_key'] = '_event_date';
         $query['orderby'] = 'meta_value';
-        $query['order'] = 'asc';
-        $query['meta_type'] = 'DATE';
-        
-        
+        $query['order'] = 'desc';
+        $query['meta_query'] = array(
+            array(
+                'key'     => '_event_date', // CHANGE THIS
+                'value'   => $today,
+                'compare' => '>=', // Greater than or equal to today
+                'type'    => 'DATE',
+            ),
+        );
     }
     return $query;
 }
