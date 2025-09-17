@@ -829,3 +829,10 @@ Container::make('post_meta', __('Template Settings'))
                 ),
             ))
     ));
+
+
+Container::make('post_meta', __('Press Review Settings'))
+    ->where('post_type', '=', 'reviews_post_type')
+    ->add_fields(array(
+        Field::make('file', 'pdf_file', __('PDF File'))
+    ));
