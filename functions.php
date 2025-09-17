@@ -300,7 +300,7 @@ function query_loop_block_query_vars__artist($query, $block)
     if (get_the_ID() == 123) {
         $query['meta_key'] = '_event_date';
         $query['orderby'] = 'meta_value';
-        $query['order'] = 'desc';
+        $query['order'] = 'asc';
         $query['meta_type'] = 'DATE';
         
         
