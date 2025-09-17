@@ -125,7 +125,7 @@ function pdf_file()
 {
     $pdf_file = get__post_meta('pdf_file');
     if ($pdf_file) {
-        return '<a href="' . esc_url(wp_get_attachment_url($pdf_file)) . '" target="_blank" class="btn btn-primary">Download PDF</a>';
+        return '<a href="' . esc_url(wp_get_attachment_url($pdf_file)) . '" target="_blank" class= wp-block-button__link has-white-theme-color has-maroon-background-color rounded-0 fs-15 has-text-color has-background wp-element-button w-100">Download PDF</a>';
     }
 }
 add_shortcode('pdf_file', 'pdf_file');
