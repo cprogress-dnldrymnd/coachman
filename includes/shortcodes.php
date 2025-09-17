@@ -119,3 +119,13 @@ function post_title()
     return get_the_title();
 }
 add_shortcode('post_title', 'post_title');
+
+
+function pdf_file()
+{
+    $pdf_file = get__post_meta($pdf_file);
+    if ($pdf_file) {
+        return '<a href="' . esc_url(wp_get_attachment_url($pdf_file)) . '" target="_blank" class="btn btn-primary">Download PDF</a>';
+    }
+}
+add_shortcode('pdf_file', 'pdf_file');
