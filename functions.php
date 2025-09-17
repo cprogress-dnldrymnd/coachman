@@ -304,7 +304,7 @@ function query_loop_block_query_vars__artist($query, $block)
         $query['order'] = 'desc';
         $query['meta_query'] = array(
             array(
-                'key'     => '_event_date', // CHANGE THIS
+                'key'     => '_event_end_date', // CHANGE THIS
                 'value'   => $today,
                 'compare' => '>=', // Greater than or equal to today
                 'type'    => 'DATE',
