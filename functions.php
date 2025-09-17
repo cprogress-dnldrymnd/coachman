@@ -291,3 +291,16 @@ function display_csv_import_admin_notices()
     settings_errors('csv_import_errors'); // Display error messages
 }
 add_action('admin_notices', 'display_csv_import_admin_notices');
+
+
+// Function to add custom meta query parameters to the front-end query
+function query_loop_block_query_vars__artist($query, $block)
+{
+
+    global $post;
+    if (get_the_ID() == 123) {
+        $query['s'] = 'sssxx';
+    }
+    return $query;
+}
+add_filter('query_loop_block_query_vars', 'query_loop_block_query_vars__artist', 10, 2);
