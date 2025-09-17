@@ -121,7 +121,7 @@ function __listing_buttons($post_id)
             <?php } ?>
         </ul>
     </div>
-    <!--
+ 
     <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0 ">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -139,7 +139,7 @@ function __listing_buttons($post_id)
             </div>
         </div>
     </div>
-            -->
+           
     <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvasVideo-<?= $post_id ?>" aria-labelledby="offCanvasVideo-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
