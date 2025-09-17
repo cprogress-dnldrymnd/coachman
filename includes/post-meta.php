@@ -852,7 +852,12 @@ Block::make(__('Event Date'))
     ))
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
         $event_date = get__post_meta('event_date');
+        $event_end_date = get__post_meta('event_end_date');
         if ($event_date) {
             echo date('F j, Y', strtotime($event_date));
+        }
+
+        if ($event_end_date && $event_end_date != $event_date) {
+            echo ' - ' . date('F j, Y', strtotime($event_end_date));
         }
     });
