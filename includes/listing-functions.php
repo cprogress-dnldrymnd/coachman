@@ -121,42 +121,45 @@ function __listing_buttons($post_id)
             <?php } ?>
         </ul>
     </div>
- 
-    <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
-        <div class="offcanvas-body p-0 ">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
-                </svg>
-            </button>
-            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
-                <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
-                <p class="fs-22">360° Walkthrough</p>
-                <div class="embed-holder position-relative mb-5">
-                    <iframe src="<?= $_360_walkthrough ?>" frameborder="0"></iframe>
+    <?php if ($_360_walkthrough) { ?>
+        <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvas360-<?= $post_id ?>" aria-labelledby="offCanvas360-<?= $post_id ?>Label" aria-modal="true" role="dialog">
+            <div class="offcanvas-body p-0 ">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
+                    </svg>
+                </button>
+                <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
+                    <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
+                    <p class="fs-22">360° Walkthrough</p>
+                    <div class="embed-holder position-relative mb-5">
+                        <iframe src="<?= $_360_walkthrough ?>" frameborder="0"></iframe>
+                    </div>
+                    <?= do_shortcode('[template template_id=26276]'); ?>
                 </div>
-                <?= do_shortcode('[template template_id=26276]'); ?>
             </div>
         </div>
-    </div>
-           
-    <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvasVideo-<?= $post_id ?>" aria-labelledby="offCanvasVideo-<?= $post_id ?>Label" aria-modal="true" role="dialog">
-        <div class="offcanvas-body p-0">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
-                </svg>
-            </button>
-            <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
-                <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
-                <p class="fs-22">Range Tour</p>
-                <div class="embed-holder position-relative mb-5">
-                    <iframe src="<?= getYoutubeEmbedUrl($video) ?>" frameborder="0"></iframe>
+    <?php } ?>
+    <?php if ($video) { ?>
+        <div class="offcanvas offcanvas--layouts offcanvas-end" tabindex="-1" id="offCanvasVideo-<?= $post_id ?>" aria-labelledby="offCanvasVideo-<?= $post_id ?>Label" aria-modal="true" role="dialog">
+            <div class="offcanvas-body p-0">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
+                    </svg>
+                </button>
+                <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
+                    <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
+                    <p class="fs-22">Range Tour</p>
+                    <div class="embed-holder position-relative mb-5">
+                        <iframe src="<?= getYoutubeEmbedUrl($video) ?>" frameborder="0"></iframe>
+                    </div>
+                    <?= do_shortcode('[template template_id=26276]'); ?>
                 </div>
-                <?= do_shortcode('[template template_id=26276]'); ?>
             </div>
         </div>
-    </div>
+    <?php } ?>
+
     <div class="offcanvas offcanvas--layouts offcanvas--layouts--wide offcanvas-end" tabindex="-1" id="offCanvasSpecification-<?= $post_id ?>" aria-labelledby="offCanvasSpecification-<?= $post_id ?>Label" aria-modal="true" role="dialog">
         <div class="offcanvas-body p-0">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
