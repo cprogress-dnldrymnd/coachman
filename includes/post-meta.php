@@ -844,10 +844,3 @@ Container::make('post_meta', __('Events Settings'))
         Field::make('date', 'event_date', __('Event Start Date')),
         Field::make('date', 'event_end_date', __('Event End Date'))
     ));
-
-
-Container::make('post_meta', __('Team Settings'))
-    ->where('post_type', '=', 'team')
-    ->add_fields(array(
-        Field::make('image', 'badge', __('Badge')),
-    ));
