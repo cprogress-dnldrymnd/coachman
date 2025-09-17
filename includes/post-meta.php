@@ -839,7 +839,7 @@ Container::make('post_meta', __('Press Review Settings'))
 
 
     Container::make('post_meta', __('Events Settings'))
-    ->where('post_type', '=', 'reviews_pevents_post_typeost_type')
+    ->where('post_type', '=', 'events_post_type')
     ->add_fields(array(
         Field::make('date', 'event_date', __('Event Date'))
     ));
