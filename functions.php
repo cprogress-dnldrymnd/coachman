@@ -299,16 +299,27 @@ function query_loop_block_query_vars__artist($query, $block)
 
     if (get_the_ID() == 123) {
         $today = date('Y-m-d');
-        $query['meta_key'] = '_event_date';
-        $query['orderby'] = 'meta_value';
-        $query['order'] = 'desc';
         $query['meta_query'] = array(
-            array(
-                'key'     => '_event_end_date', // CHANGE THIS
+            'relation' => 'AND', // Both conditions below must be met.
+
+            // Clause to filter out past events.
+            // Only include posts where 'event_end_date' is today or in the future.
+            'end_date_clause' => array(
+                'key'     => '_event_end_date',
                 'value'   => $today,
-                'compare' => '>=', // Greater than or equal to today
+                'compare' => '>=', // Greater than or equal to today.
                 'type'    => 'DATE',
             ),
+
+            // Clause to identify the field we want to sort by.
+            // We'll refer to this clause name in 'orderby'.
+            'start_date_clause' => array(
+                'key'  => '_event_date',
+                'type' => 'DATE', // Ensures WordPress treats this as a date for sorting.
+            ),
+        );
+        $query['orderby'] = array(
+            'start_date_clause' => 'ASC', // 'ASC' for ascending (earliest to latest). Use 'DESC' for descending.
         );
     }
     return $query;
