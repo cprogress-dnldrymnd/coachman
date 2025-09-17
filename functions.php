@@ -297,9 +297,8 @@ add_action('admin_notices', 'display_csv_import_admin_notices');
 function query_loop_block_query_vars__artist($query, $block)
 {
 
-    global $post;
     if (get_the_ID() == 123) {
-        $query['s'] = 'sssxx';
+        
     }
     return $query;
 }
