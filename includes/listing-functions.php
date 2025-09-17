@@ -98,14 +98,8 @@ function __listing_buttons($post_id)
     $video = get__post_meta_by_id($post_id, 'video');
 ?>
     <div class="listing--buttons mt-2">
-        <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between align-items-center list-inline">
-            <?php if ($_360_walkthrough) { ?>
-                <li>
-                    <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas360-<?= $post_id ?>" aria-controls="offCanvas360-<?= $post_id ?>">
-                        360° Walkthrough
-                    </button>
-                </li>
-            <?php } ?>
+        <ul class="d-flex gap-3 m-0 fs-15 p-0 w-100 justify-content-between flex-wrap align-items-center list-inline">
+
             <?php if ($video) { ?>
                 <li>
                     <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasVideo-<?= $post_id ?>" aria-controls="offCanvasVideo-<?= $post_id ?>">
@@ -118,6 +112,13 @@ function __listing_buttons($post_id)
                     Specification
                 </button>
             </li>
+            <?php if ($_360_walkthrough) { ?>
+                <li>
+                    <button class="py-2 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvas360-<?= $post_id ?>" aria-controls="offCanvas360-<?= $post_id ?>">
+                        360° Walkthrough
+                    </button>
+                </li>
+            <?php } ?>
         </ul>
     </div>
     <!--
