@@ -836,3 +836,13 @@ Container::make('post_meta', __('Press Review Settings'))
     ->add_fields(array(
         Field::make('file', 'pdf_file', __('PDF File'))
     ));
+
+
+    Container::make('post_meta', __('Events Settings'))
+    ->where('post_type', '=', 'reviews_pevents_post_typeost_type')
+    ->add_fields(array(
+        Field::make('date', 'event_date', __('Event Date'))
+    ));
+
+
+    
