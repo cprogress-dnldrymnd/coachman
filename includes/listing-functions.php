@@ -225,12 +225,27 @@ function specification($post_id, $meta_key, $label)
 
     if ($meta) {
         if ($meta_key == 'price') {
-            $meta = '£' . $meta;
+            $meta = formatPrice($meta);
         }
         $meta = wpautop($meta);
         return "<div class='specification'><div class='meta-label'><strong>$label</strong></div><div class='meta-value'> $meta</div></div>";
     }
 }
+
+/**
+ * Formats a number into a price string with a preceding pound symbol,
+ * comma separators for thousands, and two decimal places.
+ *
+ * @param float $price The number to format.
+ * @return string The formatted price string (e.g., £30,340.00).
+ */
+function formatPrice($price)
+{
+    // The '£' is hardcoded for consistency.
+    // number_format handles the thousands separator and decimal points.
+    return '£' . number_format($price, 2, '.', ',');
+}
+
 /**
  * Gets the YouTube embed URL from any type of YouTube link.
  *
