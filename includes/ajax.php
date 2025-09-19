@@ -33,7 +33,7 @@ function dealer_details_ajax()
 			<?php if ($wpsl_url) { ?>
 				<li>
 					<span class="label">Website:</span>
-					<span class="value"><a href="<?= $wpsl_url ?>" target="_blank"><?= $wpsl_url ?></a></span>
+					<span class="value"><a href="<?= fixUrl($wpsl_url) ?>" target="_blank"><?= $wpsl_url ?></a></span>
 				</li>
 			<?php } ?>
 		</ul>
@@ -88,4 +88,33 @@ function dealer_details_ajax()
 	</div>
 <?php
 	die();
+}
+
+
+/**
+ * Fixes a URL by prepending 'https://' if the protocol is missing.
+ *
+ * This function uses parse_url() to check for an existing scheme (http, https, etc.).
+ * If no scheme is found, it adds the secure 'https://' protocol to the beginning of the URL.
+ *
+ * @param string $url The URL string to fix.
+ * @return string The fixed URL.
+ */
+function fixUrl($url)
+{
+	// Return an empty string if the input is empty to avoid errors
+	if (empty($url)) {
+		return '';
+	}
+
+	// Parse the URL to check for a scheme (e.g., http, https)
+	$parsed = parse_url($url);
+
+	// If no scheme is present, prepend 'https://'
+	if (empty($parsed['scheme'])) {
+		$url = 'https://' . $url;
+	}
+
+	// Return the fixed URL
+	return $url;
 }
