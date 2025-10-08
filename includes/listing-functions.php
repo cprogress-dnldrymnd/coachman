@@ -77,7 +77,7 @@ function __listing_features($post_id)
             <?php if ($price) { ?>
                 <li class="d-flex align-items-center justify-content-between py-2">
                     <span>Price</span>
-                    <span>£ <?= formatPrice($price) ?></span>
+                    <span><?= formatPrice($price) ?></span>
                 </li>
             <?php } ?>
             <?php if ($berths) { ?>
