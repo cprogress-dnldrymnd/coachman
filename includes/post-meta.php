@@ -544,6 +544,7 @@ Block::make(__('Caravan/Motohomes Models'))
                                         <div class="image-box image-style image-style-2 mb-3" style="--fit: contain">
                                             <?= get_the_post_thumbnail($posts_listing->ID, 'medium') ?>
                                         </div>
+                             
                                         <?= __listing_features($posts_listing->ID) ?>
                                         <?php if ($page) { ?>
                                             <div class="listing--buttons mt-2">

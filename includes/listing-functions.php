@@ -69,7 +69,11 @@ function __listing_features($post_id)
     ob_start();
     $berths = get__post_meta_by_id($post_id, 'berths');
     $length = get__post_meta_by_id($post_id, 'length');
+    $price = get__post_meta_by_id($post_id, 'price');
 ?>
+    <div class="listing--price">
+        £ <?= $price ?>
+    </div>
     <div class="listing--features">
         <ul class="d-flex flex-column gap-3 m-0 fs-14 p-0">
             <?php if ($berths) { ?>
