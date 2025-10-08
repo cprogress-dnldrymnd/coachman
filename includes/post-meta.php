@@ -519,6 +519,7 @@ Block::make(__('Caravan/Motohomes Models'))
                     $args = array(
                         'post_type' => $post['_type'],
                         'numberposts' => -1,
+                        'orderby' => 'title',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => $post['taxonomy'],
