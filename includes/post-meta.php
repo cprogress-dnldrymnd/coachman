@@ -562,6 +562,8 @@ Block::make(__('Caravan/Motohomes Models'))
                                 </div>
                             <?php } ?>
                         </div>
+
+                        <p class="otr-price">*OTR price</p>
                     </div>
                 </div>
             <?php } ?>

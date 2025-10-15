@@ -251,7 +251,7 @@ function formatPrice($price)
 {
     // The '£' is hardcoded for consistency.
     // number_format handles the thousands separator and decimal points.
-    return '£' . number_format($price, 2, '.', ',').'<span>*</span>';
+    return '£' . number_format($price, 2, '.', ',').'<span class="otr-price-span">*</span>';
 }
 
 /**
