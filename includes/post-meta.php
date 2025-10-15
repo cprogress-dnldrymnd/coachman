@@ -575,7 +575,7 @@ Block::make(__('Caravan/Motohomes Models'))
                                 Prices effective from 29th September 2025.
                             </p>
                             <p>
-                                <strong>*Prices exclude Norther Ireland.</strong>
+                                <strong>*Prices exclude Northern Ireland.</strong>
                             </p>
                         <?php } ?>
                     </div>
