@@ -562,8 +562,9 @@ Block::make(__('Caravan/Motohomes Models'))
                                 </div>
                             <?php } ?>
                         </div>
+                            <?= $type_key ?>
+
                         <?php if ($type_key == 'caravan') { ?>
-                            <?= $key ?>
                             <p class="otr-price mt-4">
                                 *All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024.
                             </p>
