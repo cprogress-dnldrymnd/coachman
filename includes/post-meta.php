@@ -562,8 +562,9 @@ Block::make(__('Caravan/Motohomes Models'))
                                 </div>
                             <?php } ?>
                         </div>
-                        <?php if ($key == 'caravan') { ?>
                             <?= $key ?>
+
+                        <?php if ($key == 'caravan') { ?>
                            
                         <?php } else { ?>
                             
