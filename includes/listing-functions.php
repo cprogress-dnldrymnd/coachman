@@ -223,6 +223,22 @@ function specifications($post_id)
         <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
         <?= specification($post_id, 'max_gross_weight', 'Maximum Gross Weight') ?>
     </div>
+
+    <?php if (get_post_type($post_id) == 'caravan') { ?>
+        <p class="otr-price mt-4">
+            *All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024.
+        </p>
+    <?php } else { ?>
+        <p class="otr-price mt-4">
+            *Includes First Registration, Vehicle Excise Duty and Registration Plates.
+        </p>
+        <p>
+            Prices effective from 29th September 2025.
+        </p>
+        <p>
+            * Prices exclude Norther Ireland.
+        </p>
+    <?php } ?>
     <p class="otr-price mt-4">*All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024</p>
 
 <?php
