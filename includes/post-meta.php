@@ -514,7 +514,7 @@ Block::make(__('Caravan/Motohomes Models'))
     </div>
     <?php if ($fields['display_model_layouts']) { ?>
         <?php foreach ($fields['posts'] as $type_key => $post) { ?>
-        
+
             <?php foreach ($post['model'] as $key => $model) { ?>
                 <?php
                     $args = array(
@@ -575,7 +575,7 @@ Block::make(__('Caravan/Motohomes Models'))
                                 Prices effective from 29th September 2025.
                             </p>
                             <p>
-                                * Prices exclude Norther Ireland.
+                                <strong>*Prices exclude Norther Ireland.</strong>
                             </p>
                         <?php } ?>
                     </div>

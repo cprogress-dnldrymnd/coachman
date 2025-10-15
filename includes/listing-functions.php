@@ -236,7 +236,7 @@ function specifications($post_id)
             Prices effective from 29th September 2025.
         </p>
         <p>
-            * Prices exclude Norther Ireland.
+            <strong>*Prices exclude Norther Ireland.</strong>
         </p>
     <?php } ?>
 
