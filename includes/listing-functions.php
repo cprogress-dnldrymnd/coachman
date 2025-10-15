@@ -223,6 +223,8 @@ function specifications($post_id)
         <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
         <?= specification($post_id, 'max_gross_weight', 'Maximum Gross Weight') ?>
     </div>
+    <p class="otr-price mt-4">*OTR price</p>
+
 <?php
     return ob_get_clean();
 }
@@ -251,7 +253,7 @@ function formatPrice($price)
 {
     // The '£' is hardcoded for consistency.
     // number_format handles the thousands separator and decimal points.
-    return '£' . number_format($price, 2, '.', ',').'<span class="otr-price-span">*</span>';
+    return '£' . number_format($price, 2, '.', ',') . '<span class="otr-price-span">*</span>';
 }
 
 /**
