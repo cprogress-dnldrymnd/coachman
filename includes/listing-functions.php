@@ -223,7 +223,7 @@ function specifications($post_id)
         <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
         <?= specification($post_id, 'max_gross_weight', 'Maximum Gross Weight') ?>
     </div>
-    <p class="otr-price mt-4">*OTR price</p>
+    <p class="otr-price mt-4">*All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024</p>
 
 <?php
     return ob_get_clean();
