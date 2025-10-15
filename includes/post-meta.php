@@ -562,17 +562,25 @@ Block::make(__('Caravan/Motohomes Models'))
                                 </div>
                             <?php } ?>
                         </div>
-                            <?= $type_key ?>
 
-                        <?php if ($type_key == 'caravan') { ?>
-                            <p class="otr-price mt-4">
-                                *All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024.
-                            </p>
-                        <?php } else { ?>
-                           
-                        <?php } ?>
                     </div>
                 </div>
+            <?php } ?>
+            <?php if ($type_key == 'caravan') { ?>
+                <?= $key ?>
+                <p class="otr-price mt-4">
+                    *All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024.
+                </p>
+            <?php } else { ?>
+                <p class="otr-price mt-4">
+                    *Includes First Registration, Vehicle Excise Duty and Registration Plates.
+                </p>
+                <p>
+                    Prices effective from 29th September 2025.
+                </p>
+                <p>
+                    * Prices exclude Norther Ireland.
+                </p>
             <?php } ?>
         <?php } ?>
     <?php } ?>
