@@ -569,13 +569,7 @@ Block::make(__('Caravan/Motohomes Models'))
                             </p>
                         <?php } else { ?>
                             <p class="otr-price mt-4">
-                                *Includes First Registration, Vehicle Excise Duty and Registration Plates.
-                            </p>
-                            <p>
-                                Prices effective from 29th September 2025.
-                            </p>
-                            <p>
-                                <strong>*Prices exclude Northern Ireland.</strong>
+                                       *Includes First Registration, Vehicle Excise Duty and Registration Plates. Prices effective from 29th September 2025. Prices exclude Northern Ireland.
                             </p>
                         <?php } ?>
                     </div>
