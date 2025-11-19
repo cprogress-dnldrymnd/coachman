@@ -156,7 +156,7 @@ function __listing_buttons($post_id)
                         <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"></path>
                     </svg>
                 </button>
-                <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5">
+                <div class="offcanvas-body--inner background-white rounded overflow-hidden p-3 p-lg-5" <?=  $video ?>>
                     <h2 class="fs-24"><?= __listing_title(get_the_ID()) ?></h2>
                     <p class="fs-22">Range Tour</p>
                     <div class="embed-holder position-relative mb-5">
