@@ -281,13 +281,15 @@ function formatPrice($price)
  */
 function getYoutubeEmbedUrl($url)
 {
-    // A regular expression to match and capture the video ID from various YouTube URL formats.
-    // The pattern looks for 'v=', '/embed/', or '.be/' followed by an 11-character video ID.
-    $pattern = '/(?:https?://)?(?:www.)?(?:youtube.com/(?:[^/ns]+/S+/|(?:watch|embed)/|v/)|youtu.be/)([a-zA-Z0-9_-]{11})/';
+    // Updated pattern to match:
+    // 1. Standard: youtube.com/watch?v=ID
+    // 2. Embed: youtube.com/embed/ID
+    // 3. Short: youtu.be/ID
+    $pattern = '/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/';
 
     // Use preg_match to find the pattern in the provided URL.
     if (preg_match($pattern, $url, $matches)) {
-        // If a match is found, the video ID is in the second element of the $matches array.
+        // The video ID is in the first captured group ($matches[1])
         $videoId = $matches[1];
 
         // Construct the standard embed URL using the extracted video ID.
