@@ -72,6 +72,10 @@ function __listing_features($post_id)
     $price = get__post_meta_by_id($post_id, 'price');
     $axles = get__post_meta_by_id($post_id, 'axles');
     $mtplm = get__post_meta_by_id($post_id, 'mtplm');
+    $travelling_seats = get__post_meta_by_id($post_id, 'travelling_seats');
+    $max_gross_weight = get__post_meta_by_id($post_id, 'max_gross_weight');
+
+
 ?>
 
     <div class="listing--features">
@@ -88,26 +92,38 @@ function __listing_features($post_id)
                     <span><?= $berths ?></span>
                 </li>
             <?php } ?>
+            <?php if ($travelling_seats) { ?>
+                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                    <span>Travelling seats</span>
+                    <span><?= $travelling_seats ?></span>
+                </li>
+            <?php } ?>
             <?php if ($length) { ?>
                 <li class="d-flex gap-3 align-items-center justify-content-between py-2">
                     <span>Length</span>
                     <span><?= $length ?></span>
                 </li>
             <?php } ?>
-              <?php if ($axles) { ?>
+            <?php if ($axles) { ?>
                 <li class="d-flex gap-3 align-items-center justify-content-between py-2">
                     <span>Axles</span>
                     <span><?= $axles ?></span>
                 </li>
             <?php } ?>
-              <?php if ($mtplm) { ?>
+            <?php if ($mtplm) { ?>
                 <li class="d-flex gap-3 align-items-center justify-content-between py-2">
                     <span>MTPLM</span>
                     <span><?= $mtplm ?></span>
                 </li>
             <?php } ?>
+             <?php if ($max_gross_weight) { ?>
+                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                    <span>Maximum Gross Weight</span>
+                    <span><?= $max_gross_weight ?></span>
+                </li>
+            <?php } ?>
 
-            
+
         </ul>
     </div>
 <?php
