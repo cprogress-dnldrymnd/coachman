@@ -11,8 +11,8 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     <div class="container">
         <div class="swiper swiper-nav-tabs-swiper nav-tabs-swiper overflow-visible sm-margin-bottom nav-tabs-swiper-js">
             <ul class="swiper-wrapper nav nav-tabs  flex-row " id="Dealers-Navigation" role="tablist" aria-live="polite">
-                <a class="nav-link <?= $category == 'all' ? 'active' : '' ?>" href="?category=<?= $dealer->slug ?>">
-                    <p><?= $dealer->name ?></p>
+                <a class="nav-link <?= $category == 'all' ? 'active' : '' ?>" href="/">
+                    <p>All Dealers</p>
                 </a>
                 <?php foreach ($dealer_cat as $dealer) { ?>
                     <li class="swiper-slide nav-item">
