@@ -70,6 +70,8 @@ function __listing_features($post_id)
     $berths = get__post_meta_by_id($post_id, 'berths');
     $length = get__post_meta_by_id($post_id, 'length');
     $price = get__post_meta_by_id($post_id, 'price');
+    $axles = get__post_meta_by_id($post_id, 'axles');
+    $mtplm = get__post_meta_by_id($post_id, 'mtplm');
 ?>
 
     <div class="listing--features">
@@ -92,6 +94,20 @@ function __listing_features($post_id)
                     <span><?= $length ?></span>
                 </li>
             <?php } ?>
+              <?php if ($axles) { ?>
+                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                    <span>Axles</span>
+                    <span><?= $axles ?></span>
+                </li>
+            <?php } ?>
+              <?php if ($mtplm) { ?>
+                <li class="d-flex gap-3 align-items-center justify-content-between py-2">
+                    <span>MTPLM</span>
+                    <span><?= $mtplm ?></span>
+                </li>
+            <?php } ?>
+
+            axles
         </ul>
     </div>
 <?php
