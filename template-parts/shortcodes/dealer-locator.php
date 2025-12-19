@@ -30,7 +30,13 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
     </div>
 
     <div class="dealer--locator">
-        <?= do_shortcode('[wpsl template="default" category="' . $category . '"]') ?>
+        <?php
+        if ($category == 'all')
+            echo do_shortcode('[wpsl template="default"]');
+        else
+            echo
+            do_shortcode('[wpsl template="default" category="' . $category . '"]');
+        ?>
     </div>
 </div>
 <?php if (isset($_GET['wpsl-search-input'])) { ?>
