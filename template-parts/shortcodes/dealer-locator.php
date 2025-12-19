@@ -13,7 +13,7 @@ $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : 
             <ul class="swiper-wrapper nav nav-tabs  flex-row " id="Dealers-Navigation" role="tablist" aria-live="polite">
                 <li class="swiper-slide nav-item">
 
-                    <a class="nav-link <?= $category == 'all' ? 'active' : '' ?>" href="/">
+                    <a class="nav-link <?= $category == 'all' ? 'active' : '' ?>" href="/find-a-dealer/">
                         <p>All Dealers</p>
                     </a>
                 </li>
