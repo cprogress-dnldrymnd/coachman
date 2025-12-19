@@ -107,7 +107,7 @@ function __listing_features($post_id)
                 </li>
             <?php } ?>
 
-            axles
+            
         </ul>
     </div>
 <?php
