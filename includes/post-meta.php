@@ -509,6 +509,14 @@ Block::make(__('Caravan/Motohomes Models'))
                         <?php } ?>
                     <?php } ?>
                 </div>
+                <?php if ($fields['is_swiper']) { ?>
+                    <div class="swiper-navigation-holder">
+                        <div class="container">
+                            <div class="swiper-button-prev"> </div>
+                            <div class="swiper-button-next"> </div>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -563,10 +571,10 @@ Block::make(__('Caravan/Motohomes Models'))
                                 </div>
                             <?php } ?>
                         </div>
-                        <?php $text = carbon_get_theme_option($post['_type'].'_text') ?>
+                        <?php $text = carbon_get_theme_option($post['_type'] . '_text') ?>
                         <p class="otr-price mt-4">
-                               <?= $text ?>
-                            </p>
+                            <?= $text ?>
+                        </p>
                     </div>
                 </div>
             <?php } ?>
@@ -796,15 +804,15 @@ Container::make('theme_options', __('Theme Options'))
         Field::make('select', 'footer', __('Default Footer'))
             ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['footer'], 'template')),
     ));
-    
+
 Container::make('theme_options', __('Caravan Settings'))
-->set_page_parent('edit.php?post_type=caravan')
+    ->set_page_parent('edit.php?post_type=caravan')
     ->add_fields(array(
         Field::make('textarea', 'caravan_text', __('Caravan Text'))
     ));
-    
+
 Container::make('theme_options', __('Motorhome Settings'))
-->set_page_parent('edit.php?post_type=motorhome')
+    ->set_page_parent('edit.php?post_type=motorhome')
     ->add_fields(array(
         Field::make('textarea', 'motorhome_text', __('Motorhome Text'))
     ));
