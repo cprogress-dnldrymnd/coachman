@@ -48,7 +48,7 @@ Container::make('post_meta', __('Caravan Properties'))
         Field::make('text', 'awning_size', __('Awning Size (Approx. for reference only)'))->set_width(25),
         Field::make('text', 'upper_mtplm', __('Upper MTPLM (Optional weight plate upgrade'))->set_width(75),
 
-        Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
+        Field::make('oembed', '360_walkthrough', __('360째 Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
     ));
 
@@ -85,7 +85,7 @@ Container::make('post_meta', __('Motorhome Properties'))
         Field::make('text', 'max_gross_weight', __('Maximum Gross Weight'))->set_width(25),
         Field::make('text', 'base_vehicle', __('Base Vehicle'))->set_width(100),
 
-        Field::make('oembed', '360_walkthrough', __('360° Walkthrough'))->set_width(50),
+        Field::make('oembed', '360_walkthrough', __('360째 Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
     ));
 
@@ -509,14 +509,6 @@ Block::make(__('Caravan/Motohomes Models'))
                         <?php } ?>
                     <?php } ?>
                 </div>
-                <?php if ($fields['is_swiper']) { ?>
-                    <div class="swiper-navigation-holder">
-                        <div class="container">
-                            <div class="swiper-button-prev"> </div>
-                            <div class="swiper-button-next"> </div>
-                        </div>
-                    </div>
-                <?php } ?>
             </div>
         </div>
     </div>
@@ -571,15 +563,10 @@ Block::make(__('Caravan/Motohomes Models'))
                                 </div>
                             <?php } ?>
                         </div>
-                        <?php if ($post['_type'] == 'caravan') { ?>
-                            <p class="otr-price mt-4">
-                                *All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 1st September 2024.
+                        <?php $text = carbon_get_theme_option($post['_type'].'_text') ?>
+                        <p class="otr-price mt-4">
+                               <?= $text ?>
                             </p>
-                        <?php } else { ?>
-                            <p class="otr-price mt-4">
-                                *Includes First Registration, Vehicle Excise Duty and Registration Plates. Prices effective from 29th September 2025. Prices exclude Northern Ireland.
-                            </p>
-                        <?php } ?>
                     </div>
                 </div>
             <?php } ?>
@@ -808,6 +795,18 @@ Container::make('theme_options', __('Theme Options'))
             ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['header'], 'template')),
         Field::make('select', 'footer', __('Default Footer'))
             ->set_options(get_posts_by_taxonomy_wpdb('template_category', ['footer'], 'template')),
+    ));
+    
+Container::make('theme_options', __('Caravan Settings'))
+->set_page_parent('edit.php?post_type=caravan')
+    ->add_fields(array(
+        Field::make('textarea', 'caravan_text', __('Caravan Text'))
+    ));
+    
+Container::make('theme_options', __('Motorhome Settings'))
+->set_page_parent('edit.php?post_type=motorhome')
+    ->add_fields(array(
+        Field::make('textarea', 'motorhome_text', __('Motorhome Text'))
     ));
 
 
