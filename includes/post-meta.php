@@ -509,6 +509,14 @@ Block::make(__('Caravan/Motohomes Models'))
                         <?php } ?>
                     <?php } ?>
                 </div>
+                <?php if ($fields['is_swiper']) { ?>
+                    <div class="swiper-navigation-holder">
+                        <div class="container">
+                            <div class="swiper-button-prev"> </div>
+                            <div class="swiper-button-next"> </div>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
