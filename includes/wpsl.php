@@ -88,37 +88,3 @@ function custom_listing_template()
 add_filter('wpsl_admin_marker_dir', 'custom_admin_marker_dir');
 
 
-add_filter( 'wpsl_info_window_template', 'custom_wpsl_info_window_template' );
-
-function custom_wpsl_info_window_template() {
-    
-    // Start the Info Window HTML
-    $info_window_template = '<div data-store-id="<%= id %>" class="wpsl-info-window">' . "\r\n";
-    
-    // Store Name
-    $info_window_template .= '    <p>' . "\r\n";
-    $info_window_template .= '        <strong><%= store %></strong>' . "\r\n";
-    $info_window_template .= '    </p>' . "\r\n";
-    
-    // Address Details
-    $info_window_template .= '    <p>' . "\r\n";
-    $info_window_template .= '        <span><%= address %></span>' . "\r\n";
-    $info_window_template .= '        <% if ( address2 ) { %>' . "\r\n";
-    $info_window_template .= '        <span><%= address2 %></span>' . "\r\n";
-    $info_window_template .= '        <% } %>' . "\r\n";
-    $info_window_template .= '        <span><%= city %> <%= state %> <%= zip %></span>' . "\r\n";
-    $info_window_template .= '    </p>' . "\r\n";
-
-    // --- START: Website Link Addition ---
-    // The 'url' variable holds the data from the "Website" field in the store editor
-    $info_window_template .= '    <% if ( url ) { %>' . "\r\n";
-    $info_window_template .= '    <p>' . "\r\n";
-    $info_window_template .= '        <a href="<%= url %>" target="_blank" rel="noopener noreferrer">Visit Website</a>' . "\r\n";
-    $info_window_template .= '    </p>' . "\r\n";
-    $info_window_template .= '    <% } %>' . "\r\n";
-    // --- END: Website Link Addition ---
-
-    $info_window_template .= '</div>' . "\r\n";
-
-    return $info_window_template;
-}
