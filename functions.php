@@ -2,7 +2,7 @@
 /*-----------------------------------------------------------------------------------*/
 /* Define the version so we can easily replace it throughout the theme
 /*-----------------------------------------------------------------------------------*/
-define('version', 1.1);
+define('version', 1);
 define('theme_dir', get_template_directory_uri() . '/');
 define('assets_dir', theme_dir . 'assets/');
 define('image_dir', assets_dir . 'images/');
@@ -325,3 +325,21 @@ function query_loop_block_query_vars__artist($query, $block)
     return $query;
 }
 add_filter('query_loop_block_query_vars', 'query_loop_block_query_vars__artist', 10, 2);
+
+
+
+
+
+add_action( 'wp_enqueue_scripts', function () {
+
+    wp_enqueue_script(
+        'wpsl-popup-override',
+        get_stylesheet_directory_uri() . '/js/wpsl-popup.js',
+        array( 'jquery', 'wpsl' ),
+        '1.0',
+        true
+    );
+
+}, 20 );
+
+
