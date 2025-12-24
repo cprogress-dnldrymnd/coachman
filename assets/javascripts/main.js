@@ -224,12 +224,10 @@ function swiper_sliders() {
     var swiper_listing_taxonomy = new Swiper(".swiper-listings-taxonomy", {
         slidesPerView: 'auto',
         spaceBetween: 40,
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
     });
 
 
