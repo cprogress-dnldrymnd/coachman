@@ -104,19 +104,19 @@ function custom_wpsl_info_window_template_with_website() {
     $info_window_template .= '        <span><%= address2 %></span>' . "\r\n";
     $info_window_template .= '        <% } %>' . "\r\n";
     $info_window_template .= '        <span><%= city %> <%= state %> <%= zip %></span>' . "\r\n";
-    $info_window_template .= '    </div>' . "\r\n";
+    $info_window_template .= '    </div><br>' . "\r\n";
 
     // 2. Phone Section
     $info_window_template .= '    <% if ( phone ) { %>' . "\r\n";
     $info_window_template .= '    <div class="wpsl-info-window-details">' . "\r\n";
-    $info_window_template .= '        <strong>Phone:</strong> <span><%= phone %></span>' . "\r\n";
+    $info_window_template .= '        <strong>Phone:</strong> <%= phone %>' . "\r\n";
     $info_window_template .= '    </div>' . "\r\n";
     $info_window_template .= '    <% } %>' . "\r\n";
 
     // 3. Email Section (Matches your image: Label on one line, email on next)
     $info_window_template .= '    <% if ( email ) { %>' . "\r\n";
     $info_window_template .= '    <div class="wpsl-info-window-details">' . "\r\n";
-    $info_window_template .= '        <strong>Email:</strong><br>' . "\r\n";
+    $info_window_template .= '        <strong>Email:</strong>' . "\r\n";
     $info_window_template .= '        <a href="mailto:<%= email %>"><%= email %></a>' . "\r\n";
     $info_window_template .= '    </div>' . "\r\n";
     $info_window_template .= '    <% } %>' . "\r\n";
@@ -131,7 +131,7 @@ function custom_wpsl_info_window_template_with_website() {
     // -----------------------------
 
     // 4. Directions Link
-    $info_window_template .= '    <div class="wpsl-info-window-directions" style="margin-top: 10px;">' . "\r\n";
+    $info_window_template .= '    <br><div class="wpsl-info-window-directions" style="margin-top: 10px;">' . "\r\n";
     $info_window_template .= '        <%= createDirectionUrl() %>' . "\r\n"; 
     $info_window_template .= '    </div>' . "\r\n";
 
