@@ -87,4 +87,55 @@ function custom_listing_template()
 
 add_filter('wpsl_admin_marker_dir', 'custom_admin_marker_dir');
 
+add_filter( 'wpsl_info_window_template', 'custom_wpsl_info_window_template_with_website' );
 
+function custom_wpsl_info_window_template_with_website() {
+
+    $info_window_template = '<div data-store-id="<%= id %>" class="wpsl-info-window">' . "\r\n";
+
+    // 1. Store Name and Address Section
+    $info_window_template .= '    <div class="wpsl-info-window-title">' . "\r\n";
+    $info_window_template .= '        <strong><%= store %></strong>' . "\r\n";
+    $info_window_template .= '    </div>' . "\r\n";
+    
+    $info_window_template .= '    <div class="wpsl-info-window-address">' . "\r\n";
+    $info_window_template .= '        <span><%= address %></span>' . "\r\n";
+    $info_window_template .= '        <% if ( address2 ) { %>' . "\r\n";
+    $info_window_template .= '        <span><%= address2 %></span>' . "\r\n";
+    $info_window_template .= '        <% } %>' . "\r\n";
+    $info_window_template .= '        <span><%= city %> <%= state %> <%= zip %></span>' . "\r\n";
+    $info_window_template .= '    </div>' . "\r\n";
+
+    // 2. Phone Section
+    $info_window_template .= '    <% if ( phone ) { %>' . "\r\n";
+    $info_window_template .= '    <div class="wpsl-info-window-details">' . "\r\n";
+    $info_window_template .= '        <strong>Phone:</strong> <span><%= phone %></span>' . "\r\n";
+    $info_window_template .= '    </div>' . "\r\n";
+    $info_window_template .= '    <% } %>' . "\r\n";
+
+    // 3. Email Section (Matches your image: Label on one line, email on next)
+    $info_window_template .= '    <% if ( email ) { %>' . "\r\n";
+    $info_window_template .= '    <div class="wpsl-info-window-details">' . "\r\n";
+    $info_window_template .= '        <strong>Email:</strong><br>' . "\r\n";
+    $info_window_template .= '        <a href="mailto:<%= email %>"><%= email %></a>' . "\r\n";
+    $info_window_template .= '    </div>' . "\r\n";
+    $info_window_template .= '    <% } %>' . "\r\n";
+
+    // --- NEW SECTION: Website ---
+    // Added below Email as requested
+    $info_window_template .= '    <% if ( url ) { %>' . "\r\n";
+    $info_window_template .= '    <div class="wpsl-info-window-details" style="margin-top: 5px;">' . "\r\n";
+    $info_window_template .= '        <strong>Website:</strong> <a href="<%= url %>" target="_blank" rel="noopener noreferrer"><%= url %></a>' . "\r\n";
+    $info_window_template .= '    </div>' . "\r\n";
+    $info_window_template .= '    <% } %>' . "\r\n";
+    // -----------------------------
+
+    // 4. Directions Link
+    $info_window_template .= '    <div class="wpsl-info-window-directions" style="margin-top: 10px;">' . "\r\n";
+    $info_window_template .= '        <%= createDirectionUrl() %>' . "\r\n"; 
+    $info_window_template .= '    </div>' . "\r\n";
+
+    $info_window_template .= '</div>' . "\r\n";
+
+    return $info_window_template;
+}
