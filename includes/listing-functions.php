@@ -116,7 +116,7 @@ function __listing_features($post_id)
                     <span><?= $mtplm ?></span>
                 </li>
             <?php } ?>
-             <?php if ($max_gross_weight) { ?>
+            <?php if ($max_gross_weight) { ?>
                 <li class="d-flex gap-3 align-items-center justify-content-between py-2">
                     <span>Maximum Gross Weight</span>
                     <span><?= $max_gross_weight ?></span>
@@ -236,6 +236,7 @@ function specifications($post_id)
         <?= specification($post_id, 'overall_width', 'Overall Width') ?>
         <?= specification($post_id, 'overall_height_incl_tv', 'Overall Height (including T.V Aerial)') ?>
         <?= specification($post_id, 'overall_height_incl_aircon', 'Overall Height (including Air Conditioning)') ?>
+
         <?= specification($post_id, 'overall_width_incl_mirrors', 'Overall Width (including mirrors extended)') ?>
         <?= specification($post_id, 'track_width_front', 'Track Width (Front)') ?>
         <?= specification($post_id, 'track_width_rear', 'Track Width (Rear)') ?>
@@ -253,7 +254,12 @@ function specifications($post_id)
         <?= specification($post_id, 'max_hitch_weight', 'Maximum Hitch Weight') ?>
         <?= specification($post_id, 'awning_size', 'Awning Size (Approx. for reference only)') ?>
         <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
-        <?= specification($post_id, 'max_gross_weight', 'Maximum Gross Weight') ?>
+        <?= specification($post_id, 'max_gross_weight', 'Mass Available for Optional Payload') ?>
+
+        <?= specification($post_id, 'conventional_load', 'Conventional Load') ?>
+        <?= specification($post_id, 'essential_habitation_equipment', 'Essential Habitation Equipment') ?>
+        <?= specification($post_id, 'optional_equipment', 'Optional Equipment') ?>
+        <?= specification($post_id, 'personal_effects', 'Personal Effects') ?>
     </div>
 
     <?php if (get_post_type($post_id) == 'caravan') { ?>
