@@ -82,9 +82,14 @@ Container::make('post_meta', __('Motorhome Properties'))
         Field::make('text', 'mtplm', __('MTPLM'))->set_width(25),
         Field::make('text', 'mass', __('Mass in Running Order'))->set_width(25),
         Field::make('text', 'personal_payload', __('Personal Payload'))->set_width(25),
-        Field::make('text', 'max_gross_weight', __('Maximum Gross Weight'))->set_width(25),
-        Field::make('text', 'base_vehicle', __('Base Vehicle'))->set_width(100),
+        Field::make('text', 'max_gross_weight', __('Mass Available for Optional Payload'))->set_width(25),
 
+        Field::make('text', 'conventional_load', __('Conventional Load'))->set_width(25),
+        Field::make('text', 'essential_habitation_equipment', __('Essential Habitation Equipment'))->set_width(25),
+        Field::make('text', 'optional_equipment', __('Optional Equipment'))->set_width(25),
+        Field::make('text', 'personal_effects', __('Personal Effects'))->set_width(25),
+
+        Field::make('text', 'base_vehicle', __('Base Vehicle'))->set_width(100),
         Field::make('oembed', '360_walkthrough', __('360째 Walkthrough'))->set_width(50),
         Field::make('oembed', 'video', __('Video tour'))->set_width(50),
     ));
