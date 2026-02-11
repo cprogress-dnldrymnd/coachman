@@ -815,8 +815,8 @@ Container::make('theme_options', __('Caravan Settings'))
 Container::make('theme_options', __('Motorhome Settings'))
     ->set_page_parent('edit.php?post_type=motorhome')
     ->add_fields(array(
-        Field::make('rich_text', 'motorhome_text', __('Motorhome Text Long')),
-        Field::make('rich_text', 'motorhome_text_short', __('Motorhome Text Short')),
+        Field::make('rich_text', 'motorhome_text', __('Motorhome Text Short')),
+        Field::make('rich_text', 'motorhome_text_long', __('Motorhome Text Long')),
     ));
 
 

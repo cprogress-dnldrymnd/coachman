@@ -268,7 +268,7 @@ function specifications($post_id)
         </p>
     <?php } else { ?>
         <div class="otr-price mt-4">
-            <?= do_shortcode('[motorhome_text]') ?>
+            <?= do_shortcode('[motorhome_text_long]') ?>
         </div>
     <?php } ?>
 
