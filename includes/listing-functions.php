@@ -73,7 +73,7 @@ function __listing_features($post_id)
     $axles = get__post_meta_by_id($post_id, 'axles');
     $mtplm = get__post_meta_by_id($post_id, 'mtplm');
     $travelling_seats = get__post_meta_by_id($post_id, 'travelling_seats');
-    $max_gross_weight = get__post_meta_by_id($post_id, 'max_gross_weight');
+    $mass = get__post_meta_by_id($post_id, 'mass');
 
 
 ?>
@@ -118,8 +118,8 @@ function __listing_features($post_id)
             <?php } ?>
             <?php if ($max_gross_weight) { ?>
                 <li class="d-flex gap-3 align-items-center justify-content-between py-2">
-                    <span>Maximum Gross Weight</span>
-                    <span><?= $max_gross_weight ?></span>
+                    <span>Mass In Running Order</span>
+                    <span><?= $mass ?></span>
                 </li>
             <?php } ?>
 
