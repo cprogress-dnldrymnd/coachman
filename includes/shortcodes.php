@@ -129,3 +129,9 @@ function pdf_file()
     }
 }
 add_shortcode('pdf_file', 'pdf_file');
+
+
+function motorhome_text() {
+    return get__theme_option('motorhome_text');
+}
+add_shortcode($'motorhome_text', 'motorhome_text');
