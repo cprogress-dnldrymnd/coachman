@@ -116,7 +116,7 @@ function __listing_features($post_id)
                     <span><?= $mtplm ?></span>
                 </li>
             <?php } ?>
-            <?php if ($max_gross_weight) { ?>
+            <?php if ($mass) { ?>
                 <li class="d-flex gap-3 align-items-center justify-content-between py-2">
                     <span>Mass In Running Order</span>
                     <span><?= $mass ?></span>
