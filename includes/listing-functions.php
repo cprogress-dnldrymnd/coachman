@@ -268,7 +268,7 @@ function specifications($post_id)
         </p>
     <?php } else { ?>
         <p class="otr-price mt-4">
-            *Includes First Registration, Vehicle Excise Duty and Registration Plates. Prices effective from 29th September 2025. Prices exclude Northern Ireland.
+            <?= do_shortcode('[motorhome_text]') ?>
         </p>
     <?php } ?>
 
