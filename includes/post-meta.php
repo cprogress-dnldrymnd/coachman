@@ -80,11 +80,11 @@ Container::make('post_meta', __('Motorhome Properties'))
         Field::make('text', 'tyre_pressure', __('Tyre Pressure (bar / psi at quoted MTPLM)'))->set_width(25),
         Field::make('textarea', 'bed_sizes', __('Bed Sizes'))->set_width(25),
         Field::make('text', 'mtplm', __('MTPLM'))->set_width(25),
-        Field::make('text', 'max_gross_weight', __('Maximum Gross Weight'))->set_width(25),
         
         Field::make('text', 'mass', __('Mass in Running Order'))->set_width(25),
         Field::make('text', 'personal_payload', __('Personal Payload'))->set_width(25),
-        Field::make('text', 'max_gross_weight', __('Mass Available for Optional Payload'))->set_width(25),
+        Field::make('text', 'max_gross_weight', __('Max Gross Weight'))->set_width(25),
+        Field::make('text', 'mass_available_for_optional_payload', __('Mass Available for Optional Payload'))->set_width(25),
 
         Field::make('text', 'conventional_load', __('Conventional Load'))->set_width(25),
         Field::make('text', 'essential_habitation_equipment', __('Essential Habitation Equipment'))->set_width(25),

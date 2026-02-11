@@ -248,13 +248,15 @@ function specifications($post_id)
         <?= specification($post_id, 'tyre_pressure', 'Tyre Pressure (bar / psi at quoted MTPLM)') ?>
         <?= specification($post_id, 'bed_sizes', 'Bed Sizes') ?>
         <?= specification($post_id, 'mtplm', 'MTPLM') ?>
+
         <?= specification($post_id, 'mass', 'Mass in Running Order') ?>
         <?= specification($post_id, 'personal_payload', 'Personal Payload') ?>
         <?= specification($post_id, 'max_payload', 'Total / Maximum User Payload') ?>
         <?= specification($post_id, 'max_hitch_weight', 'Maximum Hitch Weight') ?>
         <?= specification($post_id, 'awning_size', 'Awning Size (Approx. for reference only)') ?>
         <?= specification($post_id, 'upper_mtplm', 'Upper MTPLM (Optional weight plate upgrade') ?>
-        <?= specification($post_id, 'max_gross_weight', 'Mass Available for Optional Payload') ?>
+        <?= specification($post_id, 'max_gross_weight', 'Max Gross Weight') ?>
+        <?= specification($post_id, 'mass_available_for_optional_payload', 'Mass Available for Optional Payload') ?>
 
         <?= specification($post_id, 'conventional_load', 'Conventional Load') ?>
         <?= specification($post_id, 'essential_habitation_equipment', 'Essential Habitation Equipment') ?>
