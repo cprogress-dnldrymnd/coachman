@@ -267,9 +267,9 @@ function specifications($post_id)
             *All prices exclude a recommended dealer charge of £650 (including VAT). Prices effective from 14th August 2025.
         </p>
     <?php } else { ?>
-        <p class="otr-price mt-4">
+        <div class="otr-price mt-4">
             <?= do_shortcode('[motorhome_text]') ?>
-        </p>
+        </div>
     <?php } ?>
 
 <?php
