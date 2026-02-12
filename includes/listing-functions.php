@@ -231,6 +231,7 @@ function specifications($post_id)
         <?= specification($post_id, 'axles', 'Axles') ?>
         <?= specification($post_id, 'berths', 'Berths') ?>
         <?= specification($post_id, 'travelling_seats', 'Travelling Seats') ?>
+        <?= specification($post_id, 'length', 'Length') ?>
         <?= specification($post_id, 'interior_length', 'Interior Length') ?>
         <?= specification($post_id, 'overall_length', 'Overall Length') ?>
         <?= specification($post_id, 'overall_width', 'Overall Width') ?>
